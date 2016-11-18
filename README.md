@@ -6,6 +6,8 @@
 
 Until this project is published to NPM, you have two options to get it included as a dependency of your Node compatible application.
 
+---
+
 ### Option #1 - Symlink Local Directory
 
 Assuming the `crds-styles` repo resides in the same local directory as your project, you can do the following to setup the symlink...
@@ -24,6 +26,12 @@ If you don't have the DDK cloned locally, you can just reference the repo direct
         "crds-styles": "crdschurch/crds-styles"
       }
     }
+
+---
+
+Once you've added `crds-styles` to `package.json` you need to import the stylesheet in your application's main '.scss' file using the following convention. You can optionally override any of the customizable Bootstrap variables prior to import...
+
+    @import '~crds-styles/assets/stylesheets/bootstrap';
 
 ## Versions &amp; Roadmap
 
