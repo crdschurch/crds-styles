@@ -1,6 +1,6 @@
 # crds-styles
 
-`crds-styles` provides the primary CSS framework and global style patterns that power [crossroads.net](http://crossroads.net) and it's related properties. Any elements and/or implementation details included within the Digital Design Kit (DDK) are provided by this NPM package. Any deviations from the patterns defined there should be implemented in the client application.
+`crds-styles` provides the primary CSS framework and global style patterns that power [crossroads.net](http://crossroads.net) and it's related properties. Any elements and/or implementation details included within the [Digital Design Kit (DDK)](http://github.com/crdschurch/crds-styleguide) are provided by this NPM package. Any deviations from the patterns defined there should be implemented in the client application.
 
 ## Implementation
 
