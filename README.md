@@ -15,6 +15,18 @@ Assuming the `crds-styles` repo resides in the same local directory as your proj
     $ cd path/to/your/project-directory
     $ npm link ../crds-styles
 
+Then update your project's `package.json` file with a reference to `crds-styles`, for example...
+
+    {
+      "name": "foo",
+      "version": "0.0.0",
+      "dependencies": {
+        "crds-styles": "*"
+      }
+    }
+
+---
+
 ### Option #2 - Reference Github URL in package.json
 
 If you don't have the DDK cloned locally, you can just reference the repo directly in your `package.json` file, like so...
