@@ -10,7 +10,9 @@
   "files": [
     "assets"
   ],
-  "keywords": [],
+  "keywords": [
+    "crossroads"
+  ],
   "author": "",
   "license": "BSD-3-Clause",
   "dependencies": {
