@@ -21,25 +21,23 @@ $base-font-size: 14px;
 
 hr,
 .page-break {
-  color: $dark-gray;
+  color: $underline-color;
 }
 
 .help-link {
-  color: $dark-gray;
-  text-decoration: none;
+  color: $secondary-link-color;
 
   &:hover {
-    color: rgb(43, 43, 43);
-    text-decoration: underline;
+    color: darken($secondary-link-color, 20);
   }
 }
 
 a {
-  color: rgb(0, 149, 217);
+  color: $primary-link-color;
   text-decoration: none;
 
   &:hover {
-    color: rgb(0, 79, 115);
+    color: darken($primary-link-color, 20);
     text-decoration: underline;
   }
 }

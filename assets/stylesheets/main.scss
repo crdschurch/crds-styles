@@ -1,12 +1,4 @@
-@import 'base/modules',
+@import 'vendors/modules',
+        'base/modules',
         'components/modules',
-        'themes/modules',
-        'vendors/modules';
-
-
-
-
-
-body {
-  @include font-style;
-}
+        'themes/modules';
