@@ -1,0 +1,49 @@
+$base-font-face: "acumin-pro", helvetica, arial, sans-serif;
+$condensed-font-face: "acumin-pro-extra-condensed", sans-serif;
+
+$base-font-size: 14px;
+
+@mixin font-style($face: $base-font-face, $size: $base-font-size, $weight: normal) {
+  font-family: $face;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+.page-header {
+  @include font-style($condensed-font-face, 30px, 500);
+  border-bottom: none;
+  text-transform: uppercase;
+}
+
+.section-header {
+  @include font-style;
+}
+
+hr,
+.page-break {
+  color: $dark-gray;
+}
+
+.help-link {
+  color: $dark-gray;
+  text-decoration: none;
+
+  &:hover {
+    color: rgb(43, 43, 43);
+    text-decoration: underline;
+  }
+}
+
+a {
+  color: rgb(0, 149, 217);
+  text-decoration: none;
+
+  &:hover {
+    color: rgb(0, 79, 115);
+    text-decoration: underline;
+  }
+}
+
+.text-block--light {
+  font-weight: 100;
+}

@@ -1,0 +1,8 @@
+.alert {
+  border-radius: 0;
+}
+
+.alert-danger {
+  @include alert($danger-bg-color, $danger-border-color, $danger-text-color);
+  text-align: center;
+}
