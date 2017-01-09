@@ -1,3 +1,4 @@
 body {
-  @include font-style;
+  @extend .font-family-base;
+  font-size: $base-font-size;
 }
