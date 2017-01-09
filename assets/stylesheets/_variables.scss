@@ -1,3 +1,12 @@
+// BS Overrides
+
+$bootstrap-sass-asset-helper: true;
+
+// Typography
+$base-font-face: "acumin-pro", helvetica, arial, sans-serif;
+$condensed-font-face: "acumin-pro-extra-condensed", sans-serif;
+$base-font-size: 14px;
+
 // Brand colors
 $cr-blue: #3b6e8f;
 $cr-blue-dk: #113556;
@@ -11,24 +20,23 @@ $cr-danger: #c9302c;
 $cr-success: #66c93e;
 
 // Alert states
-$danger-bg-color: lighten(desaturate(adjust-hue($cr-danger, 346.4713), 20.6034), 42.9412);
-$danger-border-color: lighten(desaturate(adjust-hue($cr-danger, 348.7939), 20.4197), 38.0392);
 $danger-text-color: $cr-danger;
-
-$success-bg-color: lighten(desaturate(adjust-hue($cr-success, 346.4713), 20.6034), 42.9412);
 $success-border-color: $cr-success;
 $success-text-color: $cr-success;
+
+// TODO - where does this stuff go?
+$danger-bg-color: lighten(desaturate(adjust-hue($cr-danger, 346.4713), 20.6034), 42.9412);
+$danger-border-color: lighten(desaturate(adjust-hue($cr-danger, 348.7939), 20.4197), 38.0392);
+$success-bg-color: lighten(desaturate(adjust-hue($cr-success, 346.4713), 20.6034), 42.9412);
 
 // Default colors
 $page-bg-color: $cr-white !default;
 $primary-color: $cr-blue-lt !default;
 $secondary-color: $cr-teal !default;
 $accent-color: $cr-gray !default;
-
 $header-color: $cr-gray-dk !default;
 $underline-color: $cr-gray-lt !default;
 $text-color: $cr-gray-dk !default;
 $text-contrast-color: $cr-white !default;
-
 $primary-link-color: $primary-color;
 $secondary-link-color: $cr-gray-dk;

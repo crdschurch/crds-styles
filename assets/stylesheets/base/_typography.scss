@@ -1,8 +1,3 @@
-$base-font-face: "acumin-pro", helvetica, arial, sans-serif;
-$condensed-font-face: "acumin-pro-extra-condensed", sans-serif;
-
-$base-font-size: 14px;
-
 @mixin font-style($face: $base-font-face, $size: $base-font-size, $weight: normal) {
   font-family: $face;
   font-size: $size;

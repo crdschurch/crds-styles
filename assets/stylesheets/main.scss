@@ -1,4 +1,5 @@
-@import 'vendors/modules',
-        'base/modules',
-        'components/modules',
-        'themes/modules';
+@import 'variables';
+@import 'vendors/modules';
+@import 'base/modules';
+@import 'components/modules';
+@import 'themes/modules';

@@ -1,6 +1,4 @@
 // contains global styles, such as resets, typography, colors, etc.
-
-@import 'colors',
-        'mixins',
-        'typography',
-        'global';
+@import 'mixins';
+@import 'typography';
+@import 'global';
