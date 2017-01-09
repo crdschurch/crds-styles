@@ -9,22 +9,31 @@ $base-font-size: 14px;
   font-weight: $weight;
 }
 
-.page-header {
+.crds-page-header {
+  @include font-style($condensed-font-face, 30px, 500);
+  @include border-bottom;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.crds-page-header--no-underline {
   @include font-style($condensed-font-face, 30px, 500);
   border-bottom: none;
   text-transform: uppercase;
 }
 
-.section-header {
-  @include font-style;
+.crds-section-header {
+  @include font-style(null, 12px, 500);
+  color: $cr-gray-dk;
+  text-transform: uppercase;
 }
 
-hr,
-.page-break {
+hr {
   color: $underline-color;
 }
 
-.help-link {
+.crds-help-link {
   color: $secondary-link-color;
 
   &:hover {
@@ -42,6 +51,6 @@ a {
   }
 }
 
-.text-block--light {
+.crds-text-block--light {
   font-weight: 100;
 }

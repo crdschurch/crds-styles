@@ -4,6 +4,6 @@
 
 @mixin alert($background, $border, $text) {
   background-color: $background;
-  border-color: $border;
+  border: 1px solid $border;
   color: $text;
 }

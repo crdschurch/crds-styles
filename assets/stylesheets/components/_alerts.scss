@@ -1,8 +1,23 @@
-.alert {
+.crds-alert {
   border-radius: 0;
 }
 
-.alert-danger {
+.crds-alert-danger {
   @include alert($danger-bg-color, $danger-border-color, $danger-text-color);
+  line-height: 20px;
+  margin: -15px 0 20px;
+  padding: 5px 15px;
   text-align: center;
+
+  p {
+    margin: 7px 0 10px;
+  }
+
+  a {
+    color: $cr-gray-dk;
+
+    &:hover {
+      color: darken($cr-gray-dk, 20);
+    }
+  }
 }
