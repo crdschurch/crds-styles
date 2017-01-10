@@ -16,7 +16,8 @@
   "author": "",
   "license": "BSD-3-Clause",
   "dependencies": {
-    "bootstrap-sass": "*"
+    "bootstrap-sass": "*",
+    "font-awesome": "^4.7.0"
   },
   "devDependencies": {
     "node-sass": "^4.1.1",
