@@ -13,7 +13,7 @@
   font-weight: 600;
 }
 
-.font-family-condensed-extra {
+.font-family-condensed {
   font-family: $condensed-font-face;
   font-weight: 600;
 }
@@ -27,5 +27,41 @@
   font-family: $accent-font-face;
   font-style: italic;
   font-weight: 300;
+}
+
+h1 {
+  @extend .font-family-base-light;
+  font-size: 490%;
+}
+
+h2 {
+  @extend .font-family-condensed-extra;
+  text-transform: uppercase;
+  font-size: 390%;
+}
+
+h3 {
+  @extend .font-family-base;
+  font-size: 290%;
+}
+
+h4 {
+  @extend .font-family-base;
+  font-size: 170%;
+  border-top: 1px solid $cr-gray-lt;
+  color: $cr-gray;
+  padding-top: 0.25em;
+}
+
+h5 {
+  @extend .font-family-condensed-extra;
+  text-transform: uppercase;
+  font-size: 240%;
+}
+
+h6 {
+  @extend .font-family-condensed-extra;
+  text-transform: uppercase;
+  font-size: 170%;
 }
 
