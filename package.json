@@ -4,15 +4,26 @@
   "description": "",
   "style": "assets/stylesheets/_crds.scss",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf dist && webpack --config config/webpack.js  --progress --profile --bail"
   },
   "files": [
     "assets"
   ],
-  "keywords": [],
+  "keywords": [
+    "crossroads"
+  ],
   "author": "",
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "dependencies": {
     "bootstrap-sass": "*"
+  },
+  "devDependencies": {
+    "node-sass": "^4.1.1",
+    "raw-loader": "^0.5.1",
+    "rimraf": "^2.5.2",
+    "sass-loader": "^4.1.1",
+    "webpack": "^1.14.0",
+    "webpack-merge": "^0.17.0"
   }
 }
