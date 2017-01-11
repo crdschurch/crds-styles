@@ -82,3 +82,23 @@ h6 {
 .quiet {
   font-size: 115%;
 }
+
+/* Metadata */
+
+.metadata {
+  font-size: 95%;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: $cr-gray;
+}
+
+.subtitle {
+  @extend .font-family-base-bold;
+  font-size: 150%;
+}
+
+.tagline {
+ @extend .font-family-accent;
+ font-size: 115%;
+ color: $cr-gray;
+}
