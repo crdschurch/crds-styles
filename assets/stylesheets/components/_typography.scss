@@ -130,16 +130,18 @@ blockquote {
 }
 
 ol, ul {
-  @extend .body;
-  li {
-    margin-bottom: 1em;
-    &:last-child {
-      margin-bottom: 0;
+  &.crds-list {
+    @extend .body;
+    li {
+      margin-bottom: 1em;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }
 
-dl {
+dl.crds-list {
   font-size: 115%;
   dt {
     @extend .font-family-condensed-extra;

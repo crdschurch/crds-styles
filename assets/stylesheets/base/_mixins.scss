@@ -1,9 +1,0 @@
-@mixin border-bottom($width: 1px, $style: solid, $color: $underline-color) {
-  border-bottom: $width $style $color;
-}
-
-@mixin alert($background, $border, $text) {
-  background-color: $background;
-  border: 1px solid $border;
-  color: $text;
-}
