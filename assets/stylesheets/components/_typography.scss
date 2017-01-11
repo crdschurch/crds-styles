@@ -103,7 +103,7 @@ h6 {
  color: $cr-gray;
 }
 
-/* Othe */
+/* Other */
 
 address {
   font-size: 110%;
@@ -126,5 +126,30 @@ blockquote {
     font-style: normal;
     font-size: 130%;
     @extend .font-family-condensed-extra;
+  }
+}
+
+ol, ul {
+  @extend .body;
+  li {
+    margin-bottom: 1em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+dl {
+  font-size: 115%;
+  dt {
+    @extend .font-family-condensed-extra;
+    text-transform: uppercase;
+    font-size: 137.5%;
+  }
+  dd {
+    margin-bottom: 1em;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
