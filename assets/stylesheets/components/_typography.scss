@@ -1,0 +1,157 @@
+/* Typography */
+
+.font-family-base {
+  font-family: $base-font-face;
+  font-weight: 300;
+}
+
+.font-family-base-light {
+  font-family: $base-font-face;
+  font-weight: 100;
+}
+
+.font-family-base-bold {
+  font-family: $base-font-face;
+  font-weight: 600;
+}
+
+.font-family-condensed {
+  font-family: $condensed-font-face;
+  font-weight: 600;
+}
+
+.font-family-condensed-extra {
+  font-family: $condensed-extra-font-face;
+  font-weight: 600;
+}
+
+.font-family-accent {
+  font-family: $accent-font-face;
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* Headings */
+
+h1 {
+  @extend .font-family-base-light;
+  font-size: 490%;
+}
+
+h2 {
+  @extend .font-family-condensed-extra;
+  text-transform: uppercase;
+  font-size: 390%;
+}
+
+h3 {
+  @extend .font-family-base;
+  font-size: 290%;
+}
+
+h4 {
+  @extend .font-family-base;
+  font-size: 170%;
+  border-top: 1px solid $cr-gray-lt;
+  color: $cr-gray;
+  padding-top: 0.25em;
+}
+
+h5 {
+  @extend .font-family-condensed-extra;
+  text-transform: uppercase;
+  font-size: 240%;
+}
+
+h6 {
+  @extend .font-family-condensed-extra;
+  text-transform: uppercase;
+  font-size: 170%;
+}
+
+/* Body */
+
+.body {
+  font-size: 135%;
+}
+
+.lead {
+  font-size: 160%;
+}
+
+.quiet {
+  font-size: 115%;
+}
+
+/* Metadata */
+
+.metadata {
+  font-size: 95%;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: $cr-gray;
+}
+
+.subtitle {
+  @extend .font-family-base-bold;
+  font-size: 150%;
+}
+
+.tagline {
+ @extend .font-family-accent;
+ font-size: 115%;
+ color: $cr-gray;
+}
+
+/* Other */
+
+address {
+  font-size: 110%;
+  strong {
+    font-size: 115%;
+  }
+}
+
+blockquote {
+  @extend .font-family-accent;
+  font-size: 120%;
+  line-height: 140%;
+  font-weight: 300;
+  color: $cr-gray;
+  border: 2px solid lighten($cr-gray, 25);
+  padding: 2em;
+  span {
+    display: block;
+    margin-top: 0.5em;
+    font-style: normal;
+    font-size: 130%;
+    @extend .font-family-condensed-extra;
+  }
+}
+
+ol, ul {
+  &.crds-list {
+    @extend .body;
+    li {
+      margin-bottom: 1em;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+dl.crds-list {
+  font-size: 115%;
+  dt {
+    @extend .font-family-condensed-extra;
+    text-transform: uppercase;
+    font-size: 137.5%;
+  }
+  dd {
+    margin-bottom: 1em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
