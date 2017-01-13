@@ -1,6 +1,3 @@
-// BS Overrides
-$bootstrap-sass-asset-helper: true;
-
 // Typography
 $base-font-face: "acumin-pro", helvetica, arial, sans-serif;
 $condensed-font-face: "acumin-pro-condensed", sans-serif;
@@ -8,36 +5,19 @@ $condensed-extra-font-face: "acumin-pro-extra-condensed", sans-serif;
 $accent-font-face: "lexia", serif;
 $base-font-size: 14px;
 
-// Brand colors
-$cr-blue: #3b6e8f;
-$cr-blue-dk: #113556;
-$cr-blue-lt: #0095d9;
-$cr-teal: #56afa9;
-$cr-gray: #afafaf;
-$cr-gray-dk: #666;
-$cr-gray-lt: #f4f4f4;
-$cr-white: #fff;
-$cr-danger: #c9302c;
-$cr-success: #66c93e;
+$cr-gray: rgba(151,151,151,1);           // #979797
+$cr-gray-alpha: rgba(21,21,21,0.5);      // #8A8A8A
+$cr-gray-dark: rgba(115,115,115,1);      // #737373
+$cr-gray-darker: rgba(77,77,77,1);       // #4D4D4D
+$cr-gray-light: rgba(205,205,205,1);     // #CDCDCD
+$cr-gray-lighter: rgba(231,231,231,1);   // #E7E7E7
+$cr-magenta: rgba(204,34,85,1);          // #CC2255
+$cr-blue: rgba(59,110,143,1);            // #3B6E8F
+$cr-cyan: rgba(7,149,227,1);             // #0795E3
+$cr-cyan-lighter: rgba(15,168,238,1);    // #0FA8EE
+$cr-white: rgba(255,255,255,1);          // #FFF
+$cr-black: rgba(21,21,21,1);             // #151515
 
-// Alert states
-$danger-text-color: $cr-danger;
-$success-border-color: $cr-success;
-$success-text-color: $cr-success;
-
-// TODO - where does this stuff go?
-$danger-bg-color: lighten(desaturate(adjust-hue($cr-danger, 346.4713), 20.6034), 42.9412);
-$danger-border-color: lighten(desaturate(adjust-hue($cr-danger, 348.7939), 20.4197), 38.0392);
-$success-bg-color: lighten(desaturate(adjust-hue($cr-success, 346.4713), 20.6034), 42.9412);
-
-// Default colors
-$page-bg-color: $cr-white !default;
-$primary-color: $cr-blue-lt !default;
-$secondary-color: $cr-teal !default;
-$accent-color: $cr-gray !default;
-$header-color: $cr-gray-dk !default;
-$underline-color: $cr-gray-lt !default;
-$text-color: $cr-gray-dk !default;
-$text-contrast-color: $cr-white !default;
-$primary-link-color: $primary-color;
-$secondary-link-color: $cr-gray-dk;
+// BS Overrides
+$bootstrap-sass-asset-helper: true;
+$text-color: $cr-gray-dark !default;
