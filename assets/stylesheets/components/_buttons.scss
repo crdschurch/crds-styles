@@ -27,3 +27,31 @@
     @include crds-button-variant($cr-white, $cr-gray, $cr-gray);
   }
 }
+
+.btn-group {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+
+  .btn:first-child:not(:last-child):not(.dropdown-toggle),
+  .btn:not(:first-child):not(:last-child):not(.dropdown),
+  .btn:last-child:not(:first-child):not(.dropdown) {
+    border-radius: 4px;
+  }
+
+  .btn-option {
+    background-color: transparent;
+    border: 1px solid $cr-gray;
+    color: $cr-gray;
+  }
+
+  .btn {
+    &:active,
+    &.active {
+      box-shadow: none;
+      background: $cr-teal;
+      border-color: $cr-teal;
+      color: $cr-white;
+    }
+  }
+}
