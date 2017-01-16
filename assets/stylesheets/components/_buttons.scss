@@ -33,9 +33,22 @@
   display: inline-block;
   vertical-align: middle;
 
-  .btn:first-child:not(:last-child):not(.dropdown-toggle),
-  .btn:not(:first-child):not(:last-child):not(.dropdown),
-  .btn:last-child:not(:first-child):not(.dropdown) {
+  > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+
+  > .btn {
+    border-radius: 4px;
+  }
+
+  > .btn:last-child:not(:first-child) {
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+  }
+
+  > .btn {
+    margin-right: .5rem;
     border-radius: 4px;
   }
 
@@ -53,5 +66,29 @@
       border-color: $cr-teal;
       color: $cr-white;
     }
+  }
+}
+
+.btn-group--toggle {
+  width: 100%;
+
+  > .btn {
+    margin-right: 0;
+    width: 50%;
+  }
+
+  .btn-option {
+    border-color: $cr-teal;
+    color: $cr-teal;
+  }
+
+  > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  > .btn:last-child:not(:first-child) {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
   }
 }
