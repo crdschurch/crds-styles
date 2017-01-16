@@ -1,0 +1,27 @@
+.btn {
+  &.btn-lg {
+    font-size: 110%;
+    padding: 15px 30px;
+  }
+  &, &.btn-md {
+    font-size: 100%;
+    padding: 12.5px 20px;
+  }
+  &.btn-sm {
+    font-size: 93.5%;
+    padding: 6px 17.5px;
+  }
+
+  &.btn-primary {
+    @include crds-button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+  }
+  &.btn-info {
+    @include crds-button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+  }
+  &.btn-gray {
+    @include crds-button-variant($cr-white, $cr-gray-dark, $cr-gray-dark);
+  }
+  &.btn-default {
+    @include crds-button-variant($cr-white, $cr-gray, $cr-gray);
+  }
+}
