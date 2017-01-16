@@ -1,14 +1,16 @@
 .btn {
+  border-radius: 4px;
+
   &.btn-lg {
-    font-size: 110%;
+    font-size: 1rem; // 16px
     padding: 15px 30px;
   }
   &, &.btn-md {
-    font-size: 100%;
+    font-size: .875rem; // 14px
     padding: 12.5px 20px;
   }
   &.btn-sm {
-    font-size: 93.5%;
+    font-size: .8125rem; // 13px
     padding: 6px 17.5px;
   }
 
