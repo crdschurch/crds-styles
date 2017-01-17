@@ -23,23 +23,32 @@
   &.btn-gray {
     @include crds-button-variant($cr-white, $cr-gray-dark, $cr-gray-dark);
   }
+  &.btn-option {
+    @include crds-button-variant($cr-white, $cr-gray, $cr-gray);
+    &:focus,
+    &:active {
+      background: $cr-teal;
+      border-color: $cr-teal;
+      &:hover {
+        background: $cr-teal;
+        border-color: $cr-teal;
+      }
+    }
+    &.btn-outline {
+      &:focus {
+        color: $cr-white;
+      }
+    }
+  }
   &.btn-default {
     @include crds-button-variant($cr-white, $cr-gray, $cr-gray);
   }
 }
 
 .btn-group {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-
   > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
     border-bottom-right-radius: 4px;
     border-top-right-radius: 4px;
-  }
-
-  > .btn {
-    border-radius: 4px;
   }
 
   > .btn:last-child:not(:first-child) {
@@ -49,24 +58,6 @@
 
   > .btn {
     margin-right: .5rem;
-    border-radius: 4px;
-  }
-
-  .btn-option {
-    background-color: transparent;
-    border: 1px solid $cr-gray;
-    color: $cr-gray;
-  }
-
-  .btn {
-    &:hover,
-    &:active,
-    &.active {
-      box-shadow: none;
-      background: $cr-teal;
-      border-color: $cr-teal;
-      color: $cr-white;
-    }
   }
 }
 
@@ -76,11 +67,6 @@
   > .btn {
     margin-right: 0;
     width: 50%;
-  }
-
-  .btn-option {
-    border-color: $cr-teal;
-    color: $cr-teal;
   }
 
   > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
