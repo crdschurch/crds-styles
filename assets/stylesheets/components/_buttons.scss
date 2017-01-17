@@ -56,6 +56,10 @@
     border-top-left-radius: 4px;
   }
 
+  > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+    border-radius: 4px;
+  }
+
   > .btn {
     margin-right: .5rem;
   }
@@ -77,5 +81,65 @@
   > .btn:last-child:not(:first-child) {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
+  }
+}
+
+// Flexbox button groups - Horizontal layout
+.btn-group--flex-row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+
+  .btn-option--flex-item {
+    flex: 1 1 50%;
+    min-height: 2rem;
+  }
+}
+
+// Flexbox button groups - Vertical layout
+.btn-group--flex-col {
+  display: flex;
+  flex-flow: column nowrap;
+
+  .btn-option--flex-item {
+    flex: 1 1 auto;
+    min-height: 2rem;
+    margin: 4px 0;
+  }
+
+  .row {
+    > div {
+      position: relative;
+      float: left;
+      width: 50%;
+      min-height: 1px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    div:first-child:not(:last-child) {
+      text-align: left;
+    }
+
+    div:last-child:not(:first-child) {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      text-align: right;
+    }
+  }
+
+  .btn-circle__icon {
+    .fa {
+      padding-right: 8px;
+      vertical-align: middle;
+    }
+
+    .fa-circle-thin {
+      display: inline-block;
+    }
+
+    .fa-check-circle {
+      display: none;
+    }
   }
 }
