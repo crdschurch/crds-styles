@@ -57,5 +57,32 @@ select {
   }
 }
 
-input[type=checkbox][disabled]{
+.radio,
+.checkbox {
+  label {
+    padding-left: 25px;
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    margin-left: -25px;
+  }
+}
+
+input[type="radio"]:disabled,
+input[type="checkbox"]:disabled {
+  -webkit-appearance: none;
+  content: '';
+  width: 15px;
+  height: 15px;
+  background-color: $cr-gray;
+  outline: 0;
+}
+
+input[type="radio"]:disabled {
+  border-radius: 50%;
+}
+
+input[type="checkbox"]:disabled {
+  border-radius: 4px;
 }
