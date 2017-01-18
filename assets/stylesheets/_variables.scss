@@ -18,6 +18,9 @@ $cr-cyan-lighter: rgba(15,168,238,1);    // #0FA8EE
 $cr-white: rgba(255,255,255,1);          // #FFF
 $cr-black: rgba(21,21,21,1);             // #151515
 
+// Validation colors
+$cr-danger: rgba(201,48,42,1); // #C9302A
+
 // BS Overrides
 $bootstrap-sass-asset-helper: true;
 $text-color: $cr-gray-dark !default;

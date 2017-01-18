@@ -1,0 +1,9 @@
+.alert {
+  border-radius: 0;
+  line-height: 1.125rem;
+
+  &.alert-danger {
+    color: $cr-danger;
+    text-align: center;
+  }
+}
