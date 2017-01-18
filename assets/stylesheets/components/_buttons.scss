@@ -73,33 +73,8 @@
 
 // Toggle button group
 
-.btn-group--toggle {
+.btn-group-toggle {
   width: 100%;
-
-  .btn-option {
-    border-color: $cr-teal;
-
-    &.btn-outline {
-      color: $cr-teal;
-
-      &:hover {
-        background: $cr-white;
-        border-color: $cr-teal;
-      }
-
-      &:focus {
-        &:hover {
-          background: $cr-teal;
-          border-color: $cr-teal;
-        }
-      }
-
-      &:active {
-        box-shadow: none;
-        color: $cr-white;
-      }
-    }
-  }
 
   > .btn {
     margin-right: 0;
@@ -114,6 +89,59 @@
   > .btn:last-child:not(:first-child) {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
+  }
+}
+
+.btn-group-teal {
+  .btn-option {
+    border: 2px solid $cr-teal;
+    background: $cr-white;
+    color: $cr-teal;
+
+    &:hover {
+      background: $cr-white;
+      border-color: $cr-teal;
+      color: $cr-teal;
+    }
+
+    &:focus {
+      &:hover {
+        background: $cr-teal;
+        border-color: $cr-teal;
+        color: $cr-white;
+      }
+    }
+
+    &:active {
+      box-shadow: none;
+    }
+  }
+}
+
+
+.btn-option {
+  &.btn-teal {
+    border: 2px solid $cr-teal;
+    background: $cr-white;
+    color: $cr-teal;
+
+    &:hover {
+      background: $cr-white;
+      border-color: $cr-teal;
+      color: $cr-teal;
+    }
+
+    &:focus {
+      &:hover {
+        background: $cr-teal;
+        border-color: $cr-teal;
+        color: $cr-white;
+      }
+    }
+
+    &:active {
+      box-shadow: none;
+    }
   }
 }
 
@@ -137,23 +165,23 @@ a {
 }
 
 // Flexbox button groups - Horizontal layout
-.btn-group--flex-row {
+.btn-group-row {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
 
-  .btn-option--flex-item {
+  .btn-flex {
     flex: 1 1 50%;
     min-height: 2rem;
   }
 }
 
 // Flexbox button groups - Vertical layout
-.btn-group--flex-col {
+.btn-group-block {
   display: flex;
   flex-flow: column nowrap;
 
-  .btn-option--flex-item {
+  .btn-flex {
     flex: 1 1 auto;
     min-height: 3.5rem;
     margin: 4px 0;
