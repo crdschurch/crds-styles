@@ -84,6 +84,25 @@
   }
 }
 
+// Disabled buttons styles
+a {
+  &.btn {
+    &.disabled {
+      pointer-events: auto;
+    }
+  }
+}
+
+.btn {
+  &.btn-outline {
+    &.disabled {
+      &:hover {
+        background: $cr-white;
+      }
+    }
+  }
+}
+
 // Flexbox button groups - Horizontal layout
 .btn-group--flex-row {
   display: flex;
