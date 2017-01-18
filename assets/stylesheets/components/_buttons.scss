@@ -65,8 +65,35 @@
   }
 }
 
+// Toggle button group
+
 .btn-group--toggle {
   width: 100%;
+
+  .btn-option {
+    border-color: $cr-teal;
+
+    &.btn-outline {
+      color: $cr-teal;
+
+      &:hover {
+        background: $cr-white;
+        border-color: $cr-teal;
+      }
+
+      &:focus {
+        &:hover {
+          background: $cr-teal;
+          border-color: $cr-teal;
+        }
+      }
+
+      &:active {
+        box-shadow: none;
+        color: $cr-white;
+      }
+    }
+  }
 
   > .btn {
     margin-right: 0;
