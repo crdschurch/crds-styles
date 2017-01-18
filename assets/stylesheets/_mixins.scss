@@ -1,0 +1,15 @@
+@mixin crds-button-variant($color, $background, $border) {
+  @include button-variant($color, $background, $border);
+
+  &.btn-outline {
+    border-width: 2px;
+    color: $border;
+    background: $cr-white;
+    &:focus {
+      color: $border;
+    }
+    &:hover {
+      background: $cr-gray-lighter;
+    }
+  }
+}
