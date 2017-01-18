@@ -1,4 +1,4 @@
-.btn-group--flex-col {
+.btn-group-block {
   .custom-input {
     display: flex;
     align-content: center;
@@ -17,10 +17,6 @@
 
     .custom-input__input {
       flex-basis: calc(100% - 30px);
-
-      .form-group {
-
-      }
 
       .input-group {
         border: 1px solid transparent;
