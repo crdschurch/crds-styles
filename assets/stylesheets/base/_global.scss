@@ -2,6 +2,10 @@
   font-size: $base-font-size;
 }
 
+:focus {
+  outline: 0;
+}
+
 body {
   font-size: 1rem;
   @extend .font-family-base;

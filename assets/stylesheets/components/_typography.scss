@@ -52,7 +52,7 @@ h3 {
 h4 {
   @extend .font-family-base;
   font-size: 1.5rem; // 24px
-  border-top: 1px solid $cr-gray-light;
+  border-top: 1px solid $cr-gray-alpha;
   color: $cr-gray;
   padding-top: 0.25em;
 }
@@ -94,7 +94,7 @@ h6 {
 
 .subtitle {
   @extend .font-family-base-bold;
-  font-size: 1.3125rem; // 21px
+  font-size: 1.1875rem; // 19px
 }
 
 .tagline {
