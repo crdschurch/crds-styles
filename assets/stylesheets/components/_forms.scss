@@ -92,3 +92,159 @@ input[type="checkbox"]:disabled {
   font-size: .8125rem; // 13px
   padding-top: 8px;
 }
+
+.input-group {
+  input {
+    padding: 0 10px;
+  }
+
+  .input-group-addon {
+    background: $cr-gray-lightest;
+    border: 0;
+    border-radius: 0;
+    color: $cr-gray-darker;
+    font-size: 1.125rem;
+  }
+}
+
+// Datepicker
+
+datepicker {
+  $calendar-bg: $cr-white;
+  $calendar-text: $cr-gray-darker;
+  $calendar-border: $cr-gray-light;
+  $calendar-active-bg: $cr-teal;
+  $calendar-active-text: $cr-white;
+  $calendar-active-border: $cr-teal;
+  $calendar-hover-bg: $cr-gray-lighter;
+  $calendar-hover-text: $cr-gray-darker;
+  $calendar-hover-border: $cr-gray;
+
+  display: none;
+
+  .well {
+    margin-bottom: 0;
+    margin-top: -.5em;
+  }
+
+  &.visible {
+    display: block;
+  }
+
+  th {
+    .btn-default {
+      &.btn-secondary {
+        &.btn-sm {
+          border: 0;
+          border-radius: 0;
+          width: 100%;
+
+          &.pull-left {
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+
+          &.pull-right {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+          }
+        }
+      }
+    }
+  }
+
+  .btn {
+    &:focus {
+      outline: none;
+    }
+
+    &:active,
+    &.active {
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+
+    &-info {
+      &.active {
+        background-color: $calendar-active-bg;
+        border-color: $calendar-active-border;
+
+        &:focus {
+          background-color: $calendar-active-bg;
+          border-color: $calendar-active-border;
+        }
+
+        .text-info {
+          color: $calendar-active-text;
+        }
+      }
+    }
+  }
+
+  .btn-default {
+    border-color: $calendar-border;
+
+    &.active {
+      span {
+        color: $calendar-active-text;
+      }
+    }
+
+    .text-muted {
+      color: $cr-gray-light;
+    }
+  }
+}
+
+.form-row {
+  @extend %clearfix;
+
+  .form-col-2 {
+    float: left;
+    width: calc(50% - 1rem);
+  }
+
+  .form-col-2:first-child {
+    margin-right: 1rem;
+  }
+
+  .form-col-2:last-child {
+    margin-left: 1rem;
+  }
+
+  .form-col-3 {
+    width: 100%;
+
+    @media (min-width: 710px) {
+      float: left;
+      margin-right: 1rem;
+      margin-left: 1rem;
+      width: calc(33% - 1.2rem);
+    }
+  }
+
+  .form-col-3:first-child {
+    @media (min-width: 710px) {
+      margin-left: 0;
+    }
+  }
+
+  .form-col-3:last-child {
+    @media (min-width: 710px) {
+      margin-right: 0;
+    }
+  }
+}
+
+.radio-inline {
+  margin-top: 0;
+  padding-left: 10px;
+
+  &:first-child {
+    padding-left: 0;
+  }
+}
