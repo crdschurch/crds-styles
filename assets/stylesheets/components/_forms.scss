@@ -247,4 +247,8 @@ datepicker {
   &:first-child {
     padding-left: 0;
   }
+
+  &:first-of-type {
+    padding-left: 0;
+  }
 }

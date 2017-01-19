@@ -31,44 +31,6 @@
   font-weight: 300;
 }
 
-/* Headings */
-
-h1 {
-  @extend .font-family-base-light;
-  font-size: 4.25rem; // 68px
-}
-
-h2 {
-  @extend .font-family-condensed-extra;
-  text-transform: uppercase;
-  font-size: 3.4375rem; // 55px
-}
-
-h3 {
-  @extend .font-family-base;
-  font-size: 2.5rem; // 40px
-}
-
-h4 {
-  @extend .font-family-base;
-  font-size: 1.5rem; // 24px
-  border-top: 1px solid $cr-gray-alpha;
-  color: $cr-gray;
-  padding-top: 0.25em;
-}
-
-h5 {
-  @extend .font-family-condensed-extra;
-  text-transform: uppercase;
-  font-size: 2.125rem; // 34px
-}
-
-h6 {
-  @extend .font-family-condensed-extra;
-  text-transform: uppercase;
-  font-size: 1.5rem; // 24px
-}
-
 /* Body */
 
 .body {
