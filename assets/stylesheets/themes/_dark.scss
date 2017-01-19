@@ -1,0 +1,12 @@
+.dark-theme {
+  background: $cr-black;
+  color: $cr-gray;
+
+  hr {
+    border-top-color: $cr-gray-darker;
+  }
+
+  h2 {
+    color: $cr-gray-dark;
+  }
+}

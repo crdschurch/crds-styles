@@ -1,9 +1,9 @@
 // Typography
 $base-font-face: "acumin-pro", helvetica, arial, sans-serif;
-$condensed-font-face: "acumin-pro-condensed", sans-serif;
+$condensed-font-face: "acumin-pro-semi-condensed", sans-serif;
 $condensed-extra-font-face: "acumin-pro-extra-condensed", sans-serif;
 $accent-font-face: "lexia", serif;
-$base-font-size: 14px;
+$base-font-size: 16px;
 
 $cr-gray: rgba(151,151,151,1);           // #979797
 $cr-gray-alpha: rgba(21,21,21,0.5);      // #8A8A8A
@@ -17,6 +17,7 @@ $cr-blue: rgba(59,110,143,1);            // #3B6E8F
 $cr-cyan: rgba(7,149,227,1);             // #0795E3
 $cr-cyan-light: rgba(31,178,255,1);      // #1FB2FF
 $cr-cyan-lighter: rgba(15,168,238,1);    // #0FA8EE
+$cr-teal: rgba(88,175,169,1);            // #58AFA9
 $cr-white: rgba(255,255,255,1);          // #FFF
 $cr-black: rgba(21,21,21,1);             // #151515
 
@@ -27,3 +28,6 @@ $cr-success: rgba(79,191,142,1);         // #4FC08F
 // BS Overrides
 $bootstrap-sass-asset-helper: true;
 $text-color: $cr-gray-dark !default;
+$brand-primary: $cr-blue;
+$brand-info: $cr-cyan-lighter;
+$border-radius-large: 5px;

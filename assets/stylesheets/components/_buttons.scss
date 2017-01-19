@@ -1,0 +1,225 @@
+.btn {
+  border-radius: 4px;
+
+  &:focus,
+  &:active:focus {
+    box-shadow: none;
+    outline: none;
+  }
+
+  &.btn-lg {
+    font-size: 1rem; // 16px
+    padding: 15px 30px;
+  }
+  &, &.btn-md {
+    font-size: .875rem; // 14px
+    padding: 12.5px 20px;
+  }
+  &.btn-sm {
+    font-size: .8125rem; // 13px
+    padding: 6px 17.5px;
+  }
+
+  &.btn-primary {
+    @include crds-button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+  }
+  &.btn-info {
+    @include crds-button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+  }
+  &.btn-gray {
+    @include crds-button-variant($cr-white, $cr-gray-dark, $cr-gray-dark);
+  }
+  &.btn-option {
+    @include crds-button-variant($cr-white, $cr-gray, $cr-gray);
+    &:focus,
+    &:active {
+      background: $cr-teal;
+      border-color: $cr-teal;
+      &:hover {
+        background: $cr-teal;
+        border-color: $cr-teal;
+      }
+    }
+    &.btn-outline {
+      &:focus {
+        color: $cr-white;
+      }
+    }
+  }
+  &.btn-default {
+    @include crds-button-variant($cr-white, $cr-gray, $cr-gray);
+  }
+}
+
+.btn-group {
+  > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+
+  > .btn:last-child:not(:first-child) {
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+  }
+
+  > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+    border-radius: 4px;
+  }
+
+  > .btn {
+    margin-right: .5rem;
+  }
+}
+
+// Toggle button group
+
+.btn-group-toggle {
+  width: 100%;
+
+  > .btn {
+    margin-right: 0;
+    width: 50%;
+  }
+
+  > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  > .btn:last-child:not(:first-child) {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+  }
+}
+
+.btn-group-teal {
+  .btn-option {
+    border: 2px solid $cr-teal;
+    background: $cr-white;
+    color: $cr-teal;
+
+    &:hover {
+      background: $cr-white;
+      border-color: $cr-teal;
+      color: $cr-teal;
+    }
+
+    &:focus {
+      &:hover {
+        background: $cr-teal;
+        border-color: $cr-teal;
+        color: $cr-white;
+      }
+    }
+
+    &:active {
+      box-shadow: none;
+    }
+  }
+}
+
+
+.btn-option {
+  &.btn-teal {
+    border: 2px solid $cr-teal;
+    background: $cr-white;
+    color: $cr-teal;
+
+    &:hover {
+      background: $cr-white;
+      border-color: $cr-teal;
+      color: $cr-teal;
+    }
+
+    &:focus {
+      &:hover {
+        background: $cr-teal;
+        border-color: $cr-teal;
+        color: $cr-white;
+      }
+    }
+
+    &:active {
+      box-shadow: none;
+    }
+  }
+}
+
+// Disabled buttons styles
+a {
+  &.btn {
+    &.disabled {
+      pointer-events: auto;
+    }
+  }
+}
+
+.btn {
+  &.btn-outline {
+    &.disabled {
+      &:hover {
+        background: $cr-white;
+      }
+    }
+  }
+}
+
+// Flexbox button groups - Horizontal layout
+.btn-group-row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+
+  .btn-flex {
+    flex: 1 1 50%;
+    min-height: 2rem;
+  }
+}
+
+// Flexbox button groups - Vertical layout
+.btn-group-block {
+  display: flex;
+  flex-flow: column nowrap;
+
+  .btn-flex {
+    flex: 1 1 auto;
+    min-height: 3.5rem;
+    margin: 4px 0;
+  }
+
+  .row {
+    > div {
+      position: relative;
+      float: left;
+      width: 50%;
+      min-height: 1px;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    div:first-child:not(:last-child) {
+      text-align: left;
+    }
+
+    div:last-child:not(:first-child) {
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      text-align: right;
+    }
+  }
+
+  .btn-circle__icon {
+    .fa {
+      padding-right: 8px;
+      vertical-align: middle;
+    }
+
+    .fa-circle-thin {
+      display: inline-block;
+    }
+
+    .fa-check-circle {
+      display: none;
+    }
+  }
+}

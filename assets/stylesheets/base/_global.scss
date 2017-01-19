@@ -1,4 +1,8 @@
-body {
-  @extend .font-family-base;
+:root {
   font-size: $base-font-size;
+}
+
+body {
+  font-size: 1rem;
+  @extend .font-family-base;
 }
