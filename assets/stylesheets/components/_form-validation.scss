@@ -1,0 +1,29 @@
+.form-group {
+  &.has-success,
+  &.has-error {
+    border-right-style: solid;
+    border-right-width: 8px;
+
+    input,
+    textarea {
+      border: 1px solid $cr-gray-light;
+      border-right: none;
+      background: $cr-white;
+      box-shadow: none;
+    }
+  }
+
+  &.has-success {
+    border-right-color: $cr-success;
+  }
+
+  &.has-error {
+    border-right-color: $cr-danger;
+
+    .helper-text {
+      background: $cr-danger;
+      color: $cr-white;
+      padding: .5rem 1rem;
+    }
+  }
+}

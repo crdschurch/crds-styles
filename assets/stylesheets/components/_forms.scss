@@ -87,28 +87,8 @@ input[type="checkbox"]:disabled {
   border-radius: 4px;
 }
 
-// Form validation
-
-.form-group {
-  &.has-success,
-  &.has-error {
-    border: 1px solid $cr-gray-light;
-    border-right-style: solid;
-    border-right-width: 8px;
-
-    input,
-    textarea {
-      background: $cr-white;
-      box-shadow: none;
-    }
-  }
-
-  &.has-success {
-    border-right-color: $cr-success;
-  }
-
-  &.has-error {
-    border-right-color: $cr-danger;
-  }
+.helper-text {
+  color: $cr-gray;
+  font-size: .8125rem; // 13px
+  padding-top: 8px;
 }
-
