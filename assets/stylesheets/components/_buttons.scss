@@ -1,5 +1,5 @@
 .btn {
-  border-radius: 4px;
+  border-radius: $btn-border-radius-base;
 
   &:focus,
   &:active:focus {
@@ -8,7 +8,7 @@
   }
 
   &.btn-lg {
-    font-size: 1rem; // 16px
+    font-size: $base-font-size;
     padding: 15px 30px;
   }
   &, &.btn-md {
@@ -27,10 +27,10 @@
     @include crds-button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
   }
   &.btn-gray {
-    @include crds-button-variant($cr-white, $cr-gray-dark, $cr-gray-dark);
+    @include crds-button-variant($btn-gray-color, $btn-gray-bg, $btn-gray-border);
   }
   &.btn-option {
-    @include crds-button-variant($cr-white, $cr-gray, $cr-gray);
+    @include crds-button-variant($btn-option-color, $btn-option-bg, $btn-option-border);
     &:focus,
     &:active {
       background: $cr-teal;
@@ -47,23 +47,23 @@
     }
   }
   &.btn-default {
-    @include crds-button-variant($cr-white, $cr-gray, $cr-gray);
+    @include crds-button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
   }
 }
 
 .btn-group {
   > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
-    border-bottom-right-radius: 4px;
-    border-top-right-radius: 4px;
+    border-bottom-right-radius: $btn-border-radius-base;
+    border-top-right-radius: $btn-border-radius-base;
   }
 
   > .btn:last-child:not(:first-child) {
-    border-bottom-left-radius: 4px;
-    border-top-left-radius: 4px;
+    border-bottom-left-radius: $btn-border-radius-base;
+    border-top-left-radius: $btn-border-radius-base;
   }
 
   > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
-    border-radius: 4px;
+    border-radius: $btn-border-radius-base;
   }
 
   > .btn {
@@ -203,7 +203,7 @@ a {
 
     div:last-child:not(:first-child) {
       font-size: 1.5rem;
-      line-height: 1.5rem;
+      line-height: $line-height-base;
       text-align: right;
     }
   }
