@@ -24,16 +24,3 @@ $cr-white: rgba(255,255,255,1);          // #FFF
 $cr-black: rgba(21,21,21,1);             // #151515
 $cr-black-alpha: rgba(21,21,21,0.5);     // #8A8A8A
 $cr-orange: rgba(240,173,78,1);          // #F0AD4E
-
-// Validation colors
-$cr-danger: rgba(234,81,81,1);           // #EA5151
-$cr-success: rgba(79,191,142,1);         // #4FC08F
-
-// BS Overrides
-$bootstrap-sass-asset-helper: true;
-$text-color: $cr-gray-dark !default;
-$brand-primary: $cr-blue;
-$brand-info: $cr-cyan-lighter;
-$brand-success: $cr-green !default;
-$brand-danger: $cr-magenta !default;
-$brand-warning: $cr-orange !default;

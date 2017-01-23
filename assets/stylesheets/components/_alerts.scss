@@ -2,8 +2,26 @@
   border-radius: 0;
   line-height: 1.125rem;
 
+
+  &.alert-success {
+    background: lighten($brand-success, 40);
+    color: $brand-success;
+    text-align: center;
+  }
+
+  &.alert-info {
+    background: lighten($brand-info, 45);
+    color: $brand-info;
+  }
+
+  &.alert-warning {
+    background: lighten($brand-warning, 35);
+    color: $brand-warning;
+  }
+
   &.alert-danger {
-    color: $cr-danger;
+    background: lighten($brand-danger, 45);
+    color: $brand-danger;
     text-align: center;
   }
 }

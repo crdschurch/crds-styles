@@ -14,14 +14,14 @@
   }
 
   &.has-success {
-    border-right-color: $cr-success;
+    border-right-color: $brand-success;
   }
 
   &.has-error {
-    border-right-color: $cr-danger;
+    border-right-color: $brand-danger;
 
     .helper-text {
-      background: $cr-danger;
+      background: $brand-danger;
       color: $cr-white;
       padding: .5rem 1rem;
     }
