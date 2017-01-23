@@ -35,13 +35,15 @@
     &:active {
       background: $cr-teal;
       border-color: $cr-teal;
-      &:hover {
-        background: $cr-teal;
-        border-color: $cr-teal;
-      }
+      color: $cr-white;
     }
     &.btn-outline {
+      &:hover {
+        background: $cr-white;
+      }
       &:focus {
+        background: $cr-teal;
+        border-color: $cr-teal;
         color: $cr-white;
       }
     }
@@ -154,11 +156,21 @@ a {
   }
 }
 
-.btn {
+.btn-option {
   &.btn-outline {
     &.disabled {
       &:hover {
-        background: $cr-white;
+        background: $btn-outline-hover-bg;
+        border-color: $cr-gray;
+      }
+      &:focus {
+        background: $btn-outline-bg;
+        border-color: $btn-option-border;
+        color: inherit;
+      }
+      &:focus:hover {
+        background: $btn-outline-hover-bg;
+        color: $cr-gray;
       }
     }
   }
