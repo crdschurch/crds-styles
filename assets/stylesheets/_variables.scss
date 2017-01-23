@@ -5,8 +5,8 @@ $condensed-extra-font-face: "acumin-pro-extra-condensed", sans-serif;
 $accent-font-face: "lexia", serif;
 $base-font-size: 16px;
 
+// Colors
 $cr-gray: rgba(151,151,151,1);           // #979797
-$cr-gray-alpha: rgba(21,21,21,0.5);      // #8A8A8A
 $cr-gray-dark: rgba(115,115,115,1);      // #737373
 $cr-gray-darker: rgba(77,77,77,1);       // #4D4D4D
 $cr-gray-light: rgba(205,205,205,1);     // #CDCDCD
@@ -16,12 +16,8 @@ $cr-blue: rgba(59,110,143,1);            // #3B6E8F
 $cr-cyan: rgba(7,149,227,1);             // #0795E3
 $cr-cyan-lighter: rgba(15,168,238,1);    // #0FA8EE
 $cr-teal: rgba(88,175,169,1);            // #58AFA9
+$cr-green: rgba(92,184,92,1);            // #5CB85C
 $cr-white: rgba(255,255,255,1);          // #FFF
 $cr-black: rgba(21,21,21,1);             // #151515
-
-// BS Overrides
-$bootstrap-sass-asset-helper: true;
-$text-color: $cr-gray-dark !default;
-$brand-primary: $cr-blue;
-$brand-info: $cr-cyan-lighter;
-$border-radius-large: 5px;
+$cr-black-alpha: rgba(21,21,21,0.5);     // #8A8A8A
+$cr-orange: rgba(240,173,78,1);          // #F0AD4E
