@@ -42,7 +42,7 @@
 }
 
 .quiet {
-  font-size: 1rem; // 16px
+  font-size: $base-font-size;
 }
 
 /* Metadata */
@@ -51,7 +51,7 @@
   font-size: .9375rem; // 15px
   text-transform: uppercase;
   font-weight: 600;
-  color: $cr-gray;
+  color: $text-muted;
 }
 
 .subtitle {
@@ -61,14 +61,14 @@
 
 .tagline {
  @extend .font-family-accent;
- font-size: 1rem; // 16px
- color: $cr-gray;
+ font-size: $base-font-size;
+ color: $text-muted;
 }
 
 /* Other */
 
 address {
-  font-size: 1rem; // 16px
+  font-size: $base-font-size;
   strong {
     font-size: 1.1875rem; // 19px
   }
@@ -76,11 +76,11 @@ address {
 
 blockquote {
   @extend .font-family-accent;
-  font-size: 1.1875rem; // 19px
-  line-height: 140%;
+  font-size: $blockquote-font-size;
+  line-height: $line-height-base;
   font-weight: 300;
-  color: $cr-gray;
-  border: 2px solid lighten($cr-gray, 25);
+  color: $text-muted;
+  border: 2px solid $blockquote-border-color;
   padding: 2em;
   span {
     display: block;

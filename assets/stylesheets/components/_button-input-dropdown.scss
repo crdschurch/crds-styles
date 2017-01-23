@@ -19,26 +19,26 @@
       flex-basis: calc(100% - 30px);
 
       .input-group {
-        border: 1px solid transparent;
-        background-color: $cr-gray-lighter;
-        height: 2.5rem;
+        border: $input-border;
+        background-color: $input-bg;
+        height: $input-height-base;
 
         .input-group-addon {
-          background-color: $cr-gray-lighter;
-          border: 1px solid transparent;
-          border-radius: 0;
+          background-color: $input-group-addon-bg;
+          border: $input-group-addon-border-color;
+          border-radius: $input-border-radius;
           font-size: 1.125rem;
           padding: 6px 12px;
-          color: $cr-gray-darker;
+          color: $input-color;
           text-align: center;
         }
 
         input {
-          border-radius: 0;
+          border-radius: $input-border-radius;
           box-shadow: none;
-          background-color: $cr-gray-lighter;
-          border: 1px solid transparent;
-          height: 2.5rem;
+          background-color: $input-bg;
+          border: $input-border;
+          height: $input-height-base;
         }
       }
     }

@@ -7,7 +7,7 @@
 }
 
 body {
-  font-size: 1rem;
+  font-size: $base-font-size;
   @extend .font-family-base;
 }
 
