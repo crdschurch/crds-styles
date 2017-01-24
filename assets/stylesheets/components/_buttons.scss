@@ -38,13 +38,21 @@
       color: $cr-white;
     }
     &.btn-outline {
-      &:hover {
-        background: $cr-white;
-      }
+      &.active,
+      &:active,
       &:focus {
         background: $cr-teal;
         border-color: $cr-teal;
+        box-shadow: none;
         color: $cr-white;
+        outline: none;
+
+        &:hover {
+          background: $cr-teal;
+        }
+      }
+      &:hover {
+        background: $cr-white;
       }
     }
   }
