@@ -47,6 +47,26 @@
         color: $cr-white;
       }
     }
+    &.btn-no-outline {
+      border-color: $cr-white;
+      background: $cr-white;
+      color: $btn-option-border;
+      &:hover {
+        background: $cr-white;
+        border-color: $cr-white;
+      }
+      .active,
+      &:active,
+      &:focus {
+        background: $cr-teal;
+        border-color: $cr-teal;
+        color: $cr-white;
+      }
+      &:focus:hover {
+        background: $cr-teal;
+        border-color: $cr-teal;
+      }
+    }
   }
   &.btn-default {
     @include crds-button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
