@@ -4,12 +4,13 @@
   &.btn-outline {
     border-width: 2px;
     color: $border;
-    background: $cr-white;
+    background: $btn-outline-bg;
     &:focus {
       color: $border;
+      background: $btn-outline-bg;
     }
     &:hover {
-      background: $cr-gray-lighter;
+      background: $btn-outline-hover-bg;
     }
   }
 }

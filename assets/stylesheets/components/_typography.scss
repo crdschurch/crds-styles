@@ -31,44 +31,129 @@
   font-weight: 300;
 }
 
-/* Body */
+/* Headings */
 
-.body {
-  font-size: 1.1875rem; // 19px
+h1 {
+  @extend .font-family-base-light;
+  font-size: 3.625rem; // 58px
+  word-wrap: break-word;
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: 4.25rem; // 68px
+    word-wrap: normal;
+  }
+}
+
+h2 {
+  @extend .font-family-condensed-extra;
+  text-transform: uppercase;
+  font-size: 2.75rem; // 44px
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: 3.4375rem; // 55px
+  }
+}
+
+h3 {
+  @extend .font-family-base;
+  font-size: 2.25rem; // 36px
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: 2.5rem; // 40px
+  }
+}
+
+h4 {
+  @extend .font-family-base;
+  font-size: 1.3125rem; // 21px
+  border-top: 1px solid $cr-gray-light;
+  color: $cr-gray;
+  padding-top: 0.25em;
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: 1.5rem; // 24px
+  }
+}
+
+h5 {
+  @extend .font-family-condensed-extra;
+  text-transform: uppercase;
+  font-size: 2rem; // 32px
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: 2.125rem; // 34px
+  }
+}
+
+h6 {
+  @extend .font-family-condensed-extra;
+  text-transform: uppercase;
+  font-size: 1.5rem; // 24px
+}
+
+/* Body */
+main, .main {
+  font-size: 1rem; // 16px
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: 1.1875rem; // 19px
+  }
 }
 
 .lead {
-  font-size: 1.375rem; // 22px
+  font-size: 1.125rem; // 18px
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: 1.375rem; // 22px
+  }
 }
 
 .quiet {
-  font-size: $base-font-size;
+  font-size: .875rem; // 14px
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: 1rem; // 16px
+  }
 }
 
 /* Metadata */
 
 .metadata {
-  font-size: .9375rem; // 15px
+  font-size: .75rem; // 12px
   text-transform: uppercase;
   font-weight: 600;
   color: $text-muted;
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: .9375rem; // 15px
+  }
 }
 
 .subtitle {
   @extend .font-family-base-bold;
-  font-size: 1.1875rem; // 19px
+  font-size: 1rem; // 16px
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: 1.3125rem; // 21px
+  }
 }
 
 .tagline {
  @extend .font-family-accent;
- font-size: $base-font-size;
+ font-size: .875rem; // 14px
  color: $text-muted;
+
+ @media screen and (min-width: $screen-xs) {
+   font-size: 1rem; // 16px
+  }
 }
 
 /* Other */
 
 address {
-  font-size: $base-font-size;
+  background: $cr-gray-lighter;
+  font-size: 1rem; // 16px
+  padding: 1.25rem 1rem;
   strong {
     font-size: 1.1875rem; // 19px
   }
@@ -93,8 +178,7 @@ blockquote {
 
 ol, ul {
   &.crds-list {
-    font-size: 1.1875rem;
-    @extend .body;
+    font-size: 1.1875rem; // 19px
     li {
       margin-bottom: 1em;
       &:last-child {
