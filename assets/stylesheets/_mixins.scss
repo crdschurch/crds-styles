@@ -2,7 +2,7 @@
   @include button-variant($color, $background, $border);
 
   &.btn-outline {
-    border-width: 2px;
+    border-width: 1px;
     color: $border;
     background: $btn-outline-bg;
     &:focus {
