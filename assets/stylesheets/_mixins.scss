@@ -13,4 +13,26 @@
       background: $btn-outline-hover-bg;
     }
   }
+  &.btn-no-outline {
+    border-width: 2px;
+    border-color: $btn-outline-bg;
+    color: $border;
+    background: $btn-outline-bg;
+    .active,
+    &:active,
+    &:focus {
+      color: $cr-white;
+      background: $background;
+      border-color: $background;
+      box-shadow: none;
+    }
+    &:focus:hover {
+      border-color: $border;
+      background: $background;
+      color: $color;
+    }
+    &:hover {
+      background: $cr-white;
+    }
+  }
 }
