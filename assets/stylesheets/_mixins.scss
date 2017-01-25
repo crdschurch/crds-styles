@@ -3,38 +3,51 @@
   &.active,
   &:active {
     background: $background;
+    box-shadow: none;
   }
 
   &.btn-outline {
+    background: $btn-outline-bg;
     border-width: 2px;
     color: $border;
-    background: $btn-outline-bg;
+
+    .active,
+    &:active,
     &:focus {
-      color: $border;
       background: $btn-outline-bg;
+      color: $border;
+
+      &:hover {
+        color: $border;
+      }
     }
+
     &:hover {
       background: $btn-outline-hover-bg;
     }
   }
+
   &.btn-no-outline {
-    border-width: 2px;
-    border-color: $btn-outline-bg;
-    color: $border;
     background: $btn-outline-bg;
+    border-color: $btn-outline-bg;
+    border-width: 2px;
+    color: $border;
+
     .active,
     &:active,
     &:focus {
-      color: $cr-white;
       background: $background;
       border-color: $background;
       box-shadow: none;
+      color: $cr-white;
     }
+
     &:focus:hover {
-      border-color: $border;
       background: $background;
+      border-color: $border;
       color: $color;
     }
+
     &:hover {
       background: $cr-white;
     }
