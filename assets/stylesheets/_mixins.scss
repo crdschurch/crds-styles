@@ -1,5 +1,9 @@
 @mixin crds-button-variant($color, $background, $border) {
   @include button-variant($color, $background, $border);
+  &.active,
+  &:active {
+    background: $background;
+  }
 
   &.btn-outline {
     border-width: 2px;
