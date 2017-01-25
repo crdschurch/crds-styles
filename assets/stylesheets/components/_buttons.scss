@@ -1,8 +1,14 @@
 .btn {
   border-radius: $btn-border-radius-base;
 
-  &:focus,
-  &:active:focus {
+  &.active,
+  &:active {
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &:focus {
     box-shadow: none;
     outline: none;
   }
