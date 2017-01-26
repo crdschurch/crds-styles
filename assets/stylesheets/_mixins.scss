@@ -1,16 +1,55 @@
 @mixin crds-button-variant($color, $background, $border) {
   @include button-variant($color, $background, $border);
+  &.active,
+  &:active {
+    background: $background;
+    box-shadow: none;
+  }
 
   &.btn-outline {
+    background: $btn-outline-bg;
     border-width: 2px;
     color: $border;
-    background: $btn-outline-bg;
+
+    .active,
+    &:active,
     &:focus {
-      color: $border;
       background: $btn-outline-bg;
+      color: $border;
+
+      &:hover {
+        color: $border;
+      }
     }
+
     &:hover {
       background: $btn-outline-hover-bg;
+    }
+  }
+
+  &.btn-no-outline {
+    background: $btn-outline-bg;
+    border-color: $btn-outline-bg;
+    border-width: 2px;
+    color: $border;
+
+    .active,
+    &:active,
+    &:focus {
+      background: $background;
+      border-color: $background;
+      box-shadow: none;
+      color: $cr-white;
+    }
+
+    &:focus:hover {
+      background: $background;
+      border-color: $border;
+      color: $color;
+    }
+
+    &:hover {
+      background: $cr-white;
     }
   }
 }
