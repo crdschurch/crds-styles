@@ -1,0 +1,144 @@
+datepicker {
+  $calendar-bg: $cr-white;
+  $calendar-text: $cr-gray-darker;
+  $calendar-border: $cr-gray-light;
+  $calendar-active-bg: $cr-teal;
+  $calendar-active-text: $cr-white;
+  $calendar-active-border: $cr-teal;
+  $calendar-hover-bg: $cr-gray-lighter;
+  $calendar-hover-text: $cr-gray-darker;
+  $calendar-hover-border: $cr-gray;
+
+  // display: none;
+
+  &.visible {
+    display: block;
+  }
+
+  thead {
+    .btn {
+      &.btn-default {
+        background: $calendar-bg;
+        border-color: $calendar-bg;
+        border-radius: 0;
+        color: $calendar-text;
+        width: 100%;
+
+        &.pull-left {
+          border-top-left-radius: $border-radius-base;
+          border-bottom-left-radius: $border-radius-base;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+
+        &.pull-right {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+          border-top-right-radius: $border-radius-base;
+          border-bottom-right-radius: $border-radius-base;
+        }
+
+        &:active,
+        &:focus {
+          background: $cr-gray-light;
+          border-color: $cr-gray-light;
+          box-shadow: none;
+          color: $calendar-text;
+
+          &:focus {
+            background: $cr-gray-light;
+            border-color: $cr-gray-light;
+            color: $calendar-text;
+          }
+        }
+
+        &:hover {
+          background: $calendar-hover-bg;
+          border-color: $calendar-hover-bg;
+          color: $calendar-text;
+        }
+      }
+    }
+  }
+
+  tbody {
+    .btn {
+      &.btn-default {
+        background: $calendar-bg;
+        border-color: $calendar-border;
+        color: $calendar-text;
+
+        &.active,
+        &:active,
+        &:focus {
+          background: $calendar-active-bg;
+          border-color: $calendar-active-border;
+          box-shadow: none;
+          color: $calendar-active-text;
+
+          &:hover {
+            background: $calendar-active-bg;
+            border-color: $calendar-active-border;
+            color: $calendar-active-text;
+          }
+
+          .text-muted {
+            color: $calendar-active-text;
+          }
+        }
+
+        &:hover {
+          background: $calendar-hover-bg;
+          border-color: $calendar-hover-border;
+          color: $calendar-hover-text;
+        }
+
+        .text-muted {
+          color: $cr-gray-light;
+        }
+      }
+    }
+  }
+
+  .btn {
+    // &:focus {
+    //   outline: none;
+    // }
+
+    // &:active,
+    // &.active {
+    //   // -webkit-box-shadow: none;
+    //   box-shadow: none;
+    // }
+
+    &-info {
+      &.active {
+        background-color: $calendar-active-bg;
+        border-color: $calendar-active-border;
+
+        &:focus {
+          background-color: $calendar-active-bg;
+          border-color: $calendar-active-border;
+        }
+
+        .text-info {
+          color: $calendar-active-text;
+        }
+      }
+    }
+  }
+
+  .btn-default {
+    border-color: $calendar-border;
+
+    &.active {
+      span {
+        color: $calendar-active-text;
+      }
+    }
+
+    .text-muted {
+      color: $cr-gray-light;
+    }
+  }
+}
