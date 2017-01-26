@@ -46,6 +46,15 @@
         border-color: $cr-teal;
         color: $cr-white;
       }
+      &.disabled {
+        .active,
+        &:active,
+        &:focus {
+          background: $cr-white;
+          border-color: lighten($btn-option-border, 25);
+          color: lighten($btn-option-border, 25);
+        }
+      }
     }
   }
   &.btn-default {
@@ -152,26 +161,6 @@ a {
   &.btn {
     &.disabled {
       pointer-events: auto;
-    }
-  }
-}
-
-.btn-option {
-  &.btn-outline {
-    &.disabled {
-      &:hover {
-        background: $btn-outline-hover-bg;
-        border-color: $cr-gray;
-      }
-      &:focus {
-        background: $btn-outline-bg;
-        border-color: $btn-option-border;
-        color: inherit;
-      }
-      &:focus:hover {
-        background: $btn-outline-hover-bg;
-        color: $cr-gray;
-      }
     }
   }
 }
