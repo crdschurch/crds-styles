@@ -100,16 +100,15 @@ datepicker {
     }
   }
 
-  .btn {
-    // &:focus {
-    //   outline: none;
-    // }
+  .well {
+    margin-bottom: 0;
+  }
 
-    // &:active,
-    // &.active {
-    //   // -webkit-box-shadow: none;
-    //   box-shadow: none;
-    // }
+  .btn {
+    &.btn-sm {
+      font-size: .75rem;
+      padding: 5px 10px;
+    }
 
     &-info {
       &.active {

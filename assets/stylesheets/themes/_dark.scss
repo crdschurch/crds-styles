@@ -19,56 +19,102 @@
 
   datepicker {
     $calendar-bg: $cr-black;
-    $calendar-text: $cr-white;
-    $calendar-border: $cr-gray-dark;
+    $calendar-text: $cr-gray;
+    $calendar-border: $cr-gray-darker;
     $calendar-active-bg: $cr-teal;
     $calendar-active-text: $cr-white;
     $calendar-active-border: $cr-teal;
-    $calendar-hover-bg: $cr-gray-lighter;
-    $calendar-hover-text: $cr-gray-darker;
-    $calendar-hover-border: $cr-gray;
+    $calendar-hover-bg: $calendar-bg;
+    $calendar-hover-text: $calendar-text;
+    $calendar-hover-border: $calendar-border;
+
+    thead {
+      .btn {
+        &.btn-default {
+          background: $calendar-border;
+          border-color: $calendar-border;
+          color: $cr-gray;
+
+          &:active,
+          &:focus,
+          &:hover {
+            background: $calendar-border;
+            border-color: $calendar-border;
+            color: $cr-gray;
+          }
+        }
+      }
+    }
+
+    tbody {
+      .btn {
+        &.btn-default {
+          background: $calendar-bg;
+          border-color: $calendar-border;
+          color: $calendar-text;
+
+          &.active,
+          &:active,
+          &:focus {
+            background: $calendar-active-bg;
+            border-color: $calendar-active-border;
+            box-shadow: none;
+            color: $calendar-active-text;
+
+            &:hover {
+              background: $calendar-active-bg;
+              border-color: $calendar-active-border;
+              color: $calendar-active-text;
+            }
+
+            .text-muted {
+              color: $calendar-active-text;
+            }
+          }
+
+          &:hover {
+            background: $calendar-hover-bg;
+            border-color: $calendar-hover-border;
+            color: $calendar-hover-text;
+          }
+
+          .text-muted {
+            color: $calendar-border;
+          }
+        }
+      }
+    }
 
     .well {
       background: $calendar-bg;
-      border: 0;
+      border-color: $calendar-bg;
       box-shadow: none;
-      padding-left: 0;
-      padding-right: 0;
-      margin-top: -1em;
+    }
+
+    .btn {
+      &-info {
+        &.active {
+          background-color: $calendar-active-bg;
+          border-color: $calendar-active-border;
+
+          &:focus {
+            background-color: $calendar-active-bg;
+            border-color: $calendar-active-border;
+          }
+
+          .text-info {
+            color: $calendar-active-text;
+          }
+        }
+      }
     }
 
     .btn-default {
-      background: $calendar-bg;
       border-color: $calendar-border;
-      color: $calendar-text;
 
       &.active {
-        background-color: $calendar-active-bg;
-        border-color: $calendar-active-border;
-
-        &:focus {
-          background-color: $calendar-active-bg;
-          border-color: $calendar-active-border;
-        }
-
-        .text-info,
         span {
           color: $calendar-active-text;
-        }
-      }
-
-      .text-info {
-        color: $calendar-active-text;
-      }
-    }
-
-    th {
-      .btn-default {
-        &.btn-secondary {
-          &.btn-sm {
-            background: $cr-gray-darker;
-            color: $cr-gray;
-          }
         }
       }
     }
