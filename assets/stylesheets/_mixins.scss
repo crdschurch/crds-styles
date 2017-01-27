@@ -1,16 +1,81 @@
 @mixin crds-button-variant($color, $background, $border) {
   @include button-variant($color, $background, $border);
+  &.active,
+  &:active {
+    background: $background;
+    box-shadow: none;
+  }
+
+  &.disabled {
+    opacity: 1;
+    background: lighten($background, 25);
+    border: lighten($border, 25);
+
+    &.active,
+    &:active,
+    &:focus,
+    &:hover {
+      background: lighten($background, 25);
+    }
+  }
 
   &.btn-outline {
-    border-width: 2px;
-    color: $border;
+    border-width: 1px;
     background: $btn-outline-bg;
+    color: $border;
+
+    .active,
+    &:active,
     &:focus {
-      color: $border;
       background: $btn-outline-bg;
+      color: $border;
+
+      &:hover {
+        color: $border;
+      }
     }
+
     &:hover {
       background: $btn-outline-hover-bg;
+    }
+    &.disabled {
+      border: 1px solid lighten($border, 25);
+      color: lighten($border, 25);
+
+      &.active,
+      &:active,
+      &:focus,
+      &:hover {
+        background: $cr-white;
+        border: 1px solid lighten($border, 25);
+        color: lighten($border, 25);
+      }
+    }
+  }
+
+  &.btn-no-outline {
+    background: $btn-outline-bg;
+    border-color: $btn-outline-bg;
+    border-width: 2px;
+    color: $border;
+
+    .active,
+    &:active,
+    &:focus {
+      background: $background;
+      border-color: $background;
+      box-shadow: none;
+      color: $cr-white;
+    }
+
+    &:focus:hover {
+      background: $background;
+      border-color: $border;
+      color: $color;
+    }
+
+    &:hover {
+      background: $cr-white;
     }
   }
 }

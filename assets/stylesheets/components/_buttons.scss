@@ -1,8 +1,14 @@
 .btn {
   border-radius: $btn-border-radius-base;
 
-  &:focus,
-  &:active:focus {
+  &.active,
+  &:active {
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &:focus {
     box-shadow: none;
     outline: none;
   }
@@ -38,13 +44,63 @@
       color: $cr-white;
     }
     &.btn-outline {
+      &.active,
+      &:active,
+      &:focus {
+        background: $cr-teal;
+        border-color: $cr-teal;
+        box-shadow: none;
+        color: $cr-white;
+        outline: none;
+
+        &:hover {
+          background: $cr-teal;
+          color: $cr-white;
+        }
+      }
       &:hover {
         background: $cr-white;
       }
+      &.disabled {
+        &.active,
+        &:active,
+        &:focus {
+          background: $cr-white;
+          border-color: lighten($btn-option-border, 25);
+          color: lighten($btn-option-border, 25);
+        }
+      }
+    }
+    &.btn-no-outline {
+      border-color: $cr-white;
+      background: $btn-option-color;
+      color: $btn-option-bg;
+      &:hover {
+        background: $cr-white;
+        border-color: $cr-white;
+      }
+      &.active,
+      &:active,
       &:focus {
         background: $cr-teal;
         border-color: $cr-teal;
         color: $cr-white;
+
+        &:hover {
+          color: $btn-option-color;
+        }
+      }
+      &:focus:hover {
+        background: $cr-teal;
+        border-color: $cr-teal;
+      }
+      &.disabled {
+        &.active,
+        &:active,
+        &:focus {
+          background: $cr-white;
+          color: lighten($btn-option-border, 25);
+        }
       }
     }
   }
@@ -96,7 +152,7 @@
 
 .btn-group-teal {
   .btn-option {
-    border: 2px solid $cr-teal;
+    border: 1px solid $cr-teal;
     background: $cr-white;
     color: $cr-teal;
 
@@ -106,43 +162,24 @@
       color: $cr-teal;
     }
 
-    &:focus {
-      &:hover {
-        background: $cr-teal;
-        border-color: $cr-teal;
-        color: $cr-white;
-      }
-    }
-
-    &:active {
-      box-shadow: none;
-    }
-  }
-}
-
-
-.btn-option {
-  &.btn-teal {
-    border: 2px solid $cr-teal;
-    background: $cr-white;
-    color: $cr-teal;
-
-    &:hover {
-      background: $cr-white;
+    &:focus:hover {
+      background: $cr-teal;
       border-color: $cr-teal;
-      color: $cr-teal;
+      color: $cr-white;
     }
 
-    &:focus {
+    &.active,
+    &:active {
+      border-color: $cr-teal;
+      box-shadow: none;
+      color: $cr-white;
+
+      &:focus,
       &:hover {
         background: $cr-teal;
         border-color: $cr-teal;
         color: $cr-white;
       }
-    }
-
-    &:active {
-      box-shadow: none;
     }
   }
 }
@@ -152,26 +189,6 @@ a {
   &.btn {
     &.disabled {
       pointer-events: auto;
-    }
-  }
-}
-
-.btn-option {
-  &.btn-outline {
-    &.disabled {
-      &:hover {
-        background: $btn-outline-hover-bg;
-        border-color: $cr-gray;
-      }
-      &:focus {
-        background: $btn-outline-bg;
-        border-color: $btn-option-border;
-        color: inherit;
-      }
-      &:focus:hover {
-        background: $btn-outline-hover-bg;
-        color: $cr-gray;
-      }
     }
   }
 }
