@@ -31,66 +31,6 @@
   font-weight: 300;
 }
 
-/* Headings */
-
-h1 {
-  @extend .font-family-base-light;
-  font-size: 3.625rem; // 58px
-  word-wrap: break-word;
-
-  @media screen and (min-width: $screen-xs) {
-    font-size: 4.25rem; // 68px
-    word-wrap: normal;
-  }
-}
-
-h2 {
-  @extend .font-family-condensed-extra;
-  text-transform: uppercase;
-  font-size: 2.75rem; // 44px
-
-  @media screen and (min-width: $screen-xs) {
-    font-size: 3.4375rem; // 55px
-  }
-}
-
-h3 {
-  @extend .font-family-base;
-  font-size: 2.25rem; // 36px
-
-  @media screen and (min-width: $screen-xs) {
-    font-size: 2.5rem; // 40px
-  }
-}
-
-h4 {
-  @extend .font-family-base;
-  font-size: 1.3125rem; // 21px
-  border-top: 1px solid $cr-gray-light;
-  color: $cr-gray;
-  padding-top: 0.25em;
-
-  @media screen and (min-width: $screen-xs) {
-    font-size: 1.5rem; // 24px
-  }
-}
-
-h5 {
-  @extend .font-family-condensed-extra;
-  text-transform: uppercase;
-  font-size: 2rem; // 32px
-
-  @media screen and (min-width: $screen-xs) {
-    font-size: 2.125rem; // 34px
-  }
-}
-
-h6 {
-  @extend .font-family-condensed-extra;
-  text-transform: uppercase;
-  font-size: 1.5rem; // 24px
-}
-
 /* Body */
 main, .main {
   font-size: 1rem; // 16px
