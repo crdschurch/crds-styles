@@ -18,23 +18,27 @@
     border-right-color: $brand-success;
   }
 
+  &.has-error,
+  &.has-warning {
+    .help-block {
+      color: $cr-white;
+      padding: .5rem 1rem;
+    }
+  }
+
   &.has-error {
     border-right-color: $brand-danger;
 
-    .helper-block {
+    .help-block {
       background: $brand-danger;
-      color: $cr-white;
-      padding: .5rem 1rem;
     }
   }
 
   &.has-warning {
     border-right-color: $brand-warning;
 
-    .helper-block {
+    .help-block {
       background: $brand-warning;
-      color: $cr-white;
-      padding: .5rem 1rem;
     }
   }
 }

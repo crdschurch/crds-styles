@@ -88,9 +88,10 @@ input[type="checkbox"]:disabled {
   border-radius: 4px;
 }
 
-.helper-block {
+.help-block {
   color: $cr-gray;
   font-size: .8125rem; // 13px
+  margin-top: 0;
   padding-top: 8px;
 }
 
