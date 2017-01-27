@@ -4,24 +4,20 @@
 
 
   &.alert-success {
-    background: lighten($brand-success, 40);
-    color: $brand-success;
+    @include alert-variant($alert-success-bg, $alert-success-border, $alert-success-text);
     text-align: center;
   }
 
   &.alert-info {
-    background: lighten($brand-info, 45);
-    color: $brand-info;
+    @include alert-variant($alert-info-bg, $alert-info-border, $alert-info-text);
   }
 
   &.alert-warning {
-    background: lighten($brand-warning, 35);
-    color: $brand-warning;
+    @include alert-variant($alert-warning-bg, $alert-warning-border, $alert-warning-text);
   }
 
   &.alert-danger {
-    background: lighten($brand-danger, 45);
-    color: $brand-danger;
+    @include alert-variant($alert-danger-bg, $alert-danger-border, $alert-danger-text);
     text-align: center;
   }
 }
