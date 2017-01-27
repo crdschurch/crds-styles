@@ -15,10 +15,11 @@
   textarea {
     &.form-control {
       background: $input-bg;
+      border: 2px solid  $input-bg;
 
       &:focus {
         background:  $input-bg-focus;
-        border: 2px solid  $input-border-focus;
+        border-color:  $input-border-focus;
         box-shadow: none;
       }
     }
