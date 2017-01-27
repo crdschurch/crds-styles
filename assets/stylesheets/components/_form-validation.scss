@@ -1,6 +1,7 @@
 .form-group {
   &.has-success,
-  &.has-error {
+  &.has-error,
+  &.has-warning {
     border-right-style: solid;
     border-right-width: 8px;
 
@@ -22,6 +23,16 @@
 
     .helper-block {
       background: $brand-danger;
+      color: $cr-white;
+      padding: .5rem 1rem;
+    }
+  }
+
+  &.has-warning {
+    border-right-color: $brand-warning;
+
+    .helper-block {
+      background: $brand-warning;
       color: $cr-white;
       padding: .5rem 1rem;
     }
