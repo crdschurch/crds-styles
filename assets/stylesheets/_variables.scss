@@ -7,17 +7,20 @@ $base-font-size: 16px;
 
 // Colors
 $cr-gray: rgba(151,151,151,1);           // #979797
-$cr-gray-dark: rgba(115,115,115,1);      // #737373
-$cr-gray-darker: rgba(77,77,77,1);       // #4D4D4D
-$cr-gray-light: rgba(205,205,205,1);     // #CDCDCD
-$cr-gray-lighter: rgba(231,231,231,1);   // #E7E7E7
+$cr-gray-alpha: rgba($cr-gray,.25);      // #979797
+$cr-gray-dark: darken($cr-gray,14);        // #737373
+$cr-gray-darker: darken($cr-gray,29);      // #4D4D4D
+$cr-gray-light: lighten($cr-gray,21);      // #CDCDCD
+$cr-gray-lighter: lighten($cr-gray,31.5);  // #E7E7E7
+$cr-gray-lightest: lighten($cr-gray,36.5); // #F4F4F4
 $cr-magenta: rgba(204,34,85,1);          // #CC2255
 $cr-blue: rgba(59,110,143,1);            // #3B6E8F
 $cr-cyan: rgba(7,149,227,1);             // #0795E3
-$cr-cyan-lighter: rgba(15,168,238,1);    // #0FA8EE
+$cr-cyan-light: lighten($cr-cyan,9);       // #1FB2FF
+$cr-cyan-lighter: lighten($cr-cyan,6);     // #0FA8EE
 $cr-teal: rgba(88,175,169,1);            // #58AFA9
 $cr-green: rgba(92,184,92,1);            // #5CB85C
 $cr-white: rgba(255,255,255,1);          // #FFF
 $cr-black: rgba(21,21,21,1);             // #151515
-$cr-black-alpha: rgba(21,21,21,0.5);     // #8A8A8A
+$cr-black-alpha: rgba($cr-black,.5);     // #8A8A8A
 $cr-orange: rgba(240,173,78,1);          // #F0AD4E

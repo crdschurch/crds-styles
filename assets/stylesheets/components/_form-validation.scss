@@ -1,0 +1,44 @@
+.form-group {
+  &.has-success,
+  &.has-error,
+  &.has-warning {
+    border-right-style: solid;
+    border-right-width: 8px;
+
+    input,
+    textarea {
+      border: 1px solid $cr-gray-light;
+      border-right: none;
+      background: $cr-white;
+      box-shadow: none;
+    }
+  }
+
+  &.has-success {
+    border-right-color: $brand-success;
+  }
+
+  &.has-error,
+  &.has-warning {
+    .help-block {
+      color: $cr-white;
+      padding: .5rem 1rem;
+    }
+  }
+
+  &.has-error {
+    border-right-color: $brand-danger;
+
+    .help-block {
+      background: $brand-danger;
+    }
+  }
+
+  &.has-warning {
+    border-right-color: $brand-warning;
+
+    .help-block {
+      background: $brand-warning;
+    }
+  }
+}
