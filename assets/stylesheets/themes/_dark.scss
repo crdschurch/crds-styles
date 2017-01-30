@@ -14,4 +14,29 @@
   h2 {
     color: $headings-color;
   }
+
+  // Tables
+  .table-contrast-bg {
+    background: $cr-gray-darkest;
+  }
+
+  .receipt-table {
+    tr:not(:last-child) {
+      border-color: $cr-gray-darker;
+    }
+
+    tr {
+      td:first-child {
+        a {
+          color: $cr-gray;
+        }
+      }
+
+      small {
+        a {
+          color: $cr-cyan;
+        }
+      }
+    }
+  }
 }

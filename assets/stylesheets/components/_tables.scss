@@ -1,0 +1,55 @@
+table {
+  width: 100%;
+}
+
+.table-contrast-bg {
+  background: $cr-gray-lightest;
+  padding: 1rem;
+}
+
+.receipt-table {
+  tr:not(:last-child) {
+    border-bottom: 1px solid $cr-gray-light;
+  }
+
+  tr:last-child {
+    td {
+      padding-bottom: 2rem;
+    }
+  }
+
+  tr {
+    td {
+      padding: .5rem 0;
+      vertical-align: top;
+
+      &.amount {
+        font-size: 1.5rem;
+      }
+    }
+
+    td:first-child {
+      @extend .text-uppercase;
+      font-size: .75rem;
+
+      a {
+        color: $cr-cyan;
+      }
+    }
+
+    td:last-child {
+      font-size: 1rem;
+      text-align: right;
+
+      &.amount {
+        font-size: 1.5rem;
+      }
+    }
+
+    small {
+      a {
+        color: $cr-cyan;
+      }
+    }
+  }
+}
