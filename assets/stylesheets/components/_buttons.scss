@@ -162,14 +162,10 @@
       color: $cr-teal;
     }
 
+    &.active,
+    &:active,
     &:focus:hover {
       background: $cr-teal;
-      border-color: $cr-teal;
-      color: $cr-white;
-    }
-
-    &.active,
-    &:active {
       border-color: $cr-teal;
       box-shadow: none;
       color: $cr-white;

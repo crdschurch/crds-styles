@@ -15,10 +15,11 @@
   textarea {
     &.form-control {
       background: $input-bg;
+      border: 2px solid  $input-bg;
 
       &:focus {
         background:  $input-bg-focus;
-        border: 2px solid  $input-border-focus;
+        border-color:  $input-border-focus;
         box-shadow: none;
       }
     }
@@ -87,9 +88,10 @@ input[type="checkbox"]:disabled {
   border-radius: 4px;
 }
 
-.helper-text {
+.help-block {
   color: $cr-gray;
   font-size: .8125rem; // 13px
+  margin-top: 0;
   padding-top: 8px;
 }
 
@@ -108,7 +110,7 @@ input[type="checkbox"]:disabled {
 }
 
 .form-row {
-  @extend %clearfix;
+  @include clearfix();
 
   .form-col-2 {
     float: left;

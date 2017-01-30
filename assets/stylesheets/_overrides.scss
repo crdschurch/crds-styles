@@ -7,6 +7,7 @@ $bootstrap-sass-asset-helper: true;
   $brand-info: $cr-cyan-lighter !default;
   $brand-warning: $cr-orange !default;
   $brand-danger: $cr-magenta !default;
+  $gray-base: $cr-gray !default;
   $gray-darker: $cr-gray-darker !default;
   $gray-dark: $cr-gray-dark !default;
   $gray: $cr-gray !default;
@@ -63,3 +64,18 @@ $bootstrap-sass-asset-helper: true;
   $input-height-base: 40px !default;
   $input-group-addon-bg:  $input-bg !default;
   $input-group-addon-border-color: $input-border !default;
+
+// Alerts
+  $alert-border-radius: 0 !default;
+  $alert-success-bg: lighten($brand-success, 40) !default;
+  $alert-success-text: $brand-success !default;
+  $alert-success-border: lighten($brand-success, 35) !default;
+  $alert-info-bg: lighten($brand-info, 45) !default;
+  $alert-info-text: $brand-info !default;
+  $alert-info-border: lighten($brand-info, 40) !default;
+  $alert-warning-bg: lighten($brand-warning, 35) !default;
+  $alert-warning-text: $brand-warning !default;
+  $alert-warning-border: lighten($brand-warning, 30) !default;
+  $alert-danger-bg: lighten($brand-danger, 45) !default;
+  $alert-danger-text: $brand-danger !default;
+  $alert-danger-border: lighten($brand-danger, 40) !default;
