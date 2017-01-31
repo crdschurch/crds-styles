@@ -54,15 +54,15 @@ $bootstrap-sass-asset-helper: true;
   $btn-outline-hover-bg: $cr-gray-lighter;
 
 // Forms
-  $input-bg: $cr-gray-lightest !default;
-  $input-bg-focus: $cr-white;
+  $input-bg: $cr-white !default;
+  $input-bg-focus: $input-bg;
   $input-color: $cr-gray-darker !default;
   $input-placeholder: $cr-gray;
-  $input-border: 0 !default;
+  $input-border: $cr-gray-light !default;
   $input-border-focus: $cr-cyan-light !default;
   $input-border-radius: 0 !default;
   $input-height-base: 40px !default;
-  $input-group-addon-bg:  $input-bg !default;
+  $input-group-addon-bg: $cr-gray-lightest !default;
   $input-group-addon-border-color: $input-border !default;
 
 // Alerts
