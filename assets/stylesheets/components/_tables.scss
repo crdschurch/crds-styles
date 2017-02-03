@@ -1,5 +1,12 @@
+// .table-header in _headings.scss
+
 table {
   width: 100%;
+}
+
+.table-tagline {
+  border-top: 1px solid $cr-gray-light;
+  padding-top: .25rem;
 }
 
 .table-contrast-bg {
@@ -50,6 +57,20 @@ table {
       a {
         color: $cr-cyan;
       }
+    }
+  }
+}
+
+.streaming-table {
+  // font-size: .875rem;
+
+  .new-day {
+    td {
+      padding-top: 2rem;
+    }
+
+    td:first-child {
+      font-weight: bold;
     }
   }
 }
