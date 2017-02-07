@@ -14,6 +14,12 @@ datepicker {
   }
 
   thead {
+    tr:last-child > th {
+      padding-top: 0.5em;
+    }
+    th > .btn.btn-sm {
+      font-size: 0.9rem;
+    }
     .btn {
       &.btn-default {
         background: $calendar-bg;
@@ -62,9 +68,10 @@ datepicker {
   tbody {
     .btn {
       &.btn-default {
-        background: $calendar-bg;
-        border-color: $calendar-border;
+        background: transparent;
+        border: none;
         color: $calendar-text;
+        font-size: 0.9rem;
 
         &.active,
         &:active,
