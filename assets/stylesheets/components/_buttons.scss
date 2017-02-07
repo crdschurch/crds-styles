@@ -1,5 +1,7 @@
 .btn {
   border-radius: $btn-border-radius-base;
+  margin-top: 5px;
+  margin-bottom: 5px;
 
   &.active,
   &:active {
@@ -124,7 +126,7 @@
     border-radius: $btn-border-radius-base;
   }
 
-  > .btn {
+  > .btn:not(:last-child) {
     margin-right: .5rem;
   }
 }
@@ -135,8 +137,11 @@
   width: 100%;
 
   > .btn {
-    margin-right: 0;
     width: 50%;
+
+    &.btn-option {
+      margin-right: 0;
+    }
   }
 
   > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
@@ -192,12 +197,18 @@ a {
 // Flexbox button groups - Horizontal layout
 .btn-group-row {
   display: flex;
-  flex-flow: row nowrap;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: -5px;
+  margin-left: -5px;
   justify-content: space-between;
 
-  .btn-flex {
-    flex: 1 1 50%;
-    min-height: 2rem;
+  .btn-option {
+    &.btn-flex {
+      min-height: 2rem;
+      flex: 1 1 auto;
+      margin: 5px;
+    }
   }
 }
 
@@ -210,6 +221,12 @@ a {
     flex: 1 1 auto;
     min-height: 3.5rem;
     margin: 4px 0;
+  }
+
+  .btn-option {
+    &.btn-flex {
+      margin-right: 0;
+    }
   }
 
   .row {
