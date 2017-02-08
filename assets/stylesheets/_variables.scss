@@ -10,7 +10,6 @@ $cr-gray: rgba(151,151,151,1);           // #979797
 $cr-gray-alpha: rgba($cr-gray,.25);      // #979797
 $cr-gray-dark: darken($cr-gray,14);        // #737373
 $cr-gray-darker: darken($cr-gray,29);      // #4D4D4D
-$cr-gray-darkest: darken($cr-gray,35);
 $cr-gray-light: lighten($cr-gray,21);      // #CDCDCD
 $cr-gray-lighter: lighten($cr-gray,31.5);  // #E7E7E7
 $cr-gray-lightest: lighten($cr-gray,36.5); // #F4F4F4

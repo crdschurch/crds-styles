@@ -5,18 +5,18 @@ table {
 }
 
 .table-tagline {
-  border-top: 1px solid $cr-gray-light;
+  border-top: 1px solid $table-border-color;
   padding-top: .25rem;
 }
 
 .table-contrast-bg {
-  background: $cr-gray-lightest;
+  background: $table-bg;
   padding: 1rem;
 }
 
 .receipt-table {
   tr:not(:last-child) {
-    border-bottom: 1px solid $cr-gray-light;
+    border-bottom: 1px solid $table-border-color;
   }
 
   tr:last-child {
@@ -69,6 +69,37 @@ table {
 
     td:first-child {
       font-weight: bold;
+    }
+  }
+}
+
+.dark-theme {
+  table,
+  .table-contrast-bg {
+    background: darken($table-bg, 70);
+  }
+
+  .table-tagline {
+    border-top: 1px solid darken($table-border-color, 30);
+  }
+
+  .receipt-table {
+    tr:not(:last-child) {
+      border-color: darken($table-border-color, 30);
+    }
+
+    tr {
+      td:first-child {
+        a {
+          color: $cr-gray;
+        }
+      }
+
+      small {
+        a {
+          color: $cr-cyan;
+        }
+      }
     }
   }
 }
