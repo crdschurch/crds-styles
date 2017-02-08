@@ -5,7 +5,6 @@
 
   &.alert-success {
     @include alert-variant($alert-success-bg, $alert-success-border, $alert-success-text);
-    text-align: center;
   }
 
   &.alert-info {
@@ -18,6 +17,5 @@
 
   &.alert-danger {
     @include alert-variant($alert-danger-bg, $alert-danger-border, $alert-danger-text);
-    text-align: center;
   }
 }
