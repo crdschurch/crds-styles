@@ -1,12 +1,23 @@
-// .table-header in _headings.scss
+.table-header {
+  @extend .font-family-condensed-extra;
+  color: $cr-gray-darker;
+  font-size: 1.875rem;
+  font-weight: 500;
+  margin-bottom: .5rem;
+  text-transform: uppercase;
 
-table {
-  width: 100%;
+  .dark-theme & {
+    color: $cr-gray;
+  }
 }
 
 .table-tagline {
   border-top: 1px solid $table-border-color;
   padding-top: .25rem;
+}
+
+.table {
+  width: 100%;
 }
 
 .table-contrast-bg {
@@ -15,26 +26,7 @@ table {
 }
 
 .receipt-table {
-  tr:not(:last-child) {
-    border-bottom: 1px solid $table-border-color;
-  }
-
-  tr:last-child {
-    td {
-      padding-bottom: 2rem;
-    }
-  }
-
   tr {
-    td {
-      padding: .5rem 0;
-      vertical-align: top;
-
-      &.amount {
-        font-size: 1.5rem;
-      }
-    }
-
     td:first-child {
       @extend .text-uppercase;
       font-size: .75rem;
@@ -62,6 +54,15 @@ table {
 }
 
 .streaming-table {
+  tbody {
+    tr {
+      td {
+        padding: 0;
+        border-top: none;
+      }
+    }
+  }
+
   .new-day {
     td {
       padding-top: 2rem;
@@ -74,18 +75,25 @@ table {
 }
 
 .dark-theme {
-  table,
+  $table-contrast-bg: darken($cr-gray, 30);
+  $table-border-color: darken($cr-gray, 5);
+
+
   .table-contrast-bg {
-    background: darken($table-bg, 70);
+    background: $table-contrast-bg;
   }
 
   .table-tagline {
-    border-top: 1px solid darken($table-border-color, 30);
+    border-top: 1px solid $table-border-color;
   }
 
   .receipt-table {
-    tr:not(:last-child) {
-      border-color: darken($table-border-color, 30);
+    tbody {
+      tr {
+        td {
+          border-color: $table-border-color;
+        }
+      }
     }
 
     tr {

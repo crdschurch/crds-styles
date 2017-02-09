@@ -63,16 +63,3 @@ h6 {
   font-weight: bold;
   text-transform: uppercase;
 }
-
-.table-header {
-  @extend .font-family-condensed-extra;
-  color: $cr-gray-darker;
-  font-size: 1.875rem;
-  font-weight: 500;
-  margin-bottom: .5rem;
-  text-transform: uppercase;
-
-  .dark-theme & {
-    color: $cr-gray;
-  }
-}
