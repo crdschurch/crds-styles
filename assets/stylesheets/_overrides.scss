@@ -4,8 +4,8 @@ $bootstrap-sass-asset-helper: true;
 // Colors
   $brand-primary: $cr-blue !default;
   $brand-success: $cr-green !default;
-  $brand-info: $cr-cyan-lighter !default;
-  $brand-warning: $cr-orange !default;
+  $brand-info: $cr-cyan !default;
+  $brand-warning: $cr-gold !default;
   $brand-danger: $cr-magenta !default;
   $gray-base: $cr-gray !default;
   $gray-darker: $cr-gray-darker !default;
@@ -38,44 +38,49 @@ $bootstrap-sass-asset-helper: true;
   $border-radius-large: 5px !default;
   $border-radius-small: 3px !default;
 
+// Tables
+  $table-bg: transparent !default;
+  $table-contrast-bg: lighten($cr-gray-light, 36);
+  $table-border-color: lighten($cr-gray-light, 20) !default;
+
 // Buttons
   $btn-default-color: $cr-white !default;
-  $btn-default-bg: $cr-gray !default;
-  $btn-default-border: $cr-gray !default;
+  $btn-default-bg: $cr-gray-light !default;
+  $btn-default-border: $cr-gray-light !default;
   $btn-primary-color: $cr-white !default;
   $btn-info-color: $cr-white !default;
-  $btn-gray-bg: $cr-gray-dark;
-  $btn-gray-border: $cr-gray-dark;
+  $btn-gray-bg: $cr-gray;
+  $btn-gray-border: $cr-gray;
   $btn-gray-color: $cr-white;
   $btn-option-color: $cr-white;
-  $btn-option-bg: $cr-gray;
-  $btn-option-border: $cr-gray;
+  $btn-option-bg: $cr-gray-light;
+  $btn-option-border: $cr-gray-light;
   $btn-outline-bg: $cr-white;
   $btn-outline-hover-bg: $cr-gray-lighter;
 
 // Forms
   $input-bg: $cr-white !default;
   $input-bg-focus: $input-bg;
-  $input-color: $cr-gray-darker !default;
-  $input-placeholder: $cr-gray;
+  $input-color: $cr-gray !default;
+  $input-placeholder: $cr-gray-light;
   $input-border: $cr-gray-light !default;
   $input-border-focus: $cr-cyan-light !default;
   $input-border-radius: 0 !default;
   $input-height-base: 40px !default;
-  $input-group-addon-bg: $cr-gray-lightest !default;
+  $input-group-addon-bg: $cr-gray-lighter !default;
   $input-group-addon-border-color: $input-border !default;
 
 // Alerts
   $alert-border-radius: 0 !default;
   $alert-success-bg: lighten($brand-success, 40) !default;
   $alert-success-text: $brand-success !default;
-  $alert-success-border: lighten($brand-success, 35) !default;
-  $alert-info-bg: lighten($brand-info, 45) !default;
+  $alert-success-border: lighten($brand-success, 30) !default;
+  $alert-info-bg: lighten($brand-info, 50) !default;
   $alert-info-text: $brand-info !default;
   $alert-info-border: lighten($brand-info, 40) !default;
-  $alert-warning-bg: lighten($brand-warning, 35) !default;
+  $alert-warning-bg: lighten($brand-warning, 45) !default;
   $alert-warning-text: $brand-warning !default;
-  $alert-warning-border: lighten($brand-warning, 30) !default;
+  $alert-warning-border: lighten($brand-warning, 25) !default;
   $alert-danger-bg: lighten($brand-danger, 45) !default;
   $alert-danger-text: $brand-danger !default;
   $alert-danger-border: lighten($brand-danger, 40) !default;
