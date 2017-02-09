@@ -1,77 +1,33 @@
-//** Background Images **/
+// Background images
+
 .img-background {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
 }
+
 .img-background-100 {
   background-size: 100%;
   background-position: top left;
   background-repeat: no-repeat;
 }
-.dark-bg {
-  color: $white;
-  background-color: $black;
-  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, p, small, .small, .legend, output, label, .btn-standard-dark
-  {
-    color: $white;
-  }
-  .has-error p,
-  .has-error p span {
-    color: $brand-danger;
 
-    a {
-      color: $brand-danger;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-
-  .icon {
-    fill: $white;
-    color: $white !important;
-  }
-  .text-muted {
-    color: #ccc; //temp until I see it to refine
-  }
-  .icon-bar {
-    background-color: $white;
-  }
-  a {
-    color: $gray-lighter;
-    text-decoration: none;
-    &:hover,
-    &:focus {
-      color: $gray-light;
-      text-decoration: $link-hover-decoration;
-    }
-  }
-  .btn-standard {
-    @include button-variant(black, $gray-lighter, $gray-lighter);
-  }
-  .panel, .billboard {
-    background-color: transparent;
-  }
-}
-
-/** Font weights **/
+// Font weights
 
 .weight-light {
-    font-weight: 300;
+  font-weight: 100;
 }
 
 .weight-normal {
-    font-weight: 400;
+  font-weight: 300;
 }
 
 .weight-semibold {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .bold {
-    font-weight: bold;
+  @extend .weight-semibold;
 }
 
 a.underline,
@@ -79,37 +35,20 @@ a.underline,
     text-decoration: underline;
 }
 
-/** Font styles **/
-.black {
-  color: $black;
-}
-
-.white {
-  color: $white;
-}
-
-.text-lowercase {
-    text-transform: lowercase;
-}
-
-.text-uppercase {
-    text-transform: uppercase;
-}
-
-/** Text overflow **/
 .ellipsis {
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
-}
-.btn-multi-line {
-  white-space:normal;
+  white-space: nowrap;
 }
 
-/** Spacing **/
+.btn-multi-line {
+  white-space: normal;
+}
+
+// Spacing
 
 .full-width {
-    width: 100%;
+  width: 100%;
 }
 
 .overflow-hidden {
@@ -123,66 +62,66 @@ a.underline,
   transform: translate(-50%, -50%);
 }
 
-/** Add/remove margins **/
+// Add/remove margins
 
 .push {
-    margin: $line-height-computed;
+  margin: $line-height-computed;
 }
 
 .push-top {
-    margin-top: $line-height-computed;
+  margin-top: $line-height-computed;
 }
 
 .push-right {
-    margin-right: $line-height-computed;
+  margin-right: $line-height-computed;
 }
 
 .push-bottom {
-    margin-bottom: $line-height-computed;
+  margin-bottom: $line-height-computed;
 }
 
 .push-left {
-    margin-left: $line-height-computed;
+  margin-left: $line-height-computed;
 }
 
 .push-ends {
-    margin-top: $line-height-computed;
-    margin-bottom: $line-height-computed;
+  margin-top: $line-height-computed;
+  margin-bottom: $line-height-computed;
 }
 
 .push-sides {
-    margin-right: $line-height-computed;
-    margin-left: $line-height-computed;
+  margin-right: $line-height-computed;
+  margin-left: $line-height-computed;
 }
 
 .push-half {
-    margin: $line-height-computed / 2;
+  margin: $line-height-computed / 2;
 }
 
 .push-half-top {
-    margin-top: $line-height-computed / 2;
+  margin-top: $line-height-computed / 2;
 }
 
 .push-half-right {
-    margin-right: $line-height-computed / 2;
+  margin-right: $line-height-computed / 2;
 }
 
 .push-half-bottom {
-    margin-bottom: $line-height-computed / 2;
+  margin-bottom: $line-height-computed / 2;
 }
 
 .push-half-left {
-    margin-left: $line-height-computed / 2;
+  margin-left: $line-height-computed / 2;
 }
 
 .push-half-ends {
-    margin-top: $line-height-computed / 2;
-    margin-bottom: $line-height-computed / 2;
+  margin-top: $line-height-computed / 2;
+  margin-bottom: $line-height-computed / 2;
 }
 
 .push-half-sides {
-    margin-right: $line-height-computed / 2;
-    margin-left: $line-height-computed / 2;
+  margin-right: $line-height-computed / 2;
+  margin-left: $line-height-computed / 2;
 }
 
 .push-quarter-bottom {
@@ -190,298 +129,330 @@ a.underline,
 }
 
 .flush {
-    margin: 0;
+  margin: 0;
 }
 
 .flush-top {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .flush-right {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 .flush-bottom {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .flush-left {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .flush-ends {
-    margin-top: 0;
-    margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .flush-sides {
-    margin-right: 0;
-    margin-left: 0;
+  margin-right: 0;
+  margin-left: 0;
 }
-/** Add/remove paddings **/
+
+// Add/remove padding
 
 .soft {
-    padding: $line-height-computed;
+  padding: $line-height-computed;
 }
 
 .soft-top {
-    padding-top: $line-height-computed;
+  padding-top: $line-height-computed;
 }
 
 .soft-right {
-    padding-right: $line-height-computed;
+  padding-right: $line-height-computed;
 }
 
 .soft-right-grid {
-    padding-right: $grid-gutter-width/4;
+  padding-right: $grid-gutter-width / 4;
 }
 
 .soft-bottom {
-    padding-bottom: $line-height-computed;
+  padding-bottom: $line-height-computed;
 }
 
 .soft-left {
-    padding-left: $line-height-computed;
+  padding-left: $line-height-computed;
 }
 
 .soft-left-grid {
-    padding-left: $grid-gutter-width/4;
+  padding-left: $grid-gutter-width / 4;
 }
 
 .soft-ends {
-    padding-top: $line-height-computed;
-    padding-bottom: $line-height-computed;
+  padding-top: $line-height-computed;
+  padding-bottom: $line-height-computed;
 }
 
 .soft-sides {
-    padding-right: $line-height-computed;
-    padding-left: $line-height-computed;
+  padding-right: $line-height-computed;
+  padding-left: $line-height-computed;
 }
 
 .soft-half {
-    padding: $line-height-computed / 2;
+  padding: $line-height-computed / 2;
 }
 
 .soft-half-top {
-    padding-top: $line-height-computed / 2;
+  padding-top: $line-height-computed / 2;
 }
 
 .soft-half-right {
-    padding-right: $line-height-computed / 2;
+  padding-right: $line-height-computed / 2;
 }
 
 .soft-half-bottom {
-    padding-bottom: $line-height-computed / 2;
+  padding-bottom: $line-height-computed / 2;
 }
 
 .soft-half-left {
-    padding-left: $line-height-computed / 2;
+  padding-left: $line-height-computed / 2;
 }
 
 .soft-quarter {
-    padding: $line-height-computed / 4;
+  padding: $line-height-computed / 4;
 }
 
 .soft-quarter-left {
-    padding-left: $line-height-computed / 4;
+  padding-left: $line-height-computed / 4;
 }
 
 .soft-quarter-bottom {
-    padding-bottom: $line-height-computed / 4;
+  padding-bottom: $line-height-computed / 4;
 }
 
 .soft-half-ends {
-    padding-top: $line-height-computed / 2;
-    padding-bottom: $line-height-computed / 2;
+  padding-top: $line-height-computed / 2;
+  padding-bottom: $line-height-computed / 2;
 }
 
 .soft-half-sides {
-    padding-right: $line-height-computed / 2;
-    padding-left: $line-height-computed / 2;
+  padding-right: $line-height-computed / 2;
+  padding-left: $line-height-computed / 2;
 }
 
 .hard {
-    padding: 0;
+  padding: 0;
 }
 
 .hard-top {
-    padding-top: 0;
+  padding-top: 0;
 }
 
 .hard-right {
-    padding-right: 0;
+  padding-right: 0;
 }
 
 .hard-bottom {
-    padding-bottom: 0;
+  padding-bottom: 0;
 }
 
 .hard-left {
-    padding-left: 0;
+  padding-left: 0;
 }
 
 .hard-ends {
-    padding-top: 0;
-    padding-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .hard-sides {
-    padding-right: 0;
-    padding-left: 0;
+  padding-right: 0;
+  padding-left: 0;
 }
-/** Mobile Push to account for stacking **/
+
+// Mobile positioning
 
 @media only screen and (max-width: $screen-sm-min) {
-    .mobile-push {
-        margin: $line-height-computed;
-    }
-    .mobile-push-top {
+  .mobile {
+    &-push {
+      margin: $line-height-computed;
+
+      &-top {
         margin-top: $line-height-computed;
-    }
-    .mobile-push-right {
+      }
+
+      &-right {
         margin-right: $line-height-computed;
-    }
-    .mobile-push-bottom {
+      }
+
+      &-bottom {
         margin-bottom: $line-height-computed;
-    }
-    .mobile-push-left {
+      }
+
+      &-left {
         margin-left: $line-height-computed;
-    }
-    .mobile-push-ends {
+      }
+
+      &-ends {
         margin-top: $line-height-computed;
         margin-bottom: $line-height-computed;
-    }
-    .mobile-push-sides {
+      }
+
+      &-sides {
         margin-right: $line-height-computed;
         margin-left: $line-height-computed;
-    }
-    .mobile-push-half {
+      }
+
+      &-half {
         margin: $line-height-computed / 2;
+
+        &-top {
+          margin-top: $line-height-computed / 2;
+        }
+
+        &-right {
+          margin-right: $line-height-computed / 2;
+        }
+
+        &-bottom {
+          margin-bottom: $line-height-computed / 2;
+        }
+
+        &-left {
+          margin-left: $line-height-computed / 2;
+        }
+
+        &-ends {
+          margin-top: $line-height-computed / 2;
+          margin-bottom: $line-height-computed / 2;
+        }
+
+        &-sides {
+          margin-right: $line-height-computed / 2;
+          margin-left: $line-height-computed / 2;
+        }
+      }
     }
 
-    .mobile-push-half-top {
-        margin-top: $line-height-computed / 2;
-    }
+    &-flush {
+      margin: 0;
 
-    .mobile-push-half-right {
-        margin-right: $line-height-computed / 2;
-    }
-
-    .mobile-push-half-bottom {
-        margin-bottom: $line-height-computed / 2;
-    }
-
-    .mobile-push-half-left {
-        margin-left: $line-height-computed / 2;
-    }
-
-    .mobile-push-half-ends {
-        margin-top: $line-height-computed / 2;
-        margin-bottom: $line-height-computed / 2;
-    }
-
-    .mobile-push-half-sides {
-        margin-right: $line-height-computed / 2;
-        margin-left: $line-height-computed / 2;
-    }
-    .mobile-flush {
-        margin: 0;
-    }
-    .mobile-flush-top {
+      &-top {
         margin-top: 0;
-    }
-    .mobile-flush-right {
+      }
+
+      &-right {
         margin-right: 0;
-    }
-    .mobile-flush-bottom {
+      }
+
+      &-bottom {
         margin-bottom: 0;
-    }
-    .mobile-flush-left {
+      }
+
+      &-left {
         margin-left: 0;
-    }
-    .mobile-flush-ends {
+      }
+
+      &-ends {
         margin-top: 0;
         margin-bottom: 0;
-    }
-    .mobile-flush-sides {
+      }
+
+      &-sides {
         margin-right: 0;
         margin-left: 0;
+      }
     }
-    .mobile-hard {
-        padding: 0;
-    }
-    .mobile-hard-top {
+
+    &-hard {
+      padding: 0;
+
+      &-top {
         padding-top: 0;
-    }
-    .mobile-hard-right {
+      }
+
+      &-right {
         padding-right: 0;
-    }
-    .mobile-hard-bottom {
+      }
+
+      &-bottom {
         padding-bottom: 0;
-    }
-    .mobile-hard-left {
+      }
+
+      &-left {
         padding-left: 0;
-    }
-    .mobile-hard-ends {
+      }
+
+      &-ends {
         padding-top: 0;
         padding-bottom: 0;
-    }
-    .mobile-hard-sides {
+      }
+
+      &-sides {
         padding-right: 0;
         padding-left: 0;
-    }
-    .mobile-soft {
-        padding: $line-height-computed;
+      }
     }
 
-    .mobile-soft-top {
+    &-soft {
+      padding: $line-height-computed;
+
+      &-top {
         padding-top: $line-height-computed;
-    }
+      }
 
-    .mobile-soft-right {
+      &-right {
         padding-right: $line-height-computed;
-    }
+      }
 
-    .mobile-soft-bottom {
+      &-bottom {
         padding-bottom: $line-height-computed;
-    }
+      }
 
-    .mobile-soft-left {
+      &-left {
         padding-left: $line-height-computed;
-    }
+      }
 
-    .mobile-soft-ends {
+      &-ends {
         padding-top: $line-height-computed;
         padding-bottom: $line-height-computed;
-    }
+      }
 
-    .mobile-soft-sides {
+      &-sides {
         padding-right: $line-height-computed;
         padding-left: $line-height-computed;
-    }
+      }
 
-    .mobile-soft-half-top {
-        padding-top: $line-height-computed / 2;
-    }
+      &-half {
+        &-top {
+          padding-top: $line-height-computed / 2;
+        }
 
-    .mobile-soft-half-ends {
-        padding-top: $line-height-computed / 2;
-        padding-bottom: $line-height-computed / 2;
-    }
+        &-ends {
+          padding-top: $line-height-computed / 2;
+          padding-bottom: $line-height-computed / 2;
+        }
 
-    .mobile-soft-half-sides {
-        padding-right: $line-height-computed / 2;
-        padding-left: $line-height-computed / 2;
+        &-sides {
+          padding-right: $line-height-computed / 2;
+          padding-left: $line-height-computed / 2;
+        }
+      }
     }
+  }
 }
 
-// Misc helpers
+// Display helpers
 .block {
-    display: block;
+  display: block;
+}
+
+.relative {
+  position: relative;
 }
 
 .inline {
-    display: inline;
+  display: inline;
 }
 
 .inline-block {
@@ -489,14 +460,14 @@ a.underline,
 }
 
 .static {
-    position: static;
+  position: static;
 }
 
 .center {
-    float: none;
-    display: inline-block;
-    vertical-align: middle;
+  display: inline-block;
+  vertical-align: middle;
 }
+
 .vertical-center {
   position: absolute;
   left: 50%;
@@ -504,6 +475,7 @@ a.underline,
   transform: translate(-50%, -50%);
   width: 100%;
 }
+
 .vertical-bottom {
   position: absolute;
   left: 50%;
@@ -511,6 +483,7 @@ a.underline,
   transform: translate(-50%, 0%);
   width: 100%;
 }
+
 .vertical-10 {
   position: absolute;
   left: 50%;
@@ -518,6 +491,7 @@ a.underline,
   transform: translate(-50%, -10%);
   width: 100%;
 }
+
 .vertical-20 {
   position: absolute;
   left: 50%;
@@ -525,6 +499,7 @@ a.underline,
   transform: translate(-50%, -20%);
   width: 100%;
 }
+
 .vertical-70 {
   position: absolute;
   left: 50%;
@@ -532,6 +507,7 @@ a.underline,
   transform: translate(-50%, -70%);
   width: 100%;
 }
+
 .vertical-80 {
   position: absolute;
   left: 50%;
@@ -541,11 +517,11 @@ a.underline,
 }
 
 .smaller {
-    font-size: 70%;
+  font-size: 70%;
 }
 
 .pointer {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .tight-line-height {
@@ -557,15 +533,13 @@ a.underline,
 }
 
 .or-divider {
-    margin-top: -41px;
-    span {
-        background: #fff; padding: 5px;
-        vertical-align: middle;
-    }
-}
+  margin-top: -41px;
 
-.relative {
-  position: relative;
+  span {
+    background: $cr-white;
+    padding: 5px;
+    vertical-align: middle;
+  }
 }
 
 .no-borders {
@@ -596,12 +570,6 @@ a.underline,
   }
 }
 
-.hide {
-  display: none;
-}
-.show {
-  display: block;;
-}
 .square-corners {
   border-radius: 0;
 }
@@ -693,7 +661,7 @@ a.underline,
 .carousel,
 .panel-title a,
 a[ng-click] {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .img-full-width {
@@ -714,40 +682,6 @@ a[ng-click] {
   right: 0;
 }
 
-// Style normal text link a link
-.link-styling {
-  color: $link-color;
-  cursor: pointer;
-  &:hover {
-    color: $link-hover-color;
-  }
-}
-
-// Auto width columns
-@media (min-width: $screen-xs-min) {
-    .col-xs-auto {
-        width: auto;
-    }
-}
-
-@media (min-width: $screen-sm-min) {
-    .col-sm-auto {
-        width: auto;
-    }
-}
-
-@media (min-width: $screen-md-min) {
-    .col-md-auto {
-        width: auto;
-    }
-}
-
-@media (min-width: $screen-lg-min) {
-    .col-lg-auto {
-        width: auto;
-    }
-}
-
 // Vertical Align
 // Note: if the element is blurry, try putting transform-style: preserve-3d; on the parent
 // Reference: http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
@@ -757,26 +691,25 @@ a[ng-click] {
   transform: translateY(-50%);
 }
 
-
 // Maintain Aspect Ratio
 
 @mixin aspect-ratio($width, $height) {
-    position: relative;
+  position: relative;
 
-    &:before{
-        display: block;
-        content: " ";
-        width: 100%;
-        padding-top: ($height / $width) * 100%;
-    }
+  &:before{
+    display: block;
+    content: " ";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
 
-    > .aspect-content {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-    }
+  > .aspect-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 }
 
 .sixteen-nine {
