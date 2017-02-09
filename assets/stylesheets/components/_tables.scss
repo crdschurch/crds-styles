@@ -1,0 +1,113 @@
+.table-header {
+  @extend .font-family-condensed-extra;
+  color: $cr-gray-darker;
+  font-size: 1.875rem;
+  font-weight: 500;
+  margin-bottom: .5rem;
+  text-transform: uppercase;
+
+  .dark-theme & {
+    color: $cr-gray;
+  }
+}
+
+.table-tagline {
+  border-top: 1px solid $table-border-color;
+  padding-top: .25rem;
+}
+
+.table {
+  width: 100%;
+}
+
+.table-contrast-bg {
+  background: $table-contrast-bg;
+  padding: 1rem;
+}
+
+.receipt-table {
+  tr {
+    td:first-child {
+      @extend .text-uppercase;
+      font-size: .75rem;
+
+      a {
+        color: $cr-cyan;
+      }
+    }
+
+    td:last-child {
+      font-size: 1rem;
+      text-align: right;
+
+      &.amount {
+        font-size: 1.5rem;
+      }
+    }
+
+    small {
+      a {
+        color: $cr-cyan;
+      }
+    }
+  }
+}
+
+.streaming-table {
+  tbody {
+    tr {
+      td {
+        padding: 0;
+        border-top: none;
+      }
+    }
+  }
+
+  .new-day {
+    td {
+      padding-top: 2rem;
+    }
+
+    td:first-child {
+      font-weight: bold;
+    }
+  }
+}
+
+.dark-theme {
+  $table-contrast-bg: darken($cr-gray, 30);
+  $table-border-color: darken($cr-gray, 5);
+
+
+  .table-contrast-bg {
+    background: $table-contrast-bg;
+  }
+
+  .table-tagline {
+    border-top: 1px solid $table-border-color;
+  }
+
+  .receipt-table {
+    tbody {
+      tr {
+        td {
+          border-color: $table-border-color;
+        }
+      }
+    }
+
+    tr {
+      td:first-child {
+        a {
+          color: $cr-gray;
+        }
+      }
+
+      small {
+        a {
+          color: $cr-cyan;
+        }
+      }
+    }
+  }
+}

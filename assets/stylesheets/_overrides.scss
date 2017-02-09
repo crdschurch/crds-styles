@@ -38,6 +38,11 @@ $bootstrap-sass-asset-helper: true;
   $border-radius-large: 5px !default;
   $border-radius-small: 3px !default;
 
+// Tables
+  $table-bg: transparent !default;
+  $table-contrast-bg: lighten($cr-gray-light, 36);
+  $table-border-color: lighten($cr-gray-light, 20) !default;
+
 // Buttons
   $btn-default-color: $cr-white !default;
   $btn-default-bg: $cr-gray-light !default;
