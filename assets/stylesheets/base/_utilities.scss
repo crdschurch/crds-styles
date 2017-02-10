@@ -12,24 +12,6 @@
   background-repeat: no-repeat;
 }
 
-// Font weights
-
-.weight-light {
-  font-weight: 100;
-}
-
-.weight-normal {
-  font-weight: 300;
-}
-
-.weight-semibold {
-  font-weight: 600;
-}
-
-.bold {
-  @extend .weight-semibold;
-}
-
 a.underline,
 .underline {
     text-decoration: underline;
@@ -44,8 +26,6 @@ a.underline,
 .btn-multi-line {
   white-space: normal;
 }
-
-// Spacing
 
 .full-width {
   width: 100%;
@@ -172,7 +152,7 @@ a.underline,
   padding-right: $line-height-computed;
 }
 
-.soft-right-grid {
+.soft-quarter-right {
   padding-right: $grid-gutter-width / 4;
 }
 
@@ -182,10 +162,6 @@ a.underline,
 
 .soft-left {
   padding-left: $line-height-computed;
-}
-
-.soft-left-grid {
-  padding-left: $grid-gutter-width / 4;
 }
 
 .soft-ends {
@@ -270,178 +246,6 @@ a.underline,
   padding-left: 0;
 }
 
-// Mobile positioning
-
-@media only screen and (max-width: $screen-sm-min) {
-  .mobile {
-    &-push {
-      margin: $line-height-computed;
-
-      &-top {
-        margin-top: $line-height-computed;
-      }
-
-      &-right {
-        margin-right: $line-height-computed;
-      }
-
-      &-bottom {
-        margin-bottom: $line-height-computed;
-      }
-
-      &-left {
-        margin-left: $line-height-computed;
-      }
-
-      &-ends {
-        margin-top: $line-height-computed;
-        margin-bottom: $line-height-computed;
-      }
-
-      &-sides {
-        margin-right: $line-height-computed;
-        margin-left: $line-height-computed;
-      }
-
-      &-half {
-        margin: $line-height-computed / 2;
-
-        &-top {
-          margin-top: $line-height-computed / 2;
-        }
-
-        &-right {
-          margin-right: $line-height-computed / 2;
-        }
-
-        &-bottom {
-          margin-bottom: $line-height-computed / 2;
-        }
-
-        &-left {
-          margin-left: $line-height-computed / 2;
-        }
-
-        &-ends {
-          margin-top: $line-height-computed / 2;
-          margin-bottom: $line-height-computed / 2;
-        }
-
-        &-sides {
-          margin-right: $line-height-computed / 2;
-          margin-left: $line-height-computed / 2;
-        }
-      }
-    }
-
-    &-flush {
-      margin: 0;
-
-      &-top {
-        margin-top: 0;
-      }
-
-      &-right {
-        margin-right: 0;
-      }
-
-      &-bottom {
-        margin-bottom: 0;
-      }
-
-      &-left {
-        margin-left: 0;
-      }
-
-      &-ends {
-        margin-top: 0;
-        margin-bottom: 0;
-      }
-
-      &-sides {
-        margin-right: 0;
-        margin-left: 0;
-      }
-    }
-
-    &-hard {
-      padding: 0;
-
-      &-top {
-        padding-top: 0;
-      }
-
-      &-right {
-        padding-right: 0;
-      }
-
-      &-bottom {
-        padding-bottom: 0;
-      }
-
-      &-left {
-        padding-left: 0;
-      }
-
-      &-ends {
-        padding-top: 0;
-        padding-bottom: 0;
-      }
-
-      &-sides {
-        padding-right: 0;
-        padding-left: 0;
-      }
-    }
-
-    &-soft {
-      padding: $line-height-computed;
-
-      &-top {
-        padding-top: $line-height-computed;
-      }
-
-      &-right {
-        padding-right: $line-height-computed;
-      }
-
-      &-bottom {
-        padding-bottom: $line-height-computed;
-      }
-
-      &-left {
-        padding-left: $line-height-computed;
-      }
-
-      &-ends {
-        padding-top: $line-height-computed;
-        padding-bottom: $line-height-computed;
-      }
-
-      &-sides {
-        padding-right: $line-height-computed;
-        padding-left: $line-height-computed;
-      }
-
-      &-half {
-        &-top {
-          padding-top: $line-height-computed / 2;
-        }
-
-        &-ends {
-          padding-top: $line-height-computed / 2;
-          padding-bottom: $line-height-computed / 2;
-        }
-
-        &-sides {
-          padding-right: $line-height-computed / 2;
-          padding-left: $line-height-computed / 2;
-        }
-      }
-    }
-  }
-}
-
 // Display helpers
 .block {
   display: block;
@@ -467,6 +271,8 @@ a.underline,
   display: inline-block;
   vertical-align: middle;
 }
+
+// Vertical positioning
 
 .vertical-center {
   position: absolute;
@@ -516,10 +322,6 @@ a.underline,
   width: 100%;
 }
 
-.smaller {
-  font-size: 70%;
-}
-
 .pointer {
   cursor: pointer;
 }
@@ -541,6 +343,8 @@ a.underline,
     vertical-align: middle;
   }
 }
+
+// Border stuff
 
 .no-borders {
   border: 0px !important;
@@ -564,12 +368,11 @@ a.underline,
   border-bottom: 1px solid $gray-lighter;
 }
 
-.pull-right {
-  &.btn {
-    margin-left: 5px;
-  }
+.pull-right.btn {
+  margin-left: 5px;
 }
 
+// Square corners
 .square-corners {
   border-radius: 0;
 }
