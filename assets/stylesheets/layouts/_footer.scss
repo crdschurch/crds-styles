@@ -1,0 +1,30 @@
+// TODO: Use the crds-bg-variant here when US6912 is merged.
+.footer {
+  margin-top: 40px;
+  padding: 50px 0 200px;
+  background-color: $cr-gray-lighter;
+  color: $cr-gray;
+
+  .footer-heading {
+    margin-bottom: 13px;
+    font-size: $base-font-size;
+    text-transform: none;
+    font-family: $base-font-face;
+  }
+
+  .footer-menu {
+    list-style: none;
+    margin: 0 0 13px;
+    padding: 0;
+  }
+
+  a {
+    color: $cr-gray;
+    &:active,
+    &:focus,
+    &:hover {
+      color: $link-hover-color;
+      text-decoration: none;
+    }
+  }
+}
