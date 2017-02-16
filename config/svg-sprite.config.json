@@ -4,14 +4,15 @@
   "mode": {
     "css": {
       "dest": "svg",
-      "sprite": "sprite.css.svg",
+      "sprite": "assets/sprite.css.svg",
+      "bust": false,
       "render": {
           "scss": true
       }
     },
     "symbol": {
       "dest": "svg",
-      "sprite": "sprite.symbol.svg"
+      "sprite": "assets/sprite.symbol.svg"
     }
   }
 }

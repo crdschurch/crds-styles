@@ -33,6 +33,15 @@ Once you've added `crds-styles` to `package.json` you need to import the stylesh
 
     @import '~crds-styles/assets/stylesheets/bootstrap';
 
+## SVGs
+
+### Adding New SVGs
+To add a new SVG, simple add the svg to `assets/svgs`
+
+### Compile SVG sprites
+Run `npm run build-svg` to compile the SVGs into the correct sass and sprite files
+
+
 ## Versions &amp; Roadmap
 
 We'll be developing the pattern library over the next few months and as we release new updates, we will increase the version number according to the following rules.
