@@ -142,3 +142,15 @@ dl.crds-list {
     }
   }
 }
+
+/* Links */
+
+a {
+  &.secondary {
+    color: $cr-gray;
+
+    &:hover {
+      color: $cr-gray-dark;
+    }
+  }
+}
