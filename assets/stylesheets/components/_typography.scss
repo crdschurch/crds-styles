@@ -145,13 +145,8 @@ dl.crds-list {
 
 .page-header {
   @extend .font-family-base-light;
-  font-size: 2.75rem; // 44px
+  @extend .font-size-h1;
   word-wrap: break-word;
-
-  @media screen and (min-width: $screen-xs) {
-    font-size: 4.25rem; // 68px
-    word-wrap: normal;
-  }
 }
 
 .section-header {
