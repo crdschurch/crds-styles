@@ -32,6 +32,10 @@
   @media screen and (min-width: $screen-xs) {
     font-size: 1.75rem; // 28px
   }
+
+  .dark-theme & {
+    border-top: 1px solid $cr-gray-dark;
+  }
 }
 .font-size-h6 {
   font-size: 1.1875rem; // 19px
@@ -61,6 +65,7 @@
     font-size: 1rem; // 16px
   }
 }
+
 .font-size-smaller {
   font-size: 0.75rem; // 12px
 
@@ -85,4 +90,17 @@ h5 {
 }
 h6 {
   @extend .font-size-h6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  .dark-theme & {
+    $headings-color: $cr-gray-dark;
+
+    color: $headings-color;
+  }
 }

@@ -14,6 +14,28 @@
     }
   }
 
+  input,
+  textarea {
+    border: 1px solid $input-border;
+    border-right: none;
+    background: $cr-white;
+    box-shadow: none;
+
+    &.ng-invalid,
+    &.ng-valid {
+      border-right-style: solid;
+      border-right-width: 8px;
+    }
+
+    &.ng-valid {
+      border-right-color: $brand-success;
+    }
+
+    &.ng-invalid {
+      border-right-color: $brand-danger;
+    }
+  }
+
   &.has-success {
     border-right-color: $brand-success;
   }
@@ -23,6 +45,16 @@
     .help-block {
       color: $cr-white;
       padding: .5rem 1rem;
+    }
+  }
+
+  .error {
+    &.help-block {
+      background: $brand-danger;
+      color: $cr-white;
+      padding: .5rem 1rem;
+      position: relative;
+      top: -1px;
     }
   }
 
