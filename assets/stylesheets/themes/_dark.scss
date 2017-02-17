@@ -2,16 +2,11 @@
   $body-bg: $cr-black;
   $text-color: $cr-gray;
   $hr-border: $cr-gray-darker;
-  $headings-color: $cr-gray-dark;
 
   background: $body-bg;
   color: $text-color;
 
   hr {
     border-top-color: $hr-border;
-  }
-
-  h2 {
-    color: $headings-color;
   }
 }
