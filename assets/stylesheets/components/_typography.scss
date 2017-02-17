@@ -210,3 +210,15 @@ dl.crds-list {
   font-weight: bold;
   text-transform: uppercase;
 }
+
+/* Links */
+
+a {
+  &.secondary {
+    color: $cr-gray;
+
+    &:hover {
+      color: $cr-gray-dark;
+    }
+  }
+}

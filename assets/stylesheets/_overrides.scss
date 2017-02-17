@@ -17,6 +17,8 @@ $bootstrap-sass-asset-helper: true;
 // Scaffolding
   $body-bg: $cr-white;
   $text-color: $cr-gray-dark !default;
+  $link-color: $cr-cyan !default;
+  $link-color-hover: $cr-cyan-dark !default;
   $link-hover-decoration: underline;
 
 // Typography
