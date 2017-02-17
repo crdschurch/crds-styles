@@ -147,6 +147,9 @@ dl.crds-list {
   @extend .font-family-base-light;
   @extend .font-size-h1;
   word-wrap: break-word;
+  .dark-theme & {
+    border-color: $cr-gray-dark;
+  }
 }
 
 .section-header {
@@ -174,6 +177,10 @@ dl.crds-list {
   border-top: 1px solid $cr-gray-light;
   color: $cr-gray;
   padding-top: 0.25em;
+
+  .dark-theme & {
+    border-color: $cr-gray-dark;
+  }
 
   @media screen and (min-width: $screen-xs) {
     font-size: 1.5rem; // 24px
