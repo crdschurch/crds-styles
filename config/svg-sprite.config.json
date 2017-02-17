@@ -4,6 +4,7 @@
   "mode": {
     "css": {
       "dest": "svg",
+      "dimensions": "",
       "sprite": "assets/sprite.css.svg",
       "bust": false,
       "render": {

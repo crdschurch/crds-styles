@@ -43,7 +43,7 @@ If using webpack, the `copy-webpack-plugin` can be used to move the svg files to
 plugins: [
     new CopyWebpackPlugin([
       {
-        context: './node_modules/crds-styles/assets/stylesheets/svg/',
+        context: './node_modules/crds-styles/assets/stylesheets/svg/assets',
         from: '*.svg',
         to: 'assets',
       }
