@@ -1,4 +1,4 @@
-// Background images
+/* Background images */
 
 .img-background {
   background-size: cover;
@@ -12,19 +12,17 @@
   background-repeat: no-repeat;
 }
 
+/* Text rules */
+
 a.underline,
 .underline {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .ellipsis {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-.btn-multi-line {
-  white-space: normal;
 }
 
 .full-width {
@@ -35,393 +33,12 @@ a.underline,
   overflow: hidden;
 }
 
-.center {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+.sub {
+  vertical-align: sub;
 }
 
-// Background colors
+/* Display helpers */
 
-.bg-success {
-  @include crds-bg-variant($brand-success);
-}
-
-.bg-info {
-  @include crds-bg-variant($brand-info);
-}
-
-.bg-warning {
-  @include crds-bg-variant($brand-warning);
-}
-
-.bg-danger {
-  @include crds-bg-variant($brand-danger);
-}
-
-.bg-blue {
-  @include crds-bg-variant($cr-blue);
-}
-
-.bg-cyan {
-  @include crds-bg-variant($cr-cyan);
-}
-
-.bg-gray {
-  @include crds-bg-variant($cr-gray-lighter, $cr-gray);
-}
-
-// Add/remove margins
-
-.push {
-  margin: $line-height-computed;
-}
-
-.push-top {
-  margin-top: $line-height-computed;
-}
-
-.push-right {
-  margin-right: $line-height-computed;
-}
-
-.push-bottom {
-  margin-bottom: $line-height-computed;
-}
-
-.push-left {
-  margin-left: $line-height-computed;
-}
-
-.push-ends {
-  margin-top: $line-height-computed;
-  margin-bottom: $line-height-computed;
-}
-
-.push-sides {
-  margin-right: $line-height-computed;
-  margin-left: $line-height-computed;
-}
-
-.push-half {
-  margin: $line-height-computed / 2;
-}
-
-.push-half-top {
-  margin-top: $line-height-computed / 2;
-}
-
-.push-half-right {
-  margin-right: $line-height-computed / 2;
-}
-
-.push-half-bottom {
-  margin-bottom: $line-height-computed / 2;
-}
-
-.push-half-left {
-  margin-left: $line-height-computed / 2;
-}
-
-.push-half-ends {
-  margin-top: $line-height-computed / 2;
-  margin-bottom: $line-height-computed / 2;
-}
-
-.push-half-sides {
-  margin-right: $line-height-computed / 2;
-  margin-left: $line-height-computed / 2;
-}
-
-.push-quarter-bottom {
-  margin-bottom: $line-height-computed / 4;
-}
-
-.flush {
-  margin: 0;
-}
-
-.flush-top {
-  margin-top: 0;
-}
-
-.flush-right {
-  margin-right: 0;
-}
-
-.flush-bottom {
-  margin-bottom: 0;
-}
-
-.flush-left {
-  margin-left: 0;
-}
-
-.flush-ends {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.flush-sides {
-  margin-right: 0;
-  margin-left: 0;
-}
-
-// Add/remove padding
-
-.soft {
-  padding: $line-height-computed;
-}
-
-.soft-top {
-  padding-top: $line-height-computed;
-}
-
-.soft-right {
-  padding-right: $line-height-computed;
-}
-
-.soft-quarter-right {
-  padding-right: $grid-gutter-width / 4;
-}
-
-.soft-bottom {
-  padding-bottom: $line-height-computed;
-}
-
-.soft-left {
-  padding-left: $line-height-computed;
-}
-
-.soft-ends {
-  padding-top: $line-height-computed;
-  padding-bottom: $line-height-computed;
-}
-
-.soft-sides {
-  padding-right: $line-height-computed;
-  padding-left: $line-height-computed;
-}
-
-.soft-half {
-  padding: $line-height-computed / 2;
-}
-
-.soft-half-top {
-  padding-top: $line-height-computed / 2;
-}
-
-.soft-half-right {
-  padding-right: $line-height-computed / 2;
-}
-
-.soft-half-bottom {
-  padding-bottom: $line-height-computed / 2;
-}
-
-.soft-half-left {
-  padding-left: $line-height-computed / 2;
-}
-
-.soft-quarter {
-  padding: $line-height-computed / 4;
-}
-
-.soft-quarter-left {
-  padding-left: $line-height-computed / 4;
-}
-
-.soft-quarter-bottom {
-  padding-bottom: $line-height-computed / 4;
-}
-
-.soft-half-ends {
-  padding-top: $line-height-computed / 2;
-  padding-bottom: $line-height-computed / 2;
-}
-
-.soft-half-sides {
-  padding-right: $line-height-computed / 2;
-  padding-left: $line-height-computed / 2;
-}
-
-.hard {
-  padding: 0;
-}
-
-.hard-top {
-  padding-top: 0;
-}
-
-.hard-right {
-  padding-right: 0;
-}
-
-.hard-bottom {
-  padding-bottom: 0;
-}
-
-.hard-left {
-  padding-left: 0;
-}
-
-.hard-ends {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.hard-sides {
-  padding-right: 0;
-  padding-left: 0;
-}
-
-// Mobile stacking
-@media only screen and (max-width: $screen-sm-min) {
-  .mobile-push {
-    margin: $line-height-computed;
-  }
-  .mobile-push-top {
-    margin-top: $line-height-computed;
-  }
-  .mobile-push-right {
-    margin-right: $line-height-computed;
-  }
-  .mobile-push-bottom {
-    margin-bottom: $line-height-computed;
-  }
-  .mobile-push-left {
-    margin-left: $line-height-computed;
-  }
-  .mobile-push-ends {
-    margin-top: $line-height-computed;
-    margin-bottom: $line-height-computed;
-  }
-  .mobile-push-sides {
-    margin-right: $line-height-computed;
-    margin-left: $line-height-computed;
-  }
-  .mobile-push-half {
-    margin: $line-height-computed / 2;
-  }
-
-  .mobile-push-half-top {
-    margin-top: $line-height-computed / 2;
-  }
-
-  .mobile-push-half-right {
-    margin-right: $line-height-computed / 2;
-  }
-
-  .mobile-push-half-bottom {
-    margin-bottom: $line-height-computed / 2;
-  }
-
-  .mobile-push-half-left {
-    margin-left: $line-height-computed / 2;
-  }
-
-  .mobile-push-half-ends {
-    margin-top: $line-height-computed / 2;
-    margin-bottom: $line-height-computed / 2;
-  }
-
-  .mobile-push-half-sides {
-    margin-right: $line-height-computed / 2;
-    margin-left: $line-height-computed / 2;
-  }
-  .mobile-flush {
-    margin: 0;
-  }
-  .mobile-flush-top {
-    margin-top: 0;
-  }
-  .mobile-flush-right {
-    margin-right: 0;
-  }
-  .mobile-flush-bottom {
-    margin-bottom: 0;
-  }
-  .mobile-flush-left {
-    margin-left: 0;
-  }
-  .mobile-flush-ends {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  .mobile-flush-sides {
-    margin-right: 0;
-    margin-left: 0;
-  }
-  .mobile-hard {
-    padding: 0;
-  }
-  .mobile-hard-top {
-    padding-top: 0;
-  }
-  .mobile-hard-right {
-    padding-right: 0;
-  }
-  .mobile-hard-bottom {
-    padding-bottom: 0;
-  }
-  .mobile-hard-left {
-    padding-left: 0;
-  }
-  .mobile-hard-ends {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-  .mobile-hard-sides {
-    padding-right: 0;
-    padding-left: 0;
-  }
-  .mobile-soft {
-    padding: $line-height-computed;
-  }
-
-  .mobile-soft-top {
-    padding-top: $line-height-computed;
-  }
-
-  .mobile-soft-right {
-    padding-right: $line-height-computed;
-  }
-
-  .mobile-soft-bottom {
-    padding-bottom: $line-height-computed;
-  }
-
-  .mobile-soft-left {
-    padding-left: $line-height-computed;
-  }
-
-  .mobile-soft-ends {
-    padding-top: $line-height-computed;
-    padding-bottom: $line-height-computed;
-  }
-
-  .mobile-soft-sides {
-    padding-right: $line-height-computed;
-    padding-left: $line-height-computed;
-  }
-
-  .mobile-soft-half-top {
-    padding-top: $line-height-computed / 2;
-  }
-
-  .mobile-soft-half-ends {
-    padding-top: $line-height-computed / 2;
-    padding-bottom: $line-height-computed / 2;
-  }
-
-  .mobile-soft-half-sides {
-    padding-right: $line-height-computed / 2;
-    padding-left: $line-height-computed / 2;
-  }
-}
-
-// Display helpers
 .block {
   display: block;
 }
@@ -444,10 +61,14 @@ a.underline,
 
 .center {
   display: inline-block;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
   vertical-align: middle;
 }
 
-// Vertical positioning
+/* Vertical positioning */
 
 .vertical-center {
   position: absolute;
@@ -501,14 +122,6 @@ a.underline,
   cursor: pointer;
 }
 
-.tight-line-height {
-  line-height: 1.5;
-}
-
-.sub {
-  vertical-align: sub;
-}
-
 .or-divider {
   margin-top: -41px;
 
@@ -519,7 +132,7 @@ a.underline,
   }
 }
 
-// Border stuff
+/* Border stuff */
 
 .no-borders {
   border: 0px !important;
@@ -543,97 +156,67 @@ a.underline,
   border-bottom: 1px solid $gray-lighter;
 }
 
-.pull-right.btn {
-  margin-left: 5px;
-}
+/* Corners */
 
-// Square corners
 .square-corners {
   border-radius: 0;
 }
 
-//
-// Bootstrap size based pull-left and pull-right
-//
+.round-corners {
+  border-radius: $border-radius-base;
+}
 
-@media (min-width: $screen-lg-min) {
-  .lg-pull-right {
-    float: right;
-    &.btn {
-        margin-left: 5px;
+/* Stackable floats */
+
+
+@mixin floats {
+  $sizes: (
+    $screen-sm-min: "sm",
+    $screen-md-min: "md",
+    $screen-lg-min: "lg"
+  );
+
+  $directions: ("right", "left");
+
+  @each $screen, $size in $sizes {
+    @each $direction in $directions {
+      @media only screen and (min-width: $screen) {
+        .#{$size}-pull-#{$direction} {
+          float: #{$direction};
+        }
+      }
     }
   }
-  .lg-pull-left {
-    float: left;
-  }
 }
 
-@media (min-width: $screen-md-min) {
-  .md-pull-right {
-    float: right;
-    &.btn {
-        margin-left: 5px;
+@include floats;
+
+/* Stackable text alignment */
+
+@mixin alignment {
+  $sizes: (
+    $screen-sm-min: "sm",
+    $screen-md-min: "md",
+    $screen-lg-min: "lg"
+  );
+
+  $alignments: ("right", "left", "center");
+
+  @each $screen, $size in $sizes {
+    @each $align in $alignments {
+      @media only screen and (min-width: $screen) {
+        .#{$size}-text-#{$align} {
+          text-align: #{$align};
+        }
+      }
     }
   }
-  .md-pull-left {
-    float: left;
-  }
 }
 
-@media (min-width: $screen-sm-min) {
-  .sm-pull-right {
-    float: right;
-    &.btn {
-        margin-left: 5px;
-    }
-  }
-  .sm-pull-left {
-    float: left;
-  }
-}
-
-
-//
-// Bootstrap size based text-left, text-center and text-right
-//
-
-@media (min-width: $screen-lg-min) {
-  .lg-text-left {
-    text-align: left;
-  }
-  .lg-text-center {
-    text-align: center;
-  }
-  .lg-text-right {
-    text-align: right;
-  }
-}
-
-@media (min-width: $screen-md-min) {
-  .md-text-left {
-    text-align: left;
-  }
-  .md-text-center {
-    text-align: center;
-  }
-  .md-text-right {
-    text-align: right;
-  }
-}
-
-@media (min-width: $screen-sm-min) {
-  .sm-text-left {
-    text-align: left;
-  }
-  .sm-text-center {
-    text-align: center;
-  }
-  .sm-text-right {
-    text-align: right;
-  }
-}
+@include alignment;
 
 // Empty href attributes for UI Bootstrap
+
 .nav,
 .pagination,
 .carousel,
@@ -693,3 +276,114 @@ a[ng-click] {
 .sixteen-nine {
   @include aspect-ratio(16,9);
 }
+
+/* Margin/Padding Rules */
+
+@mixin sm-mobile {
+  @media only screen and (max-width: $screen-sm-min) {
+    @content;
+  }
+}
+
+@mixin ends($property, $value) {
+  #{$property}-top: $value;
+  #{$property}-bottom: $value;
+}
+
+@mixin sides($property, $value) {
+  #{$property}-right: $value;
+  #{$property}-left: $value;
+}
+
+@mixin spacing-classes {
+  $classes: (
+    "push": "margin",
+    "flush": "margin",
+    "hard": "padding",
+    "soft": "padding"
+  );
+  $sides: (" ", "-top", "-right", "-bottom", "-left");
+
+  @each $class, $property in $classes {
+    @if $class == "push" {
+      $value: $line-height-computed !global;
+    } @else if $class == "flush" {
+      $value: 0 !global;
+    } @else if $class == "hard" {
+      $value: 0 !global;
+    } @else if $class == "soft" {
+      $value: $line-height-computed !global;
+    }
+
+    @each $side in $sides {
+      .#{$class}#{$side} {
+        #{$property}#{$side} : $value;
+      }
+
+      .mobile-#{$class}#{$side} {
+        @include sm-mobile { #{$property}#{$side}: $value };
+      }
+
+      @if $value == $line-height-computed {
+        .#{$class}-half#{$side} {
+          #{$property}#{$side} : $value / 2;
+        }
+
+        .mobile-#{$class}-half#{$side} {
+          @include sm-mobile { #{$property}#{$side}: $value / 2 };
+        }
+
+        .#{$class}-quarter#{$side} {
+          #{$property}#{$side} : $value / 4;
+        }
+
+        .mobile-#{$class}-quarter#{$side} {
+          @include sm-mobile { #{$property}#{$side}: $value / 4 };
+        }
+      }
+    }
+
+    .#{$class}-sides {
+      @include sides(#{$property}, $value);
+    }
+    .mobile-#{$class}-sides {
+      @include sm-mobile {
+        #{$property}-right: $value;
+        #{$property}-left: $value;
+      };
+    }
+
+    .#{$class}-ends {
+      @include ends(#{$property}, $value);
+    }
+    .mobile-#{$class}-ends {
+      @include sm-mobile {
+        #{$property}-top: $value;
+        #{$property}-bottom: $value;
+      };
+    }
+
+    @if $value == $line-height-computed {
+      .#{$class}-half-sides {
+        @include sides(#{$property}, $value / 2);
+      }
+      .mobile-#{$class}-half-sides {
+        @include sm-mobile {
+          #{$property}-right: $value / 2;
+          #{$property}-left: $value / 2;
+        };
+      }
+      .#{$class}-half-ends {
+        @include sides(#{$property}, $value / 2);
+      }
+      .mobile-#{$class}-half-ends {
+        @include sm-mobile {
+          #{$property}-top: $value / 2;
+          #{$property}-bottom: $value / 2;
+        };
+      }
+    }
+  }
+}
+
+@include spacing-classes;
