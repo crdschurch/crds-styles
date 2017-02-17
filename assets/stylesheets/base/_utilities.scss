@@ -42,6 +42,36 @@ a.underline,
   transform: translate(-50%, -50%);
 }
 
+// Background colors
+
+.bg-success {
+  @include crds-bg-variant($brand-success);
+}
+
+.bg-info {
+  @include crds-bg-variant($brand-info);
+}
+
+.bg-warning {
+  @include crds-bg-variant($brand-warning);
+}
+
+.bg-danger {
+  @include crds-bg-variant($brand-danger);
+}
+
+.bg-blue {
+  @include crds-bg-variant($cr-blue);
+}
+
+.bg-cyan {
+  @include crds-bg-variant($cr-cyan);
+}
+
+.bg-gray {
+  @include crds-bg-variant($cr-gray-lighter, $cr-gray);
+}
+
 // Add/remove margins
 
 .push {

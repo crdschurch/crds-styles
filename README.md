@@ -45,4 +45,4 @@ Once we reach version 1.0.0, the DDK will be feature complete and will continue 
 
 ## License
 
-This project rocks and uses MIT-LICENSE.
+This project is licensed under the [3-Clause BSD License](https://opensource.org/licenses/BSD-3-Clause). 
