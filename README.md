@@ -33,6 +33,43 @@ Once you've added `crds-styles` to `package.json` you need to import the stylesh
 
     @import '~crds-styles/assets/stylesheets/bootstrap';
 
+## SVGs
+
+Any project consuming `crds-styles` will need to update their build process in order to access SVG files.  
+
+### Webpack build
+If using webpack, the `copy-webpack-plugin` can be used to move the svg files to the distribution folder
+```
+plugins: [
+    new CopyWebpackPlugin([
+      {
+        context: './node_modules/crds-styles/assets/stylesheets/svg/',
+        from: '*.svg',
+        to: 'assets',
+      }
+    ])
+  ]
+```
+See `crds-styleguide` [`webpack.common.js`](https://github.com/crdschurch/crds-styleguide/blob/development/config/webpack.common.js) for a full example
+
+### Webpack Dev Server
+If using `webpack-dev-server` as a development tool, the implementation will need to be modifed to support `content-base` which will serve static assets from the given directory as well as trigger a build in order to have `CopyWebpackPlugin` triggered to move SVGs
+```
+"scripts": {
+    "serve": "npm run start",
+    "start": "npm run build-dev && webpack-dev-server --inline --open --progress --port 4200 --content-base dist/",
+    "build-dev": "rimraf dist && webpack --config config/webpack.dev.js --progress --profile --bail",
+}
+```
+See `crds-styleguide` [`package.json`](https://github.com/crdschurch/crds-styleguide/blob/development/package.json) for a full example.
+
+### Adding New SVGs
+To add a new SVG, simple add the svg to `assets/svgs`
+
+### Compile SVG sprites
+Run `npm run build-svg` to compile the SVGs into the correct sass and sprite files
+
+
 ## Versions &amp; Roadmap
 
 We'll be developing the pattern library over the next few months and as we release new updates, we will increase the version number according to the following rules.

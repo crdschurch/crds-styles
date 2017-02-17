@@ -1,0 +1,18 @@
+{
+  "dest": "assets/stylesheets",
+  "log": "info",
+  "mode": {
+    "css": {
+      "dest": "svg",
+      "sprite": "assets/sprite.css.svg",
+      "bust": false,
+      "render": {
+          "scss": true
+      }
+    },
+    "symbol": {
+      "dest": "svg",
+      "sprite": "assets/sprite.symbol.svg"
+    }
+  }
+}
