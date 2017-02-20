@@ -4,36 +4,36 @@
 
 .svg-arrow-left9 {
 	@extend %svg-common;
-	background-position: 100% 0;
+	background-position: 0 0;
 	width: 32px;
 	height: 32px;
 }
 
 .svg-arrow-right9 {
 	@extend %svg-common;
-	background-position: 100% 1.8181818181818181%;
+	background-position: 50% 0;
 	width: 32px;
 	height: 32px;
 }
 
 .svg-calendar {
 	@extend %svg-common;
-	background-position: 100% 3.6363636363636362%;
+	background-position: 0 100%;
 	width: 32px;
 	height: 32px;
 }
 
 .svg-check-circle {
 	@extend %svg-common;
-	background-position: 100% 5.454545454545454%;
+	background-position: 50% 100%;
 	width: 32px;
 	height: 32px;
 }
 
 .svg-circle-thin {
 	@extend %svg-common;
-	background-position: 0 0;
-	width: 1792px;
-	height: 1792px;
+	background-position: 100% 0;
+	width: 32px;
+	height: 32px;
 }
 
