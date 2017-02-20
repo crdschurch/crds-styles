@@ -73,6 +73,11 @@ datepicker {
         color: $calendar-text;
         font-size: 0.9rem;
 
+        &.disabled {
+          background: transparent;
+          color: lighten($calendar-text, 50);
+        }
+
         &.active,
         &:active,
         &:focus {
@@ -129,6 +134,9 @@ datepicker {
           color: $calendar-active-text;
         }
       }
+    }
+
+    &.btn-default {
     }
   }
 
