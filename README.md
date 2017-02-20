@@ -39,11 +39,11 @@ Any project consuming `crds-styles` will need to update their build process in o
 
 ### Webpack build
 If using webpack, the `copy-webpack-plugin` can be used to move the svg files to the distribution folder
-```
+```javascript
 plugins: [
     new CopyWebpackPlugin([
       {
-        context: './node_modules/crds-styles/assets/stylesheets/svg/',
+        context: './node_modules/crds-styles/assets/stylesheets/svg/assets',
         from: '*.svg',
         to: 'assets',
       }
@@ -54,7 +54,7 @@ See `crds-styleguide` [`webpack.common.js`](https://github.com/crdschurch/crds-s
 
 ### Webpack Dev Server
 If using `webpack-dev-server` as a development tool, the implementation will need to be modifed to support `content-base` which will serve static assets from the given directory as well as trigger a build in order to have `CopyWebpackPlugin` triggered to move SVGs
-```
+```json
 "scripts": {
     "serve": "npm run start",
     "start": "npm run build-dev && webpack-dev-server --inline --open --progress --port 4200 --content-base dist/",
