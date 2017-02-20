@@ -21,17 +21,17 @@
     background: $cr-white;
     box-shadow: none;
 
-    &.ng-invalid,
+    &.ng-touched.ng-invalid,
     &.ng-valid {
       border-right-style: solid;
       border-right-width: 8px;
     }
 
-    &.ng-valid {
+    &.ng-touched {
       border-right-color: $brand-success;
     }
 
-    &.ng-invalid {
+    &.ng-touched.ng-invalid {
       border-right-color: $brand-danger;
     }
   }
