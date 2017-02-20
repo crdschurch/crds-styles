@@ -110,42 +110,18 @@ input[type="checkbox"]:disabled {
 }
 
 .form-row {
-  @include clearfix();
+  @include make-row();
+
+  .form-col-1 {
+    @include make-xs-column(12);
+  }
 
   .form-col-2 {
-    float: left;
-    width: calc(50% - 1rem);
-  }
-
-  .form-col-2:first-child {
-    margin-right: 1rem;
-  }
-
-  .form-col-2:last-child {
-    margin-left: 1rem;
+    @include make-xs-column(6);
   }
 
   .form-col-3 {
-    width: 100%;
-
-    @media (min-width: 710px) {
-      float: left;
-      margin-right: 1rem;
-      margin-left: 1rem;
-      width: calc(33% - 1.2rem);
-    }
-  }
-
-  .form-col-3:first-child {
-    @media (min-width: 710px) {
-      margin-left: 0;
-    }
-  }
-
-  .form-col-3:last-child {
-    @media (min-width: 710px) {
-      margin-right: 0;
-    }
+    @include make-xs-column(4);
   }
 }
 
