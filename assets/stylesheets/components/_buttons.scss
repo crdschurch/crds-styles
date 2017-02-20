@@ -197,11 +197,7 @@ a {
 // Flexbox button groups - Horizontal layout
 .btn-group-row {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-right: -5px;
-  margin-left: -5px;
-  justify-content: space-between;
+  flex-direction: column;
 
   .btn-option {
     &.btn-flex {
@@ -209,6 +205,15 @@ a {
       flex: 1 1 auto;
       margin: 5px;
     }
+  }
+
+  @media screen and (min-width: $screen-xs) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px;
+    justify-content: space-between;
   }
 }
 
