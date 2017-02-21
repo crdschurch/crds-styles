@@ -1,0 +1,63 @@
+%icon-dimensions {
+	$dimensions: 16px;
+	&.icon {
+	  width: $dimensions * 2;
+  	height: $dimensions * 2;
+		background-size: $dimensions * 2;
+		@for $i from 1 through 6 {
+			&.icon-#{$i} {
+				width: $dimensions * $i;
+				height: $dimensions * $i;
+				background-size: $dimensions * $i;
+			}
+		}
+	}
+}
+
+%svg-common {
+	background: url("assets/sprite.css.svg") no-repeat;
+	@extend %icon-dimensions;
+}
+
+.svg-calendar {
+	@extend %svg-common;
+	background-position: 0 0;
+	width: 230.286px;
+	height: 248px;
+}
+
+.svg-check-circle {
+	@extend %svg-common;
+	background-position: 0 19.49685534591195%;
+	width: 256px;
+	height: 256px;
+}
+
+.svg-chevron-left {
+	@extend %svg-common;
+	background-position: 0 39.62264150943396%;
+	width: 256px;
+	height: 256px;
+}
+
+.svg-chevron-right {
+	@extend %svg-common;
+	background-position: 0 59.74842767295598%;
+	width: 256px;
+	height: 256px;
+}
+
+.svg-circle-thin {
+	@extend %svg-common;
+	background-position: 0 79.87421383647799%;
+	width: 256px;
+	height: 256px;
+}
+
+.svg-github {
+	@extend %svg-common;
+	background-position: 0 100%;
+	width: 256px;
+	height: 256px;
+}
+
