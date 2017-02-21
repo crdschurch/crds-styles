@@ -4,8 +4,9 @@
   "description": "",
   "style": "assets/stylesheets/_crds.scss",
   "scripts": {
+    "build-svg": "./node_modules/svg-sprite/bin/svg-sprite.js --config=config/svg-sprite.config.json assets/svgs/*.svg",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rimraf dist && webpack --config config/webpack.js  --progress --profile --bail"
+    "build": "rimraf dist && npm run build-svg && webpack --config config/webpack.js  --progress --profile --bail"
   },
   "files": [
     "assets"
@@ -16,7 +17,8 @@
   "author": "",
   "license": "BSD-3-Clause",
   "dependencies": {
-    "bootstrap-sass": "*"
+    "bootstrap-sass": "*",
+    "svg-sprite": "^1.3.6"
   },
   "devDependencies": {
     "node-sass": "^4.1.1",

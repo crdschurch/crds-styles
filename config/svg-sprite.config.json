@@ -1,0 +1,23 @@
+{
+  "dest": "assets/stylesheets",
+  "log": "info",
+  "mode": {
+    "css": {
+      "dest": "svg",
+      "dimensions": "",
+      "sprite": "assets/sprite.css.svg",
+      "bust": false,
+      "layout": "vertical",
+      "render": {
+        "scss": {
+          "template": "assets/template/css/_sprite.mustache",
+          "dest": "_sprite.scss"
+        }
+      }
+    },
+    "symbol": {
+      "dest": "svg",
+      "sprite": "assets/sprite.symbol.svg"
+    }
+  }
+}
