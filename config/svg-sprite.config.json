@@ -7,8 +7,12 @@
       "dimensions": "",
       "sprite": "assets/sprite.css.svg",
       "bust": false,
+      "layout": "vertical",
       "render": {
-          "scss": true
+        "scss": {
+          "template": "assets/template/css/_sprite.mustache",
+          "dest": "_sprite.scss"
+        }
       }
     },
     "symbol": {
