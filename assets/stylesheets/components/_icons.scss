@@ -1,7 +1,25 @@
-i {
-  text-indent:200%;
-  white-space:nowrap;
-  overflow:hidden;
-  display:inline-block;
-  background-size:32px 32px;
+i, .icon {
+  text-indent: 200%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  background-size: 32px 32px;
+}
+
+a.circular-icon:hover {
+  @extend .bg-blue;
+}
+
+.circular-icon {
+  display: inline-block;
+  @extend .circular;
+  @extend .soft-half;
+  &.gray {
+    background-color: $cr-gray;
+  }
+
+  i, .icon {
+    display: block;
+    position: relative;
+  }
 }

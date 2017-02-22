@@ -1,6 +1,9 @@
 @mixin crds-bg-variant($background, $color: $cr-white) {
   background-color: $background;
   color: $color;
+  * {
+    color: $color;
+  }
 }
 
 @mixin crds-button-variant($color, $background, $border) {
