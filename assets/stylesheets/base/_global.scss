@@ -15,3 +15,8 @@ body {
   font-size: $base-font-size;
   @extend .font-family-base;
 }
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
