@@ -25,35 +25,16 @@
   padding: 1rem;
 }
 
-.receipt-table {
-  tr {
-    td:first-child {
-      @extend .text-uppercase;
-      font-size: .75rem;
-
-      a {
-        color: $cr-cyan;
-      }
-    }
-
-    td:last-child {
-      font-size: 1rem;
-      text-align: right;
-
-      &.amount {
-        font-size: 1.5rem;
-      }
-    }
-
-    small {
-      a {
-        color: $cr-cyan;
-      }
-    }
-  }
+.table-label {
+  text-transform: uppercase;
+  font-size: .75rem;
 }
 
-.streaming-table {
+.amount {
+  font-size: 1.5rem;
+}
+
+.schedule-table {
   tbody {
     tr {
       td {
@@ -87,25 +68,11 @@
     border-top: 1px solid $table-border-color;
   }
 
-  .receipt-table {
+  .table {
     tbody {
       tr {
         td {
           border-color: $table-border-color;
-        }
-      }
-    }
-
-    tr {
-      td:first-child {
-        a {
-          color: $cr-gray;
-        }
-      }
-
-      small {
-        a {
-          color: $cr-cyan;
         }
       }
     }

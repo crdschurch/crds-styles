@@ -1,71 +1,95 @@
-h1 {
-  @extend .font-family-base-light;
+.font-size-h1 {
   font-size: 2.75rem; // 44px
-  word-wrap: break-word;
 
   @media screen and (min-width: $screen-xs) {
     font-size: 4.25rem; // 68px
-    word-wrap: normal;
   }
 }
-
-h2 {
-  @extend .font-family-condensed-extra;
-  text-transform: uppercase;
+.font-size-h2 {
   font-size: 2.5rem; // 40px
 
   @media screen and (min-width: $screen-xs) {
-    font-size: 3.4375rem; // 55px
+    font-size: 3rem; // 48px
   }
 }
-
-h3 {
-  @extend .font-family-base;
+.font-size-h3 {
   font-size: 2rem; // 32px
 
   @media screen and (min-width: $screen-xs) {
     font-size: 2.5rem; // 40px
   }
 }
-
-h4 {
-  @extend .font-family-base;
-  font-size: 1.3125rem; // 21px
-  border-top: 1px solid $cr-gray-light;
-  color: $cr-gray;
-  padding-top: 0.25em;
+.font-size-h4 {
+  font-size: 1.75rem; // 28px
 
   @media screen and (min-width: $screen-xs) {
-    font-size: 1.5rem; // 24px
+    font-size: 2rem; // 32px
+  }
+}
+.font-size-h5 {
+  font-size: 1.375rem; // 22px
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: 1.75rem; // 28px
   }
 
   .dark-theme & {
     border-top: 1px solid $cr-gray-dark;
   }
 }
-
-h5 {
-  @extend .font-family-condensed-extra;
-  text-transform: uppercase;
-  font-size: 2rem; // 32px
+.font-size-h6 {
+  font-size: 1.1875rem; // 19px
 
   @media screen and (min-width: $screen-xs) {
-    font-size: 2.125rem; // 34px
+    font-size: 1.375rem; // 22px
+  }
+}
+.font-size-large {
+  font-size: 1.1875rem; // 19px
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: 1.375rem; // 22px
+  }
+}
+.font-size-base {
+  font-size: 1rem; // 16px
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: 1.1875rem; // 19px
+  }
+}
+.font-size-small {
+  font-size: 0.8125rem; // 13px
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: 1rem; // 16px
   }
 }
 
-h6 {
-  @extend .font-family-condensed-extra;
-  text-transform: uppercase;
-  font-size: 1.5rem; // 24px
-}
+.font-size-smaller {
+  font-size: 0.75rem; // 12px
 
-.form-header,
-.btn-group-header {
-  color: $cr-gray-dark;
-  font-size: .75rem; // 12px
-  font-weight: bold;
-  text-transform: uppercase;
+  @media screen and (min-width: $screen-xs) {
+    font-size: 0.8125rem; // 13px
+  }
+}
+h1 {
+  @extend .font-size-h1;
+}
+h2 {
+  @extend .font-size-h2;
+}
+h3 {
+  @extend .font-size-h3;
+}
+h4 {
+  @extend .font-size-h4;
+}
+h5 {
+  @extend .font-size-h5;
+}
+h6 {
+  @extend .font-size-h6;
 }
 
 h1,
