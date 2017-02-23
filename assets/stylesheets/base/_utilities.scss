@@ -166,7 +166,6 @@ a.underline,
   border-radius: $border-radius-base;
 }
 
-/* Stackable floats */
 
 // Used for float and text-alignment functions
 $device-sizes: (
@@ -174,6 +173,10 @@ $device-sizes: (
   $screen-md-min: "md",
   $screen-lg-min: "lg"
 );
+
+/* Stackable floats */
+
+/* 👉 Example: .sm-pull-left would float an object left on small screens, while .md-pull-right would float an object right on medium-sized screens */
 
 // 🚨 $_floats-directions variable are only used in the creation of pull-left/-right classes
 $_floats-directions: ("right", "left");
@@ -192,6 +195,9 @@ $_floats-directions: ("right", "left");
 }
 
 /* Stackable text alignment */
+
+/* 👉 Example: .sm-text-left would align text to the left on small screens, while .md-text-center would align text in the center on medium-sized screens */
+
 // 🚨 $_text-alignments variable are only used in the creation of text-align classes
 $_text-alignments: ("right", "left", "center");
 
@@ -297,6 +303,7 @@ $_spacing-classes: (
 $_spacing-sides: (" ", "-top", "-right", "-bottom", "-left");
 
 // Spacing classes -- start
+
 // For each key/value in $_spacing-classes, create a class/rule and assign value to $value
 @each $class, $property in $_spacing-classes {
   @if $class == "push" {
