@@ -1,3 +1,5 @@
+$dimensions: 16px;
+
 i, .icon {
   text-indent: 200%;
   white-space: nowrap;
@@ -6,20 +8,33 @@ i, .icon {
   background-size: 32px 32px;
 }
 
-a.circular-icon:hover {
-  @extend .bg-blue;
-}
 
-.circular-icon {
-  display: inline-block;
-  @extend .circular;
-  @extend .soft-half;
-  &.gray {
-    background-color: $cr-gray;
+
+.icon-stack {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: $dimensions * 2;
+  height: $dimensions * 2;
+  @for $i from 1 through 6 {
+    &.size-#{$i} {
+      width: $dimensions * $i;
+      height: $dimensions * $i;
+      i {
+        @include crds-icon-size($i);
+      }
+      i:last-child, .icon:last-child {
+        @include crds-icon-size($i - 1);
+      }
+    }
   }
-
-  i, .icon {
-    display: block;
-    position: relative;
+  i, i.icon {
+    position: absolute;
+    @include crds-icon-size(2);
+    &:last-child {
+      @include crds-icon-size(1);
+    }
   }
 }

@@ -1,15 +1,11 @@
 %icon-dimensions {
 	$dimensions: 16px;
 	&.icon {
-	  width: $dimensions * 2;
-  	height: $dimensions * 2;
+		@include crds-icon-size(2);
 		background-color: $cr-black;
-		-webkit-mask-size: $dimensions * 2;
 		@for $i from 1 through 6 {
 			&.icon-#{$i} {
-				width: $dimensions * $i;
-				height: $dimensions * $i;
-				-webkit-mask-size: $dimensions * $i;
+				@include crds-icon-size($i);
 			}
 		}
 		@each $name, $color in $cr-colors {
@@ -46,5 +42,4 @@
 	width: {{width.outer}}px;
 	height: {{height.outer}}px;
 }{{/dimensions.extra}}
-
 {{/shapes}}

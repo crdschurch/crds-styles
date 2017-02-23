@@ -87,3 +87,10 @@
     }
   }
 }
+
+@mixin crds-icon-size($factor: 2) {
+  $dimensions: 16px;
+  width: $dimensions * $factor;
+  height: $dimensions * $factor;
+  -webkit-mask-size: $dimensions * $factor;
+}
