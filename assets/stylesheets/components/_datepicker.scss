@@ -75,7 +75,27 @@ datepicker {
 
         &.disabled {
           background: transparent;
-          color: lighten($calendar-text, 50);
+
+          &:active,
+          &:focus {
+            color: $calendar-text;
+
+            &:hover {
+              background: $calendar-hover-bg;
+            }
+          }
+
+          &:hover {
+            background: $calendar-hover-bg;
+          }
+
+          span {
+            @extend .text-muted;
+
+            &:hover {
+              @extend .text-muted;
+            }
+          }
         }
 
         &.active,
