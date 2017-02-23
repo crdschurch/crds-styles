@@ -3,19 +3,25 @@
 	&.icon {
 	  width: $dimensions * 2;
   	height: $dimensions * 2;
-		background-size: $dimensions * 2;
+		background-color: $cr-black;
+		-webkit-mask-size: $dimensions * 2;
 		@for $i from 1 through 6 {
 			&.icon-#{$i} {
 				width: $dimensions * $i;
 				height: $dimensions * $i;
-				background-size: $dimensions * $i;
+				-webkit-mask-size: $dimensions * $i;
+			}
+		}
+		@each $name, $color in $cr-colors {
+			&.cr-#{$name} {
+				background-color: $color;
 			}
 		}
 	}
 }
 
 {{#hasMixin}}@mixin {{mixinName}} {
-	background: url("{{{sprite}}}") no-repeat;
+	-webkit-mask-image: url("{{{sprite}}}");
 }
 
 {{#hasCommon}}.{{commonName}} {
@@ -23,14 +29,14 @@
 }
 
 {{/hasCommon}}{{/hasMixin}}{{^hasMixin}}{{#hasCommon}}.{{/hasCommon}}{{^hasCommon}}%{{/hasCommon}}{{commonName}} {
-	background: url("{{{sprite}}}") no-repeat;
+	-webkit-mask-image: url("{{{sprite}}}");
 	@extend %icon-dimensions;
 }
 
 {{/hasMixin}}{{#shapes}}{{#selector.shape}}{{expression}}{{^last}},
 {{/last}}{{/selector.shape}} {
 	{{^hasCommon}}{{#hasMixin}}@include {{mixinName}};{{/hasMixin}}{{^hasMixin}}@extend %{{commonName}};{{/hasMixin}}
-	{{/hasCommon}}background-position: {{position.relative.xy}};{{#dimensions.inline}}
+	{{/hasCommon}}-webkit-mask-position: {{position.relative.xy}};{{#dimensions.inline}}
 	width: {{width.outer}}px;
 	height: {{height.outer}}px;{{/dimensions.inline}}
 }{{#dimensions.extra}}
