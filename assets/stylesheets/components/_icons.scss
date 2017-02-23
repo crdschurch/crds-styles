@@ -8,8 +8,6 @@ i, .icon {
   background-size: 32px 32px;
 }
 
-
-
 .icon-stack {
   position: relative;
   display: inline-flex;
@@ -27,6 +25,13 @@ i, .icon {
       }
       i:last-child, .icon:last-child {
         @include crds-icon-size($i - 1);
+      }
+    }
+  }
+  &:hover {
+    @each $name, $color in $cr-colors {
+      i.hover-cr-#{$name}, i.icon.hover-cr-#{$name} {
+        background-color: $color;
       }
     }
   }
