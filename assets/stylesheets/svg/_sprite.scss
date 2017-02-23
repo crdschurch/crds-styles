@@ -3,89 +3,101 @@
 	&.icon {
 	  width: $dimensions * 2;
   	height: $dimensions * 2;
-		background-size: $dimensions * 2;
+		background-color: $cr-black;
+		-webkit-mask-size: $dimensions * 2;
 		@for $i from 1 through 6 {
 			&.icon-#{$i} {
 				width: $dimensions * $i;
 				height: $dimensions * $i;
-				background-size: $dimensions * $i;
+				-webkit-mask-size: $dimensions * $i;
+			}
+		}
+		@each $name, $color in $cr-colors {
+			&.cr-#{$name} {
+				background-color: $color;
 			}
 		}
 	}
 }
 
 %svg-common {
-	background: url("assets/sprite.css.svg") no-repeat;
+	-webkit-mask-image: url("assets/sprite.css.svg");
 	@extend %icon-dimensions;
 }
 
 .svg-calendar {
 	@extend %svg-common;
-	background-position: 0 0;
+	-webkit-mask-position: 0 0;
 	width: 230.286px;
 	height: 248px;
 }
 
 .svg-check-circle {
 	@extend %svg-common;
-	background-position: 0 10.801393728222996%;
+	-webkit-mask-position: 0 9.717868338557993%;
 	width: 256px;
 	height: 256px;
 }
 
 .svg-chevron-left {
 	@extend %svg-common;
-	background-position: 0 21.951219512195124%;
+	-webkit-mask-position: 0 19.74921630094044%;
 	width: 256px;
 	height: 256px;
 }
 
 .svg-chevron-right {
 	@extend %svg-common;
-	background-position: 0 33.10104529616725%;
+	-webkit-mask-position: 0 29.780564263322884%;
+	width: 256px;
+	height: 256px;
+}
+
+.svg-circle {
+	@extend %svg-common;
+	-webkit-mask-position: 0 39.81191222570533%;
 	width: 256px;
 	height: 256px;
 }
 
 .svg-circle-thin {
 	@extend %svg-common;
-	background-position: 0 44.250871080139376%;
+	-webkit-mask-position: 0 49.843260188087775%;
 	width: 256px;
 	height: 256px;
 }
 
 .svg-facebook {
 	@extend %svg-common;
-	background-position: 0 55.400696864111495%;
+	-webkit-mask-position: 0 59.874608150470216%;
 	width: 256px;
 	height: 256px;
 }
 
 .svg-github {
 	@extend %svg-common;
-	background-position: 0 66.55052264808363%;
+	-webkit-mask-position: 0 69.90595611285266%;
 	width: 256px;
 	height: 256px;
 }
 
 .svg-instagram {
 	@extend %svg-common;
-	background-position: 0 77.70034843205575%;
+	-webkit-mask-position: 0 79.9373040752351%;
 	width: 256px;
 	height: 256px;
 }
 
 .svg-twitter {
 	@extend %svg-common;
-	background-position: 0 88.85017421602788%;
+	-webkit-mask-position: 0 89.96865203761756%;
 	width: 256px;
 	height: 256px;
 }
 
 .svg-youtube {
 	@extend %svg-common;
-	background-position: 0 100%;
+	-webkit-mask-position: 0 100%;
 	width: 256px;
 	height: 256px;
 }
-
