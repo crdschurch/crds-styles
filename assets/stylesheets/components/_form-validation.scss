@@ -24,6 +24,7 @@
     &.ng-touched {
       &.ng-invalid,
       &.ng-valid {
+        background: $input-bg-focus;
         border-right-style: solid;
         border-right-width: 8px;
       }
