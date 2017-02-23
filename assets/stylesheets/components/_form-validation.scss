@@ -39,38 +39,38 @@
   &.has-success {
     border-right-color: $brand-success;
   }
+}
 
-  &.has-error,
-  &.has-warning {
-    .help-block {
-      color: $cr-white;
-      padding: .5rem 1rem;
-    }
+.has-error,
+.has-warning {
+  .help-block {
+    color: $cr-white;
+    padding: .5rem 1rem;
   }
+}
 
-  .error {
-    &.help-block {
-      background: $brand-danger;
-      color: $cr-white;
-      padding: .5rem 1rem;
-      position: relative;
-      top: -1px;
-    }
+.error {
+  &.help-block {
+    background: $brand-danger;
+    color: $cr-white;
+    padding: .5rem 1rem;
+    position: relative;
+    top: -1px;
   }
+}
 
-  &.has-error {
-    border-right-color: $brand-danger;
+.has-error {
+  border-right-color: $brand-danger;
 
-    .help-block {
-      background: $brand-danger;
-    }
+  .help-block {
+    background: $brand-danger;
   }
+}
 
-  &.has-warning {
-    border-right-color: $brand-warning;
+.has-warning {
+  border-right-color: $brand-warning;
 
-    .help-block {
-      background: $brand-warning;
-    }
+  .help-block {
+    background: $brand-warning;
   }
 }
