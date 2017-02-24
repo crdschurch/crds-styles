@@ -5,6 +5,8 @@ datepicker {
   $calendar-active-bg: $cr-teal;
   $calendar-active-text: $cr-white;
   $calendar-active-border: $cr-teal;
+  $calendar-disabled-bg: transparent;
+  $calendar-disabled-text: lighten($cr-gray-light, 20);
   $calendar-hover-bg: $cr-gray-lighter;
   $calendar-hover-text: $cr-gray-darker;
   $calendar-hover-border: $cr-gray;
@@ -76,7 +78,7 @@ datepicker {
         font-size: 0.9rem;
 
         &.disabled {
-          background: transparent;
+          background: $calendar-disabled-bg;
 
           &:active,
           &:focus {
@@ -92,10 +94,9 @@ datepicker {
           }
 
           span {
-            @extend .text-muted;
-
+            &,
             &:hover {
-              @extend .text-muted;
+              color: $calendar-disabled-text;
             }
           }
         }
@@ -183,6 +184,7 @@ datepicker {
     $calendar-active-bg: $cr-teal;
     $calendar-active-text: $cr-white;
     $calendar-active-border: $cr-teal;
+    $calendar-disabled-text: $cr-gray-dark;
     $calendar-hover-bg: $calendar-bg;
     $calendar-hover-text: $calendar-text;
     $calendar-hover-border: $calendar-border;
@@ -212,6 +214,28 @@ datepicker {
           border-color: $calendar-border;
           color: $calendar-text;
 
+          &.disabled {
+            &:active,
+            &:focus {
+              color: $calendar-text;
+
+              &:hover {
+                background: $calendar-hover-bg;
+              }
+            }
+
+            &:hover {
+              background: $calendar-hover-bg;
+            }
+
+            span {
+              &,
+              &:hover {
+                color: $calendar-disabled-text;
+              }
+            }
+          }
+
           &.active,
           &:active,
           &:focus {
@@ -238,7 +262,7 @@ datepicker {
           }
 
           .text-muted {
-            color: $calendar-border;
+            color: darken($cr-gray, 5);
           }
         }
       }
