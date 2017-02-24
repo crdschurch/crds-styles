@@ -56,7 +56,7 @@ $bootstrap-sass-asset-helper: true;
   $btn-gray-color: $cr-white;
   $btn-option-color: $cr-white;
   $btn-option-bg: $cr-gray-light;
-  $btn-option-border: $cr-gray-light;
+  $btn-option-border: rgba($cr-gray-light, 0.75);
   $btn-outline-bg: $cr-white;
   $btn-outline-hover-bg: $cr-gray-lighter;
 
