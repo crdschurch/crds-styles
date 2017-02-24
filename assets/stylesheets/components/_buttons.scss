@@ -180,23 +180,20 @@ a {
 // Flexbox button groups - Horizontal layout
 .btn-group-row {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-right: -5px;
+  margin-left: -5px;
+  justify-content: space-between;
 
   .btn-option {
     &.btn-flex {
       min-height: 2rem;
       flex: 1 1 auto;
-      margin: 5px;
+      margin: 4px;
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
-  }
-
-  @media screen and (min-width: $screen-xs) {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-right: -5px;
-    margin-left: -5px;
-    justify-content: space-between;
   }
 }
 
