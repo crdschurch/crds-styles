@@ -9,6 +9,8 @@ datepicker {
   $calendar-hover-text: $cr-gray-darker;
   $calendar-hover-border: $cr-gray;
 
+  display: none;
+
   &.visible {
     display: block;
   }
