@@ -194,3 +194,11 @@ input[type="checkbox"]:disabled {
     padding-left: 0;
   }
 }
+
+.custom-input-field {
+  .errors {
+    .help-block {
+      top: 0;
+    }
+  }
+}
