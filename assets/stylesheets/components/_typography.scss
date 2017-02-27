@@ -143,6 +143,14 @@ dl.crds-list {
   }
 }
 
+text-muted {
+  color: $text-muted;
+
+  .dark-theme & {
+    color: $cr-gray-dark;
+  }
+}
+
 .page-header {
   @extend .font-family-base-light;
   @extend .font-size-h1;

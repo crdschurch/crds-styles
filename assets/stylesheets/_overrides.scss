@@ -30,7 +30,7 @@ $bootstrap-sass-asset-helper: true;
   $headings-color: $cr-gray-darker !default;
 
 // Type
-  $text-muted: $cr-gray !default;
+  $text-muted: $cr-gray-light !default;
   $blockquote-font-size: 1.1875rem !default; // 19px
   $blockquote-border-color: lighten($cr-gray, 25) !default;
   $page-header-border-color: $cr-gray-lighter !default;
