@@ -170,6 +170,23 @@
       }
     }
   }
+
+  .dark-theme & {
+    .btn-option {
+      background: transparent;
+
+      &.active,
+      &:active,
+      &:focus:hover {
+        background: $cr-teal;
+
+        &:focus,
+        &:hover {
+          background: $cr-teal;
+        }
+      }
+    }
+  }
 }
 
 // Disabled buttons styles
