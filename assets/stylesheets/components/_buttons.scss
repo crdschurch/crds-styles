@@ -31,9 +31,13 @@
 
   &.btn-primary {
     @include crds-button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+
+    .dark-theme & {
+      @extend .btn-secondary;
+    }
   }
-  &.btn-info {
-    @include crds-button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+  &.btn-secondary {
+    @include crds-button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
   }
   &.btn-gray {
     @include crds-button-variant($btn-gray-color, $btn-gray-bg, $btn-gray-border);
