@@ -1,4 +1,35 @@
 .btn-group-block {
+  .btn {
+    &.btn-option {
+      &.btn-outline {
+        &:hover {
+          background: $cr-teal;
+          border-color: $cr-teal;
+          color: $cr-white;
+
+          .icon {
+            filter: invert(100%);
+          }
+        }
+
+        .svg-check-circle {
+          display: none;
+        }
+
+        &.active {
+          .svg-check-circle {
+            display: inline-block;
+            filter: invert(100%);
+          }
+
+          .svg-circle-thin {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
   .custom-input {
     display: flex;
     justify-content: flex-end;
