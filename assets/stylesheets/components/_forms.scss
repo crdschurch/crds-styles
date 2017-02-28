@@ -178,7 +178,7 @@ input[type="checkbox"]:disabled {
     flex-direction: column;
     z-index: 4;
     font-size: 1.125rem;
-    background: transparent;
+    background: $input-group-addon-bg;
     border: none;
 
     i, .icon {
