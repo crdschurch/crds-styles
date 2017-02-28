@@ -402,9 +402,14 @@ a.underline,
   margin-left: 5px;
 }
 
-// Square corners
+// Border Radius
+
 .square-corners {
   border-radius: 0;
+}
+
+.circular {
+  border-radius: 100%;
 }
 
 //

@@ -1,7 +1,43 @@
-i {
-  text-indent:200%;
-  white-space:nowrap;
-  overflow:hidden;
-  display:inline-block;
-  background-size:32px 32px;
+$dimensions: 16px;
+
+i, .icon {
+  text-indent: 200%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  background-size: 32px 32px;
+}
+
+.icon-circle {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  @extend %flex-center;
+
+  $dimensions: 16px;
+  @for $i from 1 through 6 {
+    &.icon-#{$i} {
+      &, &:before {
+        width: ($dimensions * $i) + $dimensions;
+        height: ($dimensions * $i) + $dimensions;
+      }
+      i, .icon {
+        width: $dimensions * $i;
+        height: $dimensions * $i;
+        background-size: $dimensions * $i;
+      }
+    }
+  }
+
+  &:before {
+    background-color: $cr-gray-light;
+    content: ' ';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+  }
+  i, .icon {
+    position: relative;
+  }
 }

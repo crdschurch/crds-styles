@@ -1,6 +1,16 @@
+%flex-center {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 @mixin crds-bg-variant($background, $color: $cr-white) {
   background-color: $background;
   color: $color;
+  * {
+    color: $color;
+  }
 }
 
 @mixin crds-button-variant($color, $background, $border) {
@@ -83,4 +93,11 @@
       background: $cr-white;
     }
   }
+}
+
+@mixin crds-icon-size($factor: 2) {
+  $dimensions: 16px;
+  width: $dimensions * $factor;
+  height: $dimensions * $factor;
+  -webkit-mask-size: $dimensions * $factor;
 }

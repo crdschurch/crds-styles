@@ -1,0 +1,41 @@
+.footer {
+  margin-top: 40px;
+  padding: 50px 0 200px;
+
+  %footer-heading-common {
+    font-size: $base-font-size;
+    font-family: $base-font-face;
+    font-weight: bold;
+  }
+
+  .footer-heading {
+    margin-top: 0;
+    margin-bottom: 13px;
+    text-transform: none;
+    @extend %footer-heading-common;
+    a {
+      font-size: inherit;
+      @extend %footer-heading-common;
+    }
+  }
+
+  a {
+    color: $cr-gray;
+    &:active,
+    &:focus,
+    &:hover {
+      color: $link-hover-color;
+      text-decoration: none;
+    }
+  }
+
+  hr {
+    border-top-color: $gray-light;
+  }
+
+  .icon-circle:hover {
+    &:before {
+      background-color: $cr-blue;
+    }
+  }
+}
