@@ -6,12 +6,15 @@
     overflow: hidden;
 
     .custom-input-icon {
-      // display: flex;
-      // justify-content: center;
-      // align-items: center;
-      // flex-basis: 2rem;
-      // font-size: 1.375rem;
-      padding: 5px 10px;
+      padding: 10px;
+
+      i {
+        filter: invert(55%);
+
+        .dark-theme & {
+          filter: invert(45%);
+        }
+      }
     }
 
     .custom-input-field {
@@ -43,6 +46,18 @@
           border-radius: $input-border-radius;
           background-color: $input-bg;
           height: $input-height-base;
+
+          &.form-control {
+            background-color: $input-bg;
+            border-color: $input-border;
+            color: $input-color;
+
+            &:focus {
+              background: $input-bg-focus;
+              border-color: $input-border-focus;
+              box-shadow: inset 0 0 0 1px $input-border-focus;
+            }
+          }
 
           .dark-theme & {
             $input-color: $cr-gray-dark;
