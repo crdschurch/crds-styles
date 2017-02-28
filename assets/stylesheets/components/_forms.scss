@@ -276,9 +276,13 @@ input[type="checkbox"]:disabled {
 }
 
 .custom-input-field {
-  .errors {
-    .help-block {
-      top: 0;
+  .form-group {
+    .input-group {
+      input {
+        &.form-control {
+          // background: url(/Users/sarahsachs/Sites/cr-proj/crds-styles/assets/svgs/usd.svg) no-repeat scroll 7px 7px;
+        }
+      }
     }
   }
 }
