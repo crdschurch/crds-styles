@@ -163,8 +163,31 @@ input[type="checkbox"]:disabled {
   position: relative;
   display: block;
 
+  &.input-group-left {
+    input.form-control {
+      padding-right: 10px;
+      padding-left: 48px;
+    }
+
+    .input-group-addon {
+      left: 1rem;
+      top: 0;
+    }
+  }
+
+  &.input-group-right {
+    input.form-control {
+      padding-right: 48px;
+      padding-left: 10px;
+    }
+
+    .input-group-addon {
+      right: 1rem;
+      top: 0;
+    }
+  }
+
   input.form-control {
-    padding: 0 10px 0 48px;
     float: none;
   }
 
@@ -172,7 +195,6 @@ input[type="checkbox"]:disabled {
     position: absolute;
     display: flex;
     height: 100%;
-    margin-left: 16px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -185,6 +207,11 @@ input[type="checkbox"]:disabled {
       height: 16px;
       width: 16px;
       background-size: 16px;
+      filter: invert(55%);
+
+      .dark-theme & {
+        filter: invert(45%);
+      }
     }
   }
 }
