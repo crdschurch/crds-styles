@@ -70,18 +70,21 @@ datepicker {
   }
 
   .glyphicon {
-
     &.glyphicon-chevron-left {
-    @extend .icon;
       @extend .svg-chevron-left;
-      @extend .icon-1;
     }
-
     &.glyphicon-chevron-right {
       @extend .svg-chevron-right;
+    }
+  }
+  datepicker-inner .glyphicon {
+    &.glyphicon-chevron-left,
+    &.glyphicon-chevron-right {
+      @extend .icon;
       @extend .icon-1;
     }
   }
+
 
   tbody {
     .btn {
