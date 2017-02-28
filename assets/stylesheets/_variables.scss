@@ -7,95 +7,47 @@ $base-font-size: 16px;
 
 // Colors
 
-$cr-colors: (
-  // Blue (Primary)
-  blue: rgba(59,110,143,1), // #3B6E8F
-  blue-dark: rgba(43,81,105,1), // #2B5169
-  blue-light: rgba(165,189,204,1), // #A5BDCC
-  blue-lighter: rgba(219,228,234,1), // #DBE4EA
-
-  // Cyan (Secondary)
-  cyan: rgba(0,149,217,1), // #0095D9
-  cyan-dark: rgba(0,109,158,1), // #006D9E
-  cyan-light: rgba(139,206,237,1), // #8BCEED
-  cyan-lighter: rgba(208,235,248,1), // #D8EBF8
-
-  // Teal (Secondary)
-  teal: rgba(87,175,169,1), // #57AFA9
-  teal-dark: rgba(65,128,123,1), // #41807B
-  teal-light: rgba(179,218,215,1), // #B3DAD7
-  teal-lighter: rgba(224,240,239,1), // #E0F0EF
-
-  // Orange (Secondary)
-  orange: rgba(192,92,4,1), // #C05C04
-  orange-dark: rgba(140,67,3,1), // #8C4303
-  orange-light: rgba(226,180,140,1), // #E2B48C
-  orange-lighter: rgba(243,225,209,1), // #F3E1D1
-
-  // Gold (Secondary)
-  gold: rgba(224,158,6,1), // #E09E06
-  gold-dark: rgba(163,115,4,1), // #A37304
-  gold-light: rgba(240,210,140,1), // #F0D28C
-  gold-lighter: rgba(249,237,209,1), // #F9EDD1
-
-  // Grayscale
-  gray-darker: rgba(21,21,21,1), // #151515
-  gray-dark: rgba(77,77,77,1), // #4D4D4D
-  gray: rgba(115,115,115,1), // #737373
-  gray-light: rgba(151,151,151,1), // #979797
-  gray-lighter: rgba(231,231,231,1), // #E7E7E7
-  white: rgba(255,255,255,1), // #FFFFFF
-  black: rgba(0,0,0,1), // #000000
-
-  gray-alpha: rgba(115,115,115,.25),
-
-  magenta: rgba(204,34,85,1),          // #CC2255
-  green: rgba(92,184,92,1),            // #5CB85C
-
-  black-alpha: rgba(0,0,0,.5)
-);
-
 // Blue (Primary)
-$cr-blue: map-get($cr-colors, blue);
-$cr-blue-dark: map-get($cr-colors, blue-dark);
-$cr-blue-light: map-get($cr-colors, blue-light);
-$cr-blue-lighter: map-get($cr-colors, blue-lighter);
+$cr-blue: rgba(59,110,143,1); // #3B6E8F
+$cr-blue-dark: rgba(43,81,105,1); // #2B5169
+$cr-blue-light: rgba(165,189,204,1); // #A5BDCC
+$cr-blue-lighter: rgba(219,228,234,1); // #DBE4EA
 
 // Cyan (Secondary)
-$cr-cyan: map-get($cr-colors, cyan);
-$cr-cyan-dark: map-get($cr-colors, cyan-dark);
-$cr-cyan-light: map-get($cr-colors, cyan-light);
-$cr-cyan-lighter: map-get($cr-colors, cyan-lighter);
+$cr-cyan: rgba(0,149,217,1); // #0095D9
+$cr-cyan-dark: rgba(0,109,158,1); // #006D9E
+$cr-cyan-light: rgba(139,206,237,1); // #8BCEED
+$cr-cyan-lighter: rgba(208,235,248,1); // #D8EBF8
 
 // Teal (Secondary)
-$cr-teal: map-get($cr-colors, teal);
-$cr-teal-dark: map-get($cr-colors, teal-dark);
-$cr-teal-light: map-get($cr-colors, teal-light);
-$cr-teal-lighter: map-get($cr-colors, teal-lighter);
+$cr-teal: rgba(87,175,169,1); // #57AFA9
+$cr-teal-dark: rgba(65,128,123,1); // #41807B
+$cr-teal-light: rgba(179,218,215,1); // #B3DAD7
+$cr-teal-lighter: rgba(224,240,239,1); // #E0F0EF
 
 // Orange (Secondary)
-$cr-orange: map-get($cr-colors, orange);
-$cr-orange-dark: map-get($cr-colors, orange-dark);
-$cr-orange-light: map-get($cr-colors, orange-light);
-$cr-orange-lighter: map-get($cr-colors, orange-lighter);
+$cr-orange: rgba(192,92,4,1); // #C05C04
+$cr-orange-dark: rgba(140,67,3,1); // #8C4303
+$cr-orange-light: rgba(226,180,140,1); // #E2B48C
+$cr-orange-lighter: rgba(243,225,209,1); // #F3E1D1
 
 // Gold (Secondary)
-$cr-gold: map-get($cr-colors, gold);
-$cr-gold-dark: map-get($cr-colors, gold-dark);
-$cr-gold-light: map-get($cr-colors, gold-light);
-$cr-gold-lighter: map-get($cr-colors, gold-lighter);
+$cr-gold: rgba(224,158,6,1); // #E09E06
+$cr-gold-dark: rgba(163,115,4,1); // #A37304
+$cr-gold-light: rgba(240,210,140,1); // #F0D28C
+$cr-gold-lighter: rgba(249,237,209,1); // #F9EDD1
 
 // Grayscale
-$cr-gray-darker: map-get($cr-colors, gray-darker);
-$cr-gray-dark: map-get($cr-colors, gray-dark);
-$cr-gray: map-get($cr-colors, gray);
-$cr-gray-light: map-get($cr-colors, gray-light);
-$cr-gray-lighter: map-get($cr-colors, gray-lighter);
-$cr-white: map-get($cr-colors, white);
-$cr-black: map-get($cr-colors, black);
+$cr-gray-darker: rgba(21,21,21,1); // #151515
+$cr-gray-dark: rgba(77,77,77,1); // #4D4D4D
+$cr-gray: rgba(115,115,115,1); // #737373
+$cr-gray-light: rgba(151,151,151,1); // #979797
+$cr-gray-lighter: rgba(231,231,231,1); // #E7E7E7
+$cr-white: rgba(255,255,255,1); // #FFFFFF
+$cr-black: rgba(0,0,0,1); // #000000
 
-$cr-gray-alpha: map-get($cr-colors, gray-alpha);
+$cr-gray-alpha: rgba($cr-gray,.25);
 
-$cr-magenta: map-get($cr-colors, magenta);
-$cr-green: map-get($cr-colors, green);
-$cr-black-alpha: map-get($cr-colors, black-alpha);
+$cr-magenta: rgba(204,34,85,1);          // #CC2255
+$cr-green: rgba(92,184,92,1);            // #5CB85C
+$cr-black-alpha: rgba($cr-black,.5);
