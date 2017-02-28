@@ -31,10 +31,18 @@
 
       &.ng-valid {
         border-right-color: $brand-success;
+
+        .dark-theme & {
+          border-right-color: $brand-success;
+        }
       }
 
       &.ng-invalid {
         border-right-color: $brand-danger;
+
+        .dark-theme & {
+          border-right-color: $brand-danger;
+        }
       }
     }
 
@@ -84,5 +92,50 @@
     .help-block {
       top: 0;
     }
+  }
+}
+
+
+.btn-group-block .custom-input .custom-input-field .input-group {
+  input,
+  textarea {
+    border: 1px solid $input-border;
+    border-right: none;
+    background: $cr-white;
+    box-shadow: none;
+
+    &.ng-touched {
+      &.ng-invalid,
+      &.ng-valid {
+        background: $input-bg-focus;
+        border-right-style: solid;
+        border-right-width: 6px;
+
+        .dark-theme & {
+          background: $input-bg-focus;
+        }
+      }
+
+      &.ng-valid {
+        &, &:focus {
+          border-right-color: $brand-success;
+
+          .dark-theme & {
+            border-right-color: $brand-success;
+          }
+        }
+      }
+
+      &.ng-invalid {
+        &, &:focus {
+          border-right-color: $brand-danger;
+
+          .dark-theme & {
+            border-right-color: $brand-danger;
+          }
+        }
+      }
+    }
+
   }
 }
