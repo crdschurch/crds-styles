@@ -25,6 +25,10 @@
 {{/hasCommon}}{{/hasMixin}}{{^hasMixin}}{{#hasCommon}}.{{/hasCommon}}{{^hasCommon}}%{{/hasCommon}}{{commonName}} {
 	background: url("{{{sprite}}}") no-repeat;
 	@extend %icon-dimensions;
+
+	.dark-theme & {
+		filter: invert(75%);
+	}
 }
 
 {{/hasMixin}}{{#shapes}}{{#selector.shape}}{{expression}}{{^last}},
