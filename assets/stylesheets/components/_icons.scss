@@ -8,38 +8,36 @@ i, .icon {
   background-size: 32px 32px;
 }
 
-.icon-stack {
+.icon-circle {
   position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  width: $dimensions * 2;
-  height: $dimensions * 2;
+  width: 48px;
+  height: 48px;
+  @extend %flex-center;
+
+  $dimensions: 16px;
   @for $i from 1 through 6 {
-    &.size-#{$i} {
-      width: $dimensions * $i;
-      height: $dimensions * $i;
-      i, i.icon {
-        @include crds-icon-size($i);
+    &.icon-#{$i} {
+      &, &:before {
+        width: ($dimensions * $i) + $dimensions;
+        height: ($dimensions * $i) + $dimensions;
       }
-      i:last-child, i.icon:last-child {
-        @include crds-icon-size($i - 1);
-      }
-    }
-  }
-  &:hover {
-    @each $name, $color in $cr-colors {
-      i.hover-cr-#{$name}, i.icon.hover-cr-#{$name} {
-        background-color: $color;
+      i, .icon {
+        width: $dimensions * $i;
+        height: $dimensions * $i;
+        background-size: $dimensions * $i;
       }
     }
   }
-  i, i.icon {
+
+  &:before {
+    background-color: $cr-gray-light;
+    content: ' ';
     position: absolute;
-    @include crds-icon-size(2);
-    &:last-child {
-      @include crds-icon-size(1);
-    }
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+  }
+  i, .icon {
+    position: relative;
   }
 }

@@ -1,3 +1,10 @@
+%flex-center {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 @mixin crds-bg-variant($background, $color: $cr-white) {
   background-color: $background;
   color: $color;

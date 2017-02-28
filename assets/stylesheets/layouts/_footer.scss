@@ -32,4 +32,10 @@
   hr {
     border-top-color: $gray-light;
   }
+
+  .icon-circle:hover {
+    &:before {
+      background-color: $cr-blue;
+    }
+  }
 }
