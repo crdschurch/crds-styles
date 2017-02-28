@@ -160,29 +160,31 @@ input[type="checkbox"]:disabled {
 }
 
 .input-group {
-  input {
-    padding: 0 10px;
+  position: relative;
+  display: block;
+
+  input.form-control {
+    padding: 0 10px 0 48px;
+    float: none;
   }
 
   .input-group-addon {
-    background: $input-group-addon-bg;
-    border-radius: $input-border-radius;
+    position: absolute;
+    display: flex;
+    height: 100%;
+    margin-left: 16px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 4;
     font-size: 1.125rem;
+    background: $input-group-addon-bg;
+    border: none;
 
-    .icon {
-      filter: invert(55%);
-
-      .dark-theme & {
-        filter: invert(45%);
-      }
-    }
-
-    .dark-theme & {
-      $input-group-addon-bg: lighten($cr-gray, 40);
-      $input-group-addon-border-color: $input-group-addon-bg;
-
-      background: $input-group-addon-bg;
-      border-color: $input-group-addon-border-color;
+    i, .icon {
+      height: 16px;
+      width: 16px;
+      background-size: 16px;
     }
   }
 }

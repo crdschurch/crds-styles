@@ -74,8 +74,8 @@ $bootstrap-sass-asset-helper: true;
   $input-border-focus: $cr-cyan-light !default;
   $input-border-radius: 0 !default;
   $input-height-base: 40px !default;
-  $input-group-addon-bg: $input-bg !default;
-  $input-group-addon-border-color: $input-border !default;
+  $input-group-addon-bg: transparent !default;
+  $input-group-addon-border-color: transparent !default;
 
 // Alerts
   $alert-border-radius: 0 !default;
