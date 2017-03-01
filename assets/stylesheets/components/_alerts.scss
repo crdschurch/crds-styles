@@ -1,25 +1,53 @@
 .alert {
+  @extend .font-family-accent;
   border-radius: 0;
+  font-size: .875rem;
   line-height: 1.125rem;
-
 
   &.alert-success {
     @include alert-variant($alert-success-bg, $alert-success-border, $alert-success-text);
+    .alert-link {
+      @extend a, .alert-link;
+      &:hover {
+        color: lighten($alert-success-bg, 40);
+      }
+    }
   }
 
   &.alert-info {
     @include alert-variant($alert-info-bg, $alert-info-border, $alert-info-text);
+    .alert-link {
+      @extend a, .alert-link;
+      &:hover {
+        color: lighten($alert-info-bg, 40);
+      }
+    }
   }
 
   &.alert-warning {
     @include alert-variant($alert-warning-bg, $alert-warning-border, $alert-warning-text);
+    .alert-link {
+      @extend a, .alert-link;
+      &:hover {
+        color: lighten($alert-warning-bg, 40);
+      }
+    }
   }
 
   &.alert-danger {
     @include alert-variant($alert-danger-bg, $alert-danger-border, $alert-danger-text);
+    .alert-link {
+      @extend a, .alert-link;
+      &:hover {
+        color: lighten($alert-danger-bg, 40);
+      }
+    }
   }
 
-  a {
-    @extend .alert-link;
+  a,
+  .alert-link {
+    color: $cr-white;
+    font-weight: normal;
+    text-decoration: underline;
   }
 }

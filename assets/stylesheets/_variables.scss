@@ -48,6 +48,11 @@ $cr-black: rgba(0,0,0,1); // #000000
 
 $cr-gray-alpha: rgba($cr-gray,.25);
 
-$cr-magenta: rgba(204,34,85,1);          // #CC2255
-$cr-green: rgba(92,184,92,1);            // #5CB85C
+$cr-rust: rgba(216,77,71,1); // #CC2255
+$cr-green: rgba(79,191,142,1); // #4FC08F
 $cr-black-alpha: rgba($cr-black,.5);
+
+$alert-success: $cr-green;
+$alert-info: rgba(106,188,204,1); // #6ABCCC
+$alert-warning: rgba(222,188,115,1); // #DEBC73
+$alert-danger: $cr-rust;
