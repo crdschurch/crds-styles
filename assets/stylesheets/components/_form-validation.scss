@@ -24,16 +24,25 @@
     &.ng-touched {
       &.ng-invalid,
       &.ng-valid {
+        background: $input-bg-focus;
         border-right-style: solid;
-        border-right-width: 8px;
+        border-right-width: 6px;
       }
 
       &.ng-valid {
         border-right-color: $brand-success;
+
+        .dark-theme & {
+          border-right-color: $brand-success;
+        }
       }
 
       &.ng-invalid {
         border-right-color: $brand-danger;
+
+        .dark-theme & {
+          border-right-color: $brand-danger;
+        }
       }
     }
 
@@ -42,38 +51,91 @@
   &.has-success {
     border-right-color: $brand-success;
   }
+}
 
-  &.has-error,
-  &.has-warning {
+.has-error,
+.has-warning {
+  .help-block {
+    color: $cr-white;
+    padding: .5rem 1rem;
+  }
+}
+
+.error {
+  &.help-block {
+    background: $brand-danger;
+    color: $cr-white;
+    padding: .5rem 1rem;
+    position: relative;
+    top: -1px;
+  }
+}
+
+.has-error {
+  border-right-color: $brand-danger;
+
+  .help-block {
+    background: $brand-danger;
+  }
+}
+
+.has-warning {
+  border-right-color: $brand-warning;
+
+  .help-block {
+    background: $brand-warning;
+  }
+}
+
+.custom-input-field {
+  .errors {
     .help-block {
-      color: $cr-white;
-      padding: .5rem 1rem;
+      top: 0;
     }
   }
+}
 
-  .error {
-    &.help-block {
-      background: $brand-danger;
-      color: $cr-white;
-      padding: .5rem 1rem;
-      position: relative;
-      top: -1px;
+
+.btn-group-block .custom-input .custom-input-field .input-group {
+  input,
+  textarea {
+    border: 1px solid $input-border;
+    border-right: none;
+    background: $cr-white;
+    box-shadow: none;
+
+    &.ng-touched {
+      &.ng-invalid,
+      &.ng-valid {
+        background: $input-bg-focus;
+        border-right-style: solid;
+        border-right-width: 6px;
+
+        .dark-theme & {
+          background: $input-bg-focus;
+        }
+      }
+
+      &.ng-valid {
+        &, &:focus {
+          border-right-color: $brand-success;
+
+          .dark-theme & {
+            border-right-color: $brand-success;
+          }
+        }
+      }
+
+      &.ng-invalid {
+        &, &:focus {
+          border-right-color: $brand-danger;
+
+          .dark-theme & {
+            border-right-color: $brand-danger;
+          }
+        }
+      }
     }
-  }
 
-  &.has-error {
-    border-right-color: $brand-danger;
-
-    .help-block {
-      background: $brand-danger;
-    }
-  }
-
-  &.has-warning {
-    border-right-color: $brand-warning;
-
-    .help-block {
-      background: $brand-warning;
-    }
   }
 }

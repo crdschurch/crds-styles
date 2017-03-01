@@ -57,30 +57,4 @@
       }
     }
   }
-
-  &.btn-no-outline {
-    background: $btn-outline-bg;
-    border-color: $btn-outline-bg;
-    border-width: 2px;
-    color: $border;
-
-    .active,
-    &:active,
-    &:focus {
-      background: $background;
-      border-color: $background;
-      box-shadow: none;
-      color: $cr-white;
-    }
-
-    &:focus:hover {
-      background: $background;
-      border-color: $border;
-      color: $color;
-    }
-
-    &:hover {
-      background: $cr-white;
-    }
-  }
 }

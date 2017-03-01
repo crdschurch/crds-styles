@@ -19,9 +19,10 @@
     font-size: $base-font-size;
     padding: 15px 30px;
   }
-  &, &.btn-md {
+  &,
+  &.btn-md {
     font-size: .875rem; // 14px
-    padding: 12.5px 20px;
+    padding: 10px 20px;
   }
   &.btn-sm {
     font-size: .8125rem; // 13px
@@ -30,15 +31,22 @@
 
   &.btn-primary {
     @include crds-button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+
+    .dark-theme & {
+      @extend .btn-secondary;
+    }
   }
-  &.btn-info {
-    @include crds-button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+  &.btn-secondary {
+    @include crds-button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
   }
   &.btn-gray {
     @include crds-button-variant($btn-gray-color, $btn-gray-bg, $btn-gray-border);
   }
   &.btn-option {
     @include crds-button-variant($btn-option-color, $btn-option-bg, $btn-option-border);
+
+    font-weight: 500;
+
     &:focus,
     &:active {
       background: $cr-teal;
@@ -72,36 +80,17 @@
           color: lighten($btn-option-border, 25);
         }
       }
-    }
-    &.btn-no-outline {
-      border-color: $cr-white;
-      background: $btn-option-color;
-      color: $btn-option-bg;
-      &:hover {
-        background: $cr-white;
-        border-color: $cr-white;
-      }
-      &.active,
-      &:active,
-      &:focus {
-        background: $cr-teal;
-        border-color: $cr-teal;
-        color: $cr-white;
 
-        &:hover {
-          color: $btn-option-color;
-        }
-      }
-      &:focus:hover {
-        background: $cr-teal;
-        border-color: $cr-teal;
-      }
-      &.disabled {
+      .dark-theme & {
+        background: transparent;
+
         &.active,
         &:active,
         &:focus {
-          background: $cr-white;
-          color: lighten($btn-option-border, 25);
+          &,
+          &:hover{
+            background: $cr-teal;
+          }
         }
       }
     }
@@ -134,6 +123,7 @@
 // Toggle button group
 
 .btn-group-toggle {
+  margin-bottom: 1rem;
   width: 100%;
 
   > .btn {
@@ -183,6 +173,23 @@
       }
     }
   }
+
+  .dark-theme & {
+    .btn-option {
+      background: transparent;
+
+      &.active,
+      &:active,
+      &:focus:hover {
+        background: $cr-teal;
+
+        &:focus,
+        &:hover {
+          background: $cr-teal;
+        }
+      }
+    }
+  }
 }
 
 // Disabled buttons styles
@@ -198,7 +205,7 @@ a {
 .btn-group-row {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin-right: -5px;
   margin-left: -5px;
   justify-content: space-between;
@@ -207,7 +214,9 @@ a {
     &.btn-flex {
       min-height: 2rem;
       flex: 1 1 auto;
-      margin: 5px;
+      margin: 4px;
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
   }
 }

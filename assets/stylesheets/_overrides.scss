@@ -30,7 +30,7 @@ $bootstrap-sass-asset-helper: true;
   $headings-color: $cr-gray-darker !default;
 
 // Type
-  $text-muted: $cr-gray !default;
+  $text-muted: $cr-gray-light !default;
   $blockquote-font-size: 1.1875rem !default; // 19px
   $blockquote-border-color: lighten($cr-gray, 25) !default;
   $page-header-border-color: $cr-gray-lighter !default;
@@ -50,27 +50,32 @@ $bootstrap-sass-asset-helper: true;
   $btn-default-bg: $cr-gray-light !default;
   $btn-default-border: $cr-gray-light !default;
   $btn-primary-color: $cr-white !default;
-  $btn-info-color: $cr-white !default;
+  $btn-secondary-bg: $cr-cyan;
+  $btn-secondary-border: $cr-cyan;
+  $btn-secondary-color: $cr-white;
+  $btn-info-bg: $btn-secondary-bg !default;
+  $btn-info-border: $btn-secondary-border !default;
+  $btn-info-color: $btn-secondary-color !default;
   $btn-gray-bg: $cr-gray;
   $btn-gray-border: $cr-gray;
   $btn-gray-color: $cr-white;
   $btn-option-color: $cr-white;
   $btn-option-bg: $cr-gray-light;
-  $btn-option-border: $cr-gray-light;
+  $btn-option-border: rgba($cr-gray-light, 0.75);
   $btn-outline-bg: $cr-white;
   $btn-outline-hover-bg: $cr-gray-lighter;
 
 // Forms
-  $input-bg: $cr-white !default;
-  $input-bg-focus: $input-bg;
+  $input-bg: lighten($cr-gray-lighter, 4) !default;
+  $input-bg-focus: $cr-white;
   $input-color: $cr-gray !default;
   $input-placeholder: $cr-gray-light;
-  $input-border: $cr-gray-light !default;
+  $input-border: $input-bg !default;
   $input-border-focus: $cr-cyan-light !default;
   $input-border-radius: 0 !default;
   $input-height-base: 40px !default;
-  $input-group-addon-bg: $cr-gray-lighter !default;
-  $input-group-addon-border-color: $input-border !default;
+  $input-group-addon-bg: transparent !default;
+  $input-group-addon-border-color: transparent !default;
 
 // Alerts
   $alert-border-radius: 0 !default;
