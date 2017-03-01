@@ -166,51 +166,68 @@ a.underline,
   border-radius: $border-radius-base;
 }
 
-
-// Used for float and text-alignment functions
-$device-sizes: (
-  $screen-sm-min: "sm",
-  $screen-md-min: "md",
-  $screen-lg-min: "lg"
-);
-
 /* Stackable floats */
 
-/* 👉 Example: .sm-pull-left would float an object left on small screens, while .md-pull-right would float an object right on medium-sized screens */
-
-// 🚨 $_floats-directions variable are only used in the creation of pull-left/-right classes
-$_floats-directions: ("right", "left");
-
-// For each defined screen-width, create a class/media query ($device-sizes)
-@each $screen, $size in $device-sizes {
-
-  // For each newly created class/media query, add a float-left and float-right rule ($_floats-direction)
-  @each $direction in $_floats-directions {
-    @media only screen and (min-width: $screen) {
-      .#{$size}-pull-#{$direction} {
-        float: #{$direction};
-      }
-    }
+@media only screen and (min-width: $screen-sm-min) {
+  .sm-pull-right {
+    float: right;
+  }
+  .sm-pull-left {
+    float: left;
+  }
+}
+@media only screen and (min-width: $screen-md-min) {
+  .md-pull-right {
+    float: right;
+  }
+  .md-pull-left {
+    float: left;
+  }
+}
+@media only screen and (min-width: $screen-lg-min) {
+  .lg-pull-right {
+    float: right;
+  }
+  .lg-pull-left {
+    float: left;
   }
 }
 
 /* Stackable text alignment */
 
-/* 👉 Example: .sm-text-left would align text to the left on small screens, while .md-text-center would align text in the center on medium-sized screens */
+@media only screen and (min-width: $screen-sm-min) {
+  .sm-text-right {
+    text-align: right;
+  }
+  .sm-text-left {
+    text-align: left;
+  }
+  .sm-text-center {
+    text-align: center;
+  }
+}
 
-// 🚨 $_text-alignments variable are only used in the creation of text-align classes
-$_text-alignments: ("right", "left", "center");
+@media only screen and (min-width: $screen-md-min) {
+  .md-text-right {
+    text-align: right;
+  }
+  .md-text-left {
+    text-align: left;
+  }
+  .md-text-center {
+    text-align: center;
+  }
+}
 
-// For each defined screen-width, create a class/media query ($device-sizes)
-@each $screen, $size in $device-sizes {
-
-  // For each newly created class/media query, add each text-alignment rule ($_text-alignments)
-  @each $align in $_text-alignments {
-    @media only screen and (min-width: $screen) {
-      .#{$size}-text-#{$align} {
-        text-align: #{$align};
-      }
-    }
+@media only screen and (min-width: $screen-lg-min) {
+  .lg-text-right {
+    text-align: right;
+  }
+  .lg-text-left {
+    text-align: left;
+  }
+  .lg-text-center {
+    text-align: center;
   }
 }
 
@@ -278,107 +295,342 @@ a[ng-click] {
 
 /* Margin/Padding Rules */
 
-// 🚨 @mixin _spacing-* are only used in the creation of spacing classes (+/- padding/margin)
-@mixin _spacing-mobile-mq {
-  @media only screen and (max-width: $screen-sm-min) {
-    @content;
+.push {
+  margin: $line-height-computed;
+}
+.push-half {
+  margin: $line-height-computed / 2;
+}
+.push-quarter {
+  margin: $line-height-computed / 4;
+}
+.push-top {
+  margin-top: $line-height-computed;
+}
+.push-half-top {
+  margin-top: $line-height-computed / 2;
+}
+.push-quarter-top {
+  margin-top: $line-height-computed / 4;
+}
+.push-right {
+  margin-right: $line-height-computed;
+}
+.push-half-right {
+  margin-right: $line-height-computed / 2;
+}
+.push-quarter-right {
+  margin-right: $line-height-computed / 4;
+}
+.push-bottom {
+  margin-bottom: $line-height-computed;
+}
+.push-half-bottom {
+  margin-bottom: $line-height-computed / 2;
+}
+.push-quarter-bottom {
+  margin-bottom: $line-height-computed / 4;
+}
+.push-left {
+  margin-left: $line-height-computed;
+}
+.push-half-left {
+  margin-left: $line-height-computed / 2;
+}
+.push-quarter-left {
+  margin-left: $line-height-computed / 4;
+}
+.push-sides {
+  margin-right: $line-height-computed;
+  margin-left: $line-height-computed;
+}
+.push-ends {
+  margin-top: $line-height-computed;
+  margin-bottom: $line-height-computed;
+}
+.push-half-sides {
+  margin-right: $line-height-computed / 2;
+  margin-left: $line-height-computed / 2;
+}
+.push-half-ends {
+  margin-right: $line-height-computed / 2;
+  margin-left: $line-height-computed / 2;
+}
+.flush {
+  margin: 0;
+}
+.flush-top {
+  margin-top: 0;
+}
+.flush-right {
+  margin-right: 0;
+}
+.flush-bottom {
+  margin-bottom: 0;
+}
+.flush-left {
+  margin-left: 0;
+}
+.flush-sides {
+  margin-right: 0;
+  margin-left: 0;
+}
+.flush-ends {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.hard {
+  padding: 0;
+}
+.hard-top {
+  padding-top: 0;
+}
+.hard-right {
+  padding-right: 0;
+}
+.hard-bottom {
+  padding-bottom: 0;
+}
+.hard-left {
+  padding-left: 0;
+}
+.hard-sides {
+  padding-right: 0;
+  padding-left: 0;
+}
+.hard-ends {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.soft {
+  padding: $line-height-computed;
+}
+.soft-half {
+  padding: $line-height-computed / 2;
+}
+.soft-quarter {
+  padding: $line-height-computed / 4;
+}
+.soft-top {
+  padding-top: $line-height-computed;
+}
+.soft-half-top {
+  padding-top: $line-height-computed / 2;
+}
+.soft-quarter-top {
+  padding-top: $line-height-computed / 4;
+}
+.soft-right {
+  padding-right: $line-height-computed;
+}
+.soft-half-right {
+  padding-right: $line-height-computed / 2;
+}
+.soft-quarter-right {
+  padding-right: $line-height-computed / 4;
+}
+.soft-bottom {
+  padding-bottom: $line-height-computed;
+}
+.soft-half-bottom {
+  padding-bottom: $line-height-computed / 2;
+}
+.soft-quarter-bottom {
+  padding-bottom: $line-height-computed / 4;
+}
+.soft-left {
+  padding-left: $line-height-computed;
+}
+.soft-half-left {
+  padding-left: $line-height-computed / 2;
+}
+.soft-quarter-left {
+  padding-left: $line-height-computed / 4;
+}
+.soft-sides {
+  padding-right: $line-height-computed;
+  padding-left: $line-height-computed;
+}
+.soft-ends {
+  padding-top: $line-height-computed;
+  padding-bottom: $line-height-computed;
+}
+.soft-half-sides {
+  padding-right: $line-height-computed / 2;
+  padding-left: $line-height-computed / 2;
+}
+.soft-half-ends {
+  padding-right: $line-height-computed / 2;
+  padding-left: $line-height-computed / 2;
+}
+
+@media only screen and (max-width: $screen-sm-min) {
+  .mobile-push {
+    margin: $line-height-computed;
+  }
+  .mobile-push-half {
+    margin: $line-height-computed / 2;
+  }
+  .mobile-push-quarter {
+    margin: $line-height-computed / 4;
+  }
+  .mobile-push-top {
+    margin-top: $line-height-computed;
+  }
+  .mobile-push-half-top {
+    margin-top: $line-height-computed / 2;
+  }
+  .mobile-push-quarter-top {
+    margin-top: $line-height-computed / 4;
+  }
+  .mobile-push-right {
+    margin-right: $line-height-computed;
+  }
+  .mobile-push-half-right {
+    margin-right: $line-height-computed / 2;
+  }
+  .mobile-push-quarter-right {
+    margin-right: $line-height-computed / 4;
+  }
+  .mobile-push-bottom {
+    margin-bottom: $line-height-computed;
+  }
+  .mobile-push-half-bottom {
+    margin-bottom: $line-height-computed / 2;
+  }
+  .mobile-push-quarter-bottom {
+    margin-bottom: $line-height-computed / 4;
+  }
+  .mobile-push-left {
+    margin-left: $line-height-computed;
+  }
+  .mobile-push-half-left {
+    margin-left: $line-height-computed / 2;
+  }
+  .mobile-push-quarter-left {
+    margin-left: $line-height-computed / 4;
+  }
+  .mobile-push-sides {
+    margin-right: $line-height-computed;
+    margin-left: $line-height-computed;
+  }
+  .mobile-push-ends {
+    margin-top: $line-height-computed;
+    margin-bottom: $line-height-computed;
+  }
+  .mobile-push-half-sides {
+    margin-right: $line-height-computed / 2;
+    margin-left: $line-height-computed / 2;
+  }
+  .mobile-push-half-ends {
+    margin-top: $line-height-computed / 2;
+    margin-bottom: $line-height-computed / 2;
+  }
+  .mobile-flush {
+    margin: 0;
+  }
+  .mobile-flush-top {
+    margin-top: 0;
+  }
+  .mobile-flush-right {
+    margin-right: 0;
+  }
+  .mobile-flush-bottom {
+    margin-bottom: 0;
+  }
+  .mobile-flush-left {
+    margin-left: 0;
+  }
+  .mobile-flush-sides {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .mobile-flush-ends {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .mobile-hard {
+    padding: 0;
+  }
+  .mobile-hard-top {
+    padding-top: 0;
+  }
+  .mobile-hard-right {
+    padding-right: 0;
+  }
+  .mobile-hard-bottom {
+    padding-bottom: 0;
+  }
+  .mobile-hard-left {
+    padding-left: 0;
+  }
+  .mobile-hard-sides {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .mobile-hard-ends {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .mobile-soft {
+    padding: $line-height-computed;
+  }
+  .mobile-soft-half {
+    padding: $line-height-computed / 2;
+  }
+  .mobile-soft-quarter {
+    padding: $line-height-computed / 4;
+  }
+  .mobile-soft-top {
+    padding-top: $line-height-computed;
+  }
+  .mobile-soft-half-top {
+    padding-top: $line-height-computed / 2;
+  }
+  .mobile-soft-quarter-top {
+    padding-top: $line-height-computed / 4;
+  }
+  .mobile-soft-right {
+    padding-right: $line-height-computed;
+  }
+  .mobile-soft-half-right {
+    padding-right: $line-height-computed / 2;
+  }
+  .mobile-soft-quarter-right {
+    padding-right: $line-height-computed / 4;
+  }
+  .mobile-soft-bottom {
+    padding-bottom: $line-height-computed;
+  }
+  .mobile-soft-half-bottom {
+    padding-bottom: $line-height-computed / 2;
+  }
+  .mobile-soft-quarter-bottom {
+    padding-bottom: $line-height-computed / 4;
+  }
+  .mobile-soft-left {
+    padding-left: $line-height-computed;
+  }
+  .mobile-soft-half-left {
+    padding-left: $line-height-computed / 2;
+  }
+  .mobile-soft-quarter-left {
+    padding-left: $line-height-computed / 4;
+  }
+  .mobile-soft-sides {
+    padding-right: $line-height-computed;
+    padding-left: $line-height-computed;
+  }
+  .mobile-soft-ends {
+    padding-top: $line-height-computed;
+    padding-bottom: $line-height-computed;
+  }
+  .mobile-soft-half-sides {
+    padding-right: $line-height-computed / 2;
+    padding-left: $line-height-computed / 2;
+  }
+  .mobile-soft-half-ends {
+    padding-top: $line-height-computed / 2;
+    padding-bottom: $line-height-computed / 2;
   }
 }
-@mixin _spacing-ends($property, $value) {
-  #{$property}-top: $value;
-  #{$property}-bottom: $value;
-}
-@mixin _spacing-sides($property, $value) {
-  #{$property}-right: $value;
-  #{$property}-left: $value;
-}
-
-// 🚨 $_spacing-* variables are only used in the creation of spacing classes (+/- padding/margin)
-$_spacing-classes: (
-  "push": "margin",
-  "flush": "margin",
-  "hard": "padding",
-  "soft": "padding"
-);
-$_spacing-sides: (" ", "-top", "-right", "-bottom", "-left");
-
-// Spacing classes -- start
-
-// For each key/value in $_spacing-classes, create a class/rule and assign value to $value
-@each $class, $property in $_spacing-classes {
-  @if $class == "push" {
-    $value: $line-height-computed !global;
-  } @else if $class == "flush" {
-    $value: 0 !global;
-  } @else if $class == "hard" {
-    $value: 0 !global;
-  } @else if $class == "soft" {
-    $value: $line-height-computed !global;
-  }
-
-  // For each class/rule created above, create a desktop and mobile class appending each side to the class/rule
-  @each $side in $_spacing-sides {
-    .#{$class}#{$side} {
-      #{$property}#{$side} : $value;
-    }
-    .mobile-#{$class}#{$side} {
-      @include _spacing-mobile-mq { #{$property}#{$side}: $value };
-    }
-
-    @if $value == $line-height-computed {
-      .#{$class}-half#{$side} {
-        #{$property}#{$side} : $value / 2;
-      }
-      .mobile-#{$class}-half#{$side} {
-        @include _spacing-mobile-mq { #{$property}#{$side}: $value / 2 };
-      }
-      .#{$class}-quarter#{$side} {
-        #{$property}#{$side} : $value / 4;
-      }
-      .mobile-#{$class}-quarter#{$side} {
-        @include _spacing-mobile-mq { #{$property}#{$side}: $value / 4 };
-      }
-    }
-  }
-
-  .#{$class}-sides {
-    @include _spacing-sides(#{$property}, $value);
-  }
-  .mobile-#{$class}-sides {
-    @include _spacing-mobile-mq {
-      #{$property}-right: $value;
-      #{$property}-left: $value;
-    };
-  }
-  .#{$class}-ends {
-    @include _spacing-ends(#{$property}, $value);
-  }
-  .mobile-#{$class}-ends {
-    @include _spacing-mobile-mq {
-      #{$property}-top: $value;
-      #{$property}-bottom: $value;
-    };
-  }
-
-  @if $value == $line-height-computed {
-    .#{$class}-half-sides {
-      @include _spacing-sides(#{$property}, $value / 2);
-    }
-    .mobile-#{$class}-half-sides {
-      @include _spacing-mobile-mq {
-        #{$property}-right: $value / 2;
-        #{$property}-left: $value / 2;
-      };
-    }
-    .#{$class}-half-ends {
-      @include _spacing-sides(#{$property}, $value / 2);
-    }
-    .mobile-#{$class}-half-ends {
-      @include _spacing-mobile-mq {
-        #{$property}-top: $value / 2;
-        #{$property}-bottom: $value / 2;
-      };
-    }
-  }
-}
-// Spacing classes -- end
