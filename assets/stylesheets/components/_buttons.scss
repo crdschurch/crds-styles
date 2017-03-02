@@ -92,6 +92,17 @@
             background: $cr-teal;
           }
         }
+
+        &.disabled {
+          &.active,
+          &:active,
+          &:focus {
+            &,
+            &:hover{
+              background: transparent;
+            }
+          }
+        }
       }
     }
   }
