@@ -66,9 +66,9 @@ $bootstrap-sass-asset-helper: true;
   $btn-outline-hover-bg: $cr-gray-lighter;
 
 // Forms
-  $input-bg: lighten($cr-gray-lighter, 4) !default;
+  $input-bg: lighten($cr-gray-lighter, 5) !default;
   $input-bg-focus: $cr-white;
-  $input-color: $cr-gray !default;
+  $input-color: $cr-gray-dark !default;
   $input-placeholder: $cr-gray-light;
   $input-border: $input-bg !default;
   $input-border-focus: $cr-cyan-light !default;
