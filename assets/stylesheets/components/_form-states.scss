@@ -105,5 +105,9 @@ text-area {
       padding-left: 0;
       text-align: center;
     }
+
+    .dark-theme & {
+      background: transparent;
+    }
   }
 }
