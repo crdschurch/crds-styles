@@ -1,5 +1,7 @@
 .dark-theme {
-  $body-bg: $cr-black;
+  $body-bg: lighten($cr-gray-darker, .75);
+
+  $body-bg: $body-bg;
   $text-color: $cr-gray;
   $hr-border: darken($cr-gray-dark, 15);
 
