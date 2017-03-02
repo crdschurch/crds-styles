@@ -68,6 +68,9 @@
     padding: .5rem 1rem;
     position: relative;
     top: -1px;
+    > p:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
