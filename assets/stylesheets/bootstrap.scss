@@ -1,2 +1,12 @@
-$bootstrap-sass-asset-helper: true;
-@import '~bootstrap-sass/assets/stylesheets/bootstrap';
+.wf-loading {
+  visibility: hidden;
+}
+
+@import 'variables';
+@import 'overrides';
+@import 'mixins';
+@import 'vendors/modules';
+@import 'base/modules';
+@import 'components/modules';
+@import 'themes/modules';
+@import 'svg/sprite';

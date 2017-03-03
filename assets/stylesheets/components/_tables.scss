@@ -1,0 +1,58 @@
+.table-tagline {
+  border-top: 1px solid $table-border-color;
+  padding-top: .25rem;
+}
+
+.table {
+  width: 100%;
+}
+
+.table-contrast-bg {
+  background: $table-contrast-bg;
+  padding: 1rem;
+}
+
+.schedule-table {
+  tbody {
+    tr {
+      td {
+        padding: 0;
+        border-top: none;
+      }
+    }
+  }
+
+  .new-day {
+    td {
+      padding-top: 2rem;
+    }
+
+    td:first-child {
+      font-weight: bold;
+    }
+  }
+}
+
+.dark-theme {
+  $table-contrast-bg: darken($cr-gray, 30);
+  $table-border-color: darken($cr-gray, 5);
+
+
+  .table-contrast-bg {
+    background: $table-contrast-bg;
+  }
+
+  .table-tagline {
+    border-top: 1px solid $table-border-color;
+  }
+
+  .table {
+    tbody {
+      tr {
+        td {
+          border-color: $table-border-color;
+        }
+      }
+    }
+  }
+}

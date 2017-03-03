@@ -1,0 +1,72 @@
+.btn-group-block {
+  .btn {
+    &.btn-option {
+      &.btn-outline {
+        &:hover {
+          background: $cr-teal;
+          border-color: $cr-teal;
+          color: $cr-white;
+
+          .icon {
+            filter: invert(100%);
+          }
+        }
+
+        .svg-check-circle {
+          display: none;
+        }
+
+        &.active {
+          .svg-check-circle {
+            display: inline-block;
+            filter: invert(100%);
+          }
+
+          .svg-circle-thin {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .custom-input {
+    display: flex;
+    justify-content: flex-end;
+    min-height: 2.75rem;
+    overflow: hidden;
+
+    .custom-input-icon {
+      padding: 10px;
+
+      i {
+        filter: invert(55%);
+
+        .dark-theme & {
+          filter: invert(45%);
+        }
+      }
+    }
+
+    .custom-input-field {
+      flex-basis: calc(100% - 30px);
+    }
+  }
+}
+
+.btn-option {
+  .row {
+    .btn-group-label {
+      margin-top: 2px;
+    }
+
+    .btn-group-icons {
+      padding-right: .5rem;
+
+      .icon {
+        filter: invert(55%);
+        vertical-align: middle;
+      }
+    }
+  }
+}

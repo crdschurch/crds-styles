@@ -1,0 +1,93 @@
+// Assets
+$bootstrap-sass-asset-helper: true;
+
+// Colors
+  $brand-primary: $cr-blue !default;
+  $brand-success: $cr-green !default;
+  $brand-info: $cr-cyan !default;
+  $brand-warning: $cr-gold !default;
+  $brand-danger: $cr-rust !default;
+  $gray-base: $cr-gray !default;
+  $gray-darker: $cr-gray-darker !default;
+  $gray-dark: $cr-gray-dark !default;
+  $gray: $cr-gray !default;
+  $gray-light: $cr-gray-light !default;
+  $gray-lighter: $cr-gray-lighter !default;
+
+// Scaffolding
+  $body-bg: $cr-white;
+  $text-color: $cr-gray-dark !default;
+  $link-color: $cr-cyan !default;
+  $link-color-hover: $cr-cyan-dark !default;
+  $link-hover-decoration: underline;
+
+// Typography
+  $font-family-serif: $accent-font-face !default;
+  $font-family-sans-serif: $base-font-face !default;
+  $font-family-base: $font-family-sans-serif;
+  $font-size-base: $base-font-size !default;
+  $line-height-base: 1.5 !default;
+  $headings-color: $cr-gray-darker !default;
+
+// Type
+  $text-muted: $cr-gray-light !default;
+  $blockquote-font-size: 1.1875rem !default; // 19px
+  $blockquote-border-color: lighten($cr-gray, 25) !default;
+  $page-header-border-color: $cr-gray-lighter !default;
+
+// Components
+  $border-radius-base: 4px !default;
+  $border-radius-large: 5px !default;
+  $border-radius-small: 3px !default;
+
+// Tables
+  $table-bg: transparent !default;
+  $table-contrast-bg: lighten($cr-gray-light, 36);
+  $table-border-color: lighten($cr-gray-light, 20) !default;
+
+// Buttons
+  $btn-default-color: $cr-white !default;
+  $btn-default-bg: $cr-gray-light !default;
+  $btn-default-border: $cr-gray-light !default;
+  $btn-primary-color: $cr-white !default;
+  $btn-secondary-bg: $cr-cyan;
+  $btn-secondary-border: $cr-cyan;
+  $btn-secondary-color: $cr-white;
+  $btn-info-bg: $btn-secondary-bg !default;
+  $btn-info-border: $btn-secondary-border !default;
+  $btn-info-color: $btn-secondary-color !default;
+  $btn-gray-bg: $cr-gray;
+  $btn-gray-border: $cr-gray;
+  $btn-gray-color: $cr-white;
+  $btn-option-color: $cr-white;
+  $btn-option-bg: $cr-gray-light;
+  $btn-option-border: rgba($cr-gray-light, 0.75);
+  $btn-outline-bg: $cr-white;
+  $btn-outline-hover-bg: $cr-gray-lighter;
+
+// Forms
+  $input-bg: lighten($cr-gray-lighter, 5) !default;
+  $input-bg-focus: $cr-white;
+  $input-color: $cr-gray-dark !default;
+  $input-placeholder: $cr-gray-light;
+  $input-border: $input-bg !default;
+  $input-border-focus: $cr-cyan-light !default;
+  $input-border-radius: 0 !default;
+  $input-height-base: 40px !default;
+  $input-group-addon-bg: transparent !default;
+  $input-group-addon-border-color: transparent !default;
+
+// Alerts
+  $alert-border-radius: 0 !default;
+  $alert-success-bg: $alert-success !default;
+  $alert-success-text: $cr-white !default;
+  $alert-success-border: $alert-success-bg !default;
+  $alert-info-bg: $alert-info !default;
+  $alert-info-text: $cr-white !default;
+  $alert-info-border: $alert-info-bg !default;
+  $alert-warning-bg: $alert-warning !default;
+  $alert-warning-text: $cr-white !default;
+  $alert-warning-border: $alert-warning-bg !default;
+  $alert-danger-bg: $alert-danger !default;
+  $alert-danger-text: $cr-white !default;
+  $alert-danger-border: $alert-danger-bg !default;

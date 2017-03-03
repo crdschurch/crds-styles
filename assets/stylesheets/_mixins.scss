@@ -1,0 +1,60 @@
+@mixin crds-bg-variant($background, $color: $cr-white) {
+  background-color: $background;
+  color: $color;
+}
+
+@mixin crds-button-variant($color, $background, $border) {
+  @include button-variant($color, $background, $border);
+  &.active,
+  &:active {
+    background: $background;
+    box-shadow: none;
+  }
+
+  &.disabled {
+    opacity: 1;
+    background: lighten($background, 25);
+    border: lighten($border, 25);
+
+    &.active,
+    &:active,
+    &:focus,
+    &:hover {
+      background: lighten($background, 25);
+    }
+  }
+
+  &.btn-outline {
+    border-width: 1px;
+    background: $btn-outline-bg;
+    color: $border;
+
+    .active,
+    &:active,
+    &:focus {
+      background: $btn-outline-bg;
+      color: $border;
+
+      &:hover {
+        color: $border;
+      }
+    }
+
+    &:hover {
+      background: $btn-outline-hover-bg;
+    }
+    &.disabled {
+      border: 1px solid lighten($border, 25);
+      color: lighten($border, 25);
+
+      &.active,
+      &:active,
+      &:focus,
+      &:hover {
+        background: $cr-white;
+        border: 1px solid lighten($border, 25);
+        color: lighten($border, 25);
+      }
+    }
+  }
+}

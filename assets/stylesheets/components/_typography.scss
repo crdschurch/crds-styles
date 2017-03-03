@@ -1,0 +1,233 @@
+/* Typography */
+
+.font-family-base {
+  font-family: $base-font-face;
+  font-weight: 300;
+}
+
+.font-family-base-light {
+  font-family: $base-font-face;
+  font-weight: 100;
+}
+
+.font-family-base-bold {
+  font-family: $base-font-face;
+  font-weight: 600;
+}
+
+.font-family-condensed {
+  font-family: $condensed-font-face;
+  font-weight: 600;
+}
+
+.font-family-condensed-extra {
+  font-family: $condensed-extra-font-face;
+  font-weight: 500;
+}
+
+.font-family-accent {
+  font-family: $accent-font-face;
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* Body */
+main, .main {
+  font-size: 1rem; // 16px
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: 1.1875rem; // 19px
+  }
+}
+
+.lead {
+  font-size: 1.125rem; // 18px
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: 1.375rem; // 22px
+  }
+}
+
+.quiet {
+  font-size: .875rem; // 14px
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: 1rem; // 16px
+  }
+}
+
+/* Metadata */
+
+.metadata {
+  font-size: .75rem; // 12px
+  text-transform: uppercase;
+  font-weight: 600;
+  color: $text-muted;
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: .9375rem; // 15px
+  }
+}
+
+.subtitle {
+  @extend .font-family-base-bold;
+  font-size: 1rem; // 16px
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: 1.3125rem; // 21px
+  }
+}
+
+.tagline {
+  @extend .font-family-accent;
+  font-size: .875rem; // 14px
+  color: $text-muted;
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: 1rem; // 16px
+  }
+}
+
+/* Other */
+
+address {
+  background: $cr-gray-lighter;
+  font-size: 1rem; // 16px
+  padding: 1.25rem 1rem;
+  strong {
+    font-size: 1.1875rem; // 19px
+  }
+}
+
+blockquote {
+  @extend .font-family-accent;
+  font-size: $blockquote-font-size;
+  line-height: $line-height-base;
+  font-weight: 300;
+  color: $text-muted;
+  border: 2px solid $blockquote-border-color;
+  padding: 2em;
+  span {
+    display: block;
+    margin-top: 0.5em;
+    font-style: normal;
+    font-size: 1.375rem; // 22px
+    @extend .font-family-condensed-extra;
+  }
+}
+
+ol, ul {
+  &.crds-list {
+    font-size: 1.1875rem; // 19px
+    li {
+      margin-bottom: 1em;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+dl.crds-list {
+  font-size: 1.1875rem; // 19px
+  dt {
+    @extend .font-family-condensed-extra;
+    text-transform: uppercase;
+    font-size: 1.5rem; // 24px
+  }
+  dd {
+    margin-bottom: 1em;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.text-muted {
+  color: $text-muted;
+
+  .dark-theme & {
+    color: $cr-gray-dark;
+  }
+}
+
+.page-header {
+  @extend .font-family-base-light;
+  @extend .font-size-h1;
+  word-wrap: break-word;
+  .dark-theme & {
+    border-color: $cr-gray-dark;
+  }
+}
+
+.section-header {
+  @extend .font-family-condensed-extra;
+  text-transform: uppercase;
+  font-size: 2.5rem; // 40px
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: 3.4375rem; // 55px
+  }
+}
+
+.title {
+  @extend .font-family-base;
+  font-size: 2rem; // 32px
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: 2.5rem; // 40px
+  }
+}
+
+.collection-header {
+  @extend .font-family-base;
+  font-size: 1.3125rem; // 21px
+  border-top: 1px solid $cr-gray-light;
+  color: $cr-gray;
+  padding-top: 0.25em;
+
+  .dark-theme & {
+    border-color: $cr-gray-dark;
+  }
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: 1.5rem; // 24px
+  }
+}
+
+.component-header {
+  @extend .font-family-condensed-extra;
+  text-transform: uppercase;
+  font-size: 2rem; // 32px
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: 2.125rem; // 34px
+  }
+}
+
+.list-header {
+  @extend .font-family-condensed-extra;
+  text-transform: uppercase;
+  font-size: 1.5rem; // 24px
+}
+
+.form-header,
+.btn-group-header {
+  color: $cr-gray-dark;
+  font-size: .75rem; // 12px
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+/* Links */
+
+a {
+  &.secondary {
+    color: $cr-gray;
+
+    &:hover {
+      color: $cr-gray-dark;
+    }
+  }
+}
