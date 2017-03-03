@@ -54,6 +54,7 @@
     &:focus {
       border: none;
       background: none;
+      text-decoration: none;
     }
     &.btn-primary {
       color: $btn-primary-bg;
@@ -69,22 +70,33 @@
     @include crds-button-variant($btn-option-color, $btn-option-bg, $btn-option-border);
 
     font-weight: 500;
-    &.btn-link {
-      background: none;
-      color: $cr-gray;
-      &:active,
-      &.active {
-        background: $cr-teal;
-        border-color: $cr-teal;
-        color: $cr-white;
-      }
-    }
+
     &:focus,
     &:active {
       background: $cr-teal;
       border-color: $cr-teal;
       color: $cr-white;
     }
+
+    &.btn-link {
+      background: none;
+      color: $cr-gray;
+      &:focus {
+        background: none;
+        border-color: $input-border-focus;
+        box-shadow: inset 0 0 0 2px rgba($input-border-focus, 0.5);
+      }
+      &:active,
+      &.active {
+        background: $cr-teal;
+        border-color: $cr-teal;
+        color: $cr-white;
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
+
     &.btn-outline {
       &.active,
       &:active,
