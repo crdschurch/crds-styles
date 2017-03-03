@@ -94,9 +94,13 @@
         }
 
         &.disabled {
+          border-color: rgba($cr-gray-light, 0.75);
+          color: rgba($cr-gray-light, 0.75);
+
           &.active,
           &:active,
-          &:focus {
+          &:focus,
+          &:hover {
             &,
             &:hover{
               background: transparent;
