@@ -34,6 +34,11 @@
 
     .dark-theme & {
       @extend .btn-secondary;
+      &.btn-link,
+      &.btn-link:hover,
+      &.btn-link:focus {
+        background: none;
+      }
     }
   }
   &.btn-secondary {
@@ -42,11 +47,38 @@
   &.btn-gray {
     @include crds-button-variant($btn-gray-color, $btn-gray-bg, $btn-gray-border);
   }
+  &.btn-link {
+    color: $cr-gray;
+    &,
+    &:hover,
+    &:focus {
+      border: none;
+      background: none;
+    }
+    &.btn-primary {
+      color: $btn-primary-bg;
+    }
+    &.btn-secondary {
+      color: $btn-secondary-bg;
+    }
+    &.btn-gray {
+      color: $btn-gray-bg;
+    }
+  }
   &.btn-option {
     @include crds-button-variant($btn-option-color, $btn-option-bg, $btn-option-border);
 
     font-weight: 500;
-
+    &.btn-link {
+      background: none;
+      color: $cr-gray;
+      &:active,
+      &.active {
+        background: $cr-teal;
+        border-color: $cr-teal;
+        color: $cr-white;
+      }
+    }
     &:focus,
     &:active {
       background: $cr-teal;
@@ -80,7 +112,6 @@
           color: lighten($btn-option-border, 25);
         }
       }
-
       .dark-theme & {
         background: transparent;
 
@@ -112,6 +143,10 @@
   }
   &.btn-default {
     @include crds-button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+    &.btn-link {
+      background: none;
+      color: $btn-default-bg;
+    }
   }
 }
 
