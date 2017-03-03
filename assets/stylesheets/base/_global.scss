@@ -11,10 +11,6 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-.wf-loading {
-  visibility: hidden;
-}
-
 body {
   font-size: $base-font-size;
   @extend .font-family-base;
