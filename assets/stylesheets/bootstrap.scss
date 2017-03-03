@@ -1,27 +1,5 @@
-.wf-lexia-n4-loading,
-.wf-lexia-i4-loading,
-.wf-acuminproextracondensed-n7-loading,
-.wf-acuminproextracondensed-n4-loading,
-.wf-acuminproextracondensed-n5-loading,
-.wf-acuminprosemicondensed-n6-loading,
-.wf-acuminprosemicondensed-i6-loading, {
-  visibility: hidden;
-}
-
-.wf-lexia-n4-inactive,
-.wf-lexia-i4-inactive,
-.wf-acuminproextracondensed-n7-inactive,
-.wf-acuminproextracondensed-n4-inactive,
-.wf-acuminproextracondensed-n5-inactive,
-.wf-acuminprosemicondensed-n6-inactive,
-.wf-acuminprosemicondensed-i6-inactive {
-  visibility: hidden;
-}
-
 .wf-loading {
-  header {
-    visibility: hidden;
-  }
+  visibility: hidden;
 }
 
 @import 'variables';
