@@ -76,8 +76,6 @@
 
   // link buttons
     &.btn-link {
-      border: 2px solid transparent;
-
       &.active,
       &:active,
       &:focus {
@@ -86,7 +84,7 @@
       }
 
       &:focus {
-        border-color: $input-border-focus;
+        box-shadow: 0 0 0 2px $input-border-focus inset;
       }
     }
   }
