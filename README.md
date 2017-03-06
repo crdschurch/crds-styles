@@ -64,11 +64,26 @@ If using `webpack-dev-server` as a development tool, the implementation will nee
 See `crds-styleguide` [`package.json`](https://github.com/crdschurch/crds-styleguide/blob/development/package.json) for a full example.
 
 ### Adding New SVGs
-To add a new SVG, simple add the svg to `assets/svgs`
+We're using [Sketch](https://www.sketchapp.com/) to development consistent iconography for this project.
+
+The source file, `crds-styles.sketch` is [hosted on Dropbox](https://www.dropbox.com/sh/d04xcc0lk5tbo71/AAD-EWEnTQkDrgITNR_DArmga/library). First thing's first, download this file.
+
+With the file open, you can duplicate the last artboard. When you do, be sure to drag the artboard down to the bottom of the lefthand panel. Rename the artboard appropriately (this name will eventually be the class/ID used to render the icon).
+
+_Note: If you're adding a new artboard beyond the end of a row, you're welcome to start a new row, just keep spacing and positioning consistent._
+
+Then you can delete the duplicated contents of that artboard.
+
+Next, find the SVG you're doing to add to the library. You can simply copy and paste from your filesystem into Sketch.
+
+Lock the dimensions into place, resize the artwork to `236px` on its longer side, and position it in the exact center of the artboard.
+
+You can also remove all the excess folders and layers from the icon so all the artboard contains is a single layer (our goal is that the exported shape for the SVG is only a single `<path>` element).
+
+And you're ready to export! Be sure to **export the entire artboard**, not just the artwork. We require that each SVG export be `256px` square. Export the new SVG layer to `assets/svgs` in this project, then you're ready to compile into a single SVG.
 
 ### Compile SVG sprites
 Run `npm run build-svg` to compile the SVGs into the correct sass and sprite files
-
 
 ## Versions &amp; Roadmap
 
