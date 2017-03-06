@@ -72,26 +72,12 @@
           }
         }
       }
-
-      // &.disabled {
-      //   &.active,
-      //   &:active,
-      //   &:focus {
-      //     &, &:focus {
-      //       background: transparent;
-
-      //       // .dark-theme & {
-      //       //   background: transparent;
-      //       //   border-color: lighten($border, 25);
-      //       //   color: lighten($border, 25);
-      //       // }
-      //     }
-      //   }
-      // }
     }
 
   // link buttons
     &.btn-link {
+      border: 2px solid transparent;
+
       &.active,
       &:active,
       &:focus {
@@ -99,9 +85,9 @@
         color: $cr-white;
       }
 
-      // &:focus {
-      //   border: 2px solid $input-border-focus;
-      // }
+      &:focus {
+        border-color: $input-border-focus;
+      }
     }
   }
   &.btn-default {
