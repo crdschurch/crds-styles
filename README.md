@@ -72,15 +72,27 @@ With the file open, you can duplicate the last artboard. When you do, be sure to
 
 _Note: If you're adding a new artboard beyond the end of a row, you're welcome to start a new row, just keep spacing and positioning consistent._
 
+![](https://github.com/crdschurch/crds-styleguide/blob/defect/DE2890-convert-svg-to-paths/src/assets/images/sketch-icon-docs/duplicate-artboard.gif?raw=true)
+
 Then you can delete the duplicated contents of that artboard.
+
+![](https://raw.githubusercontent.com/crdschurch/crds-styleguide/defect/DE2890-convert-svg-to-paths/src/assets/images/sketch-icon-docs/delete-layer.gif?raw=true)
 
 Next, find the SVG you're doing to add to the library. You can simply copy and paste from your filesystem into Sketch.
 
+![](https://github.com/crdschurch/crds-styleguide/blob/defect/DE2890-convert-svg-to-paths/src/assets/images/sketch-icon-docs/import-shape.gif?raw=true)
+
 Lock the dimensions into place, resize the artwork to `236px` on its longer side, and position it in the exact center of the artboard.
+
+![](https://github.com/crdschurch/crds-styleguide/blob/defect/DE2890-convert-svg-to-paths/src/assets/images/sketch-icon-docs/resize-and-center.gif?raw=true)
 
 You can also remove all the excess folders and layers from the icon so all the artboard contains is a single layer (our goal is that the exported shape for the SVG is only a single `<path>` element).
 
+![](https://github.com/crdschurch/crds-styleguide/blob/defect/DE2890-convert-svg-to-paths/src/assets/images/sketch-icon-docs/remove-extra-layers.gif?raw=true)
+
 And you're ready to export! Be sure to **export the entire artboard**, not just the artwork. We require that each SVG export be `256px` square. Export the new SVG layer to `assets/svgs` in this project, then you're ready to compile into a single SVG.
+
+![](https://github.com/crdschurch/crds-styleguide/blob/defect/DE2890-convert-svg-to-paths/src/assets/images/sketch-icon-docs/export-svg.gif?raw=true)
 
 ### Compile SVG sprites
 Run `npm run build-svg` to compile the SVGs into the correct sass and sprite files
