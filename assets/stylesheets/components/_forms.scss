@@ -28,6 +28,11 @@
         height: $input-height-base + 2px;
         font-size: 1rem;
       }
+
+      &.input-sm {
+        height: 30px;
+        font-size: .75rem;
+      }
     }
   }
 
