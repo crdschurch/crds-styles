@@ -1,3 +1,10 @@
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
 @mixin crds-bg-variant($background, $color: $cr-white) {
   background-color: $background;
   color: $color;
@@ -5,10 +12,11 @@
 
 @mixin crds-button-variant($color, $background, $border) {
   @include button-variant($color, $background, $border);
+
+// solid buttons
   &.active,
   &:active {
     background: $background;
-    box-shadow: none;
   }
 
   &.disabled {
@@ -20,41 +28,79 @@
     &:active,
     &:focus,
     &:hover {
-      background: lighten($background, 25);
+      &, &:focus, &:hover {
+        background: lighten($background, 25);
+      }
     }
   }
 
+// outline buttons
   &.btn-outline {
+    background: transparent;
+    border-style: solid;
     border-width: 1px;
-    background: $btn-outline-bg;
     color: $border;
 
-    .active,
+    &.active,
     &:active,
     &:focus {
-      background: $btn-outline-bg;
-      color: $border;
-
-      &:hover {
+      &, &:hover {
+        background: rgba(tint(desaturate($border, 75), 95%), 0.75);
+        border-color: $border;
         color: $border;
+
+        .dark-theme & {
+          background: rgba(shade(desaturate($border, 75), 95%), 0.75);
+          border-color: rgba($border, 0.75);
+        }
       }
+
     }
 
     &:hover {
-      background: $btn-outline-hover-bg;
+      background: rgba(tint(desaturate($border, 75), 90%), 0.75);
+
+      .dark-theme & {
+        background: rgba(shade(desaturate($border, 75), 90%), 0.75);
+      }
     }
+
     &.disabled {
-      border: 1px solid lighten($border, 25);
+      background: transparent;
+      border-color: lighten($border, 25);
       color: lighten($border, 25);
 
       &.active,
       &:active,
       &:focus,
       &:hover {
-        background: $cr-white;
-        border: 1px solid lighten($border, 25);
-        color: lighten($border, 25);
+        &, &:hover {
+          background: transparent;
+          border-color: lighten($border, 25);
+          color: lighten($border, 25);
+
+          .dark-theme & {
+            background: transparent;
+            border-color: lighten($border, 25);
+            color: lighten($border, 25);
+          }
+        }
       }
+    }
+  }
+
+// link buttons
+  &.btn-link {
+    background: none;
+    border: none;
+    color: $background;
+    text-decoration: none;
+
+    &.active,
+    &:active,
+    &:focus {
+      background: $background;
+      color: $cr-white;
     }
   }
 }
