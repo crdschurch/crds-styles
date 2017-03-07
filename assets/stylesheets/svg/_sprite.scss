@@ -20,6 +20,7 @@
 
 	.dark-theme & {
 		filter: invert(75%);
+		-webkit-filter: invert(75%);
 	}
 }
 
