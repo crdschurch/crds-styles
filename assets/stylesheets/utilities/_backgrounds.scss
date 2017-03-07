@@ -25,3 +25,7 @@
 .bg-gray {
   @include crds-bg-variant($cr-gray-lighter, $cr-gray);
 }
+
+.bg-charcoal {
+  @include crds-bg-variant(lighten($cr-gray-darker, .75), $cr-gray);
+}
