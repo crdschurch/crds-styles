@@ -1,6 +1,7 @@
 // Text fields
 .form-group {
   input {
+    height: $input-height-base;
     padding: 0 12px;
   }
 
@@ -21,6 +22,11 @@
 
       &::-webkit-input-placeholder {
         color: $input-placeholder;
+      }
+
+      &.input-lg {
+        height: $input-height-base + 2px;
+        font-size: 1rem;
       }
     }
   }
@@ -44,10 +50,6 @@
       }
     }
   }
-}
-
-.input-lg {
-  height: 42px;
 }
 
 .help-block {
