@@ -64,11 +64,10 @@ If using `webpack-dev-server` as a development tool, the implementation will nee
 See `crds-styleguide` [`package.json`](https://github.com/crdschurch/crds-styleguide/blob/development/package.json) for a full example.
 
 ### Adding New SVGs
-We're using [Sketch](https://www.sketchapp.com/) to development consistent iconography for this project.
 
-The source file, `crds-styles.sketch` is [hosted on Dropbox](https://www.dropbox.com/sh/d04xcc0lk5tbo71/AAD-EWEnTQkDrgITNR_DArmga/library). First thing's first, download this file.
+We're using [Sketch](https://www.sketchapp.com/) to develop consistent iconography for this project, by way of an SVG library available for sync via Dropbox (see the digital product owner for shared access to this library). 
 
-With the file open, you can duplicate the last artboard. When you do, be sure to drag the artboard down to the bottom of the lefthand panel. Rename the artboard appropriately (this name will eventually be the class/ID used to render the icon).
+To add new icons to the library – open the file and duplicate the last artboard. When you do, be sure to drag the artboard down to the bottom of the lefthand panel. Rename the artboard appropriately (this name will eventually be the class/ID used to render the icon).
 
 _Note: If you're adding a new artboard beyond the end of a row, you're welcome to start a new row, just keep spacing and positioning consistent._
 
