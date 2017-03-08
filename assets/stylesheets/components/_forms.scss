@@ -1,5 +1,23 @@
 .form-control {
+  border-radius: 0;
   box-shadow: none;
+  font-size: 1rem;
+  height: 42px;
+  line-height: 1.5rem;
+
+  .form-group-lg &,
+  &.input-lg {
+    font-size: 1.125rem;
+    height: 48px;
+    line-height: 1.75;
+  }
+
+  .form-group-sm &,
+  &.input-sm {
+    font-size: .75rem;
+    height: 30px;
+    line-height: 1.25;
+  }
 }
 
 // Text fields
@@ -14,8 +32,6 @@ textarea {
   border-radius: $input-border-radius;
   box-shadow: none;
   color: $input-color;
-  font-size: .875rem;
-  line-height: 1.25rem;
 
   &::-webkit-input-placeholder {
     color: $input-placeholder;
@@ -37,13 +53,6 @@ textarea {
   }
 }
 
-.input-lg,
-.input-sm,
-.form-group-lg .form-control,
-.form-group-sm .form-control {
-  border-radius: 0;
-}
-
 .help-block {
   @extend .font-family-accent;
 
@@ -61,11 +70,11 @@ textarea {
   &.input-group-left {
     input.form-control {
       padding-right: 10px;
-      padding-left: 48px;
+      padding-left: 36px;
     }
 
     .input-group-addon {
-      left: 1rem;
+      left: .25rem;
       top: 0;
     }
   }
