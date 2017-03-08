@@ -1,7 +1,25 @@
+$dimensions: 16px;
+
 i {
   text-indent:200%;
   white-space:nowrap;
   overflow:hidden;
   display:inline-block;
   background-size:32px 32px;
+}
+
+svg.icon {
+  width: $dimensions * 2;
+  height: $dimensions * 2;
+  @for $i from 1 through 6 {
+    &.icon-#{$i} {
+      width: $dimensions * $i;
+      height: $dimensions * $i;
+      background-size: $dimensions * $i;
+    }
+  }
+  
+  use {
+    fill: currentColor;
+  }
 }

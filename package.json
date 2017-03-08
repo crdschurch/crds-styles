@@ -4,7 +4,7 @@
   "description": "",
   "style": "assets/stylesheets/_crds.scss",
   "scripts": {
-    "build-svg": "./node_modules/svg-sprite/bin/svg-sprite.js --config=config/svg-sprite.config.json assets/svgs/*.svg",
+    "build-svg": "./bin/build-svg.js assets/svgs assets/icons.svg && ./node_modules/svg-sprite/bin/svg-sprite.js --config=config/svg-sprite.config.json assets/svgs/*.svg",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rimraf dist && npm run build-svg && webpack --config config/webpack.js  --progress --profile --bail"
   },
@@ -21,6 +21,8 @@
     "svg-sprite": "^1.3.6"
   },
   "devDependencies": {
+    "cheerio": "^0.22.0",
+    "commander": "^2.9.0",
     "node-sass": "^4.1.1",
     "raw-loader": "^0.5.1",
     "rimraf": "^2.5.2",
