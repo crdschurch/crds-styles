@@ -27,46 +27,81 @@
 .svg-calendar {
 	@extend %svg-common;
 	background-position: 0 0;
-	width: 230.286px;
-	height: 248px;
+	width: 256px;
+	height: 256px;
 }
 
 .svg-check-circle {
 	@extend %svg-common;
-	background-position: 0 16.230366492146597%;
+	background-position: 0 9.090909090909092%;
 	width: 256px;
 	height: 256px;
 }
 
 .svg-chevron-left {
 	@extend %svg-common;
-	background-position: 0 32.98429319371728%;
+	background-position: 0 18.181818181818183%;
 	width: 256px;
 	height: 256px;
 }
 
 .svg-chevron-right {
 	@extend %svg-common;
-	background-position: 0 49.738219895287955%;
+	background-position: 0 27.272727272727273%;
 	width: 256px;
 	height: 256px;
 }
 
 .svg-circle-thin {
 	@extend %svg-common;
-	background-position: 0 66.49214659685863%;
+	background-position: 0 36.36363636363637%;
+	width: 256px;
+	height: 256px;
+}
+
+.svg-contrast {
+	@extend %svg-common;
+	background-position: 0 45.45454545454545%;
+	width: 256px;
+	height: 256px;
+}
+
+.svg-facebook {
+	@extend %svg-common;
+	background-position: 0 54.54545454545455%;
 	width: 256px;
 	height: 256px;
 }
 
 .svg-github {
 	@extend %svg-common;
-	background-position: 0 83.24607329842932%;
+	background-position: 0 63.63636363636363%;
+	width: 256px;
+	height: 256px;
+}
+
+.svg-instagram {
+	@extend %svg-common;
+	background-position: 0 72.72727272727273%;
+	width: 256px;
+	height: 256px;
+}
+
+.svg-twitter {
+	@extend %svg-common;
+	background-position: 0 81.81818181818181%;
 	width: 256px;
 	height: 256px;
 }
 
 .svg-usd {
+	@extend %svg-common;
+	background-position: 0 90.9090909090909%;
+	width: 256px;
+	height: 256px;
+}
+
+.svg-youtube {
 	@extend %svg-common;
 	background-position: 0 100%;
 	width: 256px;
