@@ -12,17 +12,17 @@
           }
         }
 
-        .svg-check-circle {
+        .icon.check-circle {
           display: none;
         }
 
         &.active {
-          .svg-check-circle {
+          .icon.check-circle {
             display: inline-block;
             filter: invert(100%);
           }
 
-          .svg-circle-thin {
+          .icon.circle-thin {
             display: none;
           }
         }

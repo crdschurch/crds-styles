@@ -71,10 +71,10 @@ datepicker {
 
   .glyphicon {
     &.glyphicon-chevron-left {
-      @extend .svg-chevron-left;
+      @extend .icon.chevron-left;
     }
     &.glyphicon-chevron-right {
-      @extend .svg-chevron-right;
+      @extend .icon.chevron-right;
     }
   }
   datepicker-inner .glyphicon {

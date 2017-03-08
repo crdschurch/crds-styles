@@ -1,16 +1,30 @@
+$dimensions: 16px;
+
 %icon-dimensions {
-	$dimensions: 16px;
-	&.icon {
-	  width: $dimensions * 2;
-  	height: $dimensions * 2;
-		background-size: $dimensions * 2;
-		@for $i from 1 through 6 {
-			&.icon-#{$i} {
-				width: $dimensions * $i;
-				height: $dimensions * $i;
-				background-size: $dimensions * $i;
-			}
+	width: $dimensions * 2;
+	height: $dimensions * 2;
+	background-size: $dimensions * 2;
+	@for $i from 1 through 6 {
+		&.icon-#{$i} {
+			width: $dimensions * $i;
+			height: $dimensions * $i;
+			background-size: $dimensions * $i;
 		}
+	}
+}
+
+.icon:not(svg) {
+	text-indent: 200%;
+	white-space: nowrap;
+	overflow: hidden;
+	display: inline-block;
+	background-size: 32px 32px;
+}
+
+svg.icon {
+	@extend %icon-dimensions;
+	use {
+		fill: currentColor;
 	}
 }
 

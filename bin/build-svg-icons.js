@@ -44,7 +44,7 @@ function writeFile() {
  
 fs.readdir(input, function(error, files) {
   files.forEach(function(file){
-    if (file == '.DS_Store') {
+    if (file == '.DS_Store' || file == 'README.md') {
       processed++;
       return;
     }
