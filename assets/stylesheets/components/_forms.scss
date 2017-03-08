@@ -28,7 +28,7 @@ textarea {
     $input-placeholder: $cr-gray;
 
     background: $input-bg;
-    border-color: 1px solid $input-border;
+    border-color: $input-border;
     color: $input-color;
 
     &::-webkit-input-placeholder {
