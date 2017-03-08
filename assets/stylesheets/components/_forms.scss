@@ -1,39 +1,24 @@
+.form-control {
+  box-shadow: none;
+}
+
 // Text fields
-.form-group {
-  input {
-    height: $input-height-base;
-    padding: 0 12px;
-  }
+textarea {
+  resize: none;
+}
 
-  textarea {
-    resize: none;
-  }
+input,
+textarea {
+  background: $input-bg;
+  border: 1px solid $input-border;
+  border-radius: $input-border-radius;
+  box-shadow: none;
+  color: $input-color;
+  font-size: .875rem;
+  line-height: 1.25rem;
 
-  input,
-  textarea {
-    &.form-control {
-      background: $input-bg;
-      border: 1px solid $input-border;
-      border-radius: $input-border-radius;
-      box-shadow: none;
-      color: $input-color;
-      font-size: .875rem;
-      line-height: 1.25rem;
-
-      &::-webkit-input-placeholder {
-        color: $input-placeholder;
-      }
-
-      &.input-lg {
-        height: $input-height-base + 2px;
-        font-size: 1rem;
-      }
-
-      &.input-sm {
-        height: 30px;
-        font-size: .75rem;
-      }
-    }
+  &::-webkit-input-placeholder {
+    color: $input-placeholder;
   }
 
   .dark-theme & {
@@ -42,19 +27,21 @@
     $input-border: $input-bg;
     $input-placeholder: $cr-gray;
 
-    input,
-    textarea {
-      &.form-control {
-        background: $input-bg;
-        border-color: $input-border;
-        color: $input-color;
+    background: $input-bg;
+    border-color: 1px solid $input-border;
+    color: $input-color;
 
-        &::-webkit-input-placeholder {
-          color: $input-placeholder;
-        }
-      }
+    &::-webkit-input-placeholder {
+      color: $input-placeholder;
     }
   }
+}
+
+.input-lg,
+.input-sm,
+.form-group-lg .form-control,
+.form-group-sm .form-control {
+  border-radius: 0;
 }
 
 .help-block {
@@ -238,7 +225,6 @@ select {
     border: 1px solid $input-border;
     border-radius: $input-border-radius;
     color: $input-color;
-    height: $input-height-base;
     padding: 0 12px;
   }
 
