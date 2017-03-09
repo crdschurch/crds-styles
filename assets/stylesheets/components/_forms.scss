@@ -67,6 +67,10 @@ textarea {
   position: relative;
   display: block;
 
+  .input-group-addon {
+    color: $cr-gray;
+  }
+
   &.input-group-left {
     input.form-control {
       padding-right: 10px;
