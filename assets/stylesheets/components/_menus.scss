@@ -10,7 +10,12 @@
     > a,
     > a:visited,
     > a:hover:focus {
+      margin: 0;
       color: $cr-gray-dark;
+      &.btn {
+        padding-top: .8125rem;
+        padding-bottom: .8125rem;
+      }
     }
     &.open > a,
     > a:hover {
