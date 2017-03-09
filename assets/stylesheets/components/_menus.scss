@@ -7,26 +7,38 @@
   // Main nav menu
   .nav > li {
     position: static;
-    > a:not(.cta),
-    > a:visited:not(.cta),
-    > a:hover:focus:not(.cta) {
-      margin: 0;
-      color: $cr-gray-dark;
-    }
+    // Sign in and search adjust to fit the height of the other items.
     > a.btn {
       padding-top: .8125rem;
       padding-bottom: .8125rem;
     }
     > a.cta {
-      margin: 0;
       padding-top: .65625rem;
       padding-bottom: .65625rem;
     }
-    &.open > a:not(.cta),
+    // Remove margins from all links in main nav.
+    > a {
+      margin: 0;
+    }
+    // Links are dark by default, with no bg
+    > a:not(.cta) {
+      color: $cr-gray-dark;
+    }
+    // Hover should alway show primary/light combo
     > a:hover:not(.cta) {
       color: $cr-white;
+      background-color: $nav-link-hover-bg;
     }
-    > a:focus:not(.cta) {
+    // Open links have primary bg and white text
+    &.open > a:not(.cta) {
+      color: $cr-white;
+    }
+    // When the menu is closed, hovering behavior should take precedence
+    &:not(.open) > a:hover:focus:not(.cta) {
+      background-color: $nav-link-hover-bg;
+    }
+    // Unopened, focused links have grey bg
+    &:not(.open) > a:focus:not(.cta) {
       background-color: #eeeeee;
     }
   }
