@@ -91,3 +91,9 @@ $bootstrap-sass-asset-helper: true;
   $alert-danger-bg: $alert-danger !default;
   $alert-danger-text: $cr-white !default;
   $alert-danger-border: $alert-danger-bg !default;
+
+// Menus
+  $nav-link-hover-bg: $cr-blue !default;
+
+  $nav-pills-active-link-hover-bg: $cr-blue !default;
+  $nav-pills-active-link-hover-color: $cr-white !default;

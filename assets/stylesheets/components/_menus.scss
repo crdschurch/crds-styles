@@ -1,0 +1,62 @@
+.header {
+
+  .container {
+    margin-top: .625rem;
+  }
+
+  // Main nav menu
+  .nav > li {
+    position: static;
+    > a,
+    > a:visited,
+    > a:hover:focus {
+      color: $cr-gray-dark;
+    }
+    &.open > a,
+    > a:hover {
+      color: $cr-white;
+    }
+    > a:focus {
+      background-color: #eeeeee;
+    }
+  }
+
+  // Dropdown menu container
+  .dropdown-menu {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 1.25rem 0;
+    right: 0;
+    top: 2.5rem;
+    box-shadow: 0 6px 9pt $cr-gray-lighter;
+    border-radius: $border-radius-small;
+  }
+
+  // Dropdown menu lists
+  .dropdown-menu ul {
+    @extend .list-unstyled;
+    li a {
+      display: block;
+      padding: .1875rem 1.25rem;
+      color: $cr-gray-dark;
+      &:hover {
+        text-decoration: none;
+        background-color: #f5f5f5;
+      }
+    }
+    .dropdown-header {
+      color: $cr-gray-dark;
+      font-weight: 700;
+    }
+  }
+
+  // Adds a background color to the featured section.
+  .featured-row:before {
+    display: block;
+    @include position(absolute, 0 0 0 0);
+    width: 25%;
+    background: #eeeeee;
+    content: "";
+    z-index: -1;
+  }
+}
