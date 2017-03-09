@@ -7,21 +7,26 @@
   // Main nav menu
   .nav > li {
     position: static;
-    > a,
-    > a:visited,
-    > a:hover:focus {
+    > a:not(.cta),
+    > a:visited:not(.cta),
+    > a:hover:focus:not(.cta) {
       margin: 0;
       color: $cr-gray-dark;
-      &.btn {
-        padding-top: .8125rem;
-        padding-bottom: .8125rem;
-      }
     }
-    &.open > a,
-    > a:hover {
+    > a.btn {
+      padding-top: .8125rem;
+      padding-bottom: .8125rem;
+    }
+    > a.cta {
+      margin: 0;
+      padding-top: .65625rem;
+      padding-bottom: .65625rem;
+    }
+    &.open > a:not(.cta),
+    > a:hover:not(.cta) {
       color: $cr-white;
     }
-    > a:focus {
+    > a:focus:not(.cta) {
       background-color: #eeeeee;
     }
   }
