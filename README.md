@@ -35,7 +35,7 @@ Once you've added `crds-styles` to `package.json` you need to import the stylesh
 
 ## SVGs
 
-Any project consuming `crds-styles` will need to update their build process in order to access SVG files. For information on adding new icons to `crds-styles` please refer to [the documentation](https://github.com/crdschurch/crds-styles/blob/development/assets/svgs/README.md).
+Any project consuming `crds-styles` will need to update their build process in order to access SVG files. For information on adding new icons to `crds-styles` please refer to [the documentation](https://github.com/crdschurch/crds-styles/blob/development/src/assets/svgs/README.md).
 
 ### Webpack build
 If using webpack, the `copy-webpack-plugin` can be used to move the svg files to the distribution folder
