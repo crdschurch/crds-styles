@@ -59,7 +59,7 @@
   }
 }
 .font-size-small {
-  font-size: 0.8125rem; // 13px
+  font-size: .875rem; // 14px
 
   @media screen and (min-width: $screen-xs) {
     font-size: 1rem; // 16px
@@ -67,11 +67,7 @@
 }
 
 .font-size-smaller {
-  font-size: 0.75rem; // 12px
-
-  @media screen and (min-width: $screen-xs) {
-    font-size: 0.8125rem; // 13px
-  }
+  font-size: 0.875rem; // 14px
 }
 h1 {
   @extend .font-size-h1;
