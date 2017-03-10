@@ -15,7 +15,7 @@ $bootstrap-sass-asset-helper: true;
   $gray-lighter: $cr-gray-lighter !default;
 
 // Scaffolding
-  $body-bg: $cr-white;
+  $body-bg: $cr-white !default;
   $text-color: $cr-gray-dark !default;
   $link-color: $cr-cyan !default;
   $link-hover-color: $cr-cyan-dark !default;
@@ -36,30 +36,30 @@ $bootstrap-sass-asset-helper: true;
   $font-size-h5: 1.375rem !default;
   $font-size-h6: 1.1875rem !default;
   $line-height-base: 1.5 !default;
-  // $line-height-computed: !default;
-  // $headings-font-family: !default;
-  // $headings-font-weight: !default;
-  // $headings-line-height: !default;
+  $line-height-computed: floor($font-size-base * $line-height-base) !default;
+  $headings-font-family: inherit !default;
+  $headings-font-weight: 300 !default;
+  $headings-line-height: 1.1 !default;
   $headings-color: $cr-gray-darker !default;
 
 // Components
-  // $padding-base-vertical: !default;
-  // $padding-base-horizontal: !default;
+  $padding-base-vertical: 8px !default;
+  $padding-base-horizontal: 10px !default;
   // $padding-large-vertical: !default;
   // $padding-large-horizontal: !default;
   // $padding-small-vertical: !default;
   // $padding-small-horizontal: !default;
   // $padding-xs-vertical: !default;
   // $padding-xs-horizontal: !default;
-  // $line-height-large: !default;
-  // $line-height-small: !default;
+  $line-height-large: 1.75 !default;
+  $line-height-small: 1.25 !default;
   $border-radius-base: 4px !default;
-  $border-radius-large: 5px !default;
-  $border-radius-small: 3px !default;
+  $border-radius-large: 4px !default;
+  $border-radius-small: 4px !default;
   // $component-active-color: !default;
   // $component-active-bg: !default;
-  // $caret-width-base: !default;
-  // $caret-width-large: !default;
+  $caret-width-base: 4px !default;
+  $caret-width-large: 5px !default;
 
 // Tables
   // $table-cell-padding: !default;
@@ -115,14 +115,14 @@ $bootstrap-sass-asset-helper: true;
   $input-border-radius: 0 !default;
   $input-border-radius-large: 0 !default;
   $input-border-radius-small: 0 !default;
-  $input-height-base: 40px !default;
-  // $input-height-large: !default;
-  // $input-height-small: !default;
+  $input-height-base: 42px !default;
+  $input-height-large: 48px !default;
+  $input-height-small: 30px !default;
   // $form-group-margin-bottom: !default;
   // $legend-color: !default;
   // $legend-border-color: !default;
   $input-group-addon-bg: transparent !default;
-  $input-group-addon-border-color: transparent !default;
+  $input-group-addon-border-color: $input-group-addon-bg !default;
   $cursor-disabled: not-allowed;
 
 // Dropdowns
@@ -406,9 +406,9 @@ $bootstrap-sass-asset-helper: true;
   // $carousel-caption-color: !default;
 
 // Close
-  // $close-font-weight: !default;
-  // $close-color: !default;
-  // $close-text-shadow: !default;
+  $close-font-weight: bold !default;
+  $close-color: $cr-black !default;
+  $close-text-shadow: 0 1px 0 $cr-white !default;
 
 // Code
   // $code-color: !default;
@@ -431,4 +431,4 @@ $bootstrap-sass-asset-helper: true;
   $page-header-border-color: $cr-gray-lighter !default;
   // $dl-horizontal-offset: !default;
   // $dl-horizontal-breakpoint: !default;
-  // $hr-border: !default;
+  $hr-border: $cr-gray-lighter !default;
