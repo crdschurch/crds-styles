@@ -237,18 +237,18 @@ $bootstrap-sass-asset-helper: true;
   // $jumbotron-heading-font-size: !default;
 
 // Form states and alerts
-  // $state-success-text: !default;
-  // $state-success-bg: !default;
-  // $state-success-border: !default;
-  // $state-info-text: !default;
-  // $state-info-bg: !default;
-  // $state-info-border: !default;
-  // $state-warning-text: !default;
-  // $state-warning-bg: !default;
-  // $state-warning-border: !default;
-  // $state-danger-text: !default;
-  // $state-danger-bg: !default;
-  // $state-danger-border: !default;
+  $state-success-text: $cr-white !default;
+  $state-success-bg: $alert-success !default;
+  $state-success-border: $state-success-bg !default;
+  $state-info-text: $cr-white !default;
+  $state-info-bg: $alert-info !default;
+  $state-info-border: $state-info-bg !default;
+  $state-warning-text: $cr-white !default;
+  $state-warning-bg: $alert-warning !default;
+  $state-warning-border: $state-warning-bg !default;
+  $state-danger-text: $cr-white !default;
+  $state-danger-bg: $alert-danger !default;
+  $state-danger-border: $state-danger-bg !default;
 
 // Tooltips
   // $tooltip-max-width: !default;
@@ -296,21 +296,21 @@ $bootstrap-sass-asset-helper: true;
   // $modal-sm: !default;
 
 // Alerts
-  // $alert-padding: !default;
+  $alert-padding: 1rem !default;
   $alert-border-radius: 0 !default;
   $alert-link-font-weight: 300 !default;
-  $alert-success-bg: $alert-success !default;
-  $alert-success-text: $cr-white !default;
-  $alert-success-border: $alert-success-bg !default;
-  $alert-info-bg: $alert-info !default;
-  $alert-info-text: $cr-white !default;
-  $alert-info-border: $alert-info-bg !default;
-  $alert-warning-bg: $alert-warning !default;
-  $alert-warning-text: $cr-white !default;
-  $alert-warning-border: $alert-warning-bg !default;
-  $alert-danger-bg: $alert-danger !default;
-  $alert-danger-text: $cr-white !default;
-  $alert-danger-border: $alert-danger-bg !default;
+  $alert-success-bg: $state-success-bg !default;
+  $alert-success-text: $state-success-text !default;
+  $alert-success-border: $state-success-border !default;
+  $alert-info-bg: $state-info-bg !default;
+  $alert-info-text: $state-info-text !default;
+  $alert-info-border: $state-info-border !default;
+  $alert-warning-bg: $state-warning-bg !default;
+  $alert-warning-text: $state-warning-text !default;
+  $alert-warning-border: $state-warning-border !default;
+  $alert-danger-bg: $state-danger-bg !default;
+  $alert-danger-text: $state-danger-text !default;
+  $alert-danger-border: $state-danger-border !default;
 
 // Progress bars
   // $progress-bg: !default;
