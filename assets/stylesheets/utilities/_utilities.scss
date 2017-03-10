@@ -37,6 +37,11 @@ a.underline,
   vertical-align: sub;
 }
 
+.truncate {
+  @extend .ellipsis;
+  max-width: 1px;
+}
+
 /* Display helpers */
 
 .block {
