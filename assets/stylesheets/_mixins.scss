@@ -16,10 +16,9 @@
 // solid buttons
   &.active,
   &:active {
-    background: $background;
+    background: darken($background, 5);
 
     &:focus {
-      border: 1px solid $border;
       box-shadow: none;
     }
   }
@@ -32,7 +31,8 @@
   &.disabled {
     opacity: 1;
     background: lighten($background, 25);
-    border: lighten($border, 25);
+    border-color: lighten($border, 25);
+    color: $cr-white;
 
     &.active,
     &:active,
@@ -40,6 +40,8 @@
     &:hover {
       &, &:focus, &:hover {
         background: lighten($background, 25);
+        border-color: lighten($border, 25);
+        box-shadow: none;
       }
     }
   }
@@ -53,7 +55,7 @@
 
     &.active,
     &:active {
-      &, &:hover {
+      &, &:hover, &:focus {
         background: rgba(tint(desaturate($border, 75), 95%), 0.75);
         border-color: $border;
         color: $border;
@@ -65,7 +67,6 @@
       }
 
       &:focus {
-        // border-color: $border;
         box-shadow: none;
       }
     }
@@ -110,7 +111,7 @@
 // link buttons
   &.btn-link {
     background: none;
-    border-color: $cr-white;
+    border-color: transparent;
     border-style: solid;
     border-width: 1px;
     color: $background;
@@ -120,7 +121,11 @@
     &:active {
       background: $background;
       border-color: $background;
-      color: $background;
+      color: $cr-white;
+
+      &:hover {
+        color: darken($cr-white, 5);
+      }
 
       &:focus {
         border: 1px solid $border;
@@ -128,13 +133,13 @@
       }
     }
 
+    &:hover {
+      color: darken($background, 10);
+    }
+
     &:focus {
       border: 1px solid $input-border-focus;
       box-shadow: 0 0 0 1px $input-border-focus inset;
-    }
-
-    .dark-theme & {
-      border-color: transparent;
     }
   }
 }

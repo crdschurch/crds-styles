@@ -45,16 +45,18 @@
   // solid buttons
     &.active,
     &:active {
-      background: $cr-teal;
-      border-color: $cr-teal;
-      color: $cr-white;
+      &, &:focus {
+        background: $cr-teal;
+        border-color: $cr-teal;
+        color: $cr-white;
+      }
     }
 
   // outline buttons
     &.btn-outline {
       &.active,
       &:active {
-        &, &:hover {
+        &, &:hover, &:focus {
           background: $cr-teal;
           border-color: $cr-teal;
           color: $cr-white;
