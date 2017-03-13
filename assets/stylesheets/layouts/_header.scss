@@ -4,6 +4,14 @@
     margin-top: .625rem;
   }
 
+  .navbar-brand.logo {
+    margin-top: 0.25rem;
+    color: $cr-black;
+    svg {
+      @include size(10.625rem, 1.5rem);
+    }
+  }
+
   // Main nav menu
   .nav > li {
     position: static;
