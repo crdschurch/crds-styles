@@ -33,10 +33,10 @@
 
 /* Body */
 main, .main {
-  font-size: 1rem; // 16px
+  font-size: $font-size-base; // 16px
 
   @media screen and (min-width: $screen-xs) {
-    font-size: 1.1875rem; // 19px
+    font-size: $font-size-large; // 19px
   }
 }
 
@@ -59,7 +59,7 @@ main, .main {
 /* Metadata */
 
 .metadata {
-  font-size: .75rem; // 12px
+  font-size: $font-size-smaller; // 12px
   text-transform: uppercase;
   font-weight: 600;
   color: $text-muted;
@@ -71,7 +71,7 @@ main, .main {
 
 .subtitle {
   @extend .font-family-base-bold;
-  font-size: 1rem; // 16px
+  font-size: $font-size-base; // 16px
 
   @media screen and (min-width: $screen-xs) {
     font-size: 1.3125rem; // 21px
@@ -80,11 +80,11 @@ main, .main {
 
 .tagline {
   @extend .font-family-accent;
-  font-size: .875rem; // 14px
+  font-size: $font-size-small; // 14px
   color: $text-muted;
 
   @media screen and (min-width: $screen-xs) {
-    font-size: 1rem; // 16px
+    font-size: $font-size-base; // 16px
   }
 }
 
@@ -92,21 +92,21 @@ main, .main {
 
 address {
   background: $cr-gray-lighter;
-  font-size: 1rem; // 16px
+  font-size: $font-size-base; // 16px
   padding: 1.25rem 1rem;
   strong {
-    font-size: 1.1875rem; // 19px
+    font-size: $font-size-large; // 19px
   }
 }
 
 blockquote {
   @extend .font-family-accent;
-  font-size: $blockquote-font-size;
   line-height: $line-height-base;
   font-weight: 300;
   color: $text-muted;
   border: 2px solid $blockquote-border-color;
   padding: 2em;
+
   span {
     display: block;
     margin-top: 0.5em;
@@ -118,7 +118,7 @@ blockquote {
 
 ol, ul {
   &.crds-list {
-    font-size: 1.1875rem; // 19px
+    font-size: $font-size-large; // 19px
     li {
       margin-bottom: 1em;
       &:last-child {
@@ -129,7 +129,7 @@ ol, ul {
 }
 
 dl.crds-list {
-  font-size: 1.1875rem; // 19px
+  font-size: $font-size-large; // 19px
   dt {
     @extend .font-family-condensed-extra;
     text-transform: uppercase;
@@ -163,7 +163,7 @@ dl.crds-list {
 .section-header {
   @extend .font-family-condensed-extra;
   text-transform: uppercase;
-  font-size: 2.5rem; // 40px
+  font-size: $font-size-h2; // 40px
 
   @media screen and (min-width: $screen-xs) {
     font-size: 3.4375rem; // 55px
@@ -172,10 +172,10 @@ dl.crds-list {
 
 .title {
   @extend .font-family-base;
-  font-size: 2rem; // 32px
+  font-size: $font-size-h3; // 32px
 
   @media screen and (min-width: $screen-xs) {
-    font-size: 2.5rem; // 40px
+    font-size: $font-size-h2; // 40px
   }
 }
 
@@ -198,7 +198,7 @@ dl.crds-list {
 .component-header {
   @extend .font-family-condensed-extra;
   text-transform: uppercase;
-  font-size: 2rem; // 32px
+  font-size: $font-size-h3; // 32px
 
   @media screen and (min-width: $screen-xs) {
     font-size: 2.125rem; // 34px
@@ -213,7 +213,7 @@ dl.crds-list {
 
 .control-label {
   color: $cr-gray;
-  font-size: .75rem; // 12px
+  font-size: $font-size-smaller; // 12px
   font-weight: 500;
   text-transform: uppercase;
 }

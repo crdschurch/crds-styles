@@ -42,8 +42,6 @@
   &.btn-option {
     @include crds-button-variant($btn-option-color, $btn-option-bg, $btn-option-border);
 
-    font-weight: 500;
-
   // solid buttons
     &.active,
     &:active {
