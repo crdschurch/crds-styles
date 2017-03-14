@@ -1,3 +1,11 @@
+.form-control[readonly] {
+  background: $input-bg;
+
+  .dark-theme & {
+    background: lighten($cr-gray, 40);
+  }
+}
+
 datepicker {
   $calendar-bg: $cr-white;
   $calendar-text: $cr-gray-darker;

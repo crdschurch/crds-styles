@@ -44,8 +44,7 @@
 
   // solid buttons
     &.active,
-    &:active,
-    &:focus {
+    &:active {
       &, &:focus {
         background: $cr-teal;
         border-color: $cr-teal;
@@ -56,9 +55,8 @@
   // outline buttons
     &.btn-outline {
       &.active,
-      &:active,
-      &:focus {
-        &, &:hover {
+      &:active {
+        &, &:hover, &:focus {
           background: $cr-teal;
           border-color: $cr-teal;
           color: $cr-white;
@@ -75,14 +73,13 @@
   // link buttons
     &.btn-link {
       &.active,
-      &:active,
-      &:focus {
-        background: $cr-teal;
-        color: $cr-white;
-      }
-
-      &:focus {
-        box-shadow: 0 0 0 2px $input-border-focus inset;
+      &:active {
+        &, &:focus {
+          background: $cr-teal;
+          border-color: $cr-teal;
+          box-shadow: none;
+          color: $cr-white;
+        }
       }
     }
   }
