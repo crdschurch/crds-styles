@@ -93,7 +93,6 @@ text-area {
 
 .error {
   &.help-block {
-    background: $cr-white;
     color: $alert-danger;
 
     > p:last-child {
@@ -104,10 +103,6 @@ text-area {
       list-style: none;
       padding-left: 0;
       text-align: center;
-    }
-
-    .dark-theme & {
-      background: transparent;
     }
   }
 }
