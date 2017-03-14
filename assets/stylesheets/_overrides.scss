@@ -187,7 +187,7 @@ $bootstrap-sass-asset-helper: true;
 
 // Navs
   // $nav-link-padding: !default;
-  // $nav-link-hover-bg: !default;
+  $nav-link-hover-bg: $cr-blue !default;
   // $nav-disabled-link-color: !default;
   // $nav-disabled-link-hover-color: !default;
 
@@ -202,8 +202,8 @@ $bootstrap-sass-asset-helper: true;
 
 // Pills
   // $nav-pills-border-radius: !default;
-  // $nav-pills-active-link-hover-bg: !default;
-  // $nav-pills-active-link-hover-color: !default;
+  $nav-pills-active-link-hover-bg: $cr-blue !default;
+  $nav-pills-active-link-hover-color: $cr-white !default;
 
 // Pagination
   // $pagination-color: !default;
