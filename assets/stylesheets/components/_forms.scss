@@ -31,9 +31,12 @@ textarea {
 }
 
 // Input + addon styles
+.input-group-block {
+  display: block;
+}
+
 .input-group {
   position: relative;
-  display: block;
 
   &.input-group-left {
     input.form-control {
