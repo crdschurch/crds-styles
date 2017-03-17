@@ -47,7 +47,7 @@ Once you've added `crds-styles` to `package.json` you need to import the stylesh
 
 ## SVGs
 
-Any project consuming `crds-styles` will need to update their build process in order to access SVG files.  
+Any project consuming `crds-styles` will need to update their build process in order to access SVG files. For information on adding new icons to `crds-styles` please refer to [the documentation](https://github.com/crdschurch/crds-styles/blob/development/src/assets/svgs/README.md).
 
 ### Webpack build
 If using webpack, the `copy-webpack-plugin` can be used to move the svg files to the distribution folder
@@ -55,9 +55,9 @@ If using webpack, the `copy-webpack-plugin` can be used to move the svg files to
 plugins: [
     new CopyWebpackPlugin([
       {
-        context: './node_modules/crds-styles/assets/stylesheets/svg/assets',
+        context: './node_modules/crds-styles/assets/svgs/',
         from: '*.svg',
-        to: 'assets',
+        to: 'assets'
       }
     ])
   ]
@@ -75,13 +75,6 @@ If using `webpack-dev-server` as a development tool, the implementation will nee
 ```
 See `crds-styleguide` [`package.json`](https://github.com/crdschurch/crds-styleguide/blob/development/package.json) for a full example.
 
-### Adding New SVGs
-To add a new SVG, simple add the svg to `assets/svgs`
-
-### Compile SVG sprites
-Run `npm run build-svg` to compile the SVGs into the correct sass and sprite files
-
-
 ## Versions &amp; Roadmap
 
 We'll be developing the pattern library over the next few months and as we release new updates, we will increase the version number according to the following rules.
@@ -94,4 +87,4 @@ Once we reach version 1.0.0, the DDK will be feature complete and will continue 
 
 ## License
 
-This project is licensed under the [3-Clause BSD License](https://opensource.org/licenses/BSD-3-Clause). 
+This project is licensed under the [3-Clause BSD License](https://opensource.org/licenses/BSD-3-Clause).

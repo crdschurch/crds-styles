@@ -6,23 +6,18 @@
           background: $cr-teal;
           border-color: $cr-teal;
           color: $cr-white;
-
-          .icon {
-            filter: invert(100%);
-          }
         }
 
-        .svg-check-circle {
+        .icon.check-circle {
           display: none;
         }
 
         &.active {
-          .svg-check-circle {
+          .icon.check-circle {
             display: inline-block;
-            filter: invert(100%);
           }
 
-          .svg-circle-thin {
+          .icon.circle-thin {
             display: none;
           }
         }
@@ -38,14 +33,7 @@
 
     .custom-input-icon {
       padding: 10px;
-
-      i {
-        filter: invert(55%);
-
-        .dark-theme & {
-          filter: invert(45%);
-        }
-      }
+      color: $cr-gray-light;
     }
 
     .custom-input-field {
@@ -62,9 +50,7 @@
 
     .btn-group-icons {
       padding-right: .5rem;
-
       .icon {
-        filter: invert(55%);
         vertical-align: middle;
       }
     }

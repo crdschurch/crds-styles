@@ -1,49 +1,23 @@
+.form-control {
+  box-shadow: none;
+}
+
 // Text fields
-.form-group {
-  input {
-    height: $input-height-base;
-    padding: 0 12px;
-  }
+textarea {
+  resize: none;
+}
 
-  textarea {
-    resize: none;
-  }
-
-  input,
-  textarea {
-    &.form-control {
-      background: $input-bg;
-      border: 1px solid $input-border;
-      border-radius: $input-border-radius;
-      box-shadow: none;
-      color: $input-color;
-      font-size: .875rem;
-      line-height: 1.25rem;
-
-      &::-webkit-input-placeholder {
-        color: $input-placeholder;
-      }
-    }
-  }
-
+input,
+textarea {
   .dark-theme & {
     $input-color: $cr-gray-dark;
     $input-bg: lighten($cr-gray, 40);
     $input-border: $input-bg;
     $input-placeholder: $cr-gray;
 
-    input,
-    textarea {
-      &.form-control {
-        background: $input-bg;
-        border-color: $input-border;
-        color: $input-color;
-
-        &::-webkit-input-placeholder {
-          color: $input-placeholder;
-        }
-      }
-    }
+    background: $input-bg;
+    border-color: $input-border;
+    color: $input-color;
   }
 }
 
@@ -51,9 +25,9 @@
   @extend .font-family-accent;
 
   color: $cr-gray;
-  font-size: .8125rem; // 13px
+  font-size: $font-size-small; // 13px
   margin-top: 0;
-  padding-top: 8px;
+  padding-top: $padding-base-vertical;
 }
 
 // Input + addon styles
@@ -63,12 +37,12 @@
 
   &.input-group-left {
     input.form-control {
-      padding-right: 10px;
-      padding-left: 48px;
+      padding-right: $padding-base-horizontal;;
+      padding-left: 36px;
     }
 
     .input-group-addon {
-      left: 1rem;
+      left: .25rem;
       top: 0;
     }
   }
@@ -76,7 +50,7 @@
   &.input-group-right {
     input.form-control {
       padding-right: 48px;
-      padding-left: 10px;
+      padding-left: $padding-base-horizontal;;
     }
 
     .input-group-addon {
@@ -98,8 +72,6 @@
     flex-direction: column;
     z-index: 4;
     font-size: 1.125rem;
-    background: $input-group-addon-bg;
-    border: none;
 
     i, .icon {
       height: 16px;
@@ -221,14 +193,10 @@ select {
   &.form-control {
     -webkit-appearance: none;
     -moz-appearance: none;
-    background-color: $input-bg;
     background-position: 99% center;
     background-repeat: no-repeat;
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAMCAYAAABSgIzaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NDZFNDEwNjlGNzFEMTFFMkJEQ0VDRTM1N0RCMzMyMkIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NDZFNDEwNkFGNzFEMTFFMkJEQ0VDRTM1N0RCMzMyMkIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0NkU0MTA2N0Y3MUQxMUUyQkRDRUNFMzU3REIzMzIyQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo0NkU0MTA2OEY3MUQxMUUyQkRDRUNFMzU3REIzMzIyQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PuGsgwQAAAA5SURBVHjaYvz//z8DOYCJgUxAf42MQIzTk0D/M+KzkRGPoQSdykiKJrBGpOhgJFYTWNEIiEeAAAMAzNENEOH+do8AAAAASUVORK5CYII=);
-    border: 1px solid $input-border;
     border-radius: $input-border-radius;
-    color: $input-color;
-    height: $input-height-base;
     padding: 0 12px;
   }
 

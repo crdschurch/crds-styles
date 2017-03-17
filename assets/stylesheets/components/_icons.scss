@@ -1,7 +1,121 @@
-i {
-  text-indent:200%;
-  white-space:nowrap;
-  overflow:hidden;
-  display:inline-block;
-  background-size:32px 32px;
+$dimensions: 16px;
+
+%icon-dimensions {
+	width: $dimensions * 2;
+	height: $dimensions * 2;
+	background-size: $dimensions * 2;
+	@for $i from 1 through 6 {
+		&.icon-#{$i} {
+			width: $dimensions * $i;
+			height: $dimensions * $i;
+			background-size: $dimensions * $i;
+		}
+	}
 }
+
+.icon:not(svg) {
+	text-indent: 200%;
+	white-space: nowrap;
+	overflow: hidden;
+	display: inline-block;
+	background-size: 32px 32px;
+}
+
+svg.icon {
+	@extend %icon-dimensions;
+	use {
+		fill: currentColor;
+	}
+}
+
+%svg-common {
+	background-image: url("assets/svgs/icons.css.svg");
+	background-repeat: no-repeat;
+	@extend %icon-dimensions;
+
+	.dark-theme & {
+		filter: invert(75%);
+		-webkit-filter: invert(75%);
+	}
+}
+
+.icon.calendar:not(svg) {
+	@extend %svg-common;
+	background-position: 0 0;
+}
+
+.icon.check-circle:not(svg) {
+	@extend %svg-common;
+	background-position: 0 6.666666666666667%;
+}
+
+.icon.chevron-down:not(svg) {
+	@extend %svg-common;
+	background-position: 0 13.333333333333334%;
+}
+
+.icon.chevron-left:not(svg) {
+	@extend %svg-common;
+	background-position: 0 20%;
+}
+
+.icon.chevron-right:not(svg) {
+	@extend %svg-common;
+	background-position: 0 26.666666666666668%;
+}
+
+.icon.chevron-up:not(svg) {
+	@extend %svg-common;
+	background-position: 0 33.333333333333336%;
+}
+
+.icon.circle-thin:not(svg) {
+	@extend %svg-common;
+	background-position: 0 40%;
+}
+
+.icon.contrast:not(svg) {
+	@extend %svg-common;
+	background-position: 0 46.666666666666664%;
+}
+
+.icon.facebook:not(svg) {
+	@extend %svg-common;
+	background-position: 0 53.333333333333336%;
+}
+
+.icon.github:not(svg) {
+	@extend %svg-common;
+	background-position: 0 60%;
+}
+
+.icon.instagram:not(svg) {
+	@extend %svg-common;
+	background-position: 0 66.66666666666667%;
+}
+
+.icon.menu:not(svg) {
+	@extend %svg-common;
+	background-position: 0 73.33333333333333%;
+}
+
+.icon.search:not(svg) {
+	@extend %svg-common;
+	background-position: 0 80%;
+}
+
+.icon.twitter:not(svg) {
+	@extend %svg-common;
+	background-position: 0 86.66666666666667%;
+}
+
+.icon.usd:not(svg) {
+	@extend %svg-common;
+	background-position: 0 93.33333333333333%;
+}
+
+.icon.youtube:not(svg) {
+	@extend %svg-common;
+	background-position: 0 100%;
+}
+

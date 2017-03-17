@@ -4,9 +4,11 @@
 
 @import 'variables';
 @import 'overrides';
+@import 'functions';
 @import 'mixins';
 @import 'vendors/modules';
 @import 'base/modules';
 @import 'components/modules';
+@import 'layouts/modules';
 @import 'themes/modules';
-@import 'svg/sprite';
+@import 'utilities/modules';

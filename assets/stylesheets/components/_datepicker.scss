@@ -1,3 +1,11 @@
+.form-control[readonly] {
+  background: $input-bg;
+
+  .dark-theme & {
+    background: lighten($cr-gray, 40);
+  }
+}
+
 datepicker {
   $calendar-bg: $cr-white;
   $calendar-text: $cr-gray-darker;
@@ -70,21 +78,18 @@ datepicker {
   }
 
   .glyphicon {
-    &.glyphicon-chevron-left {
-      @extend .svg-chevron-left;
-    }
-    &.glyphicon-chevron-right {
-      @extend .svg-chevron-right;
-    }
-  }
-  datepicker-inner .glyphicon {
-    &.glyphicon-chevron-left,
-    &.glyphicon-chevron-right {
-      @extend .icon;
-      @extend .icon-1;
-    }
-  }
+    @extend .icon;
+    @extend .icon-1;
 
+    &.glyphicon-chevron-left {
+      @extend .chevron-left;
+    }
+    &.glyphicon-chevron-right {
+      @extend .chevron-right;
+    }
+
+    background-size: cover;
+  }
 
   tbody {
     .btn {

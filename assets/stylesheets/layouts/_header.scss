@@ -1,0 +1,199 @@
+.header {
+
+  // Make sure the header is taking up space in mobile.
+  @media only screen and (max-width: $screen-md) {
+    height: 3.375rem;
+  }
+
+  .container {
+    margin-top: .625rem;
+  }
+
+  // Get the mobile icons in the correct location with correct color.
+  a.hidden-md {
+    display: inline-block;
+    margin-top: 1.125rem;
+    svg {
+      color: $cr-black;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  // Brand / Logo
+  .navbar-brand.logo {
+    margin-top: 0.25rem;
+    padding-left: 0;
+    @media only screen and (max-width: $screen-md) {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    svg {
+      @include size(10.625rem, 1.5rem);
+      color: $cr-black;
+    }
+  }
+
+  // Main nav menu
+  .nav > li {
+    position: static;
+    // Sign in and search adjust to fit the height of the other items.
+    > a.btn {
+      padding-top: .8125rem;
+      padding-bottom: .8125rem;
+    }
+    > a.cta {
+      padding-top: .65625rem;
+      padding-bottom: .65625rem;
+    }
+    // Remove margins from all links in main nav.
+    > a {
+      margin: 0;
+    }
+    // Links are dark by default, with no bg
+    > a:not(.cta) {
+      color: $cr-gray-dark;
+    }
+    // Hover should alway show primary/light combo
+    > a:hover:not(.cta) {
+      color: $cr-white;
+      background-color: $nav-link-hover-bg;
+    }
+    // Open links have primary bg and white text
+    &.open > a:not(.cta) {
+      color: $cr-white;
+    }
+    // When the menu is closed, hovering behavior should take precedence
+    &:not(.open) > a:hover:focus:not(.cta) {
+      background-color: $nav-link-hover-bg;
+    }
+    // Unopened, focused links have grey bg
+    &:not(.open) > a:focus:not(.cta) {
+      background-color: lighten($cr-gray-lighter, 4%);
+    }
+  }
+
+  // Dropdown menu container
+  .dropdown-menu {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 1.25rem 0;
+    right: 0;
+    top: 2.5rem;
+    box-shadow: 0 .375rem .5625rem $cr-gray-lighter;
+    border-radius: $border-radius-small;
+  }
+
+  // Dropdown menu lists
+  .dropdown-menu ul {
+    @extend .list-unstyled;
+    li a {
+      display: block;
+      padding: .1875rem 1.25rem;
+      color: $cr-gray-dark;
+      &:hover {
+        text-decoration: none;
+        background-color: lighten($cr-gray-lighter, 4%);
+      }
+    }
+    .dropdown-header {
+      color: $cr-gray-dark;
+      font-weight: 700;
+    }
+  }
+
+  // Adds a background color to the featured section.
+  .featured-row:before {
+    display: block;
+    @include position(absolute, 0 0 0 0);
+    width: 25%;
+    background: $cr-gray-lighter;
+    content: "";
+    z-index: -1;
+  }
+
+  // User profile menu
+  .profile-menu {
+    ul {
+      padding: 0.3125rem 0;
+    }
+    .nav-profile-image {
+      display: inline-block;
+      @include size(2.25rem, 2.25rem);
+      overflow: hidden;
+      margin: 0.25rem;
+      background-color: #f5f5f5;
+      border: 2px solid $cr-gray-lighter;
+      img {
+        @include size(100%, 100%);
+      }
+    }
+  }
+
+  // Mobile menu
+  .mobile-menu {
+    position: absolute;
+    top: 0;
+    &:not(.in) .modal-dialog {
+      -webkit-transform: translate3d(-25vw, 0, 0);
+      transform: translate3d(-25vw, 0, 0);
+    }
+
+    .modal-dialog {
+      max-width: 80vw;
+      margin: 0;
+    }
+
+    .modal-content {
+      height: 100vh;
+      overflow-y: auto;
+      overflow-x: hidden;
+      border-radius: 0;
+      border: none;
+      background-color: lighten($cr-gray-darker, 5%);
+    }
+
+    ul {
+      margin: 0;
+      @extend .list-unstyled;
+      &.collapse, &.collapsing {
+        background-color: lighten($cr-gray-darker, 15%);
+        li a:hover {
+          background-color: lighten($cr-gray-darker, 20%);
+        }
+      }
+      &:not(.collapse) li a {
+        text-transform: uppercase;
+      }
+      li > a {
+        position: relative;
+        display: block;
+        padding: 1rem;
+        color: $cr-gray-light;
+        border-bottom: 1px solid lighten($cr-gray-darker, 20%);
+        transition: all 0.3s ease;
+        &:hover {
+          background-color: lighten($cr-gray-darker, 10%);
+          color: $cr-gray-lighter;
+        }
+        &:hover,
+        &:focus {
+          text-decoration: none;
+        }
+        &[aria-expanded="true"] {
+          box-shadow: inset -7px 0 9px -7px $cr-gray-alpha;
+          svg {
+            transform: rotate(90deg) translateX(-50%);
+          }
+        }
+        svg {
+          @include position(absolute, 50% 1rem null null);
+          transform: translateY(-50%);
+          transition: transform 0.3s ease;
+        }
+      }
+    }
+  }
+}
