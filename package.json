@@ -8,7 +8,7 @@
     "build-svg-icons": "./bin/build-svg-icons.js src/assets/svgs assets/svgs/icons.svg",
     "build-svg": "npm run build-css-icons && npm run build-svg-icons",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rimraf dist && npm run build-svg && webpack --config config/webpack.js  --progress --profile --bail"
+    "build": "rimraf dist && webpack --config config/webpack.js  --progress --profile --bail"
   },
   "files": [
     "assets"
