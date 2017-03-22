@@ -28,7 +28,7 @@ You can also remove all the excess folders and layers from the icon so all the a
 
 ![](http://crds-cms-uploads.s3.amazonaws.com/sketch-icon-docs/remove-extra-layers.gif)
 
-And you're ready to export! Be sure to **export the entire artboard**, not just the artwork. We require that each SVG export be `256px` square. Export the new SVG layer to `assets/svgs` in this project, then you're ready to compile into a single SVG.
+And you're ready to export! Be sure to **export the entire artboard**, not just the artwork. We require that each SVG export be `256px` square. Export the new SVG layer to `src/assets/svgs` in this project, then you're ready to compile into a single SVG.
 
 ![](http://crds-cms-uploads.s3.amazonaws.com/sketch-icon-docs/export-svg.gif)
 
