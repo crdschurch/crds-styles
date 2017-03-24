@@ -1,0 +1,22 @@
+$base-size: 16px;
+
+%avatar-dimensions {
+	@for $i from 1 through 6 {
+		&.avatar-size-#{$i} {
+		  img {
+  			width: $base-size * $i;
+  			height: $base-size * $i;
+  			background-size: $base-size * $i;
+        &:not(:first-child) {
+          margin-right: - $base-size/2 * $i;
+        }
+		  }
+		}
+	}
+}
+
+.avatar-group {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  @extend %avatar-dimensions;
+}
