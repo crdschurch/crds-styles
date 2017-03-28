@@ -1,14 +1,14 @@
-$base-size: 16px;
+$dimensions: 16px;
 
 %avatar-dimensions {
 	@for $i from 1 through 6 {
 		&.avatar-size-#{$i} {
 		  img {
-  			width: $base-size * $i;
-  			height: $base-size * $i;
-  			background-size: $base-size * $i;
+  			width: $dimensions * $i;
+  			height: $dimensions * $i;
+  			background-size: $dimensions * $i;
         &:not(:first-child) {
-          margin-right: - $base-size/2 * $i;
+          margin-right: - $dimensions/2 * $i;
         }
 		  }
 		}
