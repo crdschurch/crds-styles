@@ -1,0 +1,38 @@
+// These are overrides from the ng2-toasts library.
+#toast-container {
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  > div.toast,
+  > div.toast.toast-custom {
+    @extend .alert;
+    @extend .alert-info;
+    width: 100%;
+    height: 2.5rem;
+    margin: 0;
+    padding: 0.625rem 1rem;
+    color: $cr-white;
+    background-image: none !important;
+    box-shadow: none;
+    &:hover {
+      cursor: default;
+    }
+
+    &.toast-warning {
+      @extend .alert-warning;
+    }
+    &.toast-error {
+      @extend .alert-danger;
+    }
+    &.toast-success {
+      @extend .alert-success;
+    }
+
+    .toast-close-button {
+      margin-top: 0.25rem;
+      color: $cr-white !important;
+      box-shadow: none;
+    }
+  }
+}
