@@ -9,12 +9,16 @@
   > div.toast.toast-custom {
     @extend .alert;
     @extend .alert-info;
-    height: 2.5rem;
+    height: 4rem;
     margin: 0;
-    padding: 0.625rem 1rem;
+    padding: 1.5rem 1rem;
     border: none;
     color: $cr-white;
     background-image: none !important;
+    @media only screen and (max-width: $screen-md) {
+      height: 3.375rem;
+      padding: 1.125rem 1rem;
+    }
     &:hover {
       cursor: default;
     }
