@@ -27,10 +27,10 @@ datepicker {
 
   thead {
     tr:last-child > th {
-      padding-top: 0.5em;
+      padding-top: .5em;
     }
     th > .btn.btn-sm {
-      font-size: 0.9rem;
+      font-size: .9rem;
     }
     .btn {
       &.btn-default {
@@ -97,7 +97,7 @@ datepicker {
         background: transparent;
         border: none;
         color: $calendar-text;
-        font-size: 0.9rem;
+        font-size: .9rem;
 
         &.disabled {
           background: $calendar-disabled-bg;

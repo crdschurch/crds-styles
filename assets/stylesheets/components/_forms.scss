@@ -103,7 +103,7 @@ textarea {
 
 // Checkboxes & Radios
 .checkbox {
-  input[type="checkbox"] {
+  input[type='checkbox'] {
     height: 16px;
     width: 16px;
   }
@@ -116,8 +116,8 @@ textarea {
     padding-left: 25px;
   }
 
-  input[type="radio"],
-  input[type="checkbox"] {
+  input[type='radio'],
+  input[type='checkbox'] {
     margin-left: -25px;
 
     &:disabled {
@@ -130,11 +130,11 @@ textarea {
     }
   }
 
-  input[type="radio"]:disabled {
+  input[type='radio']:disabled {
     border-radius: 50%;
   }
 
-  input[type="checkbox"]:disabled {
+  input[type='checkbox']:disabled {
     border-radius: $border-radius-base;
   }
 }
@@ -145,7 +145,7 @@ textarea {
 }
 
 .radio {
-  input[type=radio] {
+  input[type='radio'] {
     display: none;
     position: absolute;
     visibility: hidden;

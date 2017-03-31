@@ -6,7 +6,7 @@
       &, &.ng-touched.ng-invalid {
         &:focus {
           border-color: $input-border-focus;
-          box-shadow: inset 0 0 0 1px rgba($input-border-focus, 0.5);
+          box-shadow: inset 0 0 0 1px rgba($input-border-focus, .5);
         }
       }
     }
@@ -16,18 +16,18 @@
 .form-control {
   &:focus {
     border-color: $input-border-focus;
-    box-shadow: inset 0 0 0 1px rgba($input-border-focus, 0.5);
+    box-shadow: inset 0 0 0 1px rgba($input-border-focus, .5);
   }
 }
 
 .checkbox {
-  input[type="checkbox"] {
+  input[type='checkbox'] {
     &, .dark-theme & {
       &:focus {
         background: $input-bg-focus;
         border-color: $input-border-focus;
         border-radius: $input-border-radius;
-        box-shadow: inset 0 0 0 2px rgba($input-border-focus, 0.5);
+        box-shadow: inset 0 0 0 2px rgba($input-border-focus, .5);
       }
     }
   }
@@ -58,7 +58,7 @@ select {
     &, .dark-theme & {
       &:focus {
         border-color: $input-border-focus;
-        box-shadow: inset 0 0 0 1px rgba($input-border-focus, 0.5);
+        box-shadow: inset 0 0 0 1px rgba($input-border-focus, .5);
       }
     }
   }
@@ -81,7 +81,7 @@ text-area {
 
           &:focus {
             border-color: $alert-danger;
-            box-shadow: inset 0 0 0 1px rgba($alert-danger, 0.5);
+            box-shadow: inset 0 0 0 1px rgba($alert-danger, .5);
           }
         }
 
@@ -90,7 +90,7 @@ text-area {
 
           &:focus {
             border-color: $alert-success;
-            box-shadow: inset 0 0 0 1px rgba($alert-success, 0.5);
+            box-shadow: inset 0 0 0 1px rgba($alert-success, .5);
           }
         }
       }
