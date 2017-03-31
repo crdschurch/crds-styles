@@ -2,8 +2,9 @@ var webpack = require('webpack');
 var webpackMerge = require('webpack-merge');
 var commonConfig = require('./webpack.common.js');
 var helpers = require('./helpers');
+var StyleLintPlugin = require('stylelint-webpack-plugin');
 
-const ENV = 'production';
+var ENV = 'production';
 
 module.exports = webpackMerge(commonConfig, {
   devtool: 'source-map',
@@ -19,6 +20,7 @@ module.exports = webpackMerge(commonConfig, {
   },
 
   plugins: [
+    new StyleLintPlugin(),
     new webpack.NoErrorsPlugin(),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({ // https://github.com/angular/angular/issues/10618
