@@ -1,0 +1,44 @@
+#toast-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 6;
+
+  > div.toast,
+  > div.toast.toast-custom {
+    @extend .alert;
+    @extend .alert-info;
+    height: 4rem;
+    margin: 0;
+    padding: 1.5rem 1rem;
+    border: none;
+    color: $cr-white;
+    background-image: none !important;
+    @media only screen and (max-width: $screen-md) {
+      height: 3.375rem;
+      padding: 1.125rem 1rem;
+    }
+    &:hover {
+      cursor: default;
+    }
+
+    &.toast-warning {
+      @extend .alert-warning;
+    }
+    &.toast-error {
+      @extend .alert-danger;
+    }
+    &.toast-success {
+      @extend .alert-success;
+    }
+
+    .toast-close-button {
+      float: right;
+      font-size: 2rem;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
