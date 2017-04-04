@@ -1,5 +1,5 @@
 #toast-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -20,6 +20,7 @@
     height: 4rem;
     margin: 0;
     padding: 1.5rem 1rem;
+    transform: translate3d(0,0,0);
     border: none;
     color: $cr-white;
     background-image: none !important;
