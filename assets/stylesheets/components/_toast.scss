@@ -1,9 +1,17 @@
 #toast-container {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 6;
+  z-index: 999;
+
+  .toast-title {
+    display: inline-block;
+    margin-right: 0.5rem;
+    & + div {
+      display: inline-block;
+    }
+  }
 
   > div.toast,
   > div.toast.toast-custom {
