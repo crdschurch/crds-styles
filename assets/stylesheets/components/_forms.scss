@@ -94,6 +94,9 @@ textarea {
   }
 
   .input-group-btn {
+    input, .btn {
+      height: 42px;
+    }
     .btn {
       padding-top: 11px;
       padding-bottom: 11px;
