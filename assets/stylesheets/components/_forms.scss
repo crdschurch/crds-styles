@@ -94,9 +94,13 @@ textarea {
   }
 
   .input-group-btn {
-    button {
-      padding-top: 12px;
-      padding-bottom: 7px;
+    input, .btn {
+      height: 42px;
+    }
+    .btn {
+      padding-top: 11px;
+      padding-bottom: 11px;
+      line-height: 16px;
     }
   }
 }
