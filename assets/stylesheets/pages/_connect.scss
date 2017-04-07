@@ -67,25 +67,46 @@ $modal-bg: darken($cr-blue, 20);
 $modal-color: $cr-white;
 
 .fauxdal {
-  position: relative;
+  background-color: $modal-bg;
+  color: $modal-color;
+  text-align: center;
 
-  // Add vertical center fauxdal class
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 7;
 
-  &.fauxdal-fullscreen {
+  .fauxdal-content {
     background-color: $modal-bg;
-    color: $modal-color;
     text-align: center;
+    @include make-row();
 
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    > * {
+      @include make-xs-column(12);
+
+      @media (min-width: $screen-xs) {
+        @include make-xs-column(8);
+        @include make-xs-column-push(2);
+      }
+    }
+  }
+
+  .close {
+    cursor: pointer;
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 10;
+    top: 1rem;
+    right: 1rem;
+  }
 
-    // Add media query styles from bland page update, modify to use Bootstrap grid.
+  // Centers content vertically
+  &.fauxdal-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
