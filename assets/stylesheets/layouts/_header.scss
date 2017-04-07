@@ -9,6 +9,12 @@
     margin-top: .625rem;
   }
 
+  // Don't show mobile menu items on the main menu.
+  [data-main-menu] [data-exclude-main],
+  [data-main-menu] [data-mobile-only] {
+    display: none;
+  }
+
   // Get the mobile icons in the correct location with correct color.
   a.hidden-md {
     display: inline-block;
