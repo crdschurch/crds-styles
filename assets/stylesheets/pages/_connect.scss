@@ -113,3 +113,112 @@ $modal-color: $cr-white;
 
 
 
+// User list
+.connect-list {
+  background: $cr-white;
+  box-shadow: 0 0 10px 0 $cr-gray-light;
+
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.content-list-banner {
+  margin-right: -30px;
+  margin-left: -30px;
+}
+// list-footer {
+//   display: block;
+
+//   @media (min-width: $screen-sm) {
+//     margin-right: -2rem;
+//     margin-left: -2rem;
+//     width: $container-tablet;
+//   }
+
+//   > div {
+//     margin-top: 1rem;
+//     padding: 1.5rem 1rem 2rem;
+
+//     @media (min-width: $screen-sm) {
+//       padding-right: 3rem;
+//       padding-left: 3rem;
+//     }
+
+//     h4 {
+//       color: $cr-gray;
+//     }
+//   }
+// }
+
+.entry {
+  border-top: 1px solid darken($cr-gray-lighter, 10);
+  cursor: pointer;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  > div:last-child {
+    flex: 1 1 100%;
+    margin-left: 1rem;
+  }
+}
+
+.entry-header {
+  @extend .component-header;
+  color: $cr-cyan;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+
+}
+
+.entry-subheader {
+  @extend .control-label;
+  color: $cr-gray-light;
+
+  .joined_by {
+    margin-left: .5rem;
+  }
+}
+
+
+
+
+// Labels
+$label-color: $cr-gray-dark;
+$label-radius: $border-radius-base;
+$label-font-family: $accent-font-face;
+$label-font-size: $font-size-smaller;
+
+.label {
+  color: $label-color;
+  border-radius: $label-radius;
+  font-family: $label-font-family;
+  font-size: $label-font-size;
+
+  float: right;
+  margin-top: 9px;
+  padding: 5px 6px 4px;
+  text-transform: uppercase;
+
+  &.label-default {
+    background: $cr-gray-light;
+  }
+  &.label-primary {
+    background: $cr-blue-lighter;
+  }
+  &.label-warning {
+    background: $cr-gold-lighter;
+  }
+
+  // Semantic labels
+  &.label-host {
+    @extend .label-primary;
+  }
+  &.label-me {
+    @extend .label-warning;
+  }
+}
