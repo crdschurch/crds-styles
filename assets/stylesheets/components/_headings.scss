@@ -82,6 +82,8 @@ h3,
 h4,
 h5,
 h6 {
+  color: inherit;
+
   .dark-theme & {
     $headings-color: $cr-gray-dark;
 
