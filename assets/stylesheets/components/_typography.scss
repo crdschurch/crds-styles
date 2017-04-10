@@ -109,7 +109,7 @@ blockquote {
 
   span {
     display: block;
-    margin-top: 0.5em;
+    margin-top: .5em;
     font-style: normal;
     font-size: 1.375rem; // 22px
     @extend .font-family-condensed-extra;
@@ -184,7 +184,7 @@ dl.crds-list {
   font-size: 1.3125rem; // 21px
   border-top: 1px solid $cr-gray-light;
   color: $cr-gray;
-  padding-top: 0.25em;
+  padding-top: .25em;
 
   .dark-theme & {
     border-color: $cr-gray-dark;
