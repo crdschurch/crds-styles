@@ -30,73 +30,15 @@ textarea {
   padding-top: $padding-base-vertical;
 }
 
-// Input + addon styles
-.input-group-block {
-  display: block;
-}
 
-.input-group {
-  position: relative;
 
-  &.input-group-left {
-    input.form-control {
-      padding-right: $padding-base-horizontal;;
-      padding-left: 36px;
-    }
-
-    .input-group-addon {
-      left: .25rem;
-      top: 0;
-    }
-  }
-
-  &.input-group-right {
-    input.form-control {
-      padding-right: 48px;
-      padding-left: $padding-base-horizontal;;
-    }
-
-    .input-group-addon {
-      right: 1rem;
-      top: 0;
-    }
-  }
-
-  input.form-control {
-    float: none;
-  }
 
   .form-control {
     margin-top: 5px;
     margin-bottom: 5px;
   }
 
-  .input-group-addon {
-    position: absolute;
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    z-index: 4;
-    font-size: 1.125rem;
-
-    i, .icon {
-      height: 16px;
-      width: 16px;
-      background-size: 16px;
-      filter: invert(55%);
-
-      .dark-theme & {
-        filter: invert(45%);
-      }
-    }
-  }
-
   .input-group-btn {
-    input, .btn {
-      height: 42px;
-    }
     .btn {
       padding-top: 11px;
       padding-bottom: 11px;
@@ -104,6 +46,82 @@ textarea {
     }
   }
 }
+
+
+// Input + addon styles
+// .input-group-block {
+//   display: block;
+// }
+
+// .input-group {
+//   position: relative;
+
+//   &.input-group-left {
+//     input.form-control {
+//       padding-right: $padding-base-horizontal;;
+//       padding-left: 36px;
+//     }
+
+//     .input-group-addon {
+//       left: .25rem;
+//       top: 0;
+//     }
+//   }
+
+//   &.input-group-right {
+//     input.form-control {
+//       padding-right: 48px;
+//       padding-left: $padding-base-horizontal;;
+//     }
+
+//     .input-group-addon {
+//       right: 1rem;
+//       top: 0;
+//     }
+//   }
+
+//   input.form-control {
+//     float: none;
+//   }
+
+//   .form-control {
+//     margin-top: 5px;
+//     margin-bottom: 5px;
+//   }
+
+//   .input-group-addon {
+//     position: absolute;
+//     display: flex;
+//     height: 100%;
+//     align-items: center;
+//     justify-content: center;
+//     flex-direction: column;
+//     z-index: 4;
+//     font-size: 1.125rem;
+
+//     i, .icon {
+//       height: 16px;
+//       width: 16px;
+//       background-size: 16px;
+//       filter: invert(55%);
+
+//       .dark-theme & {
+//         filter: invert(45%);
+//       }
+//     }
+//   }
+
+//   // .input-group-btn {
+//   //   input, .btn {
+//   //     height: 42px;
+//   //   }
+//   //   .btn {
+//   //     padding-top: 11px;
+//   //     padding-bottom: 11px;
+//   //     line-height: 16px;
+//   //   }
+//   // }
+// }
 
 // Checkboxes & Radios
 .checkbox {
