@@ -133,9 +133,9 @@ textarea {
 
 // Search bar
 .searchbar {
-  input {
+  .form-control {
     // Removes validation styles
-    &.form-control.ng-touched {
+    &.ng-touched {
       &.ng-valid,
       &.ng-invalid {
         border-color: $input-border;
