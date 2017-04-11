@@ -33,6 +33,8 @@ textarea {
 
 
 
+// Input groups + addon styles
+.input-group {
   .form-control {
     margin-top: 5px;
     margin-bottom: 5px;
@@ -40,9 +42,8 @@ textarea {
 
   .input-group-btn {
     .btn {
-      padding-top: 11px;
-      padding-bottom: 11px;
-      line-height: 16px;
+      height: $input-height-base;
+      line-height: 1;
     }
   }
 }
@@ -264,5 +265,71 @@ select {
 
   .form-col-3 {
     @include make-xs-column(4);
+  }
+}
+
+
+
+
+// Input with button
+
+
+
+
+
+// Searchbar
+.searchbar {
+  input {
+    // Removes validation styles
+    &.form-control.ng-touched {
+      &.ng-valid,
+      &.ng-invalid {
+        border-color: $input-border;
+        box-shadow: inset 0 0 0 1px $input-border;
+
+        &:focus {
+          border-color: $input-border-focus;
+          box-shadow: inset 0 0 0 1px rgba($input-border-focus, .5);
+        }
+      }
+    }
+
+    &[placeholder] {
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+// 🚨 Search bar - connect-specific layout
+.connect-search {
+  background-color: darken(desaturate($cr-blue-dark, 5), 5);
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+
+  > div {
+    display: flex;
+
+    > .btn {
+      margin-left: 10px;
+    }
+  }
+
+  .searchbar {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  .input-group-btn {
+    width: initial;
+
+    .btn {
+      padding-right: 10px;
+      padding-left: 10px;
+
+      @media (min-width: $screen-xs) {
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+    }
   }
 }
