@@ -23,7 +23,7 @@
 
   // Brand / Logo
   .navbar-brand.logo {
-    margin-top: 0.25rem;
+    margin-top: .25rem;
     padding-left: 0;
     @media only screen and (max-width: $screen-md) {
       position: absolute;
@@ -77,8 +77,8 @@
 
   // Dropdown menu container
   .dropdown-menu {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
     padding: 1.25rem 0;
     right: 0;
     top: 2.5rem;
@@ -110,20 +110,20 @@
     @include position(absolute, 0 0 0 0);
     width: 25%;
     background: $cr-gray-lighter;
-    content: "";
+    content: '';
     z-index: -1;
   }
 
   // User profile menu
   .profile-menu {
     ul {
-      padding: 0.3125rem 0;
+      padding: .3125rem 0;
     }
     .nav-profile-image {
       display: inline-block;
       @include size(2.25rem, 2.25rem);
       overflow: hidden;
-      margin: 0.25rem;
+      margin: .25rem;
       background-color: #f5f5f5;
       border: 2px solid $cr-gray-lighter;
       img {
@@ -173,7 +173,7 @@
         padding: 1rem;
         color: $cr-gray-light;
         border-bottom: 1px solid lighten($cr-gray-darker, 20%);
-        transition: all 0.3s ease;
+        transition: all .3s ease;
         &:hover {
           background-color: lighten($cr-gray-darker, 10%);
           color: $cr-gray-lighter;
@@ -182,7 +182,7 @@
         &:focus {
           text-decoration: none;
         }
-        &[aria-expanded="true"] {
+        &[aria-expanded='true'] {
           box-shadow: inset -7px 0 9px -7px $cr-gray-alpha;
           svg {
             transform: rotate(90deg) translateX(-50%);
@@ -191,7 +191,7 @@
         svg {
           @include position(absolute, 50% 1rem null null);
           transform: translateY(-50%);
-          transition: transform 0.3s ease;
+          transition: transform .3s ease;
         }
       }
     }

@@ -56,13 +56,13 @@
     &.active,
     &:active {
       &, &:hover, &:focus {
-        background: rgba(tint(desaturate($border, 75), 95%), 0.75);
+        background: rgba(tint(desaturate($border, 75), 95%), .75);
         border-color: $border;
         color: $border;
 
         .dark-theme & {
-          background: rgba(shade(desaturate($border, 75), 95%), 0.75);
-          border-color: rgba($border, 0.75);
+          background: rgba(shade(desaturate($border, 75), 95%), .75);
+          border-color: rgba($border, .75);
         }
       }
 
@@ -77,10 +77,10 @@
     }
 
     &:hover {
-      background: rgba(tint(desaturate($border, 75), 90%), 0.75);
+      background: rgba(tint(desaturate($border, 75), 90%), .75);
 
       .dark-theme & {
-        background: rgba(shade(desaturate($border, 75), 90%), 0.75);
+        background: rgba(shade(desaturate($border, 75), 90%), .75);
       }
     }
 
