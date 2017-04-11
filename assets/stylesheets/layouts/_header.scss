@@ -10,8 +10,7 @@
   }
 
   // Don't show mobile menu items on the main menu.
-  [data-main-menu] [data-exclude-main],
-  [data-main-menu] [data-mobile-only] {
+  [data-main-menu] [data-exclude-main] {
     display: none;
   }
 
