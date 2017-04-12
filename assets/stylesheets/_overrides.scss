@@ -271,13 +271,14 @@ $bootstrap-sass-asset-helper: true;
   // $popover-arrow-outer-fallback-color: !default;
 
 // Label
-  // $label-default-bg: !default;
-  // $label-primary-bg: !default;
-  // $label-success-bg: !default;
-  // $label-info-bg: !default;
-  // $label-warning-bg: !default;
-  // $label-danger-bg: !default;
-  // $label-color: !default;
+  $label-default-bg: $cr-gray-lighter !default;
+  $label-primary-bg: $cr-blue-lighter !default;
+  $label-success-bg: lighten($state-success-bg, 20) !default;
+  $label-info-bg: lighten($state-info-bg, 20) !default;
+  $label-warning-bg: lighten($state-warning-bg, 20) !default;
+  $label-danger-bg: lighten($state-danger-bg, 20) !default;
+  $label-color: $cr-gray-dark !default;
+  $label-font-family: $accent-font-face;
   // $label-link-hover-color: !default;
 
 // Modals
