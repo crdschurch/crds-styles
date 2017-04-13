@@ -304,6 +304,9 @@ a[ng-click] {
 .push {
   margin: $line-height-computed;
 }
+.push-center {
+  margin: 0 auto;
+}
 .push-half {
   margin: $line-height-computed / 2;
 }
