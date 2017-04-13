@@ -16,7 +16,13 @@
 // solid buttons
   &.active,
   &:active {
-    background: darken($background, 5);
+    background: $color;
+    color: $background;
+
+    &:hover {
+      background: darken($color, 2);
+      color: darken($background, 5);
+    }
 
     &:focus {
       box-shadow: none;
@@ -29,18 +35,16 @@
   }
 
   &.disabled {
-    opacity: 1;
-    background: lighten($background, 25);
-    border-color: lighten($border, 25);
-    color: $cr-white;
-
+    &,
     &.active,
     &:active,
     &:focus,
     &:hover {
       &, &:focus, &:hover {
+        opacity: 1;
         background: lighten($background, 25);
         border-color: lighten($border, 25);
+        color: tint($background, 95);
         box-shadow: none;
       }
     }
@@ -48,21 +52,37 @@
 
 // outline buttons
   &.btn-outline {
-    background: transparent;
+    background: $color;
     border-style: solid;
     border-width: 1px;
-    color: $border;
+    color: $background;
+
+    .dark-theme & {
+      background: transparent;
+    }
 
     &.active,
     &:active {
-      &, &:hover, &:focus {
-        background: rgba(tint(desaturate($border, 75), 95%), .75);
+      &, &:focus {
+        background: $background;
         border-color: $border;
-        color: $border;
+        color: $color;
+
+        &:hover {
+          background: darken($background, 10);
+          border-color: darken($border, 10);
+          color: $color;
+        }
 
         .dark-theme & {
-          background: rgba(shade(desaturate($border, 75), 95%), .75);
+          color: rgba(shade(desaturate($background, 75), 95%), .75);
           border-color: rgba($border, .75);
+          background: $background;
+
+          &:hover {
+            background: $background;
+            color: shade(desaturate($background, 75), 95%);
+          }
         }
       }
 
@@ -74,14 +94,6 @@
     &:focus {
       border-color: $input-border-focus;
       box-shadow: 0 0 0 1px $input-border-focus inset;
-    }
-
-    &:hover {
-      background: rgba(tint(desaturate($border, 75), 90%), .75);
-
-      .dark-theme & {
-        background: rgba(shade(desaturate($border, 75), 90%), .75);
-      }
     }
 
     &.disabled {
@@ -105,41 +117,6 @@
           }
         }
       }
-    }
-  }
-
-// link buttons
-  &.btn-link {
-    background: none;
-    border-color: transparent;
-    border-style: solid;
-    border-width: 1px;
-    color: $background;
-    text-decoration: none;
-
-    &.active,
-    &:active {
-      background: $background;
-      border-color: $background;
-      color: $cr-white;
-
-      &:hover {
-        color: darken($cr-white, 5);
-      }
-
-      &:focus {
-        border: 1px solid $border;
-        box-shadow: none;
-      }
-    }
-
-    &:hover {
-      color: darken($background, 10);
-    }
-
-    &:focus {
-      border: 1px solid $input-border-focus;
-      box-shadow: 0 0 0 1px $input-border-focus inset;
     }
   }
 }

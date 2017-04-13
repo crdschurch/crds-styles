@@ -73,34 +73,17 @@ $bootstrap-sass-asset-helper: true;
 
 // Buttons
   $btn-font-weight: 300 !default;
+
   $btn-default-color: $cr-white !default;
   $btn-default-bg: $cr-gray-light !default;
   $btn-default-border: $cr-gray-light !default;
   $btn-primary-color: $cr-white !default;
   $btn-primary-bg: $cr-blue !default;
   $btn-primary-border: $cr-blue !default;
+  $btn-secondary-color: $cr-white;
   $btn-secondary-bg: $cr-cyan;
   $btn-secondary-border: $cr-cyan;
-  $btn-secondary-color: $cr-white;
-  $btn-info-bg: $btn-secondary-bg !default;
-  $btn-info-border: $btn-secondary-border !default;
-  $btn-info-color: $btn-secondary-color !default;
-  $btn-gray-bg: $cr-gray;
-  $btn-gray-border: $cr-gray;
-  $btn-gray-color: $cr-white;
-  $btn-option-color: $cr-white;
-  $btn-option-bg: $cr-gray-light;
-  $btn-option-border: rgba($cr-gray-light, .75);
-  $btn-outline-bg: $cr-white;
-  $btn-outline-hover-bg: $cr-gray-lighter;
-  // $btn-warning-color: !default;
-  // $btn-warning-bg: !default;
-  // $btn-warning-border: !default;
-  // $btn-danger-color: !default;
-  // $btn-danger-bg: !default;
-  // $btn-danger-border: !default;
   // $btn-link-disabled-color: !default;
-  // $btn-border-radius-base: !default;
   $btn-border-radius-large: $border-radius-base !default;
   $btn-border-radius-small: $border-radius-base !default;
 
