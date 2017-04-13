@@ -281,7 +281,7 @@ a[ng-click] {
 
   &:before{
     display: block;
-    content: " ";
+    content: ' ';
     width: 100%;
     padding-top: ($height / $width) * 100%;
   }
@@ -303,6 +303,9 @@ a[ng-click] {
 
 .push {
   margin: $line-height-computed;
+}
+.push-center {
+  margin: 0 auto;
 }
 .push-half {
   margin: $line-height-computed / 2;

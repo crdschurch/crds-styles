@@ -4,6 +4,7 @@
   "description": "",
   "style": "assets/stylesheets/_crds.scss",
   "scripts": {
+    "lint": "stylelint 'assets/stylesheets/**/*.scss' --syntax scss",
     "build-css-icons": "./node_modules/svg-sprite/bin/svg-sprite.js --config=config/svg-sprite.config.json src/assets/svgs/*.svg",
     "build-svg-icons": "./bin/build-svg-icons.js src/assets/svgs assets/svgs/icons.svg",
     "build-svg": "npm run build-css-icons && npm run build-svg-icons",
@@ -29,6 +30,7 @@
     "raw-loader": "^0.5.1",
     "rimraf": "^2.5.2",
     "sass-loader": "^4.1.1",
+    "stylelint-webpack-plugin": "^0.7.0",
     "webpack": "^1.14.0",
     "webpack-merge": "^0.17.0"
   }

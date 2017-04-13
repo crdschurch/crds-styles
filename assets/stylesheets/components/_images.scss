@@ -1,5 +1,5 @@
 .logo {
-  padding: 0.5rem 1rem;
+  padding: .5rem 1rem;
   svg {
     @include size(10.625rem, 1.5rem);
   }
@@ -7,4 +7,13 @@
 
 svg use {
   fill: currentColor;
+}
+
+@for $i from 1 through 12 {
+  .img-size-#{$i} {
+    $dimensions: 16px;
+
+    height: $dimensions * $i;
+    width: $dimensions * $i;
+  }
 }
