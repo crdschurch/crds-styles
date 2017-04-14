@@ -1,5 +1,6 @@
 .form-control {
   box-shadow: none;
+  -webkit-appearance: none;
 }
 
 // Text fields
@@ -69,6 +70,7 @@ textarea {
   .form-control {
     margin-top: 5px;
     margin-bottom: 5px;
+    -webkit-appearance: none;
   }
 
   .input-group-addon {
