@@ -1,24 +1,7 @@
-/**
-* 1. Global form styles
-* 2. Text fields
-* 3. Input groups & Addon styles
-* 4. Search bar
-* 5. Checkboxes & Radios
-* 6. Selectors
-* 7. Layout
-* 8. Application-specific styles
-**/
-
-
-
-
-// Global form styles
 .form-control {
   box-shadow: none;
+  -webkit-appearance: none;
 }
-
-
-
 
 // Text fields
 textarea {
@@ -39,7 +22,6 @@ textarea {
   }
 }
 
-// Helper text found under text input fields
 .help-block {
   @extend .font-family-accent;
 
@@ -49,27 +31,12 @@ textarea {
   padding-top: $padding-base-vertical;
 }
 
-
-
-
-// Input groups & Addon styles
-.input-group {
-  .form-control {
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-
-  .input-group-btn {
-    .btn {
-      height: $input-height-base;
-      line-height: 1;
-    }
-  }
-}
-
-// Styles for the "seamless" input-addon
+// Input + addon styles
 .input-group-block {
   display: block;
+}
+
+.input-group {
   position: relative;
 
   &.input-group-left {
@@ -103,59 +70,42 @@ textarea {
   .form-control {
     margin-top: 5px;
     margin-bottom: 5px;
+    -webkit-appearance: none;
   }
 
   .input-group-addon {
-    font-size: 1.125rem;
-    height: 100%;
     position: absolute;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    height: 100%;
     align-items: center;
-    z-index: 3;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 4;
+    font-size: 1.125rem;
 
     i, .icon {
-      background-size: 16px;
-      filter: invert(55%);
       height: 16px;
       width: 16px;
+      background-size: 16px;
+      filter: invert(55%);
 
       .dark-theme & {
         filter: invert(45%);
       }
     }
   }
-}
 
-
-
-
-// Search bar
-.searchbar {
-  .form-control {
-    // Removes validation styles
-    &.ng-touched {
-      &.ng-valid,
-      &.ng-invalid {
-        border-color: $input-border;
-        box-shadow: inset 0 0 0 1px $input-border;
-
-        &:focus {
-          border-color: $input-border-focus;
-          box-shadow: inset 0 0 0 1px rgba($input-border-focus, .5);
-        }
-      }
+  .input-group-btn {
+    input, .btn {
+      height: 42px;
     }
-
-    &[placeholder] {
-      text-overflow: ellipsis;
+    .btn {
+      padding-top: 11px;
+      padding-bottom: 11px;
+      line-height: 16px;
     }
   }
 }
-
-
-
 
 // Checkboxes & Radios
 .checkbox {
@@ -259,9 +209,6 @@ textarea {
   }
 }
 
-
-
-
 // Selectors
 select {
   &.form-control {
@@ -301,42 +248,5 @@ select {
 
   .form-col-3 {
     @include make-xs-column(4);
-  }
-}
-
-
-
-
-// 🚨 Search bar - connect-specific layout
-.connect-search {
-  background-color: darken(desaturate($cr-blue-dark, 5), 5);
-  padding-top: .5rem;
-  padding-bottom: .5rem;
-
-  > div {
-    display: flex;
-
-    > .btn {
-      margin-left: 10px;
-    }
-  }
-
-  .searchbar {
-    display: flex;
-    flex-grow: 1;
-  }
-
-  .input-group-btn {
-    width: initial;
-
-    .btn {
-      padding-right: 10px;
-      padding-left: 10px;
-
-      @media (min-width: $screen-xs) {
-        padding-right: 20px;
-        padding-left: 20px;
-      }
-    }
   }
 }
