@@ -8,3 +8,12 @@
 svg use {
   fill: currentColor;
 }
+
+@for $i from 1 through 12 {
+  .img-size-#{$i} {
+    $dimensions: 16px;
+
+    height: $dimensions * $i;
+    width: $dimensions * $i;
+  }
+}
