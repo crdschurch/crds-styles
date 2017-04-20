@@ -36,16 +36,23 @@
   @extend .component-header;
   color: $cr-gray-dark;
   margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 
   &.media-heading-link {
     color: $cr-cyan;
   }
+}
 
-  .say-hi {
+.say-hi {
+  .media-heading &,
+  .media-heading-stacked & {
     color: $cr-gray-dark;
     font-family: $base-font-face;
     font-size: $font-size-base;
     text-transform: initial;
+    padding-bottom: .5rem;
   }
 }
 
@@ -86,19 +93,7 @@
 }
 
 .media-img-wrapper {
-  .pin-detail-header & {
-    float: left;
-    margin-right: 1rem;
-  }
-
-  .img-circle {
-    .pin-detail-header & {
-      border-color: $cr-gray;
-    }
-  }
-}
-
-.media-img-wrapper {
+  margin-top: .25rem;
   position: relative;
 
   .media & {
