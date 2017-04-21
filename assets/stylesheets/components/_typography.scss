@@ -153,7 +153,7 @@ dl.crds-list {
 
 .page-header {
   @extend .font-family-base-light;
-  @extend .font-size-h1;
+  font-size: $font-size-h1;
   word-wrap: break-word;
   .dark-theme & {
     border-color: $cr-gray-dark;
