@@ -50,10 +50,6 @@
 
   &.media-heading-stacked {
     flex-direction: column;
-
-    .media-label {
-      font-size: 1.75rem;
-    }
   }
 }
 
@@ -63,6 +59,14 @@
 
   > *:first-child {
     margin-right: .5rem;
+  }
+}
+
+.media-label {
+  display: flex;
+
+  > *:not(:last-child) {
+    margin-right: 5px;
   }
 }
 
