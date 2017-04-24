@@ -4,7 +4,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
-    'bootstrap': ['./src/main.js', './assets/stylesheets/bootstrap.scss']
+    'crds-styles': ['./src/main.js', './assets/stylesheets/crds-styles.scss']
   },
 
   resolve: {
