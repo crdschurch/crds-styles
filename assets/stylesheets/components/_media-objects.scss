@@ -10,7 +10,6 @@
 
 // Base layout
 .media {
-  cursor: pointer;
   display: flex;
   padding-top: .5rem;
   padding-bottom: .5rem;
@@ -25,7 +24,13 @@
   }
 }
 
+.media-link {
+  cursor: pointer;
 
+  .media-heading {
+    color: $cr-cyan;
+  }
+}
 
 
 // Text
@@ -41,10 +46,6 @@
 
   .media-dark & {
     color: $cr-white;
-  }
-
-  &.media-heading-link {
-    color: $cr-cyan;
   }
 
   &.media-heading-stacked {
