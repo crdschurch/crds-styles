@@ -6,7 +6,13 @@
 @import 'overrides';
 @import 'functions';
 @import 'mixins';
-@import 'vendors/modules';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/variables';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/mixins';
+
+// NOTE: Should we be using @extend? The following files are required as a result of extending BS selectors.
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/alerts';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap/type';
+
 @import 'base/modules';
 @import 'components/modules';
 @import 'layouts/modules';
