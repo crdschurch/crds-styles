@@ -137,7 +137,7 @@
 
   // Mobile menu
   .mobile-menu {
-    position: absolute;
+    position: fixed;
     top: 0;
     &:not(.in) .modal-dialog {
       -webkit-transform: translate3d(-25vw, 0, 0);
