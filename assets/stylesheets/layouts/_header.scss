@@ -46,12 +46,7 @@
     position: static;
     // Sign in and search adjust to fit the height of the other items.
     > a.btn {
-      padding-top: .8125rem;
-      padding-bottom: .8125rem;
-    }
-    > a.cta {
-      padding-top: .65625rem;
-      padding-bottom: .65625rem;
+      line-height: 1.5em;
     }
     // Remove margins from all links in main nav.
     > a {
