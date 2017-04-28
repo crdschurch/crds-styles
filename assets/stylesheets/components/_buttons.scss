@@ -36,55 +36,101 @@
   &.btn-secondary {
     @include crds-button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
   }
-  &.btn-gray {
-    @include crds-button-variant($btn-gray-color, $btn-gray-bg, $btn-gray-border);
-  }
-  &.btn-option {
-    @include crds-button-variant($btn-option-color, $btn-option-bg, $btn-option-border);
+  &.btn-default {
+    @include crds-button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
 
-  // solid buttons
-    &.active,
-    &:active {
-      &, &:focus {
-        background: $cr-teal;
-        border-color: $cr-teal;
-        color: $cr-white;
-      }
-    }
-
-  // outline buttons
     &.btn-outline {
-      &.active,
-      &:active {
-        &, &:hover, &:focus {
-          background: $cr-teal;
-          border-color: $cr-teal;
-          color: $cr-white;
-
-          .dark-theme & {
-            background: $cr-teal;
-            border-color: $cr-teal;
-            color: $cr-white;
-          }
-        }
-      }
-    }
-
-  // link buttons
-    &.btn-link {
       &.active,
       &:active {
         &, &:focus {
           background: $cr-teal;
           border-color: $cr-teal;
-          box-shadow: none;
-          color: $cr-white;
+
+          &:hover {
+            background: darken($cr-teal, 10);
+            border-color: darken($cr-teal, 10);
+            color: $cr-white;
+          }
+        }
+      }
+
+      &.disabled {
+        background: transparent;
+        border-color: lighten($btn-default-border, 25);
+        color: lighten($btn-default-border, 25);
+
+        &.active,
+        &:active,
+        &:focus,
+        &:hover {
+          &, &:hover {
+            background: transparent;
+            border-color: lighten($btn-default-border, 25);
+            color: lighten($btn-default-border, 25);
+
+            .dark-theme & {
+              background: transparent;
+              border-color: lighten($btn-default-border, 25);
+              color: lighten($btn-default-border, 25);
+            }
+          }
         }
       }
     }
   }
-  &.btn-default {
-    @include crds-button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+
+  &.btn-link {
+    background: none;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 1px;
+    color: $btn-default-bg;
+    text-decoration: none;
+
+    &.active,
+    &:active {
+      background: $cr-teal;
+      border-color: $cr-teal;
+      color: $cr-white;
+
+      &:hover {
+        background: darken($cr-teal, 5);
+        border-color: darken($cr-teal, 5);
+        color: darken($cr-white, 5);
+      }
+
+      &:focus {
+        border: 1px solid $btn-default-border;
+        box-shadow: none;
+      }
+    }
+
+    &:hover {
+      color: darken($btn-default-bg, 10);
+    }
+
+    &:focus {
+      border: 1px solid $input-border-focus;
+      box-shadow: 0 0 0 1px $input-border-focus inset;
+    }
+
+    &.disabled {
+      color: lighten($btn-default-border, 25);
+
+      &.active,
+      &:active {
+        &, &:hover {
+          background: none;
+          border-color: transparent;
+          color: lighten($btn-default-border, 25);
+        }
+
+        &:focus {
+          border: 1px solid $btn-default-border;
+          box-shadow: none;
+        }
+      }
+    }
   }
 }
 
