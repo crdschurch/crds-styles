@@ -2,10 +2,7 @@
   visibility: hidden;
 }
 
-@import 'variables';
-@import 'overrides';
-@import 'functions';
-@import 'mixins';
+@import 'config/modules';
 @import 'vendors/modules';
 @import 'base/modules';
 @import 'components/modules';
