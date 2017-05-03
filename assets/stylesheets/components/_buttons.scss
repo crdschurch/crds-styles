@@ -1,5 +1,5 @@
 .btn {
-  border-radius: $btn-border-radius-base;
+  border-radius: $border-radius-base;
   margin-top: 5px;
   margin-bottom: 5px;
 
@@ -16,14 +16,15 @@
     font-size: $base-font-size;
     padding: 15px 30px;
   }
-  &,
-  &.btn-md {
-    font-size: .875rem; // 14px
+
+  &, &.btn-md {
+    font-size: $font-size-small;
     padding: 10px 20px;
   }
+
   &.btn-sm {
-    font-size: .8125rem; // 13px
-    padding: 6px 17.5px;
+    font-size: $font-size-smaller;
+    padding: 6px 18px;
   }
 
   &.btn-primary {
@@ -33,58 +34,139 @@
       @extend .btn-secondary;
     }
   }
+
   &.btn-secondary {
     @include crds-button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
   }
+
   &.btn-gray {
     @include crds-button-variant($btn-gray-color, $btn-gray-bg, $btn-gray-border);
   }
-  &.btn-option {
-    @include crds-button-variant($btn-option-color, $btn-option-bg, $btn-option-border);
+  &.btn-default {
+    @include crds-button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+  }
+}
 
-  // solid buttons
-    &.active,
-    &:active {
-      &, &:focus {
-        background: $cr-teal;
-        border-color: $cr-teal;
-        color: $cr-white;
-      }
+.btn-option {
+  border-style: solid;
+  border-width: 1px;
+
+  background-color: $btn-option-bg;
+  border-color: $btn-option-border;
+  color: $btn-option-color;
+
+  &.active, &:active {
+    &, &:focus, &:hover {
+      box-shadow: none;
+
+      background-color: $cr-teal;
+      border-color: $cr-teal;
+      color: $btn-option-color;
     }
+  }
 
-  // outline buttons
-    &.btn-outline {
-      &.active,
-      &:active {
-        &, &:hover, &:focus {
-          background: $cr-teal;
+  &:hover {
+    background-color: darken($btn-option-bg, 10);
+    border-color: darken($btn-option-border, 10);
+    color: $btn-option-color;
+  }
+
+  :focus {
+    border-color: $input-border-focus;
+    box-shadow: 0 0 0 1px $input-border-focus inset;
+  }
+
+  &.btn-outline {
+    background-color: transparent;
+    border-color: $btn-option-border;
+    color: $btn-option-bg;
+
+    &.active, &:active {
+      &, &:focus, &:hover {
+        &, .dark-theme & {
+          background-color: $cr-teal;
           border-color: $cr-teal;
-          color: $cr-white;
-
-          .dark-theme & {
-            background: $cr-teal;
-            border-color: $cr-teal;
-            color: $cr-white;
-          }
+          color: $btn-option-color;
         }
       }
     }
 
-  // link buttons
-    &.btn-link {
-      &.active,
-      &:active {
-        &, &:focus {
-          background: $cr-teal;
-          border-color: $cr-teal;
-          box-shadow: none;
-          color: $cr-white;
-        }
+    &:hover {
+      background-color: shade($cr-white, 1%);
+
+      .dark-theme & {
+        background-color: transparent;
+        border-color: darken($btn-option-border, 5);
       }
     }
   }
-  &.btn-default {
-    @include crds-button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+
+  &.btn-link {
+    background: none;
+    border-color: transparent;
+    color: $btn-option-bg;
+    text-decoration: none;
+
+    &.active,
+    &:active {
+      background: $cr-teal;
+      border-color: $cr-teal;
+      color: $btn-option-color;
+
+      &:hover {
+        color: darken($btn-option-color, 5);
+      }
+
+      &:focus {
+        border-color: $cr-teal;
+        box-shadow: none;
+      }
+    }
+
+    &:hover {
+      color: darken($btn-option-bg, 10);
+    }
+
+    &:focus {
+      border-color: $input-border-focus;
+      box-shadow: 0 0 0 1px $input-border-focus inset;
+    }
+  }
+
+  &.disabled {
+    &.active, &:active {
+      &, &:focus, &:hover {
+        background-color: $btn-option-bg;
+        border-color: $btn-option-border;
+        color: $btn-option-color;
+      }
+    }
+
+    &:hover {
+      background-color: $btn-option-bg;
+      border-color: $btn-option-border;
+      color: $btn-option-color;
+    }
+
+    &.btn-outline {
+      &.active, &:active {
+        &, &:focus, &:hover {
+          background-color: transparent;
+          border-color: $btn-option-border;
+          color: $btn-option-bg;
+        }
+      }
+
+      &:hover {
+        background-color: transparent;
+        border-color: $btn-option-border;
+        color: $btn-option-bg;
+      }
+    }
+
+    .dark-theme & {
+      opacity: 1;
+    }
   }
 }
 
