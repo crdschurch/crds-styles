@@ -12,6 +12,7 @@
     "indentation": 2,
     "max-empty-lines": 4,
     "max-line-length": 80,
-    "max-nesting-depth": 3
+    "max-nesting-depth": 3,
+    "at-rule-blacklist": ["extend"]
   }
 }
