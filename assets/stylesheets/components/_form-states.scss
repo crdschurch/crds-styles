@@ -1,12 +1,10 @@
 // Focus states
 .form-group {
   input, textarea {
-    &, .dark-theme & {
-      &, &.ng-touched.ng-invalid {
-        &:focus {
-          border-color: $input-border-focus;
-          box-shadow: inset 0 0 0 1px rgba($input-border-focus, .5);
-        }
+    &, &.ng-touched.ng-invalid, .dark-theme & {
+      &:focus {
+        border-color: $input-border-focus;
+        box-shadow: inset 0 0 0 1px rgba($input-border-focus, .5);
       }
     }
   }
@@ -43,10 +41,8 @@
 
   &.disabled {
     .check {
-      &, .dark-theme & {
-        &:focus {
-          box-shadow: none;
-        }
+      &:focus, .dark-theme & {
+        box-shadow: none;
       }
     }
   }
@@ -75,20 +71,20 @@ select {
 
       &.ng-invalid {
         border-color: $alert-danger;
+      }
 
-        &:focus {
-          border-color: $alert-danger;
-          box-shadow: inset 0 0 0 1px rgba($alert-danger, .5);
-        }
+      &.ng-invalid:focus {
+        border-color: $alert-danger;
+        box-shadow: inset 0 0 0 1px rgba($alert-danger, .5);
       }
 
       &.ng-valid {
         border-color: $alert-success;
+      }
 
-        &:focus {
-          border-color: $alert-success;
-          box-shadow: inset 0 0 0 1px rgba($alert-success, .5);
-        }
+      &.ng-valid:focus {
+        border-color: $alert-success;
+        box-shadow: inset 0 0 0 1px rgba($alert-success, .5);
       }
     }
   }
