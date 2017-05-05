@@ -2,11 +2,10 @@
   display: inline-flex;
   flex-direction: row-reverse;
 
-  /* styleline-disable */
+  /* stylelint-disable */
   // Function violates nesting rules, but refactoring isn't possible. Because
   // the function doesn't create extra specificity, the extra nesting isn't a
   // problem.
-
   $dimensions: 16px;
   @for $i from 1 through 6 {
     &.avatar-size-#{$i} {

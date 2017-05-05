@@ -28,22 +28,40 @@
   }
 
   &.btn-primary {
-    @include crds-button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+    @include crds-button-variant(
+      $btn-primary-color,
+      $btn-primary-bg,
+      $btn-primary-border);
 
     .dark-theme & {
-      @extend .btn-secondary;
+      .btn-secondary {
+        @include crds-button-variant(
+          $btn-secondary-color,
+          $btn-secondary-bg,
+          $btn-secondary-border);
+      }
     }
   }
 
   &.btn-secondary {
-    @include crds-button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+    @include crds-button-variant(
+      $btn-secondary-color,
+      $btn-secondary-bg,
+      $btn-secondary-border);
   }
 
   &.btn-gray {
-    @include crds-button-variant($btn-gray-color, $btn-gray-bg, $btn-gray-border);
+    @include crds-button-variant(
+      $btn-gray-color,
+      $btn-gray-bg,
+      $btn-gray-border);
   }
+
   &.btn-default {
-    @include crds-button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+    @include crds-button-variant(
+      $btn-default-color,
+      $btn-default-bg,
+      $btn-default-border);
   }
 }
 
@@ -81,13 +99,16 @@
     border-color: $btn-option-border;
     color: $btn-option-bg;
 
-    &.active, &:active {
-      &, &:focus, &:hover {
-        &, .dark-theme & {
-          background-color: $cr-teal;
-          border-color: $cr-teal;
-          color: $btn-option-color;
-        }
+    &.active,
+    &:active,
+    &.active:focus,
+    &:active:focus,
+    &.active:hover,
+    &:active:hover {
+      &, .dark-theme & {
+        background-color: $cr-teal;
+        border-color: $cr-teal;
+        color: $btn-option-color;
       }
     }
 
@@ -149,12 +170,10 @@
     }
 
     &.btn-outline {
-      &.active, &:active {
-        &, &:focus, &:hover {
-          background-color: transparent;
-          border-color: $btn-option-border;
-          color: $btn-option-bg;
-        }
+      &.active, &:active, &:active:focus, &:active:hover {
+        background-color: transparent;
+        border-color: $btn-option-border;
+        color: $btn-option-bg;
       }
 
       &:hover {
@@ -266,13 +285,12 @@
 
       &.active,
       &:active,
-      &:focus:hover {
+      &:focus:hover,
+      &.active:focus,
+      &:active:focus,
+      &.active:hover,
+      &:active:hover {
         background: $cr-teal;
-
-        &:focus,
-        &:hover {
-          background: $cr-teal;
-        }
       }
     }
   }
