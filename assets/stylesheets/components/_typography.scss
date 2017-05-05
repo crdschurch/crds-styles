@@ -59,6 +59,7 @@
 
 .font-size-h2 {
   font-size: $font-size-h2;
+
   @media screen and (min-width: $screen-xs) {
     font-size: $font-size-h2 * 1.35; // 54px
   }
@@ -66,6 +67,7 @@
 
 .font-size-h3 {
   font-size: $font-size-h3;
+
   @media screen and (min-width: $screen-xs) {
     font-size: $font-size-h2; // 40px
   }
