@@ -1,3 +1,18 @@
+/* Base */
+
+:focus {
+  outline: 0;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+a > p {
+  cursor: pointer;
+}
+
 /* Typography */
 
 .font-family-base {
