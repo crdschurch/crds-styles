@@ -1,5 +1,19 @@
-/* Typography */
+/* Table of contents:
+** 1. Font-face utility classes
+** 2. Font-size utility classes
+** 3. Typesetting
+** 4. Body content
+** 5. Links
+** 6. Address
+** 7. Blockquote
+** 8. Lists
+** 9. Misc.
+*/
 
+
+
+
+/* 1. Font-face utility classes */
 .font-family-base {
   font-family: $base-font-face;
   font-weight: 300;
@@ -31,7 +45,170 @@
   font-weight: 300;
 }
 
-/* Body */
+
+
+
+/* 2. Font-size utility classes */
+.font-size-h1 {
+  font-size: $font-size-h1;
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: $font-size-h1 * 1.45; // 64px
+  }
+}
+
+.font-size-h2 {
+  font-size: $font-size-h2;
+  @media screen and (min-width: $screen-xs) {
+    font-size: $font-size-h2 * 1.35; // 54px
+  }
+}
+
+.font-size-h3 {
+  font-size: $font-size-h3;
+  @media screen and (min-width: $screen-xs) {
+    font-size: $font-size-h2; // 40px
+  }
+}
+
+.font-size-h4 {
+  font-size: $font-size-h4;
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: $font-size-h4 * 1.15; // 24px
+  }
+}
+
+.font-size-h5 {
+  font-size: $font-size-h5;
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: $font-size-h5 * 1.25; // 34px
+  }
+}
+
+.font-size-h6 {
+  font-size: $font-size-h6;
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: $font-size-h6 * 1.15; // 22px
+  }
+}
+
+.font-size-large {
+  font-size: $font-size-large; // 19px
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: ceil($font-size-large * 1.15); // 22px
+  }
+}
+
+.font-size-base {
+  font-size: $font-size-base; // 16px
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: $font-size-large; // 19px
+  }
+}
+
+.font-size-small {
+  font-size: $font-size-small; // 14px
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: $font-size-base; // 16px
+  }
+}
+
+.font-size-smaller {
+  font-size: $font-size-small; // 14px
+}
+
+
+
+
+/* 3. Typesetting */
+.page-header {
+  font-family: $base-font-face;
+  font-size: $font-size-h1;
+  font-weight: 100;
+  word-wrap: break-word;
+
+  .dark-theme & {
+    border-color: $cr-gray-dark;
+  }
+
+  @media (min-width: $screen-xs) {
+    font-size: $font-size-h1 * 1.45;
+  }
+}
+
+.section-header {
+  font-family: $condensed-extra-font-face;
+  font-size: $font-size-h2; // 40px
+  font-weight: 500;
+  text-transform: uppercase;
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: 3.4375rem; // 55px
+  }
+}
+
+.title {
+  font-family: $base-font-face;
+  font-weight: 100;
+  font-size: $font-size-h3; // 32px
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: $font-size-h2; // 40px
+  }
+}
+
+.control-label {
+  color: $cr-gray;
+  font-size: $font-size-smaller; // 12px
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.collection-header {
+  border-top: 1px solid $cr-gray-light;
+  color: $cr-gray;
+  font-family: $base-font-face;
+  font-size: 1.3125rem; // 21px
+  font-weight: 100;
+  padding-top: .25em;
+
+  .dark-theme & {
+    border-color: $cr-gray-dark;
+  }
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: 1.5rem; // 24px
+  }
+}
+
+.component-header {
+  font-family: $condensed-extra-font-face;
+  font-size: $font-size-h3; // 32px
+  font-weight: 500;
+  text-transform: uppercase;
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: 2.125rem; // 34px
+  }
+}
+
+.list-header {
+  font-family: $condensed-extra-font-face;
+  font-size: 1.5rem; // 24px
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+
+
+
+/* 4. Body content */
 main, .main {
   font-size: $font-size-base; // 16px
 
@@ -56,12 +233,10 @@ main, .main {
   }
 }
 
-/* Metadata */
-
 .metadata {
   font-size: $font-size-smaller; // 12px
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
   color: $text-muted;
 
   @media screen and (min-width: $screen-xs) {
@@ -70,7 +245,8 @@ main, .main {
 }
 
 .subtitle {
-  @extend .font-family-base-bold;
+  font-family: $base-font-face;
+  font-weight: 500;
   font-size: $font-size-base; // 16px
 
   @media screen and (min-width: $screen-xs) {
@@ -79,7 +255,8 @@ main, .main {
 }
 
 .tagline {
-  @extend .font-family-accent;
+  font-family: $accent-font-face;
+  font-style: italic;
   font-size: $font-size-small; // 14px
   color: $text-muted;
 
@@ -88,39 +265,66 @@ main, .main {
   }
 }
 
-/* Other */
 
+
+
+/* 5. Links */
+a {
+  &.secondary {
+    color: $cr-gray;
+
+    &:hover {
+      color: $cr-gray-dark;
+    }
+  }
+}
+
+
+
+
+/* 6. Address */
 address {
   background: $cr-gray-lighter;
   font-size: $font-size-base; // 16px
   padding: 1.25rem 1rem;
+
   strong {
     font-size: $font-size-large; // 19px
   }
 }
 
+
+
+
+/* 7. Blockquote */
 blockquote {
-  @extend .font-family-accent;
-  line-height: $line-height-base;
-  font-weight: 300;
+  border: 1px solid $blockquote-border-color;
   color: $text-muted;
-  border: 2px solid $blockquote-border-color;
+  font-family: $accent-font-face;
+  font-style: italic;
+  line-height: $line-height-base;
   padding: 2em;
 
   span {
     display: block;
-    margin-top: .5em;
     font-style: normal;
     font-size: 1.375rem; // 22px
-    @extend .font-family-condensed-extra;
+    font-family: $condensed-extra-font-face;
+    margin-top: .5em;
   }
 }
 
+
+
+
+/* 8. Lists */
 ol, ul {
   &.crds-list {
     font-size: $font-size-large; // 19px
+
     li {
       margin-bottom: 1em;
+
       &:last-child {
         margin-bottom: 0;
       }
@@ -130,102 +334,31 @@ ol, ul {
 
 dl.crds-list {
   font-size: $font-size-large; // 19px
+
   dt {
-    @extend .font-family-condensed-extra;
-    text-transform: uppercase;
+    font-family: $condensed-extra-font-face;
     font-size: 1.5rem; // 24px
+    font-weight: 500;
+    text-transform: uppercase;
   }
+
   dd {
     margin-bottom: 1em;
+
     &:last-child {
       margin-bottom: 0;
     }
   }
 }
 
+
+
+
+/* 9. Misc */
 .text-muted {
   color: $text-muted;
 
   .dark-theme & {
     color: $cr-gray-dark;
-  }
-}
-
-.page-header {
-  @extend .font-family-base-light;
-  font-size: $font-size-h1;
-  word-wrap: break-word;
-  .dark-theme & {
-    border-color: $cr-gray-dark;
-  }
-}
-
-.section-header {
-  @extend .font-family-condensed-extra;
-  text-transform: uppercase;
-  font-size: $font-size-h2; // 40px
-
-  @media screen and (min-width: $screen-xs) {
-    font-size: 3.4375rem; // 55px
-  }
-}
-
-.title {
-  @extend .font-family-base;
-  font-size: $font-size-h3; // 32px
-
-  @media screen and (min-width: $screen-xs) {
-    font-size: $font-size-h2; // 40px
-  }
-}
-
-.collection-header {
-  @extend .font-family-base;
-  font-size: 1.3125rem; // 21px
-  border-top: 1px solid $cr-gray-light;
-  color: $cr-gray;
-  padding-top: .25em;
-
-  .dark-theme & {
-    border-color: $cr-gray-dark;
-  }
-
-  @media screen and (min-width: $screen-xs) {
-    font-size: 1.5rem; // 24px
-  }
-}
-
-.component-header {
-  @extend .font-family-condensed-extra;
-  text-transform: uppercase;
-  font-size: $font-size-h3; // 32px
-
-  @media screen and (min-width: $screen-xs) {
-    font-size: 2.125rem; // 34px
-  }
-}
-
-.list-header {
-  @extend .font-family-condensed-extra;
-  text-transform: uppercase;
-  font-size: 1.5rem; // 24px
-}
-
-.control-label {
-  color: $cr-gray;
-  font-size: $font-size-smaller; // 12px
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
-/* Links */
-
-a {
-  &.secondary {
-    color: $cr-gray;
-
-    &:hover {
-      color: $cr-gray-dark;
-    }
   }
 }
