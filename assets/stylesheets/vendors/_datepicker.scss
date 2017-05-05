@@ -1,7 +1,3 @@
-/* stylelint-disable */
-
-// Disabling CSS linting because these styles override an external library's CSS, meaning it's masocistic and nearly impossible to refactor to apply style rules *and* style the datepicker correctly.
-
 .form-control[readonly] {
   background: $input-bg;
 
