@@ -92,7 +92,9 @@
 
   // Dropdown menu lists
   .dropdown-menu ul {
-    @extend .list-unstyled;
+    padding-left: 0;
+    list-style: none;
+
     li a {
       display: block;
       padding: .1875rem 1.25rem;
@@ -158,7 +160,9 @@
 
   ul {
     margin: 0;
-    @extend .list-unstyled;
+    padding-left: 0;
+    list-style: none;
+
     &.collapse, &.collapsing {
       background-color: lighten($cr-gray-darker, 15%);
       li a:hover {
