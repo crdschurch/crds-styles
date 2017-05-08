@@ -3,9 +3,9 @@
   padding-top: .25rem;
 }
 
-.table {
-  width: 100%;
-}
+// .table {
+//   width: 100%;
+// }
 
 .table-contrast-bg {
   background: $table-contrast-bg;
@@ -16,8 +16,8 @@
   tbody {
     tr {
       td {
-        padding: 0;
         border-top: none;
+        padding: 0;
       }
     }
   }
@@ -47,12 +47,8 @@
   }
 
   .table {
-    tbody {
-      tr {
-        td {
-          border-color: $table-border-color;
-        }
-      }
+    td {
+      border-color: $table-border-color;
     }
   }
 }

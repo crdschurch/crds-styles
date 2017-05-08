@@ -1,87 +1,52 @@
-.font-size-h1 {
+h1 {
+  font-size: $font-size-h1;
+
   @media screen and (min-width: $screen-xs) {
-    font-size: floor($font-size-h1 * 1.5); // 68px
+    font-size: $font-size-h1 * 1.45; // 64px
   }
 }
-.font-size-h2 {
+
+h2 {
+  font-size: $font-size-h2;
+
   @media screen and (min-width: $screen-xs) {
-    font-size: floor($font-size-h2 * 1.2); // 48px
+    font-size: $font-size-h2 * 1.35; // 54px
   }
 }
-.font-size-h3 {
+
+h3 {
+  font-size: $font-size-h3;
+
   @media screen and (min-width: $screen-xs) {
     font-size: $font-size-h2; // 40px
   }
 }
-.font-size-h4 {
-  @media screen and (min-width: $screen-xs) {
-    font-size: $font-size-h3; // 32px
-  }
-}
-.font-size-h5 {
-  @media screen and (min-width: $screen-xs) {
-    font-size: $font-size-h4; // 28px
-  }
 
-  .dark-theme & {
-    border-top: 1px solid $cr-gray-dark;
-  }
-}
-.font-size-h6 {
-  @media screen and (min-width: $screen-xs) {
-    font-size: $font-size-h5; // 22px
-  }
-}
-.font-size-large {
-  font-size: $font-size-large; // 19px
-
-  @media screen and (min-width: $screen-xs) {
-    font-size: ceil($font-size-large * 1.15); // 22px
-  }
-}
-.font-size-base {
-  font-size: $font-size-base; // 16px
-
-  @media screen and (min-width: $screen-xs) {
-    font-size: $font-size-large; // 19px
-  }
-}
-.font-size-small {
-  font-size: $font-size-small; // 14px
-
-  @media screen and (min-width: $screen-xs) {
-    font-size: $font-size-base; // 16px
-  }
-}
-
-.font-size-smaller {
-  font-size: $font-size-small; // 14px
-}
-h1 {
-  @extend .font-size-h1;
-}
-h2 {
-  @extend .font-size-h2;
-}
-h3 {
-  @extend .font-size-h3;
-}
 h4 {
-  @extend .font-size-h4;
-}
-h5 {
-  @extend .font-size-h5;
-}
-h6 {
-  @extend .font-size-h6;
+  font-size: $font-size-h4;
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: $font-size-h4 * 1.15; // 24px
+  }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
+h5 {
+  font-size: $font-size-h5;
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: $font-size-h5 * 1.25; // 34px
+  }
+}
+
 h6 {
+  font-size: $font-size-h6;
+
+  @media screen and (min-width: $screen-xs) {
+    font-size: $font-size-h6 * 1.15; // 22px
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
   .dark-theme & {
     $headings-color: $cr-gray-dark;
 
