@@ -1,131 +1,121 @@
 $dimensions: 16px;
 
-%icon-dimensions {
-	width: $dimensions * 2;
-	height: $dimensions * 2;
-	background-size: $dimensions * 2;
-	@for $i from 1 through 6 {
-		&.icon-#{$i} {
-			width: $dimensions * $i;
-			height: $dimensions * $i;
-			background-size: $dimensions * $i;
-		}
-	}
-}
-
 .icon:not(svg) {
-	text-indent: 200%;
-	white-space: nowrap;
-	overflow: hidden;
-	display: inline-block;
-	background-size: 32px 32px;
+  background-size: 32px 32px;
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 200%;
+  white-space: nowrap;
+
+
+  background-size: $dimensions * 2;
+  height: $dimensions * 2;
+  width: $dimensions * 2;
+
+  @for $i from 1 through 6 {
+    &.icon-#{$i} {
+      background-size: $dimensions * $i;
+      height: $dimensions * $i;
+      width: $dimensions * $i;
+    }
+  }
+
+  background-image: url('assets/svgs/icons.css.svg');
+  background-repeat: no-repeat;
+
+  .dark-theme & {
+    filter: invert(75%);
+    -webkit-filter: invert(75%);
+  }
 }
 
 svg.icon {
-	@extend %icon-dimensions;
-	use {
-		fill: currentColor;
-	}
-}
+  background-size: $dimensions * 2;
+  height: $dimensions * 2;
+  width: $dimensions * 2;
 
-%svg-common {
-	background-image: url('assets/svgs/icons.css.svg');
-	background-repeat: no-repeat;
-	@extend %icon-dimensions;
+  @for $i from 1 through 6 {
+    &.icon-#{$i} {
+      background-size: $dimensions * $i;
+      height: $dimensions * $i;
+      width: $dimensions * $i;
+    }
+  }
 
-	.dark-theme & {
-		filter: invert(75%);
-		-webkit-filter: invert(75%);
-	}
+  use {
+    fill: currentColor;
+  }
 }
 
 .icon.calendar:not(svg) {
-	@extend %svg-common;
-	background-position: 0 0;
+  background-position: 0 0;
 }
 
 .icon.check-circle:not(svg) {
-	@extend %svg-common;
-	background-position: 0 5.882352941176471%;
+  background-position: 0 5.882352941176471%;
 }
 
 .icon.chevron-down:not(svg) {
-	@extend %svg-common;
-	background-position: 0 11.764705882352942%;
+  background-position: 0 11.764705882352942%;
 }
 
 .icon.chevron-left:not(svg) {
-	@extend %svg-common;
-	background-position: 0 17.647058823529413%;
+  background-position: 0 17.647058823529413%;
 }
 
 .icon.chevron-right:not(svg) {
-	@extend %svg-common;
-	background-position: 0 23.529411764705884%;
+  background-position: 0 23.529411764705884%;
 }
 
 .icon.chevron-up:not(svg) {
-	@extend %svg-common;
-	background-position: 0 29.41176470588235%;
+  background-position: 0 29.41176470588235%;
 }
 
 .icon.circle-thin:not(svg) {
-	@extend %svg-common;
-	background-position: 0 35.294117647058826%;
+  background-position: 0 35.294117647058826%;
 }
 
 .icon.close:not(svg) {
-	@extend %svg-common;
-	background-position: 0 41.1764705882353%;
+  background-position: 0 41.1764705882353%;
 }
 
 .icon.contrast:not(svg) {
-	@extend %svg-common;
-	background-position: 0 47.05882352941177%;
+  background-position: 0 47.05882352941177%;
 }
 
 .icon.facebook:not(svg) {
-	@extend %svg-common;
-	background-position: 0 52.94117647058823%;
+  background-position: 0 52.94117647058823%;
 }
 
 .icon.github:not(svg) {
-	@extend %svg-common;
-	background-position: 0 58.8235294117647%;
+  background-position: 0 58.8235294117647%;
 }
 
 .icon.instagram:not(svg) {
-	@extend %svg-common;
-	background-position: 0 64.70588235294117%;
+  background-position: 0 64.70588235294117%;
 }
 
 .icon.menu:not(svg) {
-	@extend %svg-common;
-	background-position: 0 70.58823529411765%;
+  background-position: 0 70.58823529411765%;
 }
 
 .icon.question-circle:not(svg) {
-	@extend %svg-common;
-	background-position: 0 76.47058823529412%;
+  background-position: 0 76.47058823529412%;
 }
 
 .icon.search:not(svg) {
-	@extend %svg-common;
-	background-position: 0 82.3529411764706%;
+  background-position: 0 82.3529411764706%;
 }
 
 .icon.twitter:not(svg) {
-	@extend %svg-common;
-	background-position: 0 88.23529411764706%;
+  background-position: 0 88.23529411764706%;
 }
 
 .icon.usd:not(svg) {
-	@extend %svg-common;
-	background-position: 0 94.11764705882354%;
+  background-position: 0 94.11764705882354%;
 }
 
 .icon.youtube:not(svg) {
-	@extend %svg-common;
-	background-position: 0 100%;
+  background-position: 0 100%;
 }
 
