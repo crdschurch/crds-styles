@@ -1,0 +1,14 @@
+.inverted {
+  $border-color: $cr-white;
+  $icon-color: $cr-white;
+  $color: $cr-white;
+
+  .border-top,
+  .border-right,
+  .border-bottom,
+  .border-left {
+    border-color: $border-color;
+  }
+
+
+}
