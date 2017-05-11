@@ -79,6 +79,10 @@ a.underline,
   white-space: nowrap;
 }
 
+.white {
+  color: $cr-white;
+}
+
 @media only screen and (min-width: $screen-sm-min) {
   .sm-text-right {
     text-align: right;
