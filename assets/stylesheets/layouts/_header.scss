@@ -137,57 +137,61 @@
   }
 }
 
+/* stylelint-disable */
 // Main nav menu
-.nav {
-  > li {
-    position: static;
+.header {
+  .nav {
+    > li {
+      position: static;
 
-    > a {
-      // Remove margins from all links in main nav.
-      margin: 0;
+      > a {
+        // Remove margins from all links in main nav.
+        margin: 0;
 
-      // Sign in and search adjust to fit the height of the other items.
-      &.btn {
-        line-height: 1.5em;
+        // Sign in and search adjust to fit the height of the other items.
+        &.btn {
+          line-height: 1.5em;
+        }
+
+        // Links are dark by default, with no bg
+        &:not(.cta) {
+          color: $cr-gray-dark;
+        }
       }
 
-      // Links are dark by default, with no bg
-      &:not(.cta) {
-        color: $cr-gray-dark;
-      }
-    }
-
-    > a:hover {
-      // Hover should alway show primary/light combo
-      &:not(.cta) {
-        background-color: $nav-link-hover-bg;
-        color: $cr-white;
-      }
-    }
-
-    &.open {
-      > a, > a:hover, > a:focus {
-        background-color: $nav-link-hover-bg;
-      }
-      // Open links have primary bg and white text
-      > a:not(.cta) {
-        color: $cr-white;
-      }
-    }
-
-    &:not(.open) {
-      // When the menu is closed, hovering behavior should take precedence
-      > a:hover:focus:not(.cta) {
-        background-color: $nav-link-hover-bg;
+      > a:hover {
+        // Hover should alway show primary/light combo
+        &:not(.cta) {
+          background-color: $nav-link-hover-bg;
+          color: $cr-white;
+        }
       }
 
-      // Unopened, focused links have grey bg
-      > a:focus:not(.cta) {
-        background-color: lighten($cr-gray-lighter, 4%);
+      &.open {
+        > a, > a:hover, > a:focus {
+          background-color: $nav-link-hover-bg;
+        }
+        // Open links have primary bg and white text
+        > a:not(.cta) {
+          color: $cr-white;
+        }
+      }
+
+      &:not(.open) {
+        // When the menu is closed, hovering behavior should take precedence
+        > a:hover:focus:not(.cta) {
+          background-color: $nav-link-hover-bg;
+        }
+
+        // Unopened, focused links have grey bg
+        > a:focus:not(.cta) {
+          background-color: lighten($cr-gray-lighter, 4%);
+        }
       }
     }
   }
 }
+/* stylelint-enable */
 
 // Mobile menu
 .mobile-menu {
