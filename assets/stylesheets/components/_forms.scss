@@ -15,6 +15,7 @@
 // Global form styles
 .form-control {
   box-shadow: none;
+  -webkit-appearance: none;
 }
 
 
@@ -41,10 +42,11 @@ textarea {
 
 // Helper text found under text input fields
 .help-block {
-  @extend .font-family-accent;
-
   color: $cr-gray;
+  font-family: $accent-font-face;
   font-size: $font-size-small; // 13px
+  font-style: italic;
+  font-weight: 300;
   margin-top: 0;
   padding-top: $padding-base-vertical;
 }
@@ -140,11 +142,12 @@ textarea {
       &.ng-invalid {
         border-color: $input-border;
         box-shadow: inset 0 0 0 1px $input-border;
+      }
 
-        &:focus {
-          border-color: $input-border-focus;
-          box-shadow: inset 0 0 0 1px rgba($input-border-focus, .5);
-        }
+      &.ng-valid:focus,
+      &.ng-invalid:focus {
+        border-color: $input-border-focus;
+        box-shadow: inset 0 0 0 1px rgba($input-border-focus, .5);
       }
     }
 
@@ -210,10 +213,10 @@ textarea {
       ~ .check {
         background: $cr-cyan;
         border: 2px solid $cr-cyan;
+      }
 
-        &::before {
-          background: $cr-white;
-        }
+      ~ .check::before {
+        background: $cr-white;
       }
     }
   }

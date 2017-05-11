@@ -1,26 +1,24 @@
 .btn-group-block {
   .btn {
-    &.btn-option {
-      &.btn-outline {
-        &:hover {
-          background: $cr-teal;
-          border-color: $cr-teal;
-          color: $cr-white;
-        }
+    .icon.check-circle {
+      display: none;
+    }
 
-        .icon.check-circle {
-          display: none;
-        }
+    &.active {
+      .icon.check-circle {
+        display: inline-block;
+      }
 
-        &.active {
-          .icon.check-circle {
-            display: inline-block;
-          }
+      .icon.circle-thin {
+        display: none;
+      }
+    }
 
-          .icon.circle-thin {
-            display: none;
-          }
-        }
+    &.btn-outline {
+      &:hover {
+        background: $cr-teal;
+        border-color: $cr-teal;
+        color: $cr-white;
       }
     }
   }
