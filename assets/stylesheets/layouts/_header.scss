@@ -53,6 +53,7 @@
 
       a:hover {
         background-color: lighten($cr-gray-lighter, 4);
+        color: $cr-gray-dark;
         text-decoration: none;
       }
     }
@@ -138,8 +139,8 @@
 }
 
 // Main nav menu
-.nav {
-  > li {
+.header {
+  li {
     position: static;
 
     > a {
