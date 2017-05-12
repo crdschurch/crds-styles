@@ -2,10 +2,6 @@
   font-size: $base-font-size;
 }
 
-:focus {
-  outline: 0;
-}
-
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -15,17 +11,4 @@ body {
   font-family: $base-font-face;
   font-size: $base-font-size;
   font-weight: 300;
-}
-
-hr {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-a > p {
-  cursor: pointer;
-}
-
-img {
-  max-width: 100%;
 }

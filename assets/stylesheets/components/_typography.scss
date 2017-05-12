@@ -1,3 +1,20 @@
+/* Base */
+
+:focus {
+  outline: 0;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+a > p {
+  cursor: pointer;
+}
+
+/* Typography */
+
 /* Table of contents:
 ** 1. Font-face utility classes
 ** 2. Font-size utility classes

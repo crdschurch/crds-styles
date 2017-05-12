@@ -1,14 +1,22 @@
 var webpack = require('webpack');
 var helpers = require('./helpers');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
-    'app': ['./src/main.js']
+    'app': ['./src/main.js'],
+    'bootstrap': ['./assets/stylesheets/bootstrap.scss'],
+    'vendor': ['./assets/stylesheets/vendor.scss'],
+    'base': ['./assets/stylesheets/base.scss']
   },
 
   resolve: {
     extensions: ['', '.js', '.ts']
   },
+
+  plugins: [
+    new ExtractTextPlugin('[name].css')
+  ],
 
   module: {
     loaders: [
@@ -23,7 +31,7 @@ module.exports = {
       {
         test: /\.scss$/,
         exclude: /node_modules/,
-        loaders: ['raw-loader', 'sass-loader']
+        loader: ExtractTextPlugin.extract(['raw-loader', 'sass-loader'])
       }
     ]
   },
