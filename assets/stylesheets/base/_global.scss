@@ -12,8 +12,9 @@ html {
 }
 
 body {
+  font-family: $base-font-face;
   font-size: $base-font-size;
-  @extend .font-family-base;
+  font-weight: 300;
 }
 
 hr {

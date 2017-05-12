@@ -1,4 +1,22 @@
-/* Background images */
+/* Contents:
+** 1. Image styles
+** 2. Text rules
+** 3. Display helpers
+** 4. Vertical positioning
+** 5. Border stuff
+** 6. Corners
+** 7. Stackable floats
+** 8. Vertical Align
+** 9. Maintain aspect Ratio
+** 10. Margin rules
+** 11. Padding rules
+** 12. Misc.
+*/
+
+
+
+
+/* 1. Image styles */
 
 .img-background {
   background-size: cover;
@@ -12,7 +30,28 @@
   background-repeat: no-repeat;
 }
 
-/* Text rules */
+.img-full-width {
+  width: 100%;
+  height: auto;
+}
+
+.img-full-size {
+  width: 100%;
+  height: 100%;
+}
+
+.absolute-cover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+
+
+/* 2. Text rules */
 
 a.underline,
 .underline {
@@ -25,10 +64,6 @@ a.underline,
   white-space: nowrap;
 }
 
-.full-width {
-  width: 100%;
-}
-
 .overflow-hidden {
   overflow: hidden;
 }
@@ -38,11 +73,56 @@ a.underline,
 }
 
 .truncate {
-  @extend .ellipsis;
   max-width: 1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-/* Display helpers */
+.white {
+  color: $cr-white;
+}
+
+@media only screen and (min-width: $screen-sm-min) {
+  .sm-text-right {
+    text-align: right;
+  }
+  .sm-text-left {
+    text-align: left;
+  }
+  .sm-text-center {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: $screen-md-min) {
+  .md-text-right {
+    text-align: right;
+  }
+  .md-text-left {
+    text-align: left;
+  }
+  .md-text-center {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: $screen-lg-min) {
+  .lg-text-right {
+    text-align: right;
+  }
+  .lg-text-left {
+    text-align: left;
+  }
+  .lg-text-center {
+    text-align: center;
+  }
+}
+
+
+
+
+/* 3. Display helpers */
 
 .block {
   display: block;
@@ -73,7 +153,10 @@ a.underline,
   vertical-align: middle;
 }
 
-/* Vertical positioning */
+
+
+
+/* 4. Vertical positioning */
 
 .vertical-center {
   position: absolute;
@@ -123,24 +206,13 @@ a.underline,
   width: 100%;
 }
 
-.pointer {
-  cursor: pointer;
-}
 
-.or-divider {
-  margin-top: -41px;
 
-  span {
-    background: $cr-white;
-    padding: 5px;
-    vertical-align: middle;
-  }
-}
 
-/* Border stuff */
+/* 5. Border stuff */
 
 .no-borders {
-  border: 0px !important;
+  border: 0;
 }
 
 .border-bottom {
@@ -161,7 +233,10 @@ a.underline,
   border-bottom: 1px solid $gray-lighter;
 }
 
-/* Corners */
+
+
+
+/* 6. Corners */
 
 .square-corners {
   border-radius: 0;
@@ -171,7 +246,10 @@ a.underline,
   border-radius: $border-radius-base;
 }
 
-/* Stackable floats */
+
+
+
+/* 7. Stackable floats */
 
 @media only screen and (min-width: $screen-sm-min) {
   .sm-pull-right {
@@ -198,83 +276,25 @@ a.underline,
   }
 }
 
-/* Stackable text alignment */
-
-@media only screen and (min-width: $screen-sm-min) {
-  .sm-text-right {
-    text-align: right;
-  }
-  .sm-text-left {
-    text-align: left;
-  }
-  .sm-text-center {
-    text-align: center;
-  }
-}
-
-@media only screen and (min-width: $screen-md-min) {
-  .md-text-right {
-    text-align: right;
-  }
-  .md-text-left {
-    text-align: left;
-  }
-  .md-text-center {
-    text-align: center;
-  }
-}
-
-@media only screen and (min-width: $screen-lg-min) {
-  .lg-text-right {
-    text-align: right;
-  }
-  .lg-text-left {
-    text-align: left;
-  }
-  .lg-text-center {
-    text-align: center;
-  }
-}
-
-// Empty href attributes for UI Bootstrap
-
-.nav,
-.pagination,
-.carousel,
-.panel-title a,
-a[ng-click] {
-  cursor: pointer;
-}
-
-.img-full-width {
-  width: 100%;
-  height: auto;
-}
-
-.img-full-size {
-  width: 100%;
-  height: 100%;
-}
-
-.absolute-cover {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
 
 
-// Vertical Align
-// Note: if the element is blurry, try putting transform-style: preserve-3d; on the parent
-// Reference: http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
+
+/* 8. Vertical align */
+
+// If the element is blurry, add transform-style: preserve-3d; to the parent
+// Reference:
+// http://zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
+
 @mixin vertical-align {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
 }
 
-// Maintain Aspect Ratio
+
+
+
+/* 9. Maintain aspect ratio */
 
 @mixin aspect-ratio($width, $height) {
   position: relative;
@@ -299,7 +319,10 @@ a[ng-click] {
   @include aspect-ratio(16,9);
 }
 
-/* Margin/Padding Rules */
+
+
+
+/* 10. Margin rules */
 
 .push {
   margin: $line-height-computed;
@@ -396,6 +419,98 @@ a[ng-click] {
   margin-top: 0;
   margin-bottom: 0;
 }
+
+@media only screen and (max-width: $screen-sm-min) {
+  .mobile-push {
+    margin: $line-height-computed;
+  }
+  .mobile-push-half {
+    margin: $line-height-computed / 2;
+  }
+  .mobile-push-quarter {
+    margin: $line-height-computed / 4;
+  }
+  .mobile-push-top {
+    margin-top: $line-height-computed;
+  }
+  .mobile-push-half-top {
+    margin-top: $line-height-computed / 2;
+  }
+  .mobile-push-quarter-top {
+    margin-top: $line-height-computed / 4;
+  }
+  .mobile-push-right {
+    margin-right: $line-height-computed;
+  }
+  .mobile-push-half-right {
+    margin-right: $line-height-computed / 2;
+  }
+  .mobile-push-quarter-right {
+    margin-right: $line-height-computed / 4;
+  }
+  .mobile-push-bottom {
+    margin-bottom: $line-height-computed;
+  }
+  .mobile-push-half-bottom {
+    margin-bottom: $line-height-computed / 2;
+  }
+  .mobile-push-quarter-bottom {
+    margin-bottom: $line-height-computed / 4;
+  }
+  .mobile-push-left {
+    margin-left: $line-height-computed;
+  }
+  .mobile-push-half-left {
+    margin-left: $line-height-computed / 2;
+  }
+  .mobile-push-quarter-left {
+    margin-left: $line-height-computed / 4;
+  }
+  .mobile-push-sides {
+    margin-right: $line-height-computed;
+    margin-left: $line-height-computed;
+  }
+  .mobile-push-ends {
+    margin-top: $line-height-computed;
+    margin-bottom: $line-height-computed;
+  }
+  .mobile-push-half-sides {
+    margin-right: $line-height-computed / 2;
+    margin-left: $line-height-computed / 2;
+  }
+  .mobile-push-half-ends {
+    margin-top: $line-height-computed / 2;
+    margin-bottom: $line-height-computed / 2;
+  }
+  .mobile-flush {
+    margin: 0;
+  }
+  .mobile-flush-top {
+    margin-top: 0;
+  }
+  .mobile-flush-right {
+    margin-right: 0;
+  }
+  .mobile-flush-bottom {
+    margin-bottom: 0;
+  }
+  .mobile-flush-left {
+    margin-left: 0;
+  }
+  .mobile-flush-sides {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .mobile-flush-ends {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+
+
+
+/* 11. Padding rules */
 .hard {
   padding: 0;
 }
@@ -490,90 +605,6 @@ a[ng-click] {
 }
 
 @media only screen and (max-width: $screen-sm-min) {
-  .mobile-push {
-    margin: $line-height-computed;
-  }
-  .mobile-push-half {
-    margin: $line-height-computed / 2;
-  }
-  .mobile-push-quarter {
-    margin: $line-height-computed / 4;
-  }
-  .mobile-push-top {
-    margin-top: $line-height-computed;
-  }
-  .mobile-push-half-top {
-    margin-top: $line-height-computed / 2;
-  }
-  .mobile-push-quarter-top {
-    margin-top: $line-height-computed / 4;
-  }
-  .mobile-push-right {
-    margin-right: $line-height-computed;
-  }
-  .mobile-push-half-right {
-    margin-right: $line-height-computed / 2;
-  }
-  .mobile-push-quarter-right {
-    margin-right: $line-height-computed / 4;
-  }
-  .mobile-push-bottom {
-    margin-bottom: $line-height-computed;
-  }
-  .mobile-push-half-bottom {
-    margin-bottom: $line-height-computed / 2;
-  }
-  .mobile-push-quarter-bottom {
-    margin-bottom: $line-height-computed / 4;
-  }
-  .mobile-push-left {
-    margin-left: $line-height-computed;
-  }
-  .mobile-push-half-left {
-    margin-left: $line-height-computed / 2;
-  }
-  .mobile-push-quarter-left {
-    margin-left: $line-height-computed / 4;
-  }
-  .mobile-push-sides {
-    margin-right: $line-height-computed;
-    margin-left: $line-height-computed;
-  }
-  .mobile-push-ends {
-    margin-top: $line-height-computed;
-    margin-bottom: $line-height-computed;
-  }
-  .mobile-push-half-sides {
-    margin-right: $line-height-computed / 2;
-    margin-left: $line-height-computed / 2;
-  }
-  .mobile-push-half-ends {
-    margin-top: $line-height-computed / 2;
-    margin-bottom: $line-height-computed / 2;
-  }
-  .mobile-flush {
-    margin: 0;
-  }
-  .mobile-flush-top {
-    margin-top: 0;
-  }
-  .mobile-flush-right {
-    margin-right: 0;
-  }
-  .mobile-flush-bottom {
-    margin-bottom: 0;
-  }
-  .mobile-flush-left {
-    margin-left: 0;
-  }
-  .mobile-flush-sides {
-    margin-right: 0;
-    margin-left: 0;
-  }
-  .mobile-flush-ends {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
   .mobile-hard {
     padding: 0;
   }
@@ -658,4 +689,35 @@ a[ng-click] {
     padding-top: $line-height-computed / 2;
     padding-bottom: $line-height-computed / 2;
   }
+}
+
+
+
+/* 12. Misc. */
+
+.pointer {
+  cursor: pointer;
+}
+
+.or-divider {
+  margin-top: -41px;
+
+  span {
+    background: $cr-white;
+    padding: 5px;
+    vertical-align: middle;
+  }
+}
+
+.full-width {
+  width: 100%;
+}
+
+// Empty href attributes for UI Bootstrap
+.nav,
+.pagination,
+.carousel,
+.panel-title a,
+a[ng-click] {
+  cursor: pointer;
 }
