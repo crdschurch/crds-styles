@@ -5,6 +5,10 @@
   }
 }
 
+a > svg {
+  pointer-events: none;
+}
+
 svg use {
   fill: currentColor;
 }
