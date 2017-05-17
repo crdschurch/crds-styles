@@ -17,8 +17,7 @@ body {
   font-weight: 300;
 }
 
-html.noscroll,
-body.noscroll {
+.noscroll {
   position: relative;
   height: 100%;
   overflow: hidden;
