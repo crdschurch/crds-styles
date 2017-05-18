@@ -1,3 +1,14 @@
+.logo {
+  padding: .5rem 1rem;
+  svg {
+    @include size(10.625rem, 1.5rem);
+  }
+}
+
+a > svg {
+  pointer-events: none;
+}
+
 svg use {
   fill: currentColor;
 }
