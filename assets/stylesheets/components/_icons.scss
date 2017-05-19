@@ -20,7 +20,7 @@ $dimensions: 16px;
     }
   }
 
-  background-image: url('assets/svgs/icons.css.svg');
+  background-image: url('#{$cr-assets-directory}/svgs/icons.css.svg');
   background-repeat: no-repeat;
 
   .dark-theme & {
