@@ -14,9 +14,9 @@ svg use {
 }
 
 @for $i from 1 through 12 {
-  .img-size-#{$i} {
-    $dimensions: 16px;
+  $dimensions: 16px;
 
+  .img-size-#{$i} {
     height: $dimensions * $i;
     width: $dimensions * $i;
   }
