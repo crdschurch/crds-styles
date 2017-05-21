@@ -141,12 +141,18 @@
 // Main nav menu
 .header {
   .btn.btn-gray {
+    font-size: 16px;
     @include crds-button-variant(
       black,
       $cr-gray-lighter,
       $cr-gray-lighter);
   }
   ul.nav-pills > li {
+    > a > svg {
+      margin-top: 7px;
+      margin-bottom: -4px;
+    }
+
     &:not(.open) {
       // When the menu is closed, hovering behavior should take precedence
       > a:hover:focus:not(.cta) {
@@ -169,11 +175,6 @@
     > a {
       // Remove margins from all links in main nav.
       margin: 0;
-
-      // Sign in and search adjust to fit the height of the other items.
-      &.btn {
-        line-height: 1.5em;
-      }
 
       // Links are dark by default, with no bg
       &:not(.cta) {
