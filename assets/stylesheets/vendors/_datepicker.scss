@@ -8,15 +8,15 @@
 
 datepicker {
   $calendar-bg: $cr-white;
-  $calendar-text: $cr-gray-darker;
-  $calendar-border: $cr-gray-light;
+  $calendar-text: $cr-gray;
+  $calendar-border: $cr-gray-lighter;
   $calendar-active-bg: $cr-teal;
   $calendar-active-text: $cr-white;
   $calendar-active-border: $cr-teal;
   $calendar-disabled-bg: transparent;
   $calendar-disabled-text: lighten($cr-gray-light, 20);
   $calendar-hover-bg: $cr-gray-lighter;
-  $calendar-hover-text: $cr-gray-darker;
+  $calendar-hover-text: $cr-gray;
   $calendar-hover-border: $cr-gray;
 
   display: none;
@@ -135,16 +135,38 @@ datepicker {
           .text-muted {
             color: $calendar-active-text;
           }
+
+          .text-info {
+            &, &.text-muted {
+              color: $calendar-active-text;
+              font-weight: inherit;
+            }
+          }
         }
 
         &:hover {
           background: $calendar-hover-bg;
           border-color: $calendar-hover-border;
           color: $calendar-hover-text;
+
+          .text-muted {
+            color: $calendar-hover-text;
+          }
         }
 
         .text-muted {
-          color: $cr-gray-light;
+          color: darken($cr-gray-lighter, 10);
+
+          &:hover {
+            color: $calendar-hover-text;
+          }
+        }
+
+        .text-info {
+          &, &.text-muted {
+            color: $cr-black;
+            font-weight: 400;
+          }
         }
       }
     }
@@ -185,11 +207,6 @@ datepicker {
         color: $calendar-active-text;
       }
     }
-
-    .text-info,
-    .text-muted {
-      color: $cr-gray-light;
-    }
   }
 
   .dark-theme & {
@@ -201,7 +218,7 @@ datepicker {
     $calendar-active-border: $cr-teal;
     $calendar-disabled-text: $cr-gray-dark;
     $calendar-hover-bg: $calendar-bg;
-    $calendar-hover-text: $calendar-text;
+    $calendar-hover-text: $cr-gray-dark;
     $calendar-hover-border: $calendar-border;
 
     thead {
@@ -278,6 +295,13 @@ datepicker {
 
           .text-muted {
             color: darken($cr-gray, 5);
+          }
+
+          .text-info {
+            &, &.text-muted {
+              color: $calendar-active-text;
+              font-weight: inherit;
+            }
           }
         }
       }
