@@ -17,6 +17,12 @@ body {
   font-weight: 300;
 }
 
+.noscroll {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
 hr {
   margin-top: 1rem;
   margin-bottom: 1rem;

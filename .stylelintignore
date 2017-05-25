@@ -1,2 +1,3 @@
 # External library overrides
 /assets/stylesheets/vendors/*
+/assets/stylesheets/components/_icons.scss
