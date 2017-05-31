@@ -1,22 +1,99 @@
 .card {
-  margin-right: 1rem;
-  min-width: 200px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .card-block {
-  padding: 1rem;
+  padding: 0 2rem 2rem;
 }
 
 .card-title {
+  color: $cr-gray-dark;
+  line-height: 1;
+}
+
+.card-title--overlap {
+  background-color: $cr-white;
   font-family: $condensed-extra-font-face;
   font-size: 2.125rem;
-  font-weight: 600;
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 1.5;
+  font-weight: 500;
+
+  display: inline-block;
+  margin: -1.5rem -.75rem;
+  padding: .25rem .75rem;
+}
+
+.card-text:before {
+  color: $cr-gray-light;
+  content: '\2014';
+  display: block;
+  font-weight: 100;
+  padding-bottom: .25rem;
 }
 
 .card-deck {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  overflow-x: scroll;
+  overflow-x: auto;
+
+  @media (min-width: $screen-sm) {
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    overflow-y: visible;
+  }
+
+  .card {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex: 0 0 270px;
+    -ms-flex: 0 0 270px;
+    flex: 0 0 270px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+
+    @media (min-width: $screen-sm) {
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: calc(25% - .75rem);
+
+      &:nth-of-type(4n) {
+        margin-right: 0;
+      }
+    }
+
+  }
+}
+
+.card-deck--carousel {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+
+  .card {
+    -webkit-flex: 0 0 270px;
+    -ms-flex: 0 0 270px;
+    flex: 0 0 270px;
+  }
+
+  .card:nth-of-type(4n) {
+    margin-right: 1rem;
+  }
 }
