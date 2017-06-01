@@ -12,7 +12,7 @@
 }
 
 .card-block {
-  padding: 0 2rem 2rem;
+  padding: 1rem 2rem;
 }
 
 .card-title {
@@ -27,16 +27,29 @@
   font-weight: 500;
 
   display: inline-block;
-  margin: -1.5rem -.75rem;
+  margin: -2rem -.75rem;
   padding: .25rem .75rem;
 }
 
-.card-text:before {
+.card-title--overlap:after {
   color: $cr-gray-light;
   content: '\2014';
   display: block;
+  font-family: $base-font-face;
+  font-size: 1.25rem;
   font-weight: 100;
+  line-height: 1.5;
   padding-bottom: .25rem;
+}
+
+.card-link:not(:last-of-type) {
+  margin-right: .5rem;
+}
+
+.card-subtitle {
+  font-size: $font-size-smaller;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
 .card-deck {
@@ -59,27 +72,20 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-    -webkit-flex: 0 0 270px;
-    -ms-flex: 0 0 270px;
-    flex: 0 0 270px;
+    -webkit-flex: 1 0 270px;;
+    -ms-flex: 1 0 270px;;
+    flex: 1 0 270px;;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
     margin-bottom: 1rem;
-    margin-right: 1rem;
+    padding: 0 .5rem;
 
     @media (min-width: $screen-sm) {
-      flex-grow: 0;
-      flex-shrink: 0;
-      flex-basis: calc(25% - .75rem);
-
-      &:nth-of-type(4n) {
-        margin-right: 0;
-      }
+      max-width: 25%;
     }
-
   }
 }
 
@@ -91,9 +97,5 @@
     -webkit-flex: 0 0 270px;
     -ms-flex: 0 0 270px;
     flex: 0 0 270px;
-  }
-
-  .card:nth-of-type(4n) {
-    margin-right: 1rem;
   }
 }
