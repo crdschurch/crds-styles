@@ -1,9 +1,12 @@
 .jumbotron {
   text-align: center;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: $cr-white;
+
+  &[style*='background-image'] {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: $cr-white;
+  }
 
   .title {
     margin: 1.75rem;
@@ -30,7 +33,7 @@
   }
 
   a.btn-large {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
   }
 }
