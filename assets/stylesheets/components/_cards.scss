@@ -88,12 +88,22 @@
 }
 
 .card-deck--carousel {
-  flex-wrap: nowrap;
-  overflow-x: auto;
+  .card-text {
+    font-size: $font-size-small;
 
-  .card {
-    -webkit-flex: 0 0 270px;
-    -ms-flex: 0 0 270px;
-    flex: 0 0 270px;
+    address {
+      font-size: $font-size-small;
+      background: transparent;
+      padding: 0;
+    }
+  }
+}
+
+.carousel-cell {
+  width: 270px;
+  margin-right: 1rem;
+
+  @media (min-width: $screen-md) {
+    width: calc(25% - .75rem);
   }
 }
