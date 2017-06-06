@@ -29,7 +29,7 @@ svg.icon {
 }
 
 %svg-common {
-  background-image: url("assets/svgs/icons.css.svg");
+  background-image: url("#{$cr-path-to-icons-sprite}assets/svgs/icons.css.svg");
   background-repeat: no-repeat;
   @extend %icon-dimensions;
 

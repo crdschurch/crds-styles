@@ -56,3 +56,6 @@ $alert-success: $cr-green;
 $alert-info: rgba(106,188,204,1); // #6ABCCC
 $alert-warning: rgba(222,188,115,1); // #DEBC73
 $alert-danger: $cr-rust;
+
+// Other
+$cr-path-to-icons-sprite: 'assets/svgs/' !default; // include trailing slash
