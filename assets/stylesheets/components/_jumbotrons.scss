@@ -1,0 +1,39 @@
+.jumbotron {
+  text-align: center;
+
+  &[style*='background-image'] {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: $cr-white;
+  }
+
+  .title {
+    margin: 1.75rem;
+    font-family: $base-font-face;
+    font-weight: 100;
+    font-size: 4.25rem;
+    line-height: 1;
+  }
+
+  > p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+
+  .small-heading {
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 1rem;
+  }
+
+  a.btn {
+    margin: 1rem;
+  }
+
+  a.btn-large {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+  }
+}
