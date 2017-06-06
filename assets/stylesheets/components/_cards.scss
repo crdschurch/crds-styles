@@ -40,18 +40,6 @@
 }
 
 .card-deck {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  overflow-x: auto;
-
-  @media (min-width: $screen-sm) {
-    -webkit-flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
-    overflow-y: visible;
-  }
 
   .card {
     display: -webkit-box;
@@ -59,14 +47,40 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-    -webkit-flex: 1 0 270px;;
-    -ms-flex: 1 0 270px;;
-    flex: 1 0 270px;;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+  }
+
+  .card-text {
+    font-size: $font-size-small;
+
+    address {
+      font-size: $font-size-small;
+      background: transparent;
+      padding: 0;
+    }
+  }
+}
+
+.card-deck--expanded-layout {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+
+  @media (min-width: $screen-sm) {
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+  }
+
+  .card {
+    -webkit-flex: 1 0 270px;
+    -ms-flex: 1 0 270px;
+    flex: 1 0 270px;
     margin-bottom: 1rem;
     padding: 0 .5rem;
     position: relative;
@@ -75,29 +89,19 @@
       max-width: 25%;
     }
   }
-
-  .card-text {
-    font-size: $font-size-small;
-
-    address {
-      font-size: $font-size-small;
-      background: transparent;
-      padding: 0;
-    }
-  }
 }
 
-.card-deck--carousel {
-  .card-text {
-    font-size: $font-size-small;
+// .card-deck--carousel {
+//   .card-text {
+//     font-size: $font-size-small;
 
-    address {
-      font-size: $font-size-small;
-      background: transparent;
-      padding: 0;
-    }
-  }
-}
+//     address {
+//       font-size: $font-size-small;
+//       background: transparent;
+//       padding: 0;
+//     }
+//   }
+// }
 
 .carousel-cell {
   width: 270px;
