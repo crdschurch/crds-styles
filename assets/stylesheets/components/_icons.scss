@@ -1,4 +1,6 @@
 $dimensions: 16px;
+$sprite_arr: _str-split('assets/svgs/icons.css.svg', '/');
+$sprite_basename: nth($sprite_arr, 3);
 
 %icon-dimensions {
   width: auto;
@@ -29,7 +31,7 @@ svg.icon {
 }
 
 %svg-common {
-  background-image: url("#{$cr-path-to-icons-sprite}assets/svgs/icons.css.svg");
+  background-image: url("#{$cr-path-to-icons-sprite}#{$sprite_basename}");
   background-repeat: no-repeat;
   @extend %icon-dimensions;
 

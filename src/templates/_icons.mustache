@@ -1,4 +1,6 @@
 $dimensions: 16px;
+$sprite_arr: _str-split('{{{sprite}}}', '/');
+$sprite_basename: nth($sprite_arr, 3);
 
 %icon-dimensions {
   width: auto;
@@ -29,7 +31,7 @@ svg.icon {
 }
 
 {{#hasMixin}}@mixin {{mixinName}} {
-  background-image: url("#{$cr-path-to-icons-sprite}{{{sprite}}}");
+  background-image: url("#{$cr-path-to-icons-sprite}#{$sprite_basename}");
   background-repeat: no-repeat;
 }
 
@@ -38,7 +40,7 @@ svg.icon {
 }
 
 {{/hasCommon}}{{/hasMixin}}{{^hasMixin}}{{#hasCommon}}.{{/hasCommon}}{{^hasCommon}}%{{/hasCommon}}{{commonName}} {
-  background-image: url("#{$cr-path-to-icons-sprite}{{{sprite}}}");
+  background-image: url("#{$cr-path-to-icons-sprite}#{$sprite_basename}");
   background-repeat: no-repeat;
   @extend %icon-dimensions;
 
