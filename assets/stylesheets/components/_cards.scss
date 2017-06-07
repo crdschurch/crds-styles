@@ -40,40 +40,17 @@
 }
 
 .card-deck {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  overflow-x: auto;
-
-  @media (min-width: $screen-sm) {
-    -webkit-flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
-    overflow-y: visible;
-  }
-
   .card {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-flex: 1;
-    -webkit-flex: 1 0 270px;;
-    -ms-flex: 1 0 270px;;
-    flex: 1 0 270px;;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    margin-bottom: 1rem;
-    padding: 0 .5rem;
-    position: relative;
-
-    @media (min-width: $screen-sm) {
-      max-width: 25%;
-    }
   }
 
   .card-text {
@@ -87,13 +64,42 @@
   }
 }
 
-.card-deck--carousel {
-  flex-wrap: nowrap;
-  overflow-x: auto;
+.card-deck--expanded-layout {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+
+  @media (min-width: $screen-sm) {
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+  }
 
   .card {
-    -webkit-flex: 0 0 270px;
-    -ms-flex: 0 0 270px;
-    flex: 0 0 270px;
+    cursor: auto;
+    -webkit-flex: 1 0 270px;
+    -ms-flex: 1 0 270px;
+    flex: 1 0 270px;
+    margin-bottom: 1rem;
+    padding: 0 .5rem;
+    position: relative;
+
+    @media (min-width: $screen-sm) {
+      max-width: 25%;
+    }
+  }
+}
+
+.carousel-cell {
+  width: 270px;
+  margin-right: 1rem;
+
+  @media (min-width: $screen-md) {
+    width: calc(25% - .75rem);
+  }
+
+  img {
+    pointer-events: none;
   }
 }
