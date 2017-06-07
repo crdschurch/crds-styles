@@ -40,7 +40,6 @@
 }
 
 .card-deck {
-
   .card {
     display: -webkit-box;
     display: -webkit-flex;
@@ -91,23 +90,15 @@
   }
 }
 
-// .card-deck--carousel {
-//   .card-text {
-//     font-size: $font-size-small;
-
-//     address {
-//       font-size: $font-size-small;
-//       background: transparent;
-//       padding: 0;
-//     }
-//   }
-// }
-
 .carousel-cell {
   width: 270px;
   margin-right: 1rem;
 
   @media (min-width: $screen-md) {
     width: calc(25% - .75rem);
+  }
+
+  img {
+    pointer-events: none;
   }
 }
