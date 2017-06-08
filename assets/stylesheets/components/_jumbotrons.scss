@@ -1,13 +1,69 @@
 .jumbotron {
   text-align: center;
 
-  &[style*='background-image'] {
+  &[style*='background-image'],
+  &.bg-video {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: $cr-white;
-    &.text-black {
-      color: $cr-black;
+
+    a {
+      display: inline-block;
+      color: $cr-white;
+    }
+  }
+
+  &.text-black {
+    color: $cr-black;
+  }
+
+  &.bg-video {
+    position: relative;
+    background-color: transparent;
+    overflow: hidden;
+  }
+
+  .bg-video-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+
+    &:after {
+      content: ' ';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+    }
+  }
+
+  .video-full-size {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  .preloader-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: $cr-black;
+    transition: opacity .35s ease;
+    opacity: 1;
+    &.loaded {
+      opacity: 0;
     }
   }
 
@@ -25,7 +81,6 @@
   }
 
   .small-heading {
-    text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 1px;
     font-size: 1rem;
