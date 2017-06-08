@@ -33,6 +33,18 @@
   margin-right: .5rem;
 }
 
+.card-caption:before {
+  background-color: $cr-blue-lighter;
+  color: $cr-gray-dark;
+  content: 'Current Series';
+  font-family: $accent-font-face;
+  font-size: $font-size-small;
+  font-style: italic;
+  padding: .5rem .75rem;
+  position: relative;
+  top: -25px;
+}
+
 .card-subtitle {
   font-size: $font-size-smaller;
   font-weight: 600;
