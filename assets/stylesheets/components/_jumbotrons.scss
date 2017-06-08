@@ -13,6 +13,10 @@
     }
   }
 
+  &.text-black {
+    color: $cr-black;
+  }
+
   &.bg-video {
     position: relative;
     background-color: transparent;
