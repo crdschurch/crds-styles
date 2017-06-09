@@ -1,0 +1,25 @@
+@keyframes rotateInitLoadingSpinner {
+  100% {
+    transform:rotate(360deg);
+  }
+}
+
+.preloader {
+  position: fixed;
+  display: block;
+  top: calc(20% - 37.5px);
+  left: calc(50% - 37.5px);
+  width: 75px;
+  height: 75px;
+  margin: 0 auto;
+  background: transparent;
+  animation: rotateInitLoadingSpinner 700ms linear infinite;
+}
+
+.preloader-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
