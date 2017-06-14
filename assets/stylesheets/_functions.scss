@@ -48,7 +48,7 @@
     @return ($string,);
   }
 
-  @if $separator == "" {
+  @if $separator == '' {
     @for $i from 1 through str-length($string) {
       $result: append($result, str-slice($string, $i, $i));
     }
