@@ -1,0 +1,71 @@
+.countdown {
+  background-color: $cr-cyan;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 0;
+
+  @media (min-width: $screen-sm) {
+    flex-direction: row;
+    padding: .5rem;
+  }
+}
+
+.countdown-header {
+  color: $cr-cyan-light;
+  font-family: $accent-font-face;
+  font-style: italic;
+}
+
+.countdown-timer {
+  color: $cr-white;
+  font-size: 1.125rem;
+  margin: 0;
+  padding: .5rem 0;
+
+  @media (min-width: $screen-sm) {
+    padding: 0 1rem;
+  }
+
+  li {
+    display: inline-block;
+    padding: 0 .5rem;
+    text-align: center;
+
+    &::after {
+      color: $cr-cyan-light;
+      display: block;
+      font-size: .5rem;
+    }
+
+    &:not(:first-child) {
+      border-left: 1px solid rgba($cr-white, .3);
+    }
+  }
+}
+
+.countdown-days::after {
+  content: 'DAYS';
+}
+
+.countdown-hours::after {
+  content: 'HOURS';
+}
+
+.countdown-minutes::after {
+  content: 'MIN';
+}
+
+.countdown-seconds::after {
+  content: 'SEC';
+}
+
+.countdown-btn {
+  background-color: rgba(lighten($cr-cyan, 15), 10);
+  color: $cr-white;
+
+  &:hover {
+    background-color: lighten($cr-cyan, 5);
+  }
+}
