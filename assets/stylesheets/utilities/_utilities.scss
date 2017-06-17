@@ -706,6 +706,14 @@ a.underline,
   }
 }
 
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
 .full-width {
   width: 100%;
 }
@@ -714,8 +722,61 @@ a.underline,
   height: 100%;
 }
 
-.flex {
-  display: flex;
+.half-width {
+  width: 50%;
+}
+
+.half-height {
+  height: 50%;
+}
+
+.display-table {
+  display: table;
+}
+
+.display-table-cell {
+  display: table-cell;
+}
+
+@each $label, $size in (
+  xs: $screen-xs-min,
+  sm: $screen-sm-min,
+  md: $screen-md-min,
+  lg: $screen-lg-min
+) {
+  @media only screen and (min-width: $size) {
+    .full-width-#{$label} {
+      width: 100%;
+    }
+
+    .full-height-#{$label} {
+      height: 100%;
+    }
+
+    .half-width-#{$label} {
+      width: 50%;
+    }
+
+    .half-height-#{$label} {
+      height: 50%;
+    }
+
+    .display-table-#{$label} {
+      display: table;
+    }
+
+    .display-table-cell-#{$label} {
+      display: table-cell;
+    }
+
+    .position-relative-#{$label} {
+      position: relative;
+    }
+
+    .position-absolute-#{$label} {
+      position: absolute;
+    }
+  }
 }
 
 // Empty href attributes for UI Bootstrap
