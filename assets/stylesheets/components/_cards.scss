@@ -2,23 +2,37 @@
   margin-bottom: 1rem;
 }
 
-.cards-4x {
+.cards-4x .card {
+  @media screen and (max-width: $screen-sm - 1) {
+    @include make-sm-column(12);
+  }
+  @media screen and (min-width: $screen-sm) and (max-width: $screen-md - 1) {
+    @include make-sm-column(6);
+    &:nth-child(odd) {
+      clear: left;
+    }
+  }
+  @media screen and (min-width: $screen-md) {
+    @include make-sm-column(3);
+  }
+}
+
+.cards-2x .card {
+  @media screen and (max-width: $screen-sm - 1) {
+    @include make-sm-column(12);
+  }
+  @media screen and (min-width: $screen-sm) {
+    @include make-sm-column(6);
+    &:nth-child(odd) {
+      clear: left;
+    }
+  }
+}
+
+
+.cards-4x, .cards-2x {
   .feature-cards:not([data-carousel]) {
     @include make-row();
-  }
-  .card {
-    @media screen and (max-width: $screen-sm - 1) {
-      @include make-sm-column(12);
-    }
-    @media screen and (min-width: $screen-sm) and (max-width: $screen-md - 1) {
-      @include make-sm-column(6);
-      &:nth-child(odd) {
-        clear: left;
-      }
-    }
-    @media screen and (min-width: $screen-md) {
-      @include make-sm-column(3);
-    }
   }
 }
 
