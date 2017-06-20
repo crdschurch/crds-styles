@@ -305,9 +305,9 @@ a {
   }
 }
 
-// Buttons
+// Block-level buttons on mobile screens
 .btn-block-mobile {
-  @media only screen and (max-width: $screen-sm-max) {
+  @media only screen and (max-width: $screen-xs-max) {
     display: block;
     width: 100%;
   }
