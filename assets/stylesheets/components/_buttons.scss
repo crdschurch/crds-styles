@@ -305,6 +305,14 @@ a {
   }
 }
 
+// Buttons
+.btn-block-mobile {
+  @media only screen and (max-width: $screen-sm-max) {
+    display: block;
+    width: 100%;
+  }
+}
+
 // Flexbox button groups - Horizontal layout
 .btn-group-row {
   display: flex;
