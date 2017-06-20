@@ -1,5 +1,7 @@
 .jumbotron {
   text-align: center;
+  padding-top: 48px;
+  padding-bottom: 48px;
 
   &[style*='background-image'],
   &.bg-video {
@@ -22,6 +24,26 @@
     position: relative;
     background-color: transparent;
     overflow: hidden;
+  }
+
+  &.jumbotron-sm {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  &.jumbotron-md {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  &.jumbotron-lg {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  &.jumbotron-xl {
+    padding-top: 112px;
+    padding-bottom: 112px;
   }
 
   .container &,
