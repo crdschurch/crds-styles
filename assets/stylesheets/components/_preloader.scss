@@ -5,19 +5,34 @@
 }
 
 .preloader {
-  position: fixed;
+  position: absolute;
   display: block;
-  top: calc(20% - 37.5px);
+  top: calc(50% - 37.5px);
   left: calc(50% - 37.5px);
   width: 75px;
   height: 75px;
   margin: 0 auto;
   background: transparent;
   animation: rotateInitLoadingSpinner 700ms linear infinite;
+
+  &.preloader--top-right {
+    top: 37.5px;
+    right: 37.5px;
+    left: auto;
+  }
+
+  &.preloader--small {
+    width: 32px;
+    height: 32px;
+    &.preloader--top-right {
+      top: 16px;
+      right: 16px;
+    }
+  }
 }
 
 .preloader-wrapper {
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
