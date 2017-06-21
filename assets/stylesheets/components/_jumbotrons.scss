@@ -78,6 +78,12 @@
     height: 100%;
     opacity: 0;
     z-index: -4;
+    background-color: $cr-black;
+    @media screen and (max-width: $screen-sm) {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
 
     &.active {
       opacity: 1;
@@ -85,8 +91,13 @@
     }
 
     iframe {
+      position: relative;
       min-width: 100%;
       min-height: 100%;
+      @media screen and (max-width: $screen-sm) {
+        width: 100%;
+        min-height: auto;
+      }
     }
 
     .close-video {
