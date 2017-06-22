@@ -35,3 +35,7 @@ And you're ready to export! Be sure to **export the entire artboard**, not just 
 ### Compile SVG sprites
 
 Run `npm run build-svg` to compile the SVGs into the correct sass and sprite files
+
+### Adding new SVGs to the DDK
+
+To add new icons to the DDK, add the icon name to the `icons` array in `icons.services.ts` of the DDK.

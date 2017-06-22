@@ -12,7 +12,7 @@
 
 
 
-// Global form styles
+// 1. Global form styles
 .form-control {
   box-shadow: none;
   -webkit-appearance: none;
@@ -21,7 +21,7 @@
 
 
 
-// Text fields
+// 2. Text fields
 textarea {
   resize: none;
 }
@@ -54,7 +54,7 @@ textarea {
 
 
 
-// Input groups & Addon styles
+// 3. Input groups & Addon styles
 .input-group {
   .form-control {
     margin-top: 5px;
@@ -130,10 +130,70 @@ textarea {
   }
 }
 
+// Styles for input with embedded button
+.form-control-icon {
+  background-color: #f4f4f4;
+  background-image: none;
+  border: 1px solid #f4f4f4;
+  border-radius: 0;
+  flex-basis: 100%;
+  height: 42px;
+  padding: 8px 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+
+  &:focus {
+    border-color: $input-border-focus;
+    box-shadow: inset 0 0 0 1px rgba($input-border-focus, .5);
+  }
+}
+
+.input-group-icon {
+  background: transparent;
+  border: 0;
+  width: 10%;
+
+  &.open {
+    color: $cr-teal;
+  }
+
+  &.active {
+    color: $cr-orange;
+  }
+}
+
+.input-icon-group-right {
+  display: flex;
+
+  .form-control-icon {
+    padding-right: 10%;
+  }
+
+  .input-group-icon {
+    margin-left: -10%;
+  }
+}
+
+.input-icon-group-left {
+  display: flex;
+
+  .form-control-icon {
+    padding-left: 10%;
+  }
+
+  .input-group-icon {
+    margin-right: -10%;
+    z-index: 1;
+  }
+}
 
 
 
-// Search bar
+
+// 4. Search bar
 .searchbar {
   .form-control {
     // Removes validation styles
@@ -160,7 +220,7 @@ textarea {
 
 
 
-// Checkboxes & Radios
+// 5. Checkboxes & Radios
 .checkbox {
   input[type='checkbox'] {
     height: 16px;
@@ -265,7 +325,7 @@ textarea {
 
 
 
-// Selectors
+// 6. Selectors
 select {
   &.form-control {
     -webkit-appearance: none;
@@ -290,7 +350,10 @@ select {
   }
 }
 
-// Row layout
+
+
+
+// 7. Layout
 .form-row {
   @include make-row();
 
@@ -310,7 +373,7 @@ select {
 
 
 
-// 🚨 Search bar - connect-specific layout
+// 8. 🚨 Search bar - connect-specific layout
 .connect-search {
   background-color: darken(desaturate($cr-blue-dark, 5), 5);
   padding-top: .5rem;
