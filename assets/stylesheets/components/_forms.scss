@@ -390,6 +390,17 @@ select {
   .searchbar {
     display: flex;
     flex-grow: 1;
+
+    .form-control-feedback {
+      color: $cr-gray-light;
+      line-height: 2.75;
+      right: 38px;
+      top: 5px;
+
+      @media (min-width: $screen-xs) {
+        right: 58px;
+      }
+    }
   }
 
   .input-group-btn {
