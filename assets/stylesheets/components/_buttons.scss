@@ -223,6 +223,13 @@
   > .btn {
     width: auto;
   }
+
+  >.btn-block-mobile {
+    @media only screen and (max-width: $screen-xs-max) {
+      display: block;
+      width: 100%;
+    }
+  }
 }
 
 // Toggle button group
