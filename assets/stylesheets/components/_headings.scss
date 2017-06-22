@@ -62,4 +62,10 @@ h6 {
   a & {
     color: inherit;
   }
+
+  a:hover,
+  a:hover & {
+    color: $cr-gray-darker;
+    text-decoration: none;
+  }
 }
