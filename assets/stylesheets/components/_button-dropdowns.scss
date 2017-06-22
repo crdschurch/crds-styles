@@ -1,0 +1,20 @@
+.dropdown {
+  .dropdown-toggle {
+    text-align: left;
+    .icon {
+      margin-top: 4px;
+      height: 14px;
+    }
+  }
+  .crds-list {
+    font-size: .95rem;
+    padding: .5em 1em;
+    a {
+      display: block;
+      margin: .25em 0;
+      &.on {
+        font-weight: 400;
+      }
+    }
+  }
+}
