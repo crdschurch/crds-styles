@@ -20,7 +20,6 @@
 
 .countdown-timer {
   color: $cr-white;
-  font-size: 1.125rem;
   margin: 0;
   padding: .5rem 0 0;
 
@@ -31,6 +30,8 @@
   li {
     display: inline-block;
     font-family: $base-font-face;
+    font-size: 1.35rem;
+    font-weight: 500;
     padding: 0 .5rem;
     text-align: center;
 
