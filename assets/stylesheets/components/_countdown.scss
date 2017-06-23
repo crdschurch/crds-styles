@@ -13,7 +13,7 @@
 }
 
 .countdown-header {
-  color: $cr-cyan-light;
+  color: $cr-cyan-lighter;
   font-family: $accent-font-face;
   font-style: italic;
 }
@@ -35,7 +35,7 @@
     text-align: center;
 
     &::after {
-      color: $cr-cyan-light;
+      color: $cr-cyan-lighter;
       display: block;
       font-size: .5rem;
       font-weight: normal;
