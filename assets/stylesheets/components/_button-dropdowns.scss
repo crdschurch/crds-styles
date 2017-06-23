@@ -7,13 +7,16 @@
     }
   }
   .crds-list {
-    font-size: .95rem;
-    padding: .5em 1em;
+    li {
+      padding: 0;
+      margin: 0;
+      font-size: 14px;
+    }
     a {
-      display: block;
-      margin: .25em 0;
+      padding: .375rem .75rem;
+      font-weight: 300;
       &.on {
-        font-weight: 400;
+        font-weight: 600;
       }
     }
   }
