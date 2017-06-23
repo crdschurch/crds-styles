@@ -37,7 +37,7 @@
 }
 
 .card-block {
-  font-size: .875rem;
+  font-family: $base-font-face;
   padding: 1rem;
 }
 
@@ -105,7 +105,7 @@
   }
 
   .card-text {
-    font-size: $font-size-small;
+    font-size: .9375rem;;
 
     address {
       font-size: $font-size-small;

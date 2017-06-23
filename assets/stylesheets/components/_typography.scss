@@ -179,12 +179,12 @@
 }
 
 .collection-header {
-  border-top: 1px solid $cr-gray-light;
+  border-top: 1px solid rgba($cr-gray-light, .35);
   color: $cr-gray;
   font-family: $base-font-face;
   font-size: 1.3125rem; // 21px
   font-weight: 100;
-  padding-top: .25em;
+  padding-top: .65em;
 
   .dark-theme & {
     border-color: $cr-gray-dark;
