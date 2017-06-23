@@ -1,6 +1,14 @@
 .card {
   margin-bottom: 1rem;
+  &.current-series .card-caption {
+    @media screen and (min-width: $screen-sm) {
+      @include make-sm-column(8);
+      @include make-sm-column-offset(2);
+    }
+  }
 }
+
+
 
 .cards-4x .card {
   @media screen and (max-width: $screen-sm - 1) {
