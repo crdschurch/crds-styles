@@ -18,6 +18,10 @@
   @include crds-bg-variant($cr-blue);
 }
 
+.bg-blue-dark {
+  @include crds-bg-variant($cr-blue-dark);
+}
+
 .bg-cyan {
   @include crds-bg-variant($cr-cyan);
 }
@@ -28,4 +32,10 @@
 
 .bg-charcoal {
   @include crds-bg-variant(lighten($cr-gray-darker, .75), $cr-gray);
+}
+
+.bg-cover-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
