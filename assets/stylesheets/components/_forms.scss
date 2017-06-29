@@ -215,6 +215,29 @@ textarea {
       text-overflow: ellipsis;
     }
   }
+
+  .addon-btn-group {
+    display: table-cell;
+    padding: 10px 0;
+    position: absolute;
+    right: 60px;
+    z-index: 4;
+
+    .addon-btn {
+      background: transparent;
+      border: 0;
+
+      .icon {
+        vertical-align: middle;
+      }
+    }
+
+    .list-inline {
+      > li {
+        padding-left: 0;
+      }
+    }
+  }
 }
 
 
@@ -378,42 +401,4 @@ select {
   background-color: darken(desaturate($cr-blue-dark, 5), 5);
   padding-top: .5rem;
   padding-bottom: .5rem;
-
-  > div {
-    display: flex;
-
-    > .btn {
-      margin-left: 10px;
-    }
-  }
-
-  .searchbar {
-    display: flex;
-    flex-grow: 1;
-
-    .form-control-feedback {
-      color: $cr-gray-light;
-      line-height: 2.75;
-      right: 38px;
-      top: 5px;
-
-      @media (min-width: $screen-xs) {
-        right: 58px;
-      }
-    }
-  }
-
-  .input-group-btn {
-    width: initial;
-
-    .btn {
-      padding-right: 10px;
-      padding-left: 10px;
-
-      @media (min-width: $screen-xs) {
-        padding-right: 20px;
-        padding-left: 20px;
-      }
-    }
-  }
 }
