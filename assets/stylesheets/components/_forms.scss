@@ -198,7 +198,31 @@ textarea {
   margin-top: 5px;
   margin-bottom: 5px;
 
+  > form {
+    display: table;
+    height: $input-height-base;
+    position: relative;
+
+    > input:focus + .searchbar-wrapper  {
+      border: 1px solid $input-border-focus;
+      box-shadow: inset 0 0 0 1px rgba($input-border-focus, .5);
+    }
+  }
+
   .form-control {
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 38px;
+    width: calc(100% - 75px);
+    position: absolute;
+    top: 2px;
+    left: 2px;
+
+    &:focus {
+      border-color: $input-bg;
+      box-shadow: inset 0 0 0 1px rgba($input-bg, 1);
+    }
+
     // Removes validation styles
     &.ng-touched {
       &.ng-valid,
@@ -214,29 +238,9 @@ textarea {
       }
     }
 
-
     &[placeholder] {
       text-overflow: ellipsis;
     }
-
-    margin-top: 0;
-    margin-bottom: 0;
-    height: 38px;
-    width: calc(100% - 135px);
-    position: absolute;
-    top: 2px;
-    left: 2px;
-
-    &:focus {
-      border-color: $input-bg;
-      box-shadow: inset 0 0 0 1px rgba($input-bg, 1);
-    }
-  }
-
-  > input:focus + .searchbar-wrapper,
-  form + .searchbar-wrapper  {
-    border: 1px solid $input-border-focus;
-    box-shadow: inset 0 0 0 1px rgba($input-border-focus, .5);
   }
 
   .searchbar-wrapper {
@@ -256,7 +260,7 @@ textarea {
     display: table-cell;
     padding: 6px 0;
     position: absolute;
-    right: 60px;
+    right: 0;
     z-index: 4;
 
     ul {
