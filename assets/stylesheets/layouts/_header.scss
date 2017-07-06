@@ -212,6 +212,10 @@
   position: fixed;
   top: 0;
 
+  &.modal {
+    overflow: hidden;
+  }
+
   &:not(.in) {
     .modal-dialog {
       -webkit-transform: translate3d(-25vw, 0, 0);
