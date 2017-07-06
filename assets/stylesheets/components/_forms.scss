@@ -194,6 +194,10 @@ textarea {
 
 
 // 4. Search bar
+
+// 🚨 Variable rules have been duplicated with computed
+// values - remove after CSS moved to S3
+
 .searchbar {
   margin-top: 5px;
   margin-bottom: 5px;
