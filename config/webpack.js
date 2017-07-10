@@ -3,6 +3,7 @@ var webpackMerge = require('webpack-merge');
 var commonConfig = require('./webpack.common.js');
 var helpers = require('./helpers');
 var StyleLintPlugin = require('stylelint-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var ENV = 'production';
 
@@ -12,7 +13,7 @@ module.exports = webpackMerge(commonConfig, {
   output: {
     path: helpers.root('dist'),
     publicPath: '/',
-    filename: '[name].js',
+    filename: '[name].css'
   },
 
   htmlLoader: {
