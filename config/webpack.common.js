@@ -1,9 +1,12 @@
 var webpack = require('webpack');
 var helpers = require('./helpers');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+var VERSION = JSON.stringify(require('../package.json').version).replace(/\"/g, "");
 
 module.exports = {
   entry: {
-    'app': ['./src/main.js']
+    'bundle': ['./src/main.js']
   },
 
   resolve: {
@@ -23,8 +26,12 @@ module.exports = {
       {
         test: /\.scss$/,
         exclude: /node_modules/,
-        loaders: ['raw-loader', 'sass-loader']
+        loader: ExtractTextPlugin.extract(['raw-loader', 'sass-loader'])
       }
     ]
   },
+
+  plugins: [
+    new ExtractTextPlugin(`crds-styles-${VERSION}.css`)
+  ]
 };
