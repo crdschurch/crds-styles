@@ -151,11 +151,7 @@ textarea {
   }
 }
 
-.input-group-icon {
-  background: transparent;
-  border: 0;
-  width: 10%;
-
+.addon-btn {
   &.open {
     color: $cr-teal;
   }
@@ -164,6 +160,7 @@ textarea {
     color: $cr-orange;
   }
 }
+
 
 .input-icon-group-right {
   display: flex;
@@ -285,6 +282,7 @@ textarea {
     .addon-btn {
       background: transparent;
       border: 0;
+      padding: 4px 6px;
 
       .icon {
         vertical-align: middle;
