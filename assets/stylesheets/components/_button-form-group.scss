@@ -24,18 +24,25 @@
   }
 
   .custom-input {
-    display: flex;
+    position: relative;
     justify-content: flex-end;
     min-height: 2.75rem;
     overflow: hidden;
 
-    .custom-input-icon {
-      padding: 15px 10px;
-      color: $cr-gray-light;
+    &:before {
+      position: absolute;
+      display: block;
+      left: 14px;
+      top: 0;
+      height: 100%;
+      width: 2px;
+      content: ' ';
+      background: $cr-gray-lighter;
     }
 
-    .custom-input-field {
-      flex-basis: calc(100% - 30px);
+    > * {
+      width: calc(100% - 32px);
+      margin-left: 32px;
     }
   }
 }
