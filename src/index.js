@@ -2,7 +2,6 @@ var sass = require('node-sass');
 var fs = require('fs-extra');
 var pkgJson = require('../package.json');
 
-
 var CRDS = {};
 
 CRDS.Styles = function() {
@@ -20,47 +19,48 @@ CRDS.Styles.prototype.bind = function(fn, me) {
 
 CRDS.Styles.prototype.build = function() {
   this.compile('nested');
-  this.compile('compressed');
+  setTimeout(function() {
+    this.compile('compressed');
+  }.bind(this), 1000);
 }
 
 CRDS.Styles.prototype.compile = function(style) {
-  var isCompressed = style == 'compressed' ? true : false;
+  var filename = style == 'compressed' ? this.minOutputFile : this.outputFile;
   sass.render({
     file: './assets/stylesheets/bootstrap.scss',
-    outFile: (isCompressed ? this.minOutputFile : this.outputFile),
+    outFile: filename,
     sourceMap: true,
     sourceComment: 'true',
     includePaths: [ 'assets/', 'node_modules/' ],
     outputStyle: style
-  }, this.bind(this.onCompile, this));
+  }, function(error, result){
+    this.onCompile(error, result, filename)
+  }.bind(this));
 };
 
-CRDS.Styles.prototype.onCompile = function(error, result, zzz) {
-  console.log(zzz);
-
+CRDS.Styles.prototype.onCompile = function(error, result, filename) {
   if (error) {
     console.log(error.status);
     console.log(error.column);
     console.log(error.message);
     console.log(error.line);
   } else {
-
     fs.ensureDir('./dist')
-      .then(this.bind(function() {
-        // console.log(JSON.stringify(result.stats));
-        // this.writeFile(result.css, outputFile);
-        // this.writeFile(result.map, outputFile + '.map');
-      }, this))
-      .catch(this.bind(function(err) {
+      .then(function() {
+        // console.log(result.stats);
+        this.writeFile(result.css, filename);
+        this.writeFile(result.map, filename + '.map');
+      }.bind(this))
+      .catch(function(err) {
         console.error(err);
-      }, this));
+      }.bind(this));
   }
 };
 
 CRDS.Styles.prototype.writeFile = function(payload, outputFile) {
   fs.writeFile(outputFile, payload, function(err){
     if(!err){
-      //file written on disk
+      console.log(outputFile);
     }
   });
 }
