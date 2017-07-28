@@ -93,6 +93,7 @@ select {
 .error {
   &.help-block {
     color: $alert-danger;
+    text-align: left;
 
     > p:last-child {
       margin-bottom: 0;
