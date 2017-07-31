@@ -1,22 +1,42 @@
 .dropdown {
-  .dropdown-toggle {
+  display: inline-block;
+
+  .dropdown-toggle.btn {
+    padding: 14px 16px 12px;
     text-align: left;
+    font-size: 14px;
+    line-height: 1;
+
+    &:focus {
+      box-shadow: none;
+    }
+
     .icon {
-      margin-top: 4px;
+      margin-top: 2px;
       height: 14px;
     }
   }
+
   .crds-list {
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, .2);
+
     li {
       padding: 0;
       margin: 0;
       font-size: 14px;
     }
+
     a {
       padding: .375rem .75rem;
       font-weight: 300;
+      color: $cr-gray-light;
+
       &.on {
         font-weight: 600;
+      }
+
+      &:hover {
+        cursor: pointer;
       }
     }
   }
