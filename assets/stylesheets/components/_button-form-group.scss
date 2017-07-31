@@ -25,24 +25,23 @@
 
   .custom-input {
     position: relative;
-    justify-content: flex-end;
     min-height: 2.75rem;
     overflow: hidden;
 
     &:before {
       position: absolute;
       display: block;
-      left: 14px;
+      left: 0;
       top: 0;
       height: 100%;
-      width: 2px;
+      width: 3px;
       content: ' ';
       background: $cr-gray-lighter;
     }
 
     > * {
-      width: calc(100% - 32px);
-      margin-left: 32px;
+      width: calc(100% - 19px);
+      margin-left: 19px;
     }
   }
 }

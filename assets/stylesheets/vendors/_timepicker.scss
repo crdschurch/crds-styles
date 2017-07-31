@@ -27,18 +27,18 @@ timepicker {
     height: 42px;
     margin: 0 8px;
     padding: 8px 14px;
-    background-color: $input-bg;
-    color: $cr-black;
-    border-color: $input-bg;
+    background-color: #f4f4f4;
+    color: #000000;
+    border-color: #f4f4f4;
     border-radius: 0;
     &:hover,
     &:active,
     &:active:hover,
     &:active:focus,
     &:focus {
-      background-color: $input-bg;
-      color: $cr-black;
-      border-color: $input-bg;
+      background-color: #f4f4f4;
+      color: #000000;
+      border-color: #f4f4f4;
       box-shadow: none;
     }
   }
