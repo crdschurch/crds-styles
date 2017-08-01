@@ -161,8 +161,7 @@ CRDS.Styles.prototype.uploadFile = function(filename) {
     var mime_type = ext == '.css' ? 'text/css' : 'application/octet-stream'
     var params = {
       Bucket: this.s3Bucket,
-      Prefix: this.s3Prefix,
-      Key: filename,
+      Key: this.s3Prefix + filename,
       ContentType: mime_type,
       Body: stream,
       ACL: 'public-read'
