@@ -5,6 +5,8 @@ var async = require('async');
 var pkgJson = require('../package.json');
 var argv = require('yargs').argv;
 var AWS = require('aws-sdk');
+var tildeImporter = require('node-sass-tilde-importer');
+var _ = require('lodash');
 
 // ------------------------------------------------- |
 
@@ -20,11 +22,6 @@ CRDS.Styles.prototype.setup = function() {
   this.outputFile = slug + '.css';
   this.minOutputFile = slug + '.min.css';
   this.debug = argv.debug || false;
-
-  AWS.config.update({
-    accessKeyId: process.env.CRDS_STYLES_AWS_ACCESS_KEY,
-    secretAccessKey: process.env.CRDS_STYLES_AWS_SECRET_KEY
-  })
 }
 
 CRDS.Styles.prototype.init = function() {
@@ -58,6 +55,7 @@ CRDS.Styles.prototype.compile = function(style) {
     sourceMap: true,
     sourceComment: 'true',
     includePaths: [ 'assets/', 'node_modules/' ],
+    importer: tildeImporter,
     outputStyle: style
   }, function(error, result){
     this.onCompile(error, result, filename)
@@ -95,33 +93,84 @@ CRDS.Styles.prototype.writeFile = function(payload, outputFile) {
 
 // ------------------------------------------------- |
 
+CRDS.Styles.prototype.setupS3 = function() {
+  AWS.config.update({
+    accessKeyId: process.env.CRDS_STYLES_AWS_ACCESS_KEY,
+    secretAccessKey: process.env.CRDS_STYLES_AWS_SECRET_KEY
+  });
+  this.s3 = new AWS.S3();
+  this.s3Prefix = 'styles/'
+  this.s3Bucket = process.env.CRDS_STYLES_S3_BUCKET;
+  this.existingFiles = this.listObjects();
+}
+
+CRDS.Styles.prototype.listObjects = function() {
+  this.log('listObjects()');
+  this.s3.listObjects({ Bucket: this.s3Bucket, Prefix: this.s3Prefix }, function(err, data) {
+    if (err) {
+      console.error(err, err.stack);
+    } else {
+      this.existingFiles = _.chain(data['Contents'])
+        .map('Key')
+        .map(function(v) {
+          var pattern = this.s3Prefix;
+          return v.replace(new RegExp(pattern), '');
+        }.bind(this))
+        .compact()
+        .value();
+    }
+  }.bind(this));
+};
+
+CRDS.Styles.prototype.fileExists = function(filename) {
+  return _.includes(this.existingFiles, filename);
+};
+
 CRDS.Styles.prototype.publish = function() {
   this.log('publish()');
-  this.s3 = new AWS.S3();
+  this.setupS3();
+
+  var timer = setInterval(function() {
+    if(this.existingFiles) {
+      clearInterval(timer);
+      return this.upload();
+    }
+  }.bind(this), 300);
+};
+
+CRDS.Styles.prototype.upload = function() {
+  this.log('upload()');
   var directoryPath = './dist';
   fs.readdir(directoryPath, function(err, files) {
     if (err) {
       this.log('Cannot read directory ' + directoryPath + ' or doesn\'t exist')
     } else {
-      async.mapLimit(files, 5, this.upload.bind(this))
+      async.mapLimit(files, 5, this.uploadFile.bind(this))
     }
   }.bind(this));
 }
 
-CRDS.Styles.prototype.upload = function(filename) {
-  var stream = fs.createReadStream('./dist/' + filename);
-  var ext = path.extname(filename);
-  var mime_type = ext == '.css' ? 'text/css' : 'application/octet-stream'
-  var params = {
-    Bucket: process.env.CRDS_STYLES_S3_BUCKET,
-    Key: 'styles/' + filename,
-    ContentType: mime_type,
-    Body: stream,
-    ACL: 'public-read'
-  };
-  this.s3.upload(params, function(err, data) {
-    console.log(err, data);
-  });
+CRDS.Styles.prototype.uploadFile = function(filename) {
+  this.log('uploadFile()', filename);
+
+  if (this.fileExists(filename) && !argv.force) {
+    this.error('File already exists: ' + filename);
+  } else {
+    var stream = fs.createReadStream('./dist/' + filename);
+    var ext = path.extname(filename);
+    var mime_type = ext == '.css' ? 'text/css' : 'application/octet-stream'
+    var params = {
+      Bucket: this.s3Bucket,
+      Prefix: this.s3Prefix,
+      Key: filename,
+      ContentType: mime_type,
+      Body: stream,
+      ACL: 'public-read'
+    };
+    this.s3.upload(params, function(err, data) {
+      console.log(err, data);
+    });
+  }
 }
 
 // ------------------------------------------------- |
