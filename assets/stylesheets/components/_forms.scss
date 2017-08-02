@@ -49,6 +49,10 @@ textarea {
   font-weight: 300;
   margin-top: 0;
   padding-top: $padding-base-vertical;
+
+  &.text-muted {
+    color: $cr-gray-light;
+  }
 }
 
 
