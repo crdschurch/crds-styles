@@ -195,55 +195,39 @@ textarea {
 // 🚨 Variable rules have been duplicated with computed
 // values - remove after CSS moved to S3
 
+// form
 .searchbar {
   margin-top: 5px;
   margin-bottom: 5px;
+  // display: table;
+  // // height: $input-height-base;
+  // height: 42px;
+  // position: relative;
 
-  > form {
-    display: table;
-    // height: $input-height-base;
-    height: 42px;
+  .input-group {
+    display: block;
     position: relative;
-
-    > input:focus + .searchbar-wrapper  {
-      // border: 1px solid $input-border-focus;
-      border: 1px solid rgba(139,206,237,1);
-      // box-shadow: inset 0 0 0 1px rgba($input-border-focus, .5);
-      box-shadow: inset 0 0 0 1px rgba(139,206,237, .5);
-    }
   }
 
-  .form-control {
-    margin-top: 0;
-    margin-bottom: 0;
+  input.form-control {
+    display: inline-block;
+    position: relative;
+    margin: 2px 2px 0;
+    z-index: 1;
     height: 38px;
-    width: calc(100% - 75px);
-    position: absolute;
-    top: 2px;
-    left: 2px;
-
-    &:focus {
-      // border-color: $input-bg;
-      border-color: lighten(rgba(231,231,231,1), 5);
-      // box-shadow: inset 0 0 0 1px rgba($input-bg, 1);
-      box-shadow: inset 0 0 0 1px lighten(rgba(231,231,231,1), 5);
-    }
+    width: calc(100% - 64px);
 
     // Removes validation styles
     &.ng-touched {
       &.ng-valid,
       &.ng-invalid {
-        // border-color: $input-border;
         border-color: lighten(rgba(231,231,231,1), 5);
-        // box-shadow: inset 0 0 0 1px $input-border;
         box-shadow: inset 0 0 0 1px lighten(rgba(231,231,231,1), 5);
       }
 
       &.ng-valid:focus,
       &.ng-invalid:focus {
-        // border-color: $input-border;
         border-color: lighten(rgba(231,231,231,1), 5);
-        // box-shadow: inset 0 0 0 1px rgba($input-border, 1);
         box-shadow: inset 0 0 0 1px lighten(rgba(231,231,231,1), 5);
       }
     }
@@ -251,48 +235,65 @@ textarea {
     &[placeholder] {
       text-overflow: ellipsis;
     }
+
+    &:focus {
+      border-color: transparent;
+      box-shadow: none;
+    }
+
+    &:focus + .searchbar-wrapper {
+      border: 1px solid rgba(139,206,237,1);
+      box-shadow: inset 0 0 0 1px rgba(139,206,237, .5);
+    }
   }
 
   .searchbar-wrapper {
-    // background: $input-bg;
-    background: lighten(rgba(231,231,231,1), 5);
-    display: table-cell;
-    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 60px);
+    height: 42px;
+    z-index: 0;
+    background: transparent;
+    border: 1px solid lighten(rgba(231,231,231,1), 5);
+    box-shadow: inset 0 0 0 1px lighten(rgba(231,231,231,1), 5);
   }
 
   .input-group-btn {
+    width: 58px;
+
     .btn {
-      margin-top: 0;
-      margin-bottom: 0;
+      width: 100%;
+      height: 42px;
+      margin: 0;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    svg {
+      margin-top: 2px;
     }
   }
 
   .addon-btn-group {
-    display: table-cell;
-    padding: 6px 0;
-    position: absolute;
-    right: 0;
-    z-index: 4;
+    display: inline-block;
+    // position: absolute;
+    // display: flex;
+    // right: 60px;
+    // height: 42px;
+    // z-index: 4;
+    // flex-direction: column;
+    // justify-content: center;
 
     ul {
-      margin-top: 0;
-      margin-bottom: 0;
+      margin: 0;
     }
 
     .addon-btn {
       background: transparent;
       border: 0;
-      padding: 4px 6px;
-
-      .icon {
-        vertical-align: middle;
-      }
-    }
-
-    .list-inline {
-      > li {
-        padding-left: 0;
-      }
+      margin-top: 4px;
+      padding: 0;
     }
   }
 }
