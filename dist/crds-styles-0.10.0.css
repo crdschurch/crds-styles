@@ -6014,9 +6014,9 @@ timepicker .glyphicon {
   timepicker .glyphicon:before {
     content: none; }
   timepicker .glyphicon.glyphicon-chevron-down {
-    background-image: url(http://crossroads-media.s3.amazonaws.com/images/chevron-down-blue.png); }
+    background-image: url(//crossroads-media.s3.amazonaws.com/images/chevron-down-blue.png); }
   timepicker .glyphicon.glyphicon-chevron-up {
-    background-image: url(http://crossroads-media.s3.amazonaws.com/images/chevron-up-blue.png); }
+    background-image: url(//crossroads-media.s3.amazonaws.com/images/chevron-up-blue.png); }
 
 timepicker .btn-link {
   padding: 6px 20px; }
