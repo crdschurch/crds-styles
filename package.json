@@ -31,8 +31,10 @@
   "author": "",
   "license": "BSD-3-Clause",
   "dependencies": {
+    "autoprefixer": "^7.1.2",
     "bootstrap-sass": "*",
     "fs-extra": "^4.0.0",
+    "postcss": "^6.0.8",
     "svg-sprite": "^1.3.6"
   },
   "devDependencies": {

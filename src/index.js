@@ -6,6 +6,8 @@ var pkgJson = require('../package.json');
 var argv = require('yargs').argv;
 var AWS = require('aws-sdk');
 var tildeImporter = require('node-sass-tilde-importer');
+var autoprefixer = require('autoprefixer');
+var postcss = require('postcss');
 var _ = require('lodash');
 
 // ------------------------------------------------- |
@@ -72,9 +74,13 @@ CRDS.Styles.prototype.onCompile = function(error, result, filename) {
   } else {
     fs.ensureDir('./dist')
       .then(function() {
-        // this.log(result.stats);
-        this.writeFile(result.css, filename);
-        this.writeFile(result.map, filename + '.map');
+        postcss([ autoprefixer ]).process(result.css).then((css) => {
+          css.warnings().forEach((warn) => {
+            this.log(warn.toString());
+          });
+          this.writeFile(css, filename);
+          this.writeFile(result.map, filename + '.map');
+        });
       }.bind(this))
       .catch(function(err) {
         this.error(err);
