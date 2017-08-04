@@ -29,8 +29,8 @@ CRDS.Styles.prototype.setup = function() {
 CRDS.Styles.prototype.init = function() {
   if(argv.build) {
     this.build();
-  } else if(argv.publish) {
-    this.publish();
+  } else if(argv.deploy) {
+    this.deploy();
   }
 }
 
@@ -132,8 +132,8 @@ CRDS.Styles.prototype.fileExists = function(filename) {
   return _.includes(this.existingFiles, filename);
 };
 
-CRDS.Styles.prototype.publish = function() {
-  this.log('publish()');
+CRDS.Styles.prototype.deploy = function() {
+  this.log('deploy()');
   this.setupS3();
 
   var timer = setInterval(function() {
