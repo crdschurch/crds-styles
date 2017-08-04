@@ -1,6 +1,6 @@
 {
   "name": "crds-styles",
-  "version": "0.11.2",
+  "version": "0.11.3",
   "description": "",
   "style": "assets/stylesheets/_crds.scss",
   "watch": {
@@ -19,7 +19,7 @@
     "build-svg": "npm run build-css-icons && npm run build-svg-icons",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rimraf dist && node src/index.js --build",
-    "publish": "node src/index.js --publish",
+    "deploy": "node src/index.js --deploy",
     "watch": "npm-watch build"
   },
   "files": [
