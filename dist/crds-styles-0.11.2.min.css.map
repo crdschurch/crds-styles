@@ -1,6 +1,6 @@
 {
 	"version": 3,
-	"file": "crds-styles-0.11.0.min.css",
+	"file": "crds-styles-0.11.2.min.css",
 	"sources": [
 		"../assets/stylesheets/bootstrap.scss",
 		"../assets/stylesheets/_variables.scss",
