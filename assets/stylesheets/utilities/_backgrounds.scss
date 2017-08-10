@@ -26,6 +26,10 @@
   @include crds-bg-variant($cr-cyan);
 }
 
+.bg-cyan-dark {
+  @include crds-bg-variant($cr-cyan-dark);
+}
+
 .bg-gray {
   @include crds-bg-variant($cr-gray-lighter, $cr-gray);
 }
@@ -36,6 +40,12 @@
 
 .bg-cover-image {
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.bg-contain-image {
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
 }
