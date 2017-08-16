@@ -327,22 +327,47 @@ textarea {
 
 
 // 5. Checkboxes & Radios
-.checkbox {
-  input[type='checkbox'] {
-    height: 16px;
-    width: 16px;
+label {
+  &.checkbox {
+    font-size: $font-size-small;
+    font-weight: 400;
   }
 }
 
-.radio,
 .checkbox {
+  &.control {
+    input ~ .control-indicator {
+      background-color: $cr-white;
+      border: 2px solid $cr-gray-light;
+    }
+
+    input:checked ~ .control-indicator {
+      background-color: $cr-teal;
+      border: 0;
+    }
+
+    input:focus ~ .control-indicator {
+      box-shadow: none;
+    }
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+
+    input:disabled ~ .control-indicator {
+      background-color: $cr-gray-light;
+      border: 0;
+    }
+  }
+}
+
+.radio {
   label {
     font-size: .875rem;
     padding-left: 25px;
   }
 
-  input[type='radio'],
-  input[type='checkbox'] {
+  input[type='radio'] {
     margin-left: -25px;
 
     &:disabled {
@@ -357,10 +382,6 @@ textarea {
 
   input[type='radio']:disabled {
     border-radius: 50%;
-  }
-
-  input[type='checkbox']:disabled {
-    border-radius: $border-radius-base;
   }
 }
 
@@ -377,8 +398,8 @@ textarea {
 
     &:checked {
       ~ .check {
-        background: $cr-cyan;
-        border: 2px solid $cr-cyan;
+        background: $cr-teal;
+        border: 2px solid $cr-teal;
       }
 
       ~ .check::before {
