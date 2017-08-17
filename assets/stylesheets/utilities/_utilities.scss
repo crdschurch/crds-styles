@@ -219,6 +219,14 @@ a.underline,
   border-top: 1px solid $gray-lighter;
 }
 
+.border-left {
+  border-left: 1px solid $gray-lighter;
+}
+
+.border-right {
+  border-right: 1px solid $gray-lighter;
+}
+
 .border-sides {
   border-left: 1px solid $gray-lighter;
   border-right: 1px solid $gray-lighter;
