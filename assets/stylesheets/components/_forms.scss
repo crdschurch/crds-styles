@@ -4,7 +4,7 @@
 * 3. Input groups & Addon styles
 * 4. Search bar
 * 5. Checkboxes & Radios
-* 6. Selectors
+* 6. Select & Dropdowns
 * 7. Layout
 * 8. Application-specific styles
 **/
@@ -452,7 +452,7 @@ label {
 
 
 
-// 6. Selectors
+// 6. Select & Dropdowns
 select {
   &.form-control {
     -webkit-appearance: none;
@@ -474,6 +474,17 @@ select {
       border-color: $input-border;
       color: $input-color;
     }
+  }
+}
+
+.dropdown-block {
+  .btn {
+    display: block;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    margin-bottom: 1rem;
   }
 }
 
