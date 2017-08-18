@@ -4,7 +4,7 @@
 * 3. Input groups & Addon styles
 * 4. Search bar
 * 5. Checkboxes & Radios
-* 6. Selectors
+* 6. Select & Dropdowns
 * 7. Layout
 * 8. Application-specific styles
 **/
@@ -216,6 +216,24 @@ textarea {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
+
+    .input-group-btn {
+      width: 68px;
+      flex: 0 0 auto;
+      display: block;
+
+      .btn {
+        width: 100%;
+        height: 42px;
+        margin: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+
+      svg {
+        margin-top: 2px;
+      }
+    }
   }
 
   input.form-control {
@@ -263,7 +281,7 @@ textarea {
     position: absolute;
     top: 0;
     left: 0;
-    width: calc(100% - 58px);
+    width: calc(100% - 68px);
     height: 42px;
     z-index: 0;
     background: lighten(rgba(231,231,231,1), 5);
@@ -272,24 +290,7 @@ textarea {
     box-shadow: inset 0 0 0 1px lighten(rgba(231,231,231,1), 5);
   }
 
-  .input-group-btn {
-    width: 68px;
-    -webkit-box-flex: 0;
-    -ms-flex: 0;
-    flex: 0;
 
-    .btn {
-      width: 100%;
-      height: 42px;
-      margin: 0;
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-    }
-
-    svg {
-      margin-top: 2px;
-    }
-  }
 
   .addon-btn {
     position: relative;
@@ -326,22 +327,47 @@ textarea {
 
 
 // 5. Checkboxes & Radios
-.checkbox {
-  input[type='checkbox'] {
-    height: 16px;
-    width: 16px;
+label {
+  &.checkbox {
+    font-size: $font-size-small;
+    font-weight: 400;
   }
 }
 
-.radio,
 .checkbox {
+  &.control {
+    input ~ .control-indicator {
+      background-color: $cr-white;
+      border: 2px solid $cr-gray-light;
+    }
+
+    input:checked ~ .control-indicator {
+      background-color: $cr-teal;
+      border: 0;
+    }
+
+    input:focus ~ .control-indicator {
+      box-shadow: none;
+    }
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+
+    input:disabled ~ .control-indicator {
+      background-color: $cr-gray-light;
+      border: 0;
+    }
+  }
+}
+
+.radio {
   label {
     font-size: .875rem;
     padding-left: 25px;
   }
 
-  input[type='radio'],
-  input[type='checkbox'] {
+  input[type='radio'] {
     margin-left: -25px;
 
     &:disabled {
@@ -356,10 +382,6 @@ textarea {
 
   input[type='radio']:disabled {
     border-radius: 50%;
-  }
-
-  input[type='checkbox']:disabled {
-    border-radius: $border-radius-base;
   }
 }
 
@@ -376,8 +398,8 @@ textarea {
 
     &:checked {
       ~ .check {
-        background: $cr-cyan;
-        border: 2px solid $cr-cyan;
+        background: $cr-teal;
+        border: 2px solid $cr-teal;
       }
 
       ~ .check::before {
@@ -430,7 +452,7 @@ textarea {
 
 
 
-// 6. Selectors
+// 6. Select & Dropdowns
 select {
   &.form-control {
     -webkit-appearance: none;
@@ -452,6 +474,17 @@ select {
       border-color: $input-border;
       color: $input-color;
     }
+  }
+}
+
+.dropdown-block {
+  .btn {
+    display: block;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    margin-bottom: 1rem;
   }
 }
 
