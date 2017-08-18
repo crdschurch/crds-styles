@@ -285,6 +285,13 @@ a {
       color: $cr-gray-dark;
     }
   }
+
+  &.text-cyan-light {
+    &:hover,
+    &:focus {
+      color: $cr-cyan-lighter;
+    }
+  }
 }
 
 
