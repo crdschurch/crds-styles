@@ -9,6 +9,7 @@ var tildeImporter = require('node-sass-tilde-importer');
 var autoprefixer = require('autoprefixer');
 var postcss = require('postcss');
 var _ = require('lodash');
+var glob = require('glob');
 
 // ------------------------------------------------- |
 
@@ -43,6 +44,7 @@ CRDS.Styles.prototype.bind = function(fn, me) {
 CRDS.Styles.prototype.build = function() {
   this.log('build()');
   this.compile('nested');
+  this.copySVGs();
   setTimeout(function() {
     this.compile('compressed');
   }.bind(this), 1000);
@@ -63,6 +65,22 @@ CRDS.Styles.prototype.compile = function(style) {
     this.onCompile(error, result, filename)
   }.bind(this));
 };
+
+CRDS.Styles.prototype.copySVGs = function() {
+  fs.mkdir('./dist/svgs');
+  glob('./*(src|assets)/**/*.svg', {}, (err, files) => {
+    files.forEach((file) => {
+      var newFile = './dist/svgs/' + this.filenameFromPath(file)
+      fs.copySync(path.resolve(__dirname, '../' + file), newFile);
+      console.log(newFile);
+    });
+  });
+}
+
+CRDS.Styles.prototype.filenameFromPath = function(path) {
+  var segments = path.split('/');
+  return segments[segments.length - 1];
+}
 
 CRDS.Styles.prototype.onCompile = function(error, result, filename) {
   this.log('onCompile()');
@@ -105,21 +123,21 @@ CRDS.Styles.prototype.setupS3 = function() {
     secretAccessKey: process.env.CRDS_STYLES_AWS_SECRET_KEY
   });
   this.s3 = new AWS.S3();
-  this.s3Prefix = 'styles/'
   this.s3Bucket = process.env.CRDS_STYLES_S3_BUCKET;
-  this.existingFiles = this.listObjects();
+  this.existingStyleFiles = this.listObjects('styles/');
+  this.existingImageFiles = this.listObjects('images/');
 }
 
-CRDS.Styles.prototype.listObjects = function() {
+CRDS.Styles.prototype.listObjects = function(prefix) {
   this.log('listObjects()');
-  this.s3.listObjects({ Bucket: this.s3Bucket, Prefix: this.s3Prefix }, function(err, data) {
+  this.s3.listObjects({ Bucket: this.s3Bucket, Prefix: prefix }, function(err, data) {
     if (err) {
       console.error(err, err.stack);
     } else {
-      this.existingFiles = _.chain(data['Contents'])
+      this.existingStyleFiles = _.chain(data['Contents'])
         .map('Key')
         .map(function(v) {
-          var pattern = this.s3Prefix;
+          var pattern = prefix;
           return v.replace(new RegExp(pattern), '');
         }.bind(this))
         .compact()
@@ -129,50 +147,68 @@ CRDS.Styles.prototype.listObjects = function() {
 };
 
 CRDS.Styles.prototype.fileExists = function(filename) {
-  return _.includes(this.existingFiles, filename);
+  return _.includes(this.existingStyleFiles, filename);
 };
 
 CRDS.Styles.prototype.deploy = function() {
   this.log('deploy()');
   this.setupS3();
 
-  var timer = setInterval(function() {
-    if(this.existingFiles) {
-      clearInterval(timer);
-      return this.upload();
+  var stylesTimer = setInterval(function() {
+    if(this.existingStyleFiles) {
+      clearInterval(stylesTimer);
+      return this.upload('styles/', './dist/*.css*');
+    }
+  }.bind(this), 300);
+
+  var imagesTimer = setInterval(function() {
+    if(this.existingStyleFiles) {
+      clearInterval(imagesTimer);
+      return this.upload('images/', './dist/**/*.svg');
     }
   }.bind(this), 300);
 };
 
-CRDS.Styles.prototype.upload = function() {
+CRDS.Styles.prototype.upload = function(s3Prefix, files) {
   this.log('upload()');
-  var directoryPath = './dist';
-  fs.readdir(directoryPath, function(err, files) {
+  glob(files, {}, (err, files) => {
     if (err) {
-      this.log('Cannot read directory ' + directoryPath + ' or doesn\'t exist')
+      this.log(err);
     } else {
-      async.mapLimit(files, 5, this.uploadFile.bind(this))
+      files.forEach((file) => {
+        this.uploadFile(s3Prefix, file);
+      });
     }
-  }.bind(this));
+  });
 }
 
-CRDS.Styles.prototype.uploadFile = function(filename) {
+CRDS.Styles.prototype.uploadFile = function(prefix, filename) {
   this.log('uploadFile()', filename);
 
   if (this.fileExists(filename) && !argv.force) {
-    this.error('File already exists: ' + filename);
+    this.error('[SKIPPING] File already exists: ' + filename);
   } else {
-    var stream = fs.createReadStream('./dist/' + filename);
+    var stream = fs.createReadStream(filename);
     var ext = path.extname(filename);
-    var mime_type = ext == '.css' ? 'text/css' : 'application/octet-stream'
+    switch (path.extname(filename)) {
+      case '.css':
+        var mime_type = 'text/css';
+        break;
+      case '.map':
+        var mime_type = 'application/octet-stream';
+        break;
+      case '.svg':
+        var mime_type = 'image/svg+xml';
+        break;
+    }
     var params = {
       Bucket: this.s3Bucket,
-      Key: this.s3Prefix + filename,
+      Key: prefix + this.filenameFromPath(filename),
       ContentType: mime_type,
       Body: stream,
       ACL: 'public-read'
     };
-    this.s3.upload(params, function(err, data) {
+    this.s3.upload(params, (err, data) => {
       console.log(err, data);
     });
   }

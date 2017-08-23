@@ -1,6 +1,6 @@
 {
   "name": "crds-styles",
-  "version": "0.12.0",
+  "version": "0.12.1",
   "description": "",
   "style": "assets/stylesheets/_crds.scss",
   "watch": {
@@ -33,7 +33,8 @@
   "dependencies": {
     "autoprefixer": "^7.1.2",
     "bootstrap-sass": "*",
-    "fs-extra": "^4.0.0",
+    "fs-extra": "^4.0.1",
+    "glob": "^7.1.2",
     "postcss": "^6.0.8",
     "svg-sprite": "^1.3.6"
   },
