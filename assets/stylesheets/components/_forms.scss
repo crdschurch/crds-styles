@@ -329,8 +329,8 @@ textarea {
 // 5. Checkboxes & Radios
 label {
   &.checkbox {
-    font-size: $font-size-small;
-    font-weight: 400;
+    font-size: $font-size-base;
+    font-weight: 300;
   }
 }
 
@@ -358,6 +358,13 @@ label {
       background-color: $cr-gray-light;
       border: 0;
     }
+  }
+
+  .control-indicator {
+    top: 3px;
+    width: 18px;
+    height: 18px;
+    border-radius: 2px;
   }
 }
 
