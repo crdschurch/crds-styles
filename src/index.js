@@ -68,9 +68,12 @@ CRDS.Styles.prototype.compile = function(style) {
 
 CRDS.Styles.prototype.copySVGs = function() {
   fs.mkdir('./dist/svgs');
-  glob('./*(src|assets)/**/*.svg', {}, (err, files) => {
+  glob('./assets/**/*.svg', {}, (err, files) => {
     files.forEach((file) => {
-      var newFile = './dist/svgs/' + this.filenameFromPath(file)
+      var filename = this.filenameFromPath(file);
+      var newFilename = this.fileBasename(file) + '-' + pkgJson.version + '.' +
+                        this.fileExt(file);
+      var newFile = './dist/svgs/' + newFilename;
       fs.copySync(path.resolve(__dirname, '../' + file), newFile);
       console.log(newFile);
     });
@@ -78,8 +81,15 @@ CRDS.Styles.prototype.copySVGs = function() {
 }
 
 CRDS.Styles.prototype.filenameFromPath = function(path) {
-  var segments = path.split('/');
-  return segments[segments.length - 1];
+  return _.last(path.split('/'));
+}
+
+CRDS.Styles.prototype.fileExt = function(path) {
+  return _.last(path.split('.'));
+}
+
+CRDS.Styles.prototype.fileBasename = function(path) {
+  return this.filenameFromPath(path).replace('.' + this.fileExt(path), '');
 }
 
 CRDS.Styles.prototype.onCompile = function(error, result, filename) {
