@@ -365,11 +365,14 @@ label {
 }
 
 .checkbox {
-  .control-indicator {
-    top: 3px;
-    width: 18px;
-    height: 18px;
+  input ~ .control-indicator {
     border-radius: 2px;
+    top: 3px;
+  }
+
+  input:checked ~ .control-indicator {
+    background-image: url('https://d1tmclqz61gqwd.cloudfront.net/images/checkbox-checked-0.12.0.svg');
+    background-size: cover;
   }
 }
 
