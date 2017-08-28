@@ -14,8 +14,14 @@
       }
     }
 
-    &.btn-outline {
+    &.btn-outline:hover {
       &:hover {
+        background: transparent;
+        border-color: rgba($cr-gray-light, .75);
+        color: $cr-gray-light;
+      }
+
+      &.active:hover {
         background: $cr-teal;
         border-color: $cr-teal;
         color: $cr-white;
