@@ -165,7 +165,6 @@ textarea {
   }
 }
 
-
 .input-icon-group-right {
   display: flex;
 
@@ -328,17 +327,21 @@ textarea {
 
 // 5. Checkboxes & Radios
 label {
-  &.checkbox {
+  &.checkbox,
+  &.radio {
     font-size: $font-size-base;
-    font-weight: 300;
+    font-weight: 400;
   }
 }
 
-.checkbox {
+.checkbox,
+.radio {
   &.control {
     input ~ .control-indicator {
       background-color: $cr-white;
       border: 2px solid $cr-gray-light;
+      height: 18px;
+      width: 18px;
     }
 
     input:checked ~ .control-indicator {
@@ -359,99 +362,24 @@ label {
       border: 0;
     }
   }
+}
 
-  .control-indicator {
-    top: 3px;
-    width: 18px;
-    height: 18px;
+.checkbox {
+  input ~ .control-indicator {
     border-radius: 2px;
-  }
-}
-
-.radio {
-  label {
-    font-size: .875rem;
-    padding-left: 25px;
-  }
-
-  input[type='radio'] {
-    margin-left: -25px;
-
-    &:disabled {
-      -webkit-appearance: none;
-      content: '';
-      width: 15px;
-      height: 15px;
-      background-color: $cr-gray;
-      outline: 0;
-    }
-  }
-
-  input[type='radio']:disabled {
-    border-radius: 50%;
-  }
-}
-
-.radio-inline {
-  margin-top: 0;
-  padding-left: 0;
-}
-
-.radio {
-  input[type='radio'] {
-    display: none;
-    position: absolute;
-    visibility: hidden;
-
-    &:checked {
-      ~ .check {
-        background: $cr-teal;
-        border: 2px solid $cr-teal;
-      }
-
-      ~ .check::before {
-        background: $cr-white;
-      }
-    }
-  }
-
-  label {
-    cursor: pointer;
-    display: block;
-    height: 22px;
-    margin: 0 auto;
-    padding: 0 8px 0 25px;
-    position: relative;
-    z-index: 9;
-  }
-
-  .check {
-    border: 2px solid $cr-gray-light;
-    border-radius: 100%;
-    display: block;
-    height: 15px;
-    left: 5px;
-    position: absolute;
     top: 3px;
-    width: 15px;
-    z-index: 5;
-
-    &::before {
-      border-radius: 100%;
-      content: '';
-      display: block;
-      height: 5px;
-      left: 3px;
-      margin: auto;
-      position: absolute;
-      top: 3px;
-      width: 5px;
-    }
   }
 
-  &.disabled {
-    .check {
-      background: $cr-gray-light;
+  input:checked ~ .control-indicator {
+    background-image: url('https://d1tmclqz61gqwd.cloudfront.net/images/checkbox-checked-0.12.0.svg');
+    background-size: cover;
+  }
+}
+
+.radio {
+  &.control {
+    input:checked ~ .control-indicator {
+      background-size: 8px;
     }
   }
 }
