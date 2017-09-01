@@ -109,36 +109,34 @@ select {
 
 // Error states for embedded form.io form inputs
 
-#formio {
-  .form-group {
-    &.alert-danger,
-    &.has-error {
-      padding: 0;
-      margin-bottom: 15px;
-      font-style: normal;
-      font-family: $base-font-face;
-      font-size: $base-font-size;
-      border: 0px;
-      line-height: $line-height-base;
-      background: transparent;
+#formio .form-group {
+  &.alert-danger,
+  &.has-error {
+    padding: 0;
+    margin-bottom: 15px;
+    font-style: normal;
+    font-family: $base-font-face;
+    font-size: $base-font-size;
+    border: 0px;
+    line-height: $line-height-base;
+    background: transparent;
 
-      label {
-        color: $cr-gray-dark;
-      }
+    label {
+      color: $cr-gray-dark;
+    }
 
-      .form-control {
+    .form-control {
+      border-color: $alert-danger;
+      color: $cr-gray-dark;
+
+      &:focus {
         border-color: $alert-danger;
-        color: $cr-gray-dark;
-
-        &:focus {
-          border-color: $alert-danger;
-          box-shadow: inset 0 0 0 1px rgba($alert-danger, .5);
-        }
+        box-shadow: inset 0 0 0 1px rgba($alert-danger, .5);
       }
+    }
 
-      .help-block {
-        color: $alert-danger;
-      }
+    .help-block {
+      color: $alert-danger;
     }
   }
 }
