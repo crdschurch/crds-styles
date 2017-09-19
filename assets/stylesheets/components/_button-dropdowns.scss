@@ -14,6 +14,8 @@
     .icon {
       margin: 2px 0 0 4px;
       height: 14px;
+      // specified width to prevent IE 11 width:auto issue
+      width: 12px;
     }
   }
 
