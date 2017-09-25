@@ -7,16 +7,37 @@
   background-color: $cr-cyan;
   list-style: none;
   z-index: 10;
-  // should help performance
+  // apparently this helps performance
   -webkit-transform: translateZ(0);
+
+  &.dark {
+    background-color: $cr-blue-dark;
+    box-shadow: 0 -2px 10px rgba(0,0,0,.15);
+  }
+
+  &.light {
+    background-color: #efefef;
+    box-shadow: 0 -2px 10px rgba(0,0,0,.15);
+
+    li a {
+      color: rgba(29, 54, 71, .6);
+    }
+
+    .active a {
+      color: #1D3647;
+    }
+  }
 
   &.top {
     position: relative;
     top: 0;
+    margin-bottom: 1rem;
 
-    &.sticky {
-      position: fixed;
-    }
+    // &.sticky {
+    //   position: -webkit-sticky;
+    //   position: sticky;
+    //   top: 54px;
+    // }
   }
 
   &.bottom {
@@ -24,7 +45,10 @@
     bottom: 0;
   }
 
-  @media (min-width: 500px) {
+  // Using 540 as a simple breakpoint.
+  // We can have a deeper conversation in the future about 
+  //what devices should see this nav
+  @media (min-width: 540px) {
     display: none;
   }
 
