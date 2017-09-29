@@ -7009,7 +7009,7 @@ textarea {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    z-index: 3; }
+    z-index: 4; }
     .input-group-block .input-group-addon i, .input-group-block .input-group-addon .icon {
       background-size: 16px;
       -webkit-filter: invert(55%);
@@ -8964,7 +8964,8 @@ svg use {
     font-size: 1.35rem;
     font-weight: 500;
     padding: 0 .5rem;
-    text-align: center; }
+    text-align: center;
+    width: 3rem; }
     .countdown-timer li::after {
       color: #d0ebf8;
       display: block;
@@ -9583,6 +9584,9 @@ a.underline,
   -webkit-transform: translate(-50%, -80%);
           transform: translate(-50%, -80%);
   width: 100%; }
+
+.vertical-align-bottom {
+  vertical-align: bottom; }
 
 /* 5. Border stuff */
 .no-borders {
