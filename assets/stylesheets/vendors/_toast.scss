@@ -5,6 +5,10 @@
   width: 100%;
   z-index: 999;
 
+  &.toast-relative {
+    position: relative;
+  }
+
   .toast-title {
     display: inline-block;
     margin-right: .5rem;
