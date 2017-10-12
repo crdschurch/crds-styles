@@ -237,7 +237,6 @@
 
 .btn-group-toggle {
   margin-bottom: 1rem;
-  width: 100%;
 
   > .btn {
     width: 50%;
@@ -299,6 +298,52 @@
       &.active:hover,
       &:active:hover {
         background: $cr-teal;
+      }
+    }
+  }
+}
+
+.btn-group-primary {
+  .btn-option {
+    border: 1px solid $btn-primary-border;
+    background: transparent;
+    color: $btn-toggle-primary-color;
+
+    &:hover {
+      background: transparent;
+      border-color: $btn-primary-border;
+      color: $btn-toggle-primary-color;
+    }
+
+    &.active,
+    &:active,
+    &:focus:hover {
+      background: $btn-primary-bg;
+      border-color: $btn-primary-border;
+      box-shadow: none;
+      color: $btn-primary-color;
+
+      &:focus,
+      &:hover {
+        background: $btn-primary-bg;
+        border-color: $btn-primary-border;
+        color: $btn-primary-color;
+      }
+    }
+  }
+
+  .dark-theme & {
+    .btn-option {
+      background: transparent;
+
+      &.active,
+      &:active,
+      &:focus:hover,
+      &.active:focus,
+      &:active:focus,
+      &.active:hover,
+      &:active:hover {
+        background: $btn-primary-bg;
       }
     }
   }
