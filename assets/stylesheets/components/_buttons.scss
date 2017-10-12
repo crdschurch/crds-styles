@@ -238,8 +238,13 @@
 .btn-group-toggle {
   margin-bottom: 1rem;
 
+  > label {
+    white-space: nowrap;
+  }
+
   > .btn {
     width: 50%;
+    white-space: nowrap;
 
     &.btn-option {
       margin-right: 0;
@@ -305,7 +310,7 @@
 
 .btn-group-primary {
   .btn-option {
-    border: 1px solid $btn-primary-border;
+    border: 80px solid $btn-primary-border;
     background: transparent;
     color: $btn-toggle-primary-color;
 
