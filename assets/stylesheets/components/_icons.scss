@@ -46,129 +46,149 @@ svg.icon {
   background-position: 0 0;
 }
 
-.icon.check-circle:not(svg) {
+.icon.camera:not(svg) {
   @extend %svg-common;
-  background-position: 0 3.9887815518853227%;
+  background-position: 0 3.3333333333333335%;
 }
 
-.icon.checkbox-checked:not(svg) {
+.icon.caret-down:not(svg) {
   @extend %svg-common;
-  background-position: 0 7.6923076923076925%;
+  background-position: 0 6.666666666666667%;
+}
+
+.icon.check-circle:not(svg) {
+  @extend %svg-common;
+  background-position: 0 10%;
 }
 
 .icon.chevron-down:not(svg) {
   @extend %svg-common;
-  background-position: 0 8.258024306637582%;
+  background-position: 0 13.333333333333334%;
 }
 
 .icon.chevron-left:not(svg) {
   @extend %svg-common;
-  background-position: 0 12.246805858522904%;
+  background-position: 0 16.666666666666668%;
 }
 
 .icon.chevron-right:not(svg) {
   @extend %svg-common;
-  background-position: 0 16.235587410408225%;
+  background-position: 0 20%;
 }
 
 .icon.chevron-up:not(svg) {
   @extend %svg-common;
-  background-position: 0 20.22436896229355%;
+  background-position: 0 23.333333333333332%;
 }
 
 .icon.circle-thin:not(svg) {
   @extend %svg-common;
-  background-position: 0 24.21315051417887%;
+  background-position: 0 26.666666666666668%;
+}
+
+.icon.clock-o:not(svg) {
+  @extend %svg-common;
+  background-position: 0 30%;
 }
 
 .icon.close:not(svg) {
   @extend %svg-common;
-  background-position: 0 28.201932066064195%;
+  background-position: 0 33.333333333333336%;
 }
 
 .icon.close-thin:not(svg) {
   @extend %svg-common;
-  background-position: 0 32.19071361794952%;
+  background-position: 0 36.666666666666664%;
 }
 
 .icon.contrast:not(svg) {
   @extend %svg-common;
-  background-position: 0 36.17949516983484%;
+  background-position: 0 40%;
+}
+
+.icon.copy:not(svg) {
+  @extend %svg-common;
+  background-position: 0 43.333333333333336%;
 }
 
 .icon.download:not(svg) {
   @extend %svg-common;
-  background-position: 0 40.16827672172016%;
+  background-position: 0 46.666666666666664%;
 }
 
 .icon.equalizer:not(svg) {
   @extend %svg-common;
-  background-position: 0 44.157058273605486%;
+  background-position: 0 50%;
 }
 
 .icon.exclamation-circle:not(svg) {
   @extend %svg-common;
-  background-position: 0 48.14583982549081%;
+  background-position: 0 53.333333333333336%;
 }
 
 .icon.facebook:not(svg) {
   @extend %svg-common;
-  background-position: 0 52.13462137737613%;
+  background-position: 0 56.666666666666664%;
 }
 
 .icon.github:not(svg) {
   @extend %svg-common;
-  background-position: 0 56.12340292926145%;
+  background-position: 0 60%;
 }
 
 .icon.instagram:not(svg) {
   @extend %svg-common;
-  background-position: 0 60.11218448114678%;
+  background-position: 0 63.333333333333336%;
 }
 
 .icon.link:not(svg) {
   @extend %svg-common;
-  background-position: 0 64.1009660330321%;
+  background-position: 0 66.66666666666667%;
 }
 
 .icon.map-marker:not(svg) {
   @extend %svg-common;
-  background-position: 0 68.08974758491742%;
+  background-position: 0 70%;
 }
 
 .icon.menu:not(svg) {
   @extend %svg-common;
-  background-position: 0 72.07852913680274%;
+  background-position: 0 73.33333333333333%;
 }
 
 .icon.play-thin:not(svg) {
   @extend %svg-common;
-  background-position: 0 76.06731068868807%;
+  background-position: 0 76.66666666666667%;
 }
 
 .icon.question-circle:not(svg) {
   @extend %svg-common;
-  background-position: 0 80.05609224057339%;
+  background-position: 0 80%;
 }
 
 .icon.screwhead-crds:not(svg) {
   @extend %svg-common;
-  background-position: 0 84.04487379245872%;
+  background-position: 0 83.33333333333333%;
 }
 
 .icon.search:not(svg) {
   @extend %svg-common;
-  background-position: 0 88.03365534434403%;
+  background-position: 0 86.66666666666667%;
+}
+
+.icon.share:not(svg) {
+  @extend %svg-common;
+  background-position: 0 90%;
 }
 
 .icon.twitter:not(svg) {
   @extend %svg-common;
-  background-position: 0 92.02243689622935%;
+  background-position: 0 93.33333333333333%;
 }
 
 .icon.usd:not(svg) {
   @extend %svg-common;
-  background-position: 0 96.01121844811468%;
+  background-position: 0 96.66666666666667%;
 }
 
 .icon.youtube:not(svg) {
