@@ -6038,6 +6038,8 @@ timepicker .form-control.ng-touched.ng-invalid {
   left: 0;
   width: 100%;
   z-index: 999; }
+  #toast-container.toast-relative {
+    position: relative; }
   #toast-container .toast-title {
     display: inline-block;
     margin-right: .5rem; }
@@ -6433,31 +6435,31 @@ a > p {
 img {
   max-width: 100%; }
 
-svg.icon, .icon.calendar:not(svg), .icon.check-circle:not(svg), .icon.checkbox-checked:not(svg), .icon.chevron-down:not(svg), .icon.chevron-left:not(svg), .icon.chevron-right:not(svg), .icon.chevron-up:not(svg), .icon.circle-thin:not(svg), .icon.close:not(svg), .icon.close-thin:not(svg), .icon.contrast:not(svg), .icon.download:not(svg), .icon.equalizer:not(svg), .icon.exclamation-circle:not(svg), .icon.facebook:not(svg), .icon.github:not(svg), .icon.instagram:not(svg), .icon.link:not(svg), .icon.map-marker:not(svg), .icon.menu:not(svg), .icon.play-thin:not(svg), .icon.question-circle:not(svg), .icon.screwhead-crds:not(svg), .icon.search:not(svg), .icon.twitter:not(svg), .icon.usd:not(svg), .icon.youtube:not(svg) {
+svg.icon, .icon.calendar:not(svg), .icon.camera:not(svg), .icon.caret-down:not(svg), .icon.check-circle:not(svg), .icon.chevron-down:not(svg), .icon.chevron-left:not(svg), .icon.chevron-right:not(svg), .icon.chevron-up:not(svg), .icon.circle-thin:not(svg), .icon.clock-o:not(svg), .icon.close:not(svg), .icon.close-thin:not(svg), .icon.contrast:not(svg), .icon.copy:not(svg), .icon.download:not(svg), .icon.equalizer:not(svg), .icon.exclamation-circle:not(svg), .icon.facebook:not(svg), .icon.github:not(svg), .icon.instagram:not(svg), .icon.link:not(svg), .icon.map-marker:not(svg), .icon.menu:not(svg), .icon.play-thin:not(svg), .icon.question-circle:not(svg), .icon.screwhead-crds:not(svg), .icon.search:not(svg), .icon.share:not(svg), .icon.twitter:not(svg), .icon.usd:not(svg), .icon.youtube:not(svg) {
   width: auto;
   height: 32px;
   background-size: 32px; }
-  svg.icon-1.icon, .icon-1.icon.calendar:not(svg), .icon-1.icon.check-circle:not(svg), .icon-1.icon.checkbox-checked:not(svg), .icon-1.icon.chevron-down:not(svg), .icon-1.icon.chevron-left:not(svg), .icon-1.icon.chevron-right:not(svg), .icon-1.icon.chevron-up:not(svg), .icon-1.icon.circle-thin:not(svg), .icon-1.icon.close:not(svg), .icon-1.icon.close-thin:not(svg), .icon-1.icon.contrast:not(svg), .icon-1.icon.download:not(svg), .icon-1.icon.equalizer:not(svg), .icon-1.icon.exclamation-circle:not(svg), .icon-1.icon.facebook:not(svg), .icon-1.icon.github:not(svg), .icon-1.icon.instagram:not(svg), .icon-1.icon.link:not(svg), .icon-1.icon.map-marker:not(svg), .icon-1.icon.menu:not(svg), .icon-1.icon.play-thin:not(svg), .icon-1.icon.question-circle:not(svg), .icon-1.icon.screwhead-crds:not(svg), .icon-1.icon.search:not(svg), .icon-1.icon.twitter:not(svg), .icon-1.icon.usd:not(svg), .icon-1.icon.youtube:not(svg) {
+  svg.icon-1.icon, .icon-1.icon.calendar:not(svg), .icon-1.icon.camera:not(svg), .icon-1.icon.caret-down:not(svg), .icon-1.icon.check-circle:not(svg), .icon-1.icon.chevron-down:not(svg), .icon-1.icon.chevron-left:not(svg), .icon-1.icon.chevron-right:not(svg), .icon-1.icon.chevron-up:not(svg), .icon-1.icon.circle-thin:not(svg), .icon-1.icon.clock-o:not(svg), .icon-1.icon.close:not(svg), .icon-1.icon.close-thin:not(svg), .icon-1.icon.contrast:not(svg), .icon-1.icon.copy:not(svg), .icon-1.icon.download:not(svg), .icon-1.icon.equalizer:not(svg), .icon-1.icon.exclamation-circle:not(svg), .icon-1.icon.facebook:not(svg), .icon-1.icon.github:not(svg), .icon-1.icon.instagram:not(svg), .icon-1.icon.link:not(svg), .icon-1.icon.map-marker:not(svg), .icon-1.icon.menu:not(svg), .icon-1.icon.play-thin:not(svg), .icon-1.icon.question-circle:not(svg), .icon-1.icon.screwhead-crds:not(svg), .icon-1.icon.search:not(svg), .icon-1.icon.share:not(svg), .icon-1.icon.twitter:not(svg), .icon-1.icon.usd:not(svg), .icon-1.icon.youtube:not(svg) {
     width: auto;
     height: 16px;
     background-size: 16px; }
-  svg.icon-2.icon, .icon-2.icon.calendar:not(svg), .icon-2.icon.check-circle:not(svg), .icon-2.icon.checkbox-checked:not(svg), .icon-2.icon.chevron-down:not(svg), .icon-2.icon.chevron-left:not(svg), .icon-2.icon.chevron-right:not(svg), .icon-2.icon.chevron-up:not(svg), .icon-2.icon.circle-thin:not(svg), .icon-2.icon.close:not(svg), .icon-2.icon.close-thin:not(svg), .icon-2.icon.contrast:not(svg), .icon-2.icon.download:not(svg), .icon-2.icon.equalizer:not(svg), .icon-2.icon.exclamation-circle:not(svg), .icon-2.icon.facebook:not(svg), .icon-2.icon.github:not(svg), .icon-2.icon.instagram:not(svg), .icon-2.icon.link:not(svg), .icon-2.icon.map-marker:not(svg), .icon-2.icon.menu:not(svg), .icon-2.icon.play-thin:not(svg), .icon-2.icon.question-circle:not(svg), .icon-2.icon.screwhead-crds:not(svg), .icon-2.icon.search:not(svg), .icon-2.icon.twitter:not(svg), .icon-2.icon.usd:not(svg), .icon-2.icon.youtube:not(svg) {
+  svg.icon-2.icon, .icon-2.icon.calendar:not(svg), .icon-2.icon.camera:not(svg), .icon-2.icon.caret-down:not(svg), .icon-2.icon.check-circle:not(svg), .icon-2.icon.chevron-down:not(svg), .icon-2.icon.chevron-left:not(svg), .icon-2.icon.chevron-right:not(svg), .icon-2.icon.chevron-up:not(svg), .icon-2.icon.circle-thin:not(svg), .icon-2.icon.clock-o:not(svg), .icon-2.icon.close:not(svg), .icon-2.icon.close-thin:not(svg), .icon-2.icon.contrast:not(svg), .icon-2.icon.copy:not(svg), .icon-2.icon.download:not(svg), .icon-2.icon.equalizer:not(svg), .icon-2.icon.exclamation-circle:not(svg), .icon-2.icon.facebook:not(svg), .icon-2.icon.github:not(svg), .icon-2.icon.instagram:not(svg), .icon-2.icon.link:not(svg), .icon-2.icon.map-marker:not(svg), .icon-2.icon.menu:not(svg), .icon-2.icon.play-thin:not(svg), .icon-2.icon.question-circle:not(svg), .icon-2.icon.screwhead-crds:not(svg), .icon-2.icon.search:not(svg), .icon-2.icon.share:not(svg), .icon-2.icon.twitter:not(svg), .icon-2.icon.usd:not(svg), .icon-2.icon.youtube:not(svg) {
     width: auto;
     height: 32px;
     background-size: 32px; }
-  svg.icon-3.icon, .icon-3.icon.calendar:not(svg), .icon-3.icon.check-circle:not(svg), .icon-3.icon.checkbox-checked:not(svg), .icon-3.icon.chevron-down:not(svg), .icon-3.icon.chevron-left:not(svg), .icon-3.icon.chevron-right:not(svg), .icon-3.icon.chevron-up:not(svg), .icon-3.icon.circle-thin:not(svg), .icon-3.icon.close:not(svg), .icon-3.icon.close-thin:not(svg), .icon-3.icon.contrast:not(svg), .icon-3.icon.download:not(svg), .icon-3.icon.equalizer:not(svg), .icon-3.icon.exclamation-circle:not(svg), .icon-3.icon.facebook:not(svg), .icon-3.icon.github:not(svg), .icon-3.icon.instagram:not(svg), .icon-3.icon.link:not(svg), .icon-3.icon.map-marker:not(svg), .icon-3.icon.menu:not(svg), .icon-3.icon.play-thin:not(svg), .icon-3.icon.question-circle:not(svg), .icon-3.icon.screwhead-crds:not(svg), .icon-3.icon.search:not(svg), .icon-3.icon.twitter:not(svg), .icon-3.icon.usd:not(svg), .icon-3.icon.youtube:not(svg) {
+  svg.icon-3.icon, .icon-3.icon.calendar:not(svg), .icon-3.icon.camera:not(svg), .icon-3.icon.caret-down:not(svg), .icon-3.icon.check-circle:not(svg), .icon-3.icon.chevron-down:not(svg), .icon-3.icon.chevron-left:not(svg), .icon-3.icon.chevron-right:not(svg), .icon-3.icon.chevron-up:not(svg), .icon-3.icon.circle-thin:not(svg), .icon-3.icon.clock-o:not(svg), .icon-3.icon.close:not(svg), .icon-3.icon.close-thin:not(svg), .icon-3.icon.contrast:not(svg), .icon-3.icon.copy:not(svg), .icon-3.icon.download:not(svg), .icon-3.icon.equalizer:not(svg), .icon-3.icon.exclamation-circle:not(svg), .icon-3.icon.facebook:not(svg), .icon-3.icon.github:not(svg), .icon-3.icon.instagram:not(svg), .icon-3.icon.link:not(svg), .icon-3.icon.map-marker:not(svg), .icon-3.icon.menu:not(svg), .icon-3.icon.play-thin:not(svg), .icon-3.icon.question-circle:not(svg), .icon-3.icon.screwhead-crds:not(svg), .icon-3.icon.search:not(svg), .icon-3.icon.share:not(svg), .icon-3.icon.twitter:not(svg), .icon-3.icon.usd:not(svg), .icon-3.icon.youtube:not(svg) {
     width: auto;
     height: 48px;
     background-size: 48px; }
-  svg.icon-4.icon, .icon-4.icon.calendar:not(svg), .icon-4.icon.check-circle:not(svg), .icon-4.icon.checkbox-checked:not(svg), .icon-4.icon.chevron-down:not(svg), .icon-4.icon.chevron-left:not(svg), .icon-4.icon.chevron-right:not(svg), .icon-4.icon.chevron-up:not(svg), .icon-4.icon.circle-thin:not(svg), .icon-4.icon.close:not(svg), .icon-4.icon.close-thin:not(svg), .icon-4.icon.contrast:not(svg), .icon-4.icon.download:not(svg), .icon-4.icon.equalizer:not(svg), .icon-4.icon.exclamation-circle:not(svg), .icon-4.icon.facebook:not(svg), .icon-4.icon.github:not(svg), .icon-4.icon.instagram:not(svg), .icon-4.icon.link:not(svg), .icon-4.icon.map-marker:not(svg), .icon-4.icon.menu:not(svg), .icon-4.icon.play-thin:not(svg), .icon-4.icon.question-circle:not(svg), .icon-4.icon.screwhead-crds:not(svg), .icon-4.icon.search:not(svg), .icon-4.icon.twitter:not(svg), .icon-4.icon.usd:not(svg), .icon-4.icon.youtube:not(svg) {
+  svg.icon-4.icon, .icon-4.icon.calendar:not(svg), .icon-4.icon.camera:not(svg), .icon-4.icon.caret-down:not(svg), .icon-4.icon.check-circle:not(svg), .icon-4.icon.chevron-down:not(svg), .icon-4.icon.chevron-left:not(svg), .icon-4.icon.chevron-right:not(svg), .icon-4.icon.chevron-up:not(svg), .icon-4.icon.circle-thin:not(svg), .icon-4.icon.clock-o:not(svg), .icon-4.icon.close:not(svg), .icon-4.icon.close-thin:not(svg), .icon-4.icon.contrast:not(svg), .icon-4.icon.copy:not(svg), .icon-4.icon.download:not(svg), .icon-4.icon.equalizer:not(svg), .icon-4.icon.exclamation-circle:not(svg), .icon-4.icon.facebook:not(svg), .icon-4.icon.github:not(svg), .icon-4.icon.instagram:not(svg), .icon-4.icon.link:not(svg), .icon-4.icon.map-marker:not(svg), .icon-4.icon.menu:not(svg), .icon-4.icon.play-thin:not(svg), .icon-4.icon.question-circle:not(svg), .icon-4.icon.screwhead-crds:not(svg), .icon-4.icon.search:not(svg), .icon-4.icon.share:not(svg), .icon-4.icon.twitter:not(svg), .icon-4.icon.usd:not(svg), .icon-4.icon.youtube:not(svg) {
     width: auto;
     height: 64px;
     background-size: 64px; }
-  svg.icon-5.icon, .icon-5.icon.calendar:not(svg), .icon-5.icon.check-circle:not(svg), .icon-5.icon.checkbox-checked:not(svg), .icon-5.icon.chevron-down:not(svg), .icon-5.icon.chevron-left:not(svg), .icon-5.icon.chevron-right:not(svg), .icon-5.icon.chevron-up:not(svg), .icon-5.icon.circle-thin:not(svg), .icon-5.icon.close:not(svg), .icon-5.icon.close-thin:not(svg), .icon-5.icon.contrast:not(svg), .icon-5.icon.download:not(svg), .icon-5.icon.equalizer:not(svg), .icon-5.icon.exclamation-circle:not(svg), .icon-5.icon.facebook:not(svg), .icon-5.icon.github:not(svg), .icon-5.icon.instagram:not(svg), .icon-5.icon.link:not(svg), .icon-5.icon.map-marker:not(svg), .icon-5.icon.menu:not(svg), .icon-5.icon.play-thin:not(svg), .icon-5.icon.question-circle:not(svg), .icon-5.icon.screwhead-crds:not(svg), .icon-5.icon.search:not(svg), .icon-5.icon.twitter:not(svg), .icon-5.icon.usd:not(svg), .icon-5.icon.youtube:not(svg) {
+  svg.icon-5.icon, .icon-5.icon.calendar:not(svg), .icon-5.icon.camera:not(svg), .icon-5.icon.caret-down:not(svg), .icon-5.icon.check-circle:not(svg), .icon-5.icon.chevron-down:not(svg), .icon-5.icon.chevron-left:not(svg), .icon-5.icon.chevron-right:not(svg), .icon-5.icon.chevron-up:not(svg), .icon-5.icon.circle-thin:not(svg), .icon-5.icon.clock-o:not(svg), .icon-5.icon.close:not(svg), .icon-5.icon.close-thin:not(svg), .icon-5.icon.contrast:not(svg), .icon-5.icon.copy:not(svg), .icon-5.icon.download:not(svg), .icon-5.icon.equalizer:not(svg), .icon-5.icon.exclamation-circle:not(svg), .icon-5.icon.facebook:not(svg), .icon-5.icon.github:not(svg), .icon-5.icon.instagram:not(svg), .icon-5.icon.link:not(svg), .icon-5.icon.map-marker:not(svg), .icon-5.icon.menu:not(svg), .icon-5.icon.play-thin:not(svg), .icon-5.icon.question-circle:not(svg), .icon-5.icon.screwhead-crds:not(svg), .icon-5.icon.search:not(svg), .icon-5.icon.share:not(svg), .icon-5.icon.twitter:not(svg), .icon-5.icon.usd:not(svg), .icon-5.icon.youtube:not(svg) {
     width: auto;
     height: 80px;
     background-size: 80px; }
-  svg.icon-6.icon, .icon-6.icon.calendar:not(svg), .icon-6.icon.check-circle:not(svg), .icon-6.icon.checkbox-checked:not(svg), .icon-6.icon.chevron-down:not(svg), .icon-6.icon.chevron-left:not(svg), .icon-6.icon.chevron-right:not(svg), .icon-6.icon.chevron-up:not(svg), .icon-6.icon.circle-thin:not(svg), .icon-6.icon.close:not(svg), .icon-6.icon.close-thin:not(svg), .icon-6.icon.contrast:not(svg), .icon-6.icon.download:not(svg), .icon-6.icon.equalizer:not(svg), .icon-6.icon.exclamation-circle:not(svg), .icon-6.icon.facebook:not(svg), .icon-6.icon.github:not(svg), .icon-6.icon.instagram:not(svg), .icon-6.icon.link:not(svg), .icon-6.icon.map-marker:not(svg), .icon-6.icon.menu:not(svg), .icon-6.icon.play-thin:not(svg), .icon-6.icon.question-circle:not(svg), .icon-6.icon.screwhead-crds:not(svg), .icon-6.icon.search:not(svg), .icon-6.icon.twitter:not(svg), .icon-6.icon.usd:not(svg), .icon-6.icon.youtube:not(svg) {
+  svg.icon-6.icon, .icon-6.icon.calendar:not(svg), .icon-6.icon.camera:not(svg), .icon-6.icon.caret-down:not(svg), .icon-6.icon.check-circle:not(svg), .icon-6.icon.chevron-down:not(svg), .icon-6.icon.chevron-left:not(svg), .icon-6.icon.chevron-right:not(svg), .icon-6.icon.chevron-up:not(svg), .icon-6.icon.circle-thin:not(svg), .icon-6.icon.clock-o:not(svg), .icon-6.icon.close:not(svg), .icon-6.icon.close-thin:not(svg), .icon-6.icon.contrast:not(svg), .icon-6.icon.copy:not(svg), .icon-6.icon.download:not(svg), .icon-6.icon.equalizer:not(svg), .icon-6.icon.exclamation-circle:not(svg), .icon-6.icon.facebook:not(svg), .icon-6.icon.github:not(svg), .icon-6.icon.instagram:not(svg), .icon-6.icon.link:not(svg), .icon-6.icon.map-marker:not(svg), .icon-6.icon.menu:not(svg), .icon-6.icon.play-thin:not(svg), .icon-6.icon.question-circle:not(svg), .icon-6.icon.screwhead-crds:not(svg), .icon-6.icon.search:not(svg), .icon-6.icon.share:not(svg), .icon-6.icon.twitter:not(svg), .icon-6.icon.usd:not(svg), .icon-6.icon.youtube:not(svg) {
     width: auto;
     height: 96px;
     background-size: 96px; }
@@ -6472,90 +6474,102 @@ svg.icon, .icon.calendar:not(svg), .icon.check-circle:not(svg), .icon.checkbox-c
 svg.icon use {
   fill: currentColor; }
 
-.icon.calendar:not(svg), .icon.check-circle:not(svg), .icon.checkbox-checked:not(svg), .icon.chevron-down:not(svg), .icon.chevron-left:not(svg), .icon.chevron-right:not(svg), .icon.chevron-up:not(svg), .icon.circle-thin:not(svg), .icon.close:not(svg), .icon.close-thin:not(svg), .icon.contrast:not(svg), .icon.download:not(svg), .icon.equalizer:not(svg), .icon.exclamation-circle:not(svg), .icon.facebook:not(svg), .icon.github:not(svg), .icon.instagram:not(svg), .icon.link:not(svg), .icon.map-marker:not(svg), .icon.menu:not(svg), .icon.play-thin:not(svg), .icon.question-circle:not(svg), .icon.screwhead-crds:not(svg), .icon.search:not(svg), .icon.twitter:not(svg), .icon.usd:not(svg), .icon.youtube:not(svg) {
+.icon.calendar:not(svg), .icon.camera:not(svg), .icon.caret-down:not(svg), .icon.check-circle:not(svg), .icon.chevron-down:not(svg), .icon.chevron-left:not(svg), .icon.chevron-right:not(svg), .icon.chevron-up:not(svg), .icon.circle-thin:not(svg), .icon.clock-o:not(svg), .icon.close:not(svg), .icon.close-thin:not(svg), .icon.contrast:not(svg), .icon.copy:not(svg), .icon.download:not(svg), .icon.equalizer:not(svg), .icon.exclamation-circle:not(svg), .icon.facebook:not(svg), .icon.github:not(svg), .icon.instagram:not(svg), .icon.link:not(svg), .icon.map-marker:not(svg), .icon.menu:not(svg), .icon.play-thin:not(svg), .icon.question-circle:not(svg), .icon.screwhead-crds:not(svg), .icon.search:not(svg), .icon.share:not(svg), .icon.twitter:not(svg), .icon.usd:not(svg), .icon.youtube:not(svg) {
   background-image: url("assets/svgs/icons.css.svg");
   background-repeat: no-repeat; }
-  .dark-theme .icon.calendar:not(svg), .dark-theme .icon.check-circle:not(svg), .dark-theme .icon.checkbox-checked:not(svg), .dark-theme .icon.chevron-down:not(svg), .dark-theme .icon.chevron-left:not(svg), .dark-theme .icon.chevron-right:not(svg), .dark-theme .icon.chevron-up:not(svg), .dark-theme .icon.circle-thin:not(svg), .dark-theme .icon.close:not(svg), .dark-theme .icon.close-thin:not(svg), .dark-theme .icon.contrast:not(svg), .dark-theme .icon.download:not(svg), .dark-theme .icon.equalizer:not(svg), .dark-theme .icon.exclamation-circle:not(svg), .dark-theme .icon.facebook:not(svg), .dark-theme .icon.github:not(svg), .dark-theme .icon.instagram:not(svg), .dark-theme .icon.link:not(svg), .dark-theme .icon.map-marker:not(svg), .dark-theme .icon.menu:not(svg), .dark-theme .icon.play-thin:not(svg), .dark-theme .icon.question-circle:not(svg), .dark-theme .icon.screwhead-crds:not(svg), .dark-theme .icon.search:not(svg), .dark-theme .icon.twitter:not(svg), .dark-theme .icon.usd:not(svg), .dark-theme .icon.youtube:not(svg) {
+  .dark-theme .icon.calendar:not(svg), .dark-theme .icon.camera:not(svg), .dark-theme .icon.caret-down:not(svg), .dark-theme .icon.check-circle:not(svg), .dark-theme .icon.chevron-down:not(svg), .dark-theme .icon.chevron-left:not(svg), .dark-theme .icon.chevron-right:not(svg), .dark-theme .icon.chevron-up:not(svg), .dark-theme .icon.circle-thin:not(svg), .dark-theme .icon.clock-o:not(svg), .dark-theme .icon.close:not(svg), .dark-theme .icon.close-thin:not(svg), .dark-theme .icon.contrast:not(svg), .dark-theme .icon.copy:not(svg), .dark-theme .icon.download:not(svg), .dark-theme .icon.equalizer:not(svg), .dark-theme .icon.exclamation-circle:not(svg), .dark-theme .icon.facebook:not(svg), .dark-theme .icon.github:not(svg), .dark-theme .icon.instagram:not(svg), .dark-theme .icon.link:not(svg), .dark-theme .icon.map-marker:not(svg), .dark-theme .icon.menu:not(svg), .dark-theme .icon.play-thin:not(svg), .dark-theme .icon.question-circle:not(svg), .dark-theme .icon.screwhead-crds:not(svg), .dark-theme .icon.search:not(svg), .dark-theme .icon.share:not(svg), .dark-theme .icon.twitter:not(svg), .dark-theme .icon.usd:not(svg), .dark-theme .icon.youtube:not(svg) {
     filter: invert(75%);
     -webkit-filter: invert(75%); }
 
 .icon.calendar:not(svg) {
   background-position: 0 0; }
 
-.icon.check-circle:not(svg) {
-  background-position: 0 3.9887815518853227%; }
+.icon.camera:not(svg) {
+  background-position: 0 3.3333333333333335%; }
 
-.icon.checkbox-checked:not(svg) {
-  background-position: 0 7.6923076923076925%; }
+.icon.caret-down:not(svg) {
+  background-position: 0 6.666666666666667%; }
+
+.icon.check-circle:not(svg) {
+  background-position: 0 10%; }
 
 .icon.chevron-down:not(svg) {
-  background-position: 0 8.258024306637582%; }
+  background-position: 0 13.333333333333334%; }
 
 .icon.chevron-left:not(svg) {
-  background-position: 0 12.246805858522904%; }
+  background-position: 0 16.666666666666668%; }
 
 .icon.chevron-right:not(svg) {
-  background-position: 0 16.235587410408225%; }
+  background-position: 0 20%; }
 
 .icon.chevron-up:not(svg) {
-  background-position: 0 20.22436896229355%; }
+  background-position: 0 23.333333333333332%; }
 
 .icon.circle-thin:not(svg) {
-  background-position: 0 24.21315051417887%; }
+  background-position: 0 26.666666666666668%; }
+
+.icon.clock-o:not(svg) {
+  background-position: 0 30%; }
 
 .icon.close:not(svg) {
-  background-position: 0 28.201932066064195%; }
+  background-position: 0 33.333333333333336%; }
 
 .icon.close-thin:not(svg) {
-  background-position: 0 32.19071361794952%; }
+  background-position: 0 36.666666666666664%; }
 
 .icon.contrast:not(svg) {
-  background-position: 0 36.17949516983484%; }
+  background-position: 0 40%; }
+
+.icon.copy:not(svg) {
+  background-position: 0 43.333333333333336%; }
 
 .icon.download:not(svg) {
-  background-position: 0 40.16827672172016%; }
+  background-position: 0 46.666666666666664%; }
 
 .icon.equalizer:not(svg) {
-  background-position: 0 44.157058273605486%; }
+  background-position: 0 50%; }
 
 .icon.exclamation-circle:not(svg) {
-  background-position: 0 48.14583982549081%; }
+  background-position: 0 53.333333333333336%; }
 
 .icon.facebook:not(svg) {
-  background-position: 0 52.13462137737613%; }
+  background-position: 0 56.666666666666664%; }
 
 .icon.github:not(svg) {
-  background-position: 0 56.12340292926145%; }
+  background-position: 0 60%; }
 
 .icon.instagram:not(svg) {
-  background-position: 0 60.11218448114678%; }
+  background-position: 0 63.333333333333336%; }
 
 .icon.link:not(svg) {
-  background-position: 0 64.1009660330321%; }
+  background-position: 0 66.66666666666667%; }
 
 .icon.map-marker:not(svg) {
-  background-position: 0 68.08974758491742%; }
+  background-position: 0 70%; }
 
 .icon.menu:not(svg) {
-  background-position: 0 72.07852913680274%; }
+  background-position: 0 73.33333333333333%; }
 
 .icon.play-thin:not(svg) {
-  background-position: 0 76.06731068868807%; }
+  background-position: 0 76.66666666666667%; }
 
 .icon.question-circle:not(svg) {
-  background-position: 0 80.05609224057339%; }
+  background-position: 0 80%; }
 
 .icon.screwhead-crds:not(svg) {
-  background-position: 0 84.04487379245872%; }
+  background-position: 0 83.33333333333333%; }
 
 .icon.search:not(svg) {
-  background-position: 0 88.03365534434403%; }
+  background-position: 0 86.66666666666667%; }
+
+.icon.share:not(svg) {
+  background-position: 0 90%; }
 
 .icon.twitter:not(svg) {
-  background-position: 0 92.02243689622935%; }
+  background-position: 0 93.33333333333333%; }
 
 .icon.usd:not(svg) {
-  background-position: 0 96.01121844811468%; }
+  background-position: 0 96.66666666666667%; }
 
 .icon.youtube:not(svg) {
   background-position: 0 100%; }
@@ -7097,32 +7111,37 @@ textarea {
         border-bottom-left-radius: 0; }
       .searchbar .input-group .input-group-btn svg {
         margin-top: 2px; }
-  .searchbar input.form-control {
-    position: relative;
-    margin: 2px 0 0 2px;
-    z-index: 1;
-    height: 38px;
+  .searchbar.searchbar-addon input.form-control {
     -webkit-box-flex: 1;
     -ms-flex: 1;
-    flex: 1; }
-    .searchbar input.form-control.ng-touched.ng-valid, .searchbar input.form-control.ng-touched.ng-invalid {
+    flex: 1;
+    height: 34px;
+    margin: 2px;
+    position: relative;
+    top: 2px;
+    width: calc(100% - 4px);
+    z-index: 1; }
+    .searchbar.searchbar-addon input.form-control.ng-touched.ng-valid, .searchbar.searchbar-addon input.form-control.ng-touched.ng-invalid {
       border-color: #f4f4f4;
       -webkit-box-shadow: inset 0 0 0 1px #f4f4f4;
       box-shadow: inset 0 0 0 1px #f4f4f4; }
-    .searchbar input.form-control.ng-touched.ng-valid:focus, .searchbar input.form-control.ng-touched.ng-invalid:focus {
+    .searchbar.searchbar-addon input.form-control.ng-touched.ng-valid:focus, .searchbar.searchbar-addon input.form-control.ng-touched.ng-invalid:focus {
       border-color: #f4f4f4;
       -webkit-box-shadow: inset 0 0 0 1px #f4f4f4;
               box-shadow: inset 0 0 0 1px #f4f4f4; }
-    .searchbar input.form-control[placeholder] {
+    .searchbar.searchbar-addon input.form-control[placeholder] {
       text-overflow: ellipsis; }
-    .searchbar input.form-control:focus {
+    .searchbar.searchbar-addon input.form-control:focus {
       border-color: transparent;
       -webkit-box-shadow: none;
               box-shadow: none; }
-    .searchbar input.form-control:focus + .searchbar-wrapper {
+    .searchbar.searchbar-addon input.form-control:focus + .searchbar-wrapper {
       border: 1px solid #8bceed;
       -webkit-box-shadow: inset 0 0 0 1px rgba(139, 206, 237, 0.5);
       box-shadow: inset 0 0 0 1px rgba(139, 206, 237, 0.5); }
+  .searchbar input.form-control {
+    margin-top: 0;
+    margin-bottom: 0; }
   .searchbar .searchbar-wrapper {
     position: absolute;
     top: 0;
@@ -7151,10 +7170,7 @@ textarea {
     .searchbar .addon-btn svg {
       vertical-align: top; }
   .searchbar .btn-toggle {
-    height: 42px;
-    margin: 0 0 0 1rem;
-    padding-left: 0;
-    padding-right: 0; }
+    height: 42px; }
 
 label.checkbox, label.radio {
   font-size: 16px;
@@ -8013,8 +8029,7 @@ select.form-control:focus, .dark-theme select.form-control:focus {
       width: 100%; } }
 
 .btn-group-toggle {
-  margin-bottom: 1rem;
-  width: 100%; }
+  margin-bottom: 1rem; }
   .btn-group-toggle > .btn {
     width: 50%; }
     .btn-group-toggle > .btn.btn-option {
@@ -8049,6 +8064,30 @@ select.form-control:focus, .dark-theme select.form-control:focus {
   background: transparent; }
   .dark-theme .btn-group-teal .btn-option.active, .dark-theme .btn-group-teal .btn-option:active, .dark-theme .btn-group-teal .btn-option:focus:hover, .dark-theme .btn-group-teal .btn-option.active:focus, .dark-theme .btn-group-teal .btn-option:active:focus, .dark-theme .btn-group-teal .btn-option.active:hover, .dark-theme .btn-group-teal .btn-option:active:hover {
     background: #57afa9; }
+
+.btn-group-primary .btn-option {
+  border: 1px solid #3b6e8f;
+  background: transparent;
+  color: #979797; }
+  .btn-group-primary .btn-option:hover {
+    background: transparent;
+    border-color: #3b6e8f;
+    color: #979797; }
+  .btn-group-primary .btn-option.active, .btn-group-primary .btn-option:active, .btn-group-primary .btn-option:focus:hover {
+    background: #3b6e8f;
+    border-color: #3b6e8f;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    color: white; }
+    .btn-group-primary .btn-option.active:focus, .btn-group-primary .btn-option.active:hover, .btn-group-primary .btn-option:active:focus, .btn-group-primary .btn-option:active:hover, .btn-group-primary .btn-option:focus:hover:focus, .btn-group-primary .btn-option:focus:hover:hover {
+      background: #3b6e8f;
+      border-color: #3b6e8f;
+      color: white; }
+
+.dark-theme .btn-group-primary .btn-option {
+  background: transparent; }
+  .dark-theme .btn-group-primary .btn-option.active, .dark-theme .btn-group-primary .btn-option:active, .dark-theme .btn-group-primary .btn-option:focus:hover, .dark-theme .btn-group-primary .btn-option.active:focus, .dark-theme .btn-group-primary .btn-option:active:focus, .dark-theme .btn-group-primary .btn-option.active:hover, .dark-theme .btn-group-primary .btn-option:active:hover {
+    background: #3b6e8f; }
 
 a.btn.disabled {
   pointer-events: auto; }
@@ -8155,6 +8194,8 @@ a.btn.disabled {
 
 .dropdown {
   display: inline-block; }
+  .dropdown .btn {
+    white-space: normal; }
   .dropdown .dropdown-toggle.btn {
     padding: 14px 16px 12px;
     text-align: left;
@@ -9015,6 +9056,12 @@ svg use {
 
 .accordion accordion-group:first-child .panel {
   border-top: 1px solid #e7e7e7; }
+
+.accordion accordion-group.panel {
+  border: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
 
 .accordion accordion-group .panel {
   border: 0;
