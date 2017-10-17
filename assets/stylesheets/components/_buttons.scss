@@ -237,9 +237,13 @@
 .btn-group-toggle {
   margin-bottom: 1rem;
 
-  > .btn {
-    width: 50%;
+  &.btn-block {
+    > .btn {
+      width: 50%;
+    }
+  }
 
+  > .btn {
     &.btn-option {
       margin-right: 0;
     }
@@ -255,6 +259,7 @@
     border-top-left-radius: 0;
   }
 }
+
 
 .btn-group-teal {
   .btn-option {
