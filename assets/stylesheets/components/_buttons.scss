@@ -237,10 +237,8 @@
 .btn-group-toggle {
   margin-bottom: 1rem;
 
-  &.btn-block {
-    > .btn {
+  &.btn-block > .btn {
       width: 50%;
-    }
   }
 
   > .btn {
