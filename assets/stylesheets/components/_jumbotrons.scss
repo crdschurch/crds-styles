@@ -151,11 +151,13 @@
     opacity: .8;
   }
 
-  a.btn {
+  a.btn,
+  .btn {
     margin: 1rem .25rem 0;
   }
 
-  a.btn-large {
+  a.btn-large,
+  .btn-large {
     padding-top: .75rem;
     padding-bottom: .75rem;
   }
