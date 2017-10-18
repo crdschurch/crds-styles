@@ -241,6 +241,10 @@
       width: 50%;
   }
 
+  > .truncate {
+    max-width: 50%;
+  }
+
   > .btn {
     &.btn-option {
       margin-right: 0;
