@@ -236,6 +236,7 @@
 
 .btn-group-toggle {
   margin-bottom: 1rem;
+  display: flex;
 
   &.btn-block > .btn {
       width: 50%;
@@ -246,6 +247,8 @@
   }
 
   > .btn {
+    flex: 0 1 auto;
+    white-space: normal;
     &.btn-option {
       margin-right: 0;
     }
@@ -443,9 +446,6 @@ a {
     }
   }
 }
-
-
-
 
 // Single Toggle Button
 .btn-toggle {
