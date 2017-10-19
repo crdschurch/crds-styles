@@ -236,10 +236,19 @@
 
 .btn-group-toggle {
   margin-bottom: 1rem;
+  display: flex;
+
+  &.btn-block > .btn {
+      width: 50%;
+  }
+
+  > .truncate {
+    max-width: 50%;
+  }
 
   > .btn {
-    width: 50%;
-
+    flex: 0 1 auto;
+    white-space: normal;
     &.btn-option {
       margin-right: 0;
     }
@@ -255,6 +264,7 @@
     border-top-left-radius: 0;
   }
 }
+
 
 .btn-group-teal {
   .btn-option {
@@ -436,9 +446,6 @@ a {
     }
   }
 }
-
-
-
 
 // Single Toggle Button
 .btn-toggle {
