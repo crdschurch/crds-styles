@@ -8029,9 +8029,19 @@ select.form-control:focus, .dark-theme select.form-control:focus {
       width: 100%; } }
 
 .btn-group-toggle {
-  margin-bottom: 1rem; }
-  .btn-group-toggle > .btn {
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .btn-group-toggle.btn-block > .btn {
     width: 50%; }
+  .btn-group-toggle > .truncate {
+    max-width: 50%; }
+  .btn-group-toggle > .btn {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    white-space: normal; }
     .btn-group-toggle > .btn.btn-option {
       margin-right: 0; }
   .btn-group-toggle > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
@@ -8883,9 +8893,11 @@ svg use {
     font-size: .85rem;
     line-height: 1;
     opacity: .8; }
-  .jumbotron a.btn {
+  .jumbotron a.btn,
+  .jumbotron .btn {
     margin: 1rem .25rem 0; }
-  .jumbotron a.btn-large {
+  .jumbotron a.btn-large,
+  .jumbotron .btn-large {
     padding-top: .75rem;
     padding-bottom: .75rem; }
 
