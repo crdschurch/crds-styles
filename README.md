@@ -83,8 +83,6 @@ We'll be developing the pattern library over the next few months and as we relea
 * New features which don't break existing features: Minor release, increment the middle number, e.g. 1.1.0
 * Changes which break backwards compatibility: Major release, increment the first number, e.g. 2.0.0
 
-Once we reach version 1.0.0, the DDK will be feature complete and will continue to be updated in manner described above.
-
 ## License
 
 This project is licensed under the [3-Clause BSD License](https://opensource.org/licenses/BSD-3-Clause).
