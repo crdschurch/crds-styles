@@ -79,10 +79,10 @@ datepicker {
 
   .glyphicon {
     &.glyphicon-chevron-left:before {
-      content: url('http://crossroads-media.s3.amazonaws.com/images/chevron-left-black.png');
+      content: url('//crossroads-media.s3.amazonaws.com/images/chevron-left-black.png');
     }
     &.glyphicon-chevron-right:before {
-      content: url('http://crossroads-media.s3.amazonaws.com/images/chevron-right-black.png');
+      content: url('//crossroads-media.s3.amazonaws.com/images/chevron-right-black.png');
     }
   }
 
@@ -343,11 +343,11 @@ datepicker {
 
     .glyphicon {
       &.glyphicon-chevron-left:before {
-        content: url('http://crossroads-media.s3.amazonaws.com/images/chevron-left-white.png');
+        content: url('//crossroads-media.s3.amazonaws.com/images/chevron-left-white.png');
         opacity: .25;
       }
       &.glyphicon-chevron-right:before {
-        content: url('http://crossroads-media.s3.amazonaws.com/images/chevron-right-white.png');
+        content: url('//crossroads-media.s3.amazonaws.com/images/chevron-right-white.png');
         opacity: .25;
       }
     }
