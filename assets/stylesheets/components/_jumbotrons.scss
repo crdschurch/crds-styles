@@ -17,6 +17,10 @@
     }
   }
 
+  &.img-background-top {
+    background-position: top center;
+  }
+
   &.text-black {
     color: $cr-black;
   }
