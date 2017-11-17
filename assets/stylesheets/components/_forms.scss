@@ -194,6 +194,8 @@ textarea {
 
 
 // 4. Search bar
+// 🚨 will need to change to variables once maestro loads assets via S3
+// Variable scoping problems with libsass
 
 .input-group-flex {
   display: flex;
@@ -214,7 +216,7 @@ textarea {
 
       .btn {
         width: 100%;
-        height: $input-height-base;
+        height: 42px;
         margin: 0;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
@@ -256,17 +258,17 @@ textarea {
   }
 
   .btn-toggle {
-    height: $input-height-base;
+    height: 42px;
   }
 
   .icon-btn-wrapper {
-    background: lighten($cr-gray-lighter, 5);
-    border: 1px solid lighten($cr-gray-lighter, 5);
-    box-shadow: inset 0 0 0 1px lighten($cr-gray-lighter, 5);
+    background: lighten(rgba(231,231,231,1), 5);
+    border: 1px solid lighten(rgba(231,231,231,1), 5);
+    box-shadow: inset 0 0 0 1px lighten(rgba(231,231,231,1), 5);
     position: absolute;
     top: 0;
     left: 0;
-    height: $input-height-base;
+    height: 42px;
     width: 100%;
     z-index: 0;
   }
@@ -292,8 +294,8 @@ textarea {
       }
 
       &:focus + .icon-btn-wrapper {
-        border: 1px solid $cr-cyan-light;
-        box-shadow: inset 0 0 0 1px rgba($cr-cyan-light, .5);
+        border: 1px solid rgba(139,206,237,1);
+        box-shadow: inset 0 0 0 1px rgba(rgba(139,206,237,1), .5);
       }
     }
   }
