@@ -28,51 +28,38 @@
     padding: 10px 16px 11px;
   }
 
-  &.btn-primary {
-    @include crds-button-variant(
-      $btn-primary-color,
-      $btn-primary-bg,
-      $btn-primary-border);
+  &.btn-blue {
+    @include crds-button-variant($btn-blue-color, $btn-blue-bg, $btn-blue-border);
 
     .dark-theme & {
-      .btn-secondary {
-        @include crds-button-variant(
-          $btn-secondary-color,
-          $btn-secondary-bg,
-          $btn-secondary-border);
-      }
+      @extend .btn-cyan;
     }
   }
 
-  &.btn-secondary {
-    @include crds-button-variant(
-      $btn-secondary-color,
-      $btn-secondary-bg,
-      $btn-secondary-border);
+  &.btn-cyan {
+    @include crds-button-variant($btn-cyan-color, $btn-cyan-bg, $btn-cyan-border);
   }
 
   &.btn-gray {
-    @include crds-button-variant(
-      $btn-gray-color,
-      $btn-gray-bg,
-      $btn-gray-border);
+    @include crds-button-variant($btn-gray-color, $btn-gray-bg, $btn-gray-border);
   }
 
-  &.btn-default {
-    @include crds-button-variant(
-      $btn-default-color,
-      $btn-default-bg,
-      $btn-default-border);
+  &.btn-gray-light {
+    @include crds-button-variant($btn-gray-lt-color, $btn-gray-lt-bg, $btn-gray-lt-border);
+  }
+
+  &.white {
+    @include crds-button-variant($btn-white-color, $btn-white-bg, $btn-white-border);
   }
 }
 
-.btn-option {
+.btn-default {
   border-style: solid;
   border-width: 1px;
 
-  background-color: $btn-option-bg;
-  border-color: $btn-option-border;
-  color: $btn-option-color;
+  background-color: $btn-default-bg;
+  border-color: $btn-default-border;
+  color: $btn-default-color;
 
   &.active, &:active {
     &, &:focus, &:hover {
@@ -80,14 +67,14 @@
 
       background-color: $cr-teal;
       border-color: $cr-teal;
-      color: $btn-option-color;
+      color: $cr-white;
     }
   }
 
   &:hover {
-    background-color: darken($btn-option-bg, 10);
-    border-color: darken($btn-option-border, 10);
-    color: $btn-option-color;
+    background-color: darken($btn-default-bg, 10);
+    border-color: darken($btn-default-border, 10);
+    color: $btn-default-color;
   }
 
   :focus {
@@ -95,97 +82,74 @@
     box-shadow: 0 0 0 1px $input-border-focus inset;
   }
 
-  &.btn-outline {
-    background-color: transparent;
-    border-color: $btn-option-border;
-    color: $btn-option-bg;
-
-    &.active,
-    &:active,
-    &.active:focus,
-    &:active:focus,
-    &.active:hover,
-    &:active:hover {
-      &, .dark-theme & {
-        background-color: $cr-teal;
-        border-color: $cr-teal;
-        color: $btn-option-color;
-      }
-    }
-
-    &:hover {
-      background-color: shade($cr-white, 1%);
-
-      .dark-theme & {
-        background-color: transparent;
-        border-color: darken($btn-option-border, 5);
-      }
-    }
-  }
-
-  &.btn-link {
-    background: none;
-    border-color: transparent;
-    color: $btn-option-bg;
-    text-decoration: none;
-
-    &.active,
-    &:active {
-      background: $cr-teal;
-      border-color: $cr-teal;
-      color: $btn-option-color;
-
-      &:hover {
-        color: darken($btn-option-color, 5);
-      }
-
-      &:focus {
-        border-color: $cr-teal;
-        box-shadow: none;
-      }
-    }
-
-    &:hover {
-      color: darken($btn-option-bg, 10);
-    }
-
-    &:focus {
-      border-color: $input-border-focus;
-      box-shadow: 0 0 0 1px $input-border-focus inset;
-    }
-  }
-
   &.disabled {
     &.active, &:active {
       &, &:focus, &:hover {
-        background-color: $btn-option-bg;
-        border-color: $btn-option-border;
-        color: $btn-option-color;
+        background-color: $btn-default-bg;
+        border-color: $btn-default-border;
+        color: $btn-default-color;
       }
     }
 
     &:hover {
-      background-color: $btn-option-bg;
-      border-color: $btn-option-border;
-      color: $btn-option-color;
-    }
-
-    &.btn-outline {
-      &.active, &:active, &:active:focus, &:active:hover {
-        background-color: transparent;
-        border-color: $btn-option-border;
-        color: $btn-option-bg;
-      }
-
-      &:hover {
-        background-color: transparent;
-        border-color: $btn-option-border;
-        color: $btn-option-bg;
-      }
+      background-color: $btn-default-bg;
+      border-color: $btn-default-border;
+      color: $btn-default-color;
     }
 
     .dark-theme & {
       opacity: 1;
+    }
+  }
+}
+
+.btn-link {
+  color: $cr-cyan;
+
+  &:hover {
+    color: darken($cr-cyan, 5);
+  }
+
+  &:focus {
+    border: 1px solid $input-border-focus;
+    box-shadow: 0 0 0 1px $input-border-focus inset;
+  }
+
+  &.active,
+  &:active {
+    text-decoration: underline;
+  }
+
+  &.disabled {
+    &, &.active {
+      text-decoration: none;
+
+      &:hover {
+        color: $cr-cyan;
+      }
+    }
+  }
+
+  &.secondary {
+    color: $cr-gray;
+
+    &:hover {
+      color: darken($cr-gray, 5);
+    }
+
+    &.active,
+    &:active {
+      text-decoration: underline;
+    }
+
+    &.disabled {
+      &, &.active {
+        text-decoration: none;
+
+        &:hover {
+          color: $cr-gray;
+        }
+      }
     }
   }
 }
@@ -451,10 +415,10 @@ a {
 // Single Toggle Button
 .btn-toggle {
   $btn-toggle-styles: (
-    primary: (bg: $btn-primary-bg, bc: $btn-primary-border),
-    secondary: (bg: $btn-secondary-bg, bc: $btn-secondary-border),
+    primary: (bg: $btn-blue-bg, bc: $btn-blue-border),
+    secondary: (bg: $btn-cyan-bg, bc: $btn-cyan-border),
     gray: (bg: $btn-gray-bg, bc: $btn-gray-border),
-    option: (bg: $btn-option-bg, bc: $btn-option-border),
+    option: (bg: $btn-gray-lt-bg, bc: $btn-gray-lt-border),
     default: (bg: $btn-default-bg, bc: $btn-default-border)
   );
 
