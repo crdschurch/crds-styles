@@ -14,17 +14,17 @@
 
   &.btn-lg {
     font-size: $base-font-size;
-    padding: 15px 30px;
+    padding: 9px 20px;
   }
 
   &, &.btn-md {
     font-size: $font-size-small;
-    padding: 10px 20px;
+    padding: 9px 16px 10px;
   }
 
   &.btn-sm {
-    font-size: $font-size-smaller;
-    padding: 6px 18px;
+    font-size: 13px;
+    padding: 9px 16px 10px;
   }
 
   &.btn-primary {
