@@ -1,5 +1,6 @@
 .btn {
   border-radius: $border-radius-base;
+  line-height: 1;
   margin-top: 5px;
   margin-bottom: 5px;
 
@@ -14,17 +15,17 @@
 
   &.btn-lg {
     font-size: $base-font-size;
-    padding: 9px 20px;
+    padding: 14px 20px 16px;
   }
 
   &, &.btn-md {
     font-size: $font-size-small;
-    padding: 9px 16px 10px;
+    padding: 13px 16px;
   }
 
   &.btn-sm {
     font-size: 13px;
-    padding: 9px 16px 10px;
+    padding: 10px 16px 11px;
   }
 
   &.btn-primary {
