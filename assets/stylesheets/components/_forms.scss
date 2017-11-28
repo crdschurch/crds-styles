@@ -204,6 +204,14 @@ textarea {
   margin-bottom: 5px;
   min-width: 330px;
 
+  &.searchbar {
+    .form-control:focus,
+    .form-control.ng-touched.ng-valid:focus {
+      border-color: transparent;
+      box-shadow: unset;
+    }
+  }
+
   .input-group {
     display: flex;
     position: relative;
