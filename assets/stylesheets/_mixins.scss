@@ -16,10 +16,14 @@
   // solid buttons
   &.active,
   &:active {
-    background: darken($background, 5);
-
-    &:focus {
+    &, &:hover, &:focus {
+      background: darken($background, 5);
+      border-color: darken($background, 5);
       box-shadow: none;
+
+      &:focus {
+        box-shadow: none;
+      }
     }
   }
 
@@ -29,18 +33,15 @@
   }
 
   &.disabled {
-    opacity: 1;
-    background: lighten($background, 25);
-    border-color: lighten($border, 25);
-    color: $cr-white;
+    opacity: .65;
 
     &.active,
     &:active,
     &:focus,
     &:hover {
       &, &:focus, &:hover {
-        background: lighten($background, 25);
-        border-color: lighten($border, 25);
+        background: $background;
+        border-color: $border;
         box-shadow: none;
       }
     }
@@ -59,6 +60,7 @@
         background: rgba(tint(desaturate($border, 75), 95%), .75);
         border-color: $border;
         color: $border;
+        box-shadow: none;
 
         .dark-theme & {
           background: rgba(shade(desaturate($border, 75), 95%), .75);
@@ -85,9 +87,7 @@
     }
 
     &.disabled {
-      background: transparent;
-      border-color: lighten($border, 25);
-      color: lighten($border, 25);
+      opacity: .65;
 
       &.active,
       &:active,
@@ -95,8 +95,9 @@
       &:hover {
         &, &:hover, .dark-theme & {
           background: transparent;
-          border-color: lighten($border, 25);
-          color: lighten($border, 25);
+          border-color: $border;
+          color: $border;
+          box-shadow: none;
         }
       }
     }
