@@ -48,8 +48,89 @@
     @include crds-button-variant($btn-gray-lt-color, $btn-gray-lt-bg, $btn-gray-lt-border);
   }
 
-  &.white {
-    @include crds-button-variant($btn-white-color, $btn-white-bg, $btn-white-border);
+  &.btn-white {
+    background: $btn-white-bg;
+    border-color: $btn-white-border;
+    color: $btn-white-color;
+
+    // solid buttons
+    &.active,
+    &:active {
+      &, &:hover, &:focus {
+        background: darken($btn-white-bg, 5);
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
+
+    &:focus {
+      border-color: $input-border-focus;
+      box-shadow: 0 0 0 1px $input-border-focus inset;
+    }
+
+    &:hover {
+      background: darken($btn-white-bg, 5);
+    }
+
+    &.disabled {
+      opacity: .65;
+
+      &.active,
+      &:active,
+      &:focus,
+      &:hover {
+        &, &:focus, &:hover {
+          opacity: .65;
+          background: $btn-white-bg;
+          border-color: $btn-white-border;
+          color: $btn-white-color;
+          box-shadow: none;
+        }
+      }
+    }
+
+    // outline buttons
+    &.btn-outline {
+      background: transparent;
+      border-style: solid;
+      border-width: 1px;
+      color: $btn-white-border;
+
+      &.active,
+      &:active {
+        &, &:hover, &:focus {
+          background: rgba($btn-white-border, .25);
+          border-color: $btn-white-border;
+          color: $btn-white-border;
+        }
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
+
+      &:hover {
+        background: rgba($btn-white-border, .25);
+      }
+
+      &.disabled {
+        opacity: .65;
+
+        &.active,
+        &:active,
+        &:focus,
+        &:hover {
+          &, &:hover {
+            background: transparent;
+            border-color: $btn-white-border;
+            color: $btn-white-border;
+            box-shadow: none;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -121,10 +202,19 @@
   }
 
   &.disabled {
+    &:focus {
+      color: $cr-cyan;
+      border-color: transparent;
+      box-shadow: none;
+    }
+
     &, &.active {
       text-decoration: none;
 
+      &:focus,
       &:hover {
+        border-color: transparent;
+        box-shadow: none;
         color: $cr-cyan;
       }
     }
@@ -143,10 +233,18 @@
     }
 
     &.disabled {
+      &:focus {
+        border-color: transparent;
+        box-shadow: none;
+      }
+
       &, &.active {
         text-decoration: none;
 
+        &:focus,
         &:hover {
+          border-color: transparent;
+          box-shadow: none;
           color: $cr-gray;
         }
       }
