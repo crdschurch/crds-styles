@@ -15,8 +15,7 @@
   margin-bottom: 5px;
 
   &.active,
-  &:active,
-  &:focus {
+  &:active {
     &, &:focus {
       box-shadow: none;
       outline: none;
@@ -38,7 +37,8 @@
     padding: 10px 16px 11px;
   }
 
-  &.btn-blue {
+  &.btn-blue,
+  &.btn-primary {
     @include crds-button-variant($btn-blue-color, $btn-blue-bg, $btn-blue-border);
 
     .dark-theme & {
@@ -269,7 +269,7 @@
 
 /* 2. Layout */
 .btn-group {
-  > .btn {
+  .btn {
     margin-right: .5rem;
 
     // Styles below may seem redundant but are required to override bootstrap
@@ -285,6 +285,61 @@
     &:not(:first-child):not(:last-child):not(.dropdown-toggle) {
       border-radius: $btn-border-radius-base;
     }
+
+    &:not(.active),
+    &:not(:active) {
+      &.btn-blue,
+      &.btn-primary,
+      &.btn-cyan,
+      &.btn-gray,
+      &.btn-gray-light,
+      &.btn-white {
+        @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+
+        &:focus {
+          border: 1px solid $input-border-focus;
+          box-shadow: 0 0 0 1px $input-border-focus inset;
+        }
+      }
+
+      &.btn-default {
+        &:focus {
+          border: 1px solid $input-border-focus;
+          box-shadow: 0 0 0 1px $input-border-focus inset;
+        }
+      }
+    }
+
+    &.active,
+    &:active {
+      &.btn-blue,
+      &.btn-primary {
+        @include crds-button-variant($btn-blue-color, $btn-blue-bg, $btn-blue-border);
+      }
+
+      &.btn-cyan {
+        @include crds-button-variant($btn-cyan-color, $btn-cyan-bg, $btn-cyan-border);
+      }
+
+      &.btn-gray {
+        @include crds-button-variant($btn-gray-color, $btn-gray-bg, $btn-gray-border);
+      }
+
+      &.btn-gray-light {
+        @include crds-button-variant($btn-gray-lt-color, $btn-gray-lt-bg, $btn-gray-lt-border);
+      }
+
+      &.btn-white {
+        @include crds-button-variant($btn-white-color, $btn-white-bg, $btn-white-border);
+      }
+
+      &.btn-default {
+        &:focus {
+          border-color: $cr-teal;
+          box-shadow: none;
+        }
+      }
+    }
   }
 }
 
@@ -293,9 +348,24 @@
     border: 0;
     padding: 14px 17px;
 
-    &:hover:not(.active) {
-      background: transparent;
-      color: darken($btn-default-color, 15);
+    &:not(.active),
+    &:not(:active) {
+      &.btn-blue,
+      &.btn-primary,
+      &.btn-cyan,
+      &.btn-gray,
+      &.btn-gray-light,
+      &.btn-white,
+      &.btn-default {
+        &:hover {
+          background-color: transparent;
+          color: darken($btn-default-color, 15);
+        }
+
+        &:focus {
+          padding: 13px 16px;
+        }
+      }
     }
   }
 }
@@ -326,43 +396,102 @@
     &:not(:first-child):not(:last-child) {
       border-right-color: rgba($cr-gray-light, .25);
       border-left-color: rgba($cr-gray-light, .25);
+
+      &:hover {
+        border-right-color: rgba($cr-gray-light, .25);
+        border-left-color: rgba($cr-gray-light, .25);
+      }
     }
 
-    // Change following colors for each color style (map function?)
-    &.btn-default {
+    @mixin active_pillbar($active-color) {
       &:first-child,
       &:last-child {
-        border-color: $cr-teal
+        border-color: $active-color;
+
+        &:hover {
+          border-color: $active-color;
+        }
       }
 
       &:first-child {
         border-right-color: rgba($cr-gray-light, .25);
+
+        &:hover {
+          border-right-color: rgba($cr-gray-light, .25);
+        }
       }
 
       &:last-child {
         border-left-color: rgba($cr-gray-light, .25);
+
+        &:hover {
+          border-left-color: rgba($cr-gray-light, .25);
+        }
       }
 
       &:not(:first-child):not(:last-child) {
-        border-top-color: $cr-teal;
-        border-bottom-color: $cr-teal;
+        border-top-color: $active-color;
+        border-bottom-color: $active-color;
       }
 
       &.active,
       &:active {
         &:first-child {
-          border-right-color: darken($cr-teal, 5);
+          border-right-color: darken($active-color, 10);
+
+          &:focus {
+            border-right-color: darken($active-color, 10);
+            box-shadow: none;
+          }
         }
 
         &:last-child {
-          border-left-color: darken($cr-teal, 5);
+          border-left-color: darken($active-color, 10);
+
+          &:focus {
+            border-left-color: darken($active-color, 10);
+            box-shadow: none;
+          }
         }
 
         &:not(:first-child):not(:last-child) {
-          border-right-color: darken($cr-teal, 5);
-          border-left-color: darken($cr-teal, 5);
+          border-right-color: darken($active-color, 10);
+          border-left-color: darken($active-color, 10);
+
+          &:focus {
+            border-top-color: $active-color;
+            border-bottom-color: $active-color;
+            border-right-color: darken($active-color, 10);
+            border-left-color: darken($active-color, 10);
+            box-shadow: none;
+          }
         }
       }
+    }
+
+    &.btn-default {
+      @include active_pillbar($cr-teal);
+    }
+
+    &.btn-blue,
+    &.btn-primary {
+      @include active_pillbar($btn-blue-bg);
+    }
+
+    &.btn-cyan {
+      @include active_pillbar($btn-cyan-bg);
+    }
+
+    &.btn-gray {
+      @include active_pillbar($btn-gray-bg);
+    }
+
+    &.btn-gray-light {
+      @include active_pillbar($btn-gray-lt-bg);
+    }
+
+    &.btn-white {
+      @include active_pillbar($btn-white-bg);
     }
   }
 }
