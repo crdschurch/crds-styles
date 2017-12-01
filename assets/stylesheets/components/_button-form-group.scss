@@ -1,56 +1,56 @@
-.btn-group-block {
-  .btn {
-    .icon.check-circle {
-      display: none;
-    }
+// .btn-group-block {
+//   .btn {
+//     .icon.check-circle {
+//       display: none;
+//     }
 
-    &.active {
-      .icon.check-circle {
-        display: inline-block;
-      }
+//     &.active {
+//       .icon.check-circle {
+//         display: inline-block;
+//       }
 
-      .icon.circle-thin {
-        display: none;
-      }
-    }
+//       .icon.circle-thin {
+//         display: none;
+//       }
+//     }
 
-    &.btn-outline {
-      &:hover {
-        background: transparent;
-        border-color: rgba($cr-gray-light, .75);
-        color: $cr-gray-light;
-      }
+//     &.btn-outline {
+//       &:hover {
+//         background: transparent;
+//         border-color: rgba($cr-gray-light, .75);
+//         color: $cr-gray-light;
+//       }
 
-      &.active:hover {
-        background: $cr-teal;
-        border-color: $cr-teal;
-        color: $cr-white;
-      }
-    }
-  }
+//       &.active:hover {
+//         background: $cr-teal;
+//         border-color: $cr-teal;
+//         color: $cr-white;
+//       }
+//     }
+//   }
 
-  .custom-input {
-    position: relative;
-    min-height: 2.75rem;
-    overflow: hidden;
+//   .custom-input {
+//     position: relative;
+//     min-height: 2.75rem;
+//     overflow: hidden;
 
-    &:before {
-      position: absolute;
-      display: block;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 3px;
-      content: ' ';
-      background: $cr-gray-lighter;
-    }
+//     &:before {
+//       position: absolute;
+//       display: block;
+//       left: 0;
+//       top: 0;
+//       height: 100%;
+//       width: 3px;
+//       content: ' ';
+//       background: $cr-gray-lighter;
+//     }
 
-    > * {
-      width: calc(100% - 19px);
-      margin-left: 19px;
-    }
-  }
-}
+//     > * {
+//       width: calc(100% - 19px);
+//       margin-left: 19px;
+//     }
+//   }
+// }
 
 .btn-option {
   .row {

@@ -1,3 +1,13 @@
+/**************
+** 1. Styles
+** 2. Layouts
+** 3. Utilities
+**************/
+
+
+
+
+/* 1. Styles */
 .btn {
   border-radius: $border-radius-base;
   line-height: 1;
@@ -76,6 +86,7 @@
 
     &.disabled {
       opacity: .65;
+      pointer-events: auto;
 
       &.active,
       &:active,
@@ -117,6 +128,7 @@
 
       &.disabled {
         opacity: .65;
+        pointer-events: auto;
 
         &.active,
         &:active,
@@ -252,57 +264,165 @@
   }
 }
 
-.btn-group,
-.btn-group-vertical {
-  > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
-    border-radius: $btn-border-radius-base;
-  }
 
-  > .btn:last-child:not(:first-child) {
-    border-radius: $btn-border-radius-base;
-  }
 
-  > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
-    border-radius: $btn-border-radius-base;
-  }
-}
 
+/* 2. Layout */
 .btn-group {
-  > .btn:not(:last-child) {
-    margin-right: .5rem;
-  }
-}
-
-.btn-group-vertical {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  > .btn:not(:last-child) {
-    margin-bottom: .5rem;
-  }
-
   > .btn {
-    width: auto;
-  }
+    margin-right: .5rem;
 
-  >.btn-block-mobile {
-    @media only screen and (max-width: $screen-xs-max) {
-      display: block;
-      width: 100%;
+    // Styles below may seem redundant but are required to override bootstrap
+    &:first-child:not(:last-child):not(.dropdown-toggle) {
+      border-radius: $btn-border-radius-base;
+    }
+
+    &:last-child:not(:first-child):not(.dropdown-toggle) {
+      border-radius: $btn-border-radius-base;
+      margin-right: 0;
+    }
+
+    &:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+      border-radius: $btn-border-radius-base;
     }
   }
 }
 
-// Toggle button group
+.btn-group-link {
+  > .btn {
+    border: 0;
+    padding: 14px 17px;
 
+    &:hover:not(.active) {
+      background: transparent;
+      color: darken($btn-default-color, 15);
+    }
+  }
+}
+
+.btn-group-bar {
+  > .btn {
+    margin-right: 0;
+
+    &:first-child:not(:last-child):not(.dropdown-toggle) {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    &:last-child:not(:first-child):not(.dropdown-toggle) {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+
+    &:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+      border-radius: 0;
+    }
+
+    &.active {
+      border-style: solid;
+      border-width: 1px;
+    }
+
+    &:not(:first-child):not(:last-child) {
+      border-right-color: rgba($cr-gray-light, .25);
+      border-left-color: rgba($cr-gray-light, .25);
+    }
+
+    // Change following colors for each color style (map function?)
+    &.btn-default {
+      &:first-child,
+      &:last-child {
+        border-color: $cr-teal
+      }
+
+      &:first-child {
+        border-right-color: rgba($cr-gray-light, .25);
+      }
+
+      &:last-child {
+        border-left-color: rgba($cr-gray-light, .25);
+      }
+
+      &:not(:first-child):not(:last-child) {
+        border-top-color: $cr-teal;
+        border-bottom-color: $cr-teal;
+      }
+
+      &.active,
+      &:active {
+        &:first-child {
+          border-right-color: darken($cr-teal, 5);
+        }
+
+        &:last-child {
+          border-left-color: darken($cr-teal, 5);
+        }
+
+        &:not(:first-child):not(:last-child) {
+          border-right-color: darken($cr-teal, 5);
+          border-left-color: darken($cr-teal, 5);
+        }
+      }
+    }
+  }
+}
+
+.btn-group-bar-flexbox {
+  display: flex;
+
+  > .btn {
+    flex: 1 1 auto;
+  }
+}
+
+.btn-group-block {
+  width: 100%;
+
+  > .btn {
+    display: block;
+    width: 100%;
+  }
+}
+
+
+
+
+/* 3. Utilities */
+.btn-group-lg,
+.btn-group-sm {
+  > .btn {
+    line-height: 1;
+  }
+}
+
+// Block-level buttons on mobile screens
+.btn-block-mobile {
+  @media only screen and (max-width: $screen-xs-max) {
+    display: block;
+    width: 100%;
+  }
+}
+
+// Disabled buttons styles when <a> is used
+a {
+  &.btn {
+    &.disabled {
+      pointer-events: auto;
+    }
+  }
+}
+
+
+
+
+// ✂️
+// Toggle button group
 .btn-group-toggle {
   margin-bottom: 1rem;
   display: flex;
 
   &.btn-block > .btn {
-      width: 50%;
+    width: 50%;
   }
 
   > .truncate {
@@ -328,7 +448,7 @@
   }
 }
 
-
+// ✂️
 .btn-group-teal {
   .btn-option {
     border: 1px solid $cr-teal;
@@ -375,6 +495,7 @@
   }
 }
 
+// ✂️
 .btn-group-primary {
   .btn-option {
     border: 1px solid $btn-primary-border;
@@ -421,23 +542,7 @@
   }
 }
 
-// Disabled buttons styles
-a {
-  &.btn {
-    &.disabled {
-      pointer-events: auto;
-    }
-  }
-}
-
-// Block-level buttons on mobile screens
-.btn-block-mobile {
-  @media only screen and (max-width: $screen-xs-max) {
-    display: block;
-    width: 100%;
-  }
-}
-
+// ✂️
 // Flexbox button groups - Horizontal layout
 .btn-group-row {
   display: flex;
@@ -458,58 +563,7 @@ a {
   }
 }
 
-// Flexbox button groups - Vertical layout
-.btn-group-block {
-  display: flex;
-  flex-flow: column nowrap;
-
-  &[type='submit'] {
-    font-size: .875rem;
-  }
-
-  .btn-flex {
-    flex: 1 1 auto;
-    min-height: 3.5rem;
-    margin: 4px 0;
-  }
-
-  .btn-option {
-    &.btn-flex {
-      margin-right: 0;
-    }
-  }
-
-  .row {
-    > div {
-      position: relative;
-      float: left;
-      width: 50%;
-      min-height: 1px;
-      padding-left: 1rem;
-      padding-right: 1rem;
-
-      &.full-width {
-        width: 100%;
-      }
-    }
-  }
-
-  .btn-circle__icon {
-    .fa {
-      padding-right: 8px;
-      vertical-align: middle;
-    }
-
-    .fa-circle-thin {
-      display: inline-block;
-    }
-
-    .fa-check-circle {
-      display: none;
-    }
-  }
-}
-
+// ✂️
 // Single Toggle Button
 .btn-toggle {
   $btn-toggle-styles: (
