@@ -51,7 +51,8 @@
     }
   }
 
-  &.btn-cyan {
+  &.btn-cyan,
+  &.btn-secondary {
     @include crds-button-variant($btn-cyan-color, $btn-cyan-bg, $btn-cyan-border);
   }
 
@@ -296,6 +297,7 @@
       &.btn-blue,
       &.btn-primary,
       &.btn-cyan,
+      &.btn-secondary,
       &.btn-gray,
       &.btn-gray-light,
       &.btn-white {
@@ -322,7 +324,8 @@
         @include crds-button-variant($btn-blue-color, $btn-blue-bg, $btn-blue-border);
       }
 
-      &.btn-cyan {
+      &.btn-cyan,
+      &.btn-secondary {
         @include crds-button-variant($btn-cyan-color, $btn-cyan-bg, $btn-cyan-border);
       }
 
@@ -358,6 +361,7 @@
       &.btn-blue,
       &.btn-primary,
       &.btn-cyan,
+      &.btn-secondary,
       &.btn-gray,
       &.btn-gray-light,
       &.btn-white,
@@ -380,7 +384,8 @@
         @include crds-button-variant($btn-blue-color, $btn-blue-bg, $btn-blue-border);
       }
 
-      &.btn-cyan {
+      &.btn-cyan,
+      &.btn-secondary {
         @include crds-button-variant($btn-cyan-color, $btn-cyan-bg, $btn-cyan-border);
       }
 
@@ -513,7 +518,8 @@
       @include active_pillbar($btn-blue-bg);
     }
 
-    &.btn-cyan {
+    &.btn-cyan,
+    &.btn-secondary {
       @include active_pillbar($btn-cyan-bg);
     }
 
