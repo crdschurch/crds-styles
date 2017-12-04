@@ -22,6 +22,11 @@
     }
   }
 
+  &:focus {
+    outline: none;
+    outline-offset: 0;
+  }
+
   &.btn-lg {
     font-size: $base-font-size;
     padding: 14px 20px 16px;
@@ -365,6 +370,36 @@
         &:focus {
           padding: 13px 16px;
         }
+      }
+    }
+
+    &.active:hover,
+    &:active:hover {
+      &.btn-blue,
+      &.btn-primary {
+        @include crds-button-variant($btn-blue-color, $btn-blue-bg, $btn-blue-border);
+      }
+
+      &.btn-cyan {
+        @include crds-button-variant($btn-cyan-color, $btn-cyan-bg, $btn-cyan-border);
+      }
+
+      &.btn-gray {
+        @include crds-button-variant($btn-gray-color, $btn-gray-bg, $btn-gray-border);
+      }
+
+      &.btn-gray-light {
+        @include crds-button-variant($btn-gray-lt-color, $btn-gray-lt-bg, $btn-gray-lt-border);
+      }
+
+      &.btn-white {
+        @include crds-button-variant($btn-white-color, $btn-white-bg, $btn-white-border);
+      }
+
+      &.btn-default {
+        background: $cr-teal;
+        border-color: $cr-teal;
+        color: $cr-white;
       }
     }
   }
