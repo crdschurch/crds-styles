@@ -271,6 +271,10 @@
   }
 }
 
+.btn-block {
+  text-align: left;
+}
+
 
 
 
@@ -551,7 +555,12 @@
 
   > .btn {
     display: block;
+    text-align: left;
     width: 100%;
+  }
+
+  .clear {
+    clear: both;
   }
 }
 
@@ -580,194 +589,5 @@ a {
     &.disabled {
       pointer-events: auto;
     }
-  }
-}
-
-
-
-
-// ✂️
-// Toggle button group
-.btn-group-toggle {
-  margin-bottom: 1rem;
-  display: flex;
-
-  &.btn-block > .btn {
-    width: 50%;
-  }
-
-  > .truncate {
-    max-width: 50%;
-  }
-
-  > .btn {
-    flex: 0 1 auto;
-    white-space: normal;
-    &.btn-option {
-      margin-right: 0;
-    }
-  }
-
-  > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
-  }
-
-  > .btn:last-child:not(:first-child) {
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-  }
-}
-
-// ✂️
-.btn-group-teal {
-  .btn-option {
-    border: 1px solid $cr-teal;
-    background: $cr-white;
-    color: $cr-teal;
-
-    &:hover {
-      background: $cr-white;
-      border-color: $cr-teal;
-      color: $cr-teal;
-    }
-
-    &.active,
-    &:active,
-    &:focus:hover {
-      background: $cr-teal;
-      border-color: $cr-teal;
-      box-shadow: none;
-      color: $cr-white;
-
-      &:focus,
-      &:hover {
-        background: $cr-teal;
-        border-color: $cr-teal;
-        color: $cr-white;
-      }
-    }
-  }
-
-  .dark-theme & {
-    .btn-option {
-      background: transparent;
-
-      &.active,
-      &:active,
-      &:focus:hover,
-      &.active:focus,
-      &:active:focus,
-      &.active:hover,
-      &:active:hover {
-        background: $cr-teal;
-      }
-    }
-  }
-}
-
-// ✂️
-.btn-group-primary {
-  .btn-option {
-    border: 1px solid $btn-primary-border;
-    background: transparent;
-    color: $btn-toggle-primary-color;
-
-    &:hover {
-      background: transparent;
-      border-color: $btn-primary-border;
-      color: $btn-toggle-primary-color;
-    }
-
-    &.active,
-    &:active,
-    &:focus:hover {
-      background: $btn-primary-bg;
-      border-color: $btn-primary-border;
-      box-shadow: none;
-      color: $btn-primary-color;
-
-      &:focus,
-      &:hover {
-        background: $btn-primary-bg;
-        border-color: $btn-primary-border;
-        color: $btn-primary-color;
-      }
-    }
-  }
-
-  .dark-theme & {
-    .btn-option {
-      background: transparent;
-
-      &.active,
-      &:active,
-      &:focus:hover,
-      &.active:focus,
-      &:active:focus,
-      &.active:hover,
-      &:active:hover {
-        background: $btn-primary-bg;
-      }
-    }
-  }
-}
-
-// ✂️
-// Flexbox button groups - Horizontal layout
-.btn-group-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  margin-right: -5px;
-  margin-left: -5px;
-  justify-content: space-between;
-
-  .btn-option {
-    &.btn-flex {
-      min-height: 2rem;
-      flex: 1 1 auto;
-      margin: 4px;
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
-  }
-}
-
-// ✂️
-// Single Toggle Button
-.btn-toggle {
-  $btn-toggle-styles: (
-    primary: (bg: $btn-blue-bg, bc: $btn-blue-border),
-    secondary: (bg: $btn-cyan-bg, bc: $btn-cyan-border),
-    gray: (bg: $btn-gray-bg, bc: $btn-gray-border),
-    option: (bg: $btn-gray-lt-bg, bc: $btn-gray-lt-border),
-    default: (bg: $btn-default-bg, bc: $btn-default-border)
-  );
-
-  @each $style, $map in $btn-toggle-styles {
-    &.btn-#{$style} {
-      &,
-      &:active,
-      &:active:focus,
-      &:focus,
-      &:hover {
-        background: map-get($map, bg);
-        border-color: map-get($map, bc);
-        box-shadow: none;
-      }
-    }
-  }
-
-  &.btn-link,
-  &.btn-link:active,
-  &.btn-link:active:focus,
-  &.btn-link:focus,
-  &.btn-link:hover {
-    text-decoration: none;
-  }
-
-  &.text-white {
-    color: $cr-white;
   }
 }
