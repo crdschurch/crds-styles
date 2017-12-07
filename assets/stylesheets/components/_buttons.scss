@@ -195,6 +195,7 @@
     border-radius: $btn-border-radius-base;
   }
 
+
   > .btn:last-child:not(:first-child) {
     border-radius: $btn-border-radius-base;
   }
@@ -481,5 +482,28 @@ a {
 
   &.text-white {
     color: $cr-white;
+  }
+}
+
+
+
+.dropdown {
+  .dropdown-toggle {
+    &.btn {
+      &.btn-lg {
+        font-size: $base-font-size;
+        padding: 14px 20px 16px;
+      }
+
+      &, &.btn-md {
+        font-size: $font-size-small;
+        padding: 12px 16px;
+      }
+
+      &.btn-sm {
+        font-size: 13px;
+        padding: 9px 16px;
+      }
+    }
   }
 }
