@@ -507,3 +507,56 @@ a {
     }
   }
 }
+
+.input-group-lg,
+.input-group-sm {
+  .form-control {
+    line-height: 1.2;
+  }
+
+  .input-group-btn {
+    > .btn {
+      border-top-right-radius: $border-radius-base;
+      border-bottom-right-radius: $border-radius-base;
+      line-height: 1;
+    }
+  }
+}
+
+.input-group-lg {
+  .form-control,
+  .input-group-btn > .btn {
+    height: 48px;
+  }
+
+  .form-control {
+    padding: 11px 10px 8px;
+  }
+
+  .input-group-btn {
+    > .btn {
+      font-size: 18px;
+      margin: 0;
+      padding: 15px 22px 17px 20px;
+    }
+  }
+}
+
+.input-group-sm {
+  .form-control,
+  .input-group-btn > .btn {
+    height: 36px;
+  }
+
+  .form-control {
+    padding: 8px 10px 7px;
+  }
+
+  .input-group-btn {
+    > .btn {
+      font-size: 14px;
+      margin: 0;
+      padding: 12px 16px;
+    }
+  }
+}
