@@ -510,8 +510,12 @@ a {
 
 .input-group-white {
   .form-control {
-    background-color: #d9d9d9;
-    border-color: #d9d9d9;
+    background-color: darken($cr-gray-lighter, 2);
+    border-color: darken($cr-gray-lighter, 2);
+  }
+  .form-control[disabled] {
+    background-color: lighten($input-color-placeholder, 25);
+    border-color: lighten($input-color-placeholder, 25);
   }
 }
 
