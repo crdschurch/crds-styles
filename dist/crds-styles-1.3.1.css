@@ -7096,6 +7096,11 @@ textarea {
   margin-top: 5px;
   margin-bottom: 5px;
   min-width: 330px; }
+  .input-group-flex.searchbar .form-control:focus,
+  .input-group-flex.searchbar .form-control.ng-touched.ng-valid:focus {
+    border-color: transparent;
+    -webkit-box-shadow: unset;
+            box-shadow: unset; }
   .input-group-flex .input-group {
     display: -webkit-box;
     display: -ms-flexbox;
