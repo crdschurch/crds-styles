@@ -374,9 +374,16 @@ label {
     input:checked ~ .control-indicator {
       background-size: 8px;
     }
+
+    .controls-inline & {
+      height: auto;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
   }
 }
-
 
 
 

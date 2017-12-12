@@ -1,77 +1,165 @@
+/**************
+** 1. Styles
+** 2. Layouts
+** 3. Utilities
+**************/
+
+
+
+
+/* 1. Styles */
 .btn {
   border-radius: $border-radius-base;
+  line-height: 1;
   margin-top: 5px;
   margin-bottom: 5px;
 
   &.active,
-  &:active,
-  &:focus {
+  &:active {
     &, &:focus {
       box-shadow: none;
       outline: none;
     }
   }
 
+  &:focus {
+    outline: none;
+    outline-offset: 0;
+  }
+
   &.btn-lg {
     font-size: $base-font-size;
-    padding: 15px 30px;
+    padding: 14px 20px 16px;
   }
 
   &, &.btn-md {
     font-size: $font-size-small;
-    padding: 10px 20px;
+    padding: 13px 16px;
   }
 
   &.btn-sm {
-    font-size: $font-size-smaller;
-    padding: 6px 18px;
+    font-size: 13px;
+    padding: 10px 16px 11px;
   }
 
+  &.btn-blue,
   &.btn-primary {
-    @include crds-button-variant(
-      $btn-primary-color,
-      $btn-primary-bg,
-      $btn-primary-border);
+    @include crds-button-variant($btn-blue-color, $btn-blue-bg, $btn-blue-border);
 
     .dark-theme & {
-      .btn-secondary {
-        @include crds-button-variant(
-          $btn-secondary-color,
-          $btn-secondary-bg,
-          $btn-secondary-border);
-      }
+      @extend .btn-cyan;
     }
   }
 
+  &.btn-cyan,
   &.btn-secondary {
-    @include crds-button-variant(
-      $btn-secondary-color,
-      $btn-secondary-bg,
-      $btn-secondary-border);
+    @include crds-button-variant($btn-cyan-color, $btn-cyan-bg, $btn-cyan-border);
   }
 
   &.btn-gray {
-    @include crds-button-variant(
-      $btn-gray-color,
-      $btn-gray-bg,
-      $btn-gray-border);
+    @include crds-button-variant($btn-gray-color, $btn-gray-bg, $btn-gray-border);
   }
 
-  &.btn-default {
-    @include crds-button-variant(
-      $btn-default-color,
-      $btn-default-bg,
-      $btn-default-border);
+  &.btn-gray-light {
+    @include crds-button-variant($btn-gray-lt-color, $btn-gray-lt-bg, $btn-gray-lt-border);
+  }
+
+  &.btn-white {
+    background: $btn-white-bg;
+    border-color: $btn-white-border;
+    color: $btn-white-color;
+
+    // solid buttons
+    &.active,
+    &:active {
+      &, &:hover, &:focus {
+        background: darken($btn-white-bg, 5);
+
+        &:focus {
+          border: 1px solid darken($btn-white-bg, 5);
+          box-shadow: none;
+        }
+      }
+    }
+
+    &:focus {
+      border-color: $input-border-focus;
+      box-shadow: 0 0 0 1px $input-border-focus inset;
+    }
+
+    &:hover {
+      background: darken($btn-white-bg, 5);
+    }
+
+    &.disabled {
+      opacity: .65;
+      pointer-events: auto;
+
+      &.active,
+      &:active,
+      &:focus,
+      &:hover {
+        &, &:focus, &:hover {
+          opacity: .65;
+          background: $btn-white-bg;
+          border-color: $btn-white-border;
+          color: $btn-white-color;
+          box-shadow: none;
+        }
+      }
+    }
+
+    // outline buttons
+    &.btn-outline {
+      background: transparent;
+      border-style: solid;
+      border-width: 1px;
+      color: $btn-white-border;
+
+      &.active,
+      &:active {
+        &, &:hover, &:focus {
+          background: rgba($btn-white-border, .25);
+          border-color: $btn-white-border;
+          color: $btn-white-border;
+        }
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
+
+      &:hover {
+        background: rgba($btn-white-border, .25);
+      }
+
+      &.disabled {
+        opacity: .65;
+        pointer-events: auto;
+
+        &.active,
+        &:active,
+        &:focus,
+        &:hover {
+          &, &:hover {
+            background: transparent;
+            border-color: $btn-white-border;
+            color: $btn-white-border;
+            box-shadow: none;
+          }
+        }
+      }
+    }
   }
 }
 
-.btn-option {
+.btn-default {
   border-style: solid;
   border-width: 1px;
 
-  background-color: $btn-option-bg;
-  border-color: $btn-option-border;
-  color: $btn-option-color;
+  background-color: $btn-default-bg;
+  border-color: $btn-default-border;
+  color: $btn-default-color;
 
   &.active, &:active {
     &, &:focus, &:hover {
@@ -79,14 +167,14 @@
 
       background-color: $cr-teal;
       border-color: $cr-teal;
-      color: $btn-option-color;
+      color: $cr-white;
     }
   }
 
   &:hover {
-    background-color: darken($btn-option-bg, 10);
-    border-color: darken($btn-option-border, 10);
-    color: $btn-option-color;
+    background-color: darken($btn-default-bg, 10);
+    border-color: darken($btn-default-border, 10);
+    color: $btn-default-color;
   }
 
   :focus {
@@ -94,93 +182,19 @@
     box-shadow: 0 0 0 1px $input-border-focus inset;
   }
 
-  &.btn-outline {
-    background-color: transparent;
-    border-color: $btn-option-border;
-    color: $btn-option-bg;
-
-    &.active,
-    &:active,
-    &.active:focus,
-    &:active:focus,
-    &.active:hover,
-    &:active:hover {
-      &, .dark-theme & {
-        background-color: $cr-teal;
-        border-color: $cr-teal;
-        color: $btn-option-color;
-      }
-    }
-
-    &:hover {
-      background-color: shade($cr-white, 1%);
-
-      .dark-theme & {
-        background-color: transparent;
-        border-color: darken($btn-option-border, 5);
-      }
-    }
-  }
-
-  &.btn-link {
-    background: none;
-    border-color: transparent;
-    color: $btn-option-bg;
-    text-decoration: none;
-
-    &.active,
-    &:active {
-      background: $cr-teal;
-      border-color: $cr-teal;
-      color: $btn-option-color;
-
-      &:hover {
-        color: darken($btn-option-color, 5);
-      }
-
-      &:focus {
-        border-color: $cr-teal;
-        box-shadow: none;
-      }
-    }
-
-    &:hover {
-      color: darken($btn-option-bg, 10);
-    }
-
-    &:focus {
-      border-color: $input-border-focus;
-      box-shadow: 0 0 0 1px $input-border-focus inset;
-    }
-  }
-
   &.disabled {
     &.active, &:active {
       &, &:focus, &:hover {
-        background-color: $btn-option-bg;
-        border-color: $btn-option-border;
-        color: $btn-option-color;
+        background-color: $btn-default-bg;
+        border-color: $btn-default-border;
+        color: $btn-default-color;
       }
     }
 
     &:hover {
-      background-color: $btn-option-bg;
-      border-color: $btn-option-border;
-      color: $btn-option-color;
-    }
-
-    &.btn-outline {
-      &.active, &:active, &:active:focus, &:active:hover {
-        background-color: transparent;
-        border-color: $btn-option-border;
-        color: $btn-option-bg;
-      }
-
-      &:hover {
-        background-color: transparent;
-        border-color: $btn-option-border;
-        color: $btn-option-bg;
-      }
+      background-color: $btn-default-bg;
+      border-color: $btn-default-border;
+      color: $btn-default-color;
     }
 
     .dark-theme & {
@@ -189,181 +203,375 @@
   }
 }
 
-.btn-group,
-.btn-group-vertical {
-  > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
-    border-radius: $btn-border-radius-base;
+.btn-link {
+  color: $cr-cyan;
+
+  &:hover {
+    color: darken($cr-cyan, 5);
   }
 
-  > .btn:last-child:not(:first-child) {
-    border-radius: $btn-border-radius-base;
+  &:focus {
+    border: 1px solid $input-border-focus;
+    box-shadow: 0 0 0 1px $input-border-focus inset;
   }
 
-  > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
-    border-radius: $btn-border-radius-base;
-  }
-}
-
-.btn-group {
-  > .btn:not(:last-child) {
-    margin-right: .5rem;
-  }
-}
-
-.btn-group-vertical {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  > .btn:not(:last-child) {
-    margin-bottom: .5rem;
+  &.active,
+  &:active {
+    text-decoration: underline;
   }
 
-  > .btn {
-    width: auto;
-  }
-
-  >.btn-block-mobile {
-    @media only screen and (max-width: $screen-xs-max) {
-      display: block;
-      width: 100%;
-    }
-  }
-}
-
-// Toggle button group
-
-.btn-group-toggle {
-  margin-bottom: 1rem;
-  display: flex;
-
-  &.btn-block > .btn {
-      width: 50%;
-  }
-
-  > .truncate {
-    max-width: 50%;
-  }
-
-  > .btn {
-    flex: 0 1 auto;
-    white-space: normal;
-    &.btn-option {
-      margin-right: 0;
-    }
-  }
-
-  > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
-  }
-
-  > .btn:last-child:not(:first-child) {
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-  }
-}
-
-
-.btn-group-teal {
-  .btn-option {
-    border: 1px solid $cr-teal;
-    background: $cr-white;
-    color: $cr-teal;
-
-    &:hover {
-      background: $cr-white;
-      border-color: $cr-teal;
-      color: $cr-teal;
-    }
-
-    &.active,
-    &:active,
-    &:focus:hover {
-      background: $cr-teal;
-      border-color: $cr-teal;
+  &.disabled {
+    &:focus {
+      color: $cr-cyan;
+      border-color: transparent;
       box-shadow: none;
-      color: $cr-white;
+    }
+
+    &, &.active {
+      text-decoration: none;
 
       &:focus,
       &:hover {
+        border-color: transparent;
+        box-shadow: none;
+        color: $cr-cyan;
+      }
+    }
+  }
+
+  &.secondary {
+    color: $cr-gray;
+
+    &:hover {
+      color: darken($cr-gray, 5);
+    }
+
+    &.active,
+    &:active {
+      text-decoration: underline;
+    }
+
+    &.disabled {
+      &:focus {
+        border-color: transparent;
+        box-shadow: none;
+      }
+
+      &, &.active {
+        text-decoration: none;
+
+        &:focus,
+        &:hover {
+          border-color: transparent;
+          box-shadow: none;
+          color: $cr-gray;
+        }
+      }
+    }
+  }
+}
+
+.btn-block {
+  text-align: left;
+}
+
+
+
+
+/* 2. Layout */
+.btn-group {
+  .btn {
+    margin-right: .5rem;
+
+    // Styles below may seem redundant but are required to override bootstrap
+    &:first-child:not(:last-child):not(.dropdown-toggle) {
+      border-radius: $btn-border-radius-base;
+    }
+
+    &:last-child:not(:first-child):not(.dropdown-toggle) {
+      border-radius: $btn-border-radius-base;
+      margin-right: 0;
+    }
+
+    &:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+      border-radius: $btn-border-radius-base;
+    }
+
+    &:not(.active),
+    &:not(:active) {
+      &.btn-blue,
+      &.btn-primary,
+      &.btn-cyan,
+      &.btn-secondary,
+      &.btn-gray,
+      &.btn-gray-light,
+      &.btn-white {
+        @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+
+        &:focus {
+          border: 1px solid $input-border-focus;
+          box-shadow: 0 0 0 1px $input-border-focus inset;
+        }
+      }
+
+      &.btn-default {
+        &:focus {
+          border: 1px solid $input-border-focus;
+          box-shadow: 0 0 0 1px $input-border-focus inset;
+        }
+      }
+    }
+
+    &.active,
+    &:active {
+      &.btn-blue,
+      &.btn-primary {
+        @include crds-button-variant($btn-blue-color, $btn-blue-bg, $btn-blue-border);
+      }
+
+      &.btn-cyan,
+      &.btn-secondary {
+        @include crds-button-variant($btn-cyan-color, $btn-cyan-bg, $btn-cyan-border);
+      }
+
+      &.btn-gray {
+        @include crds-button-variant($btn-gray-color, $btn-gray-bg, $btn-gray-border);
+      }
+
+      &.btn-gray-light {
+        @include crds-button-variant($btn-gray-lt-color, $btn-gray-lt-bg, $btn-gray-lt-border);
+      }
+
+      &.btn-white {
+        @include crds-button-variant($btn-white-color, $btn-white-bg, $btn-white-border);
+      }
+
+      &.btn-default {
+        &:focus {
+          border-color: $cr-teal;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+
+.btn-group-link {
+  > .btn {
+    border: 0;
+    padding: 14px 17px;
+
+    &:not(.active),
+    &:not(:active) {
+      &.btn-blue,
+      &.btn-primary,
+      &.btn-cyan,
+      &.btn-secondary,
+      &.btn-gray,
+      &.btn-gray-light,
+      &.btn-white,
+      &.btn-default {
+        &:hover {
+          background-color: transparent;
+          color: darken($btn-default-color, 15);
+        }
+
+        &:focus {
+          padding: 13px 16px;
+        }
+      }
+    }
+
+    &.active:hover,
+    &:active:hover {
+      &.btn-blue,
+      &.btn-primary {
+        @include crds-button-variant($btn-blue-color, $btn-blue-bg, $btn-blue-border);
+      }
+
+      &.btn-cyan,
+      &.btn-secondary {
+        @include crds-button-variant($btn-cyan-color, $btn-cyan-bg, $btn-cyan-border);
+      }
+
+      &.btn-gray {
+        @include crds-button-variant($btn-gray-color, $btn-gray-bg, $btn-gray-border);
+      }
+
+      &.btn-gray-light {
+        @include crds-button-variant($btn-gray-lt-color, $btn-gray-lt-bg, $btn-gray-lt-border);
+      }
+
+      &.btn-white {
+        @include crds-button-variant($btn-white-color, $btn-white-bg, $btn-white-border);
+      }
+
+      &.btn-default {
         background: $cr-teal;
         border-color: $cr-teal;
         color: $cr-white;
       }
     }
   }
-
-  .dark-theme & {
-    .btn-option {
-      background: transparent;
-
-      &.active,
-      &:active,
-      &:focus:hover,
-      &.active:focus,
-      &:active:focus,
-      &.active:hover,
-      &:active:hover {
-        background: $cr-teal;
-      }
-    }
-  }
 }
 
-.btn-group-primary {
-  .btn-option {
-    border: 1px solid $btn-primary-border;
-    background: transparent;
-    color: $btn-toggle-primary-color;
+.btn-group-bar {
+  > .btn {
+    margin-right: 0;
 
-    &:hover {
-      background: transparent;
-      border-color: $btn-primary-border;
-      color: $btn-toggle-primary-color;
+    &:first-child:not(:last-child):not(.dropdown-toggle) {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
     }
 
-    &.active,
-    &:active,
-    &:focus:hover {
-      background: $btn-primary-bg;
-      border-color: $btn-primary-border;
-      box-shadow: none;
-      color: $btn-primary-color;
+    &:last-child:not(:first-child):not(.dropdown-toggle) {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
 
-      &:focus,
+    &:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+      border-radius: 0;
+    }
+
+    &.active {
+      border-style: solid;
+      border-width: 1px;
+    }
+
+    &:not(:first-child):not(:last-child) {
+      border-right-color: rgba($cr-gray-light, .25);
+      border-left-color: rgba($cr-gray-light, .25);
+
       &:hover {
-        background: $btn-primary-bg;
-        border-color: $btn-primary-border;
-        color: $btn-primary-color;
+        border-right-color: rgba($cr-gray-light, .25);
+        border-left-color: rgba($cr-gray-light, .25);
       }
     }
-  }
 
-  .dark-theme & {
-    .btn-option {
-      background: transparent;
+    @mixin active_pillbar($active-color) {
+      &:first-child,
+      &:last-child {
+        border-color: $active-color;
+
+        &:hover {
+          border-color: $active-color;
+        }
+      }
+
+      &:first-child {
+        border-right-color: rgba($cr-gray-light, .25);
+
+        &:hover {
+          border-right-color: rgba($cr-gray-light, .25);
+        }
+      }
+
+      &:last-child {
+        border-left-color: rgba($cr-gray-light, .25);
+
+        &:hover {
+          border-left-color: rgba($cr-gray-light, .25);
+        }
+      }
+
+      &:not(:first-child):not(:last-child) {
+        border-top-color: $active-color;
+        border-bottom-color: $active-color;
+      }
 
       &.active,
-      &:active,
-      &:focus:hover,
-      &.active:focus,
-      &:active:focus,
-      &.active:hover,
-      &:active:hover {
-        background: $btn-primary-bg;
+      &:active {
+        &:first-child {
+          border-right-color: darken($active-color, 10);
+
+          &:focus {
+            border-right-color: darken($active-color, 10);
+            box-shadow: none;
+          }
+        }
+
+        &:last-child {
+          border-left-color: darken($active-color, 10);
+
+          &:focus {
+            border-left-color: darken($active-color, 10);
+            box-shadow: none;
+          }
+        }
+
+        &:not(:first-child):not(:last-child) {
+          border-right-color: darken($active-color, 10);
+          border-left-color: darken($active-color, 10);
+
+          &:focus {
+            border-top-color: $active-color;
+            border-bottom-color: $active-color;
+            border-right-color: darken($active-color, 10);
+            border-left-color: darken($active-color, 10);
+            box-shadow: none;
+          }
+        }
       }
+    }
+
+    &.btn-default {
+      @include active_pillbar($cr-teal);
+    }
+
+    &.btn-blue,
+    &.btn-primary {
+      @include active_pillbar($btn-blue-bg);
+    }
+
+    &.btn-cyan,
+    &.btn-secondary {
+      @include active_pillbar($btn-cyan-bg);
+    }
+
+    &.btn-gray {
+      @include active_pillbar($btn-gray-bg);
+    }
+
+    &.btn-gray-light {
+      @include active_pillbar($btn-gray-lt-bg);
+    }
+
+    &.btn-white {
+      @include active_pillbar($btn-white-bg);
     }
   }
 }
 
-// Disabled buttons styles
-a {
-  &.btn {
-    &.disabled {
-      pointer-events: auto;
-    }
+.btn-group-bar-flexbox {
+  display: flex;
+
+  > .btn {
+    flex: 1 1 auto;
+  }
+}
+
+.btn-group-block {
+  width: 100%;
+
+  > .btn {
+    display: block;
+    text-align: left;
+    width: 100%;
+  }
+
+  .clear {
+    clear: both;
+  }
+}
+
+
+
+
+/* 3. Utilities */
+.btn-group-lg,
+.btn-group-sm {
+  > .btn {
+    line-height: 1;
   }
 }
 
@@ -375,111 +583,11 @@ a {
   }
 }
 
-// Flexbox button groups - Horizontal layout
-.btn-group-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  margin-right: -5px;
-  margin-left: -5px;
-  justify-content: space-between;
-
-  .btn-option {
-    &.btn-flex {
-      min-height: 2rem;
-      flex: 1 1 auto;
-      margin: 4px;
-      padding-left: 1rem;
-      padding-right: 1rem;
+// Disabled buttons styles when <a> is used
+a {
+  &.btn {
+    &.disabled {
+      pointer-events: auto;
     }
-  }
-}
-
-// Flexbox button groups - Vertical layout
-.btn-group-block {
-  display: flex;
-  flex-flow: column nowrap;
-
-  &[type='submit'] {
-    font-size: .875rem;
-  }
-
-  .btn-flex {
-    flex: 1 1 auto;
-    min-height: 3.5rem;
-    margin: 4px 0;
-  }
-
-  .btn-option {
-    &.btn-flex {
-      margin-right: 0;
-    }
-  }
-
-  .row {
-    > div {
-      position: relative;
-      float: left;
-      width: 50%;
-      min-height: 1px;
-      padding-left: 1rem;
-      padding-right: 1rem;
-
-      &.full-width {
-        width: 100%;
-      }
-    }
-  }
-
-  .btn-circle__icon {
-    .fa {
-      padding-right: 8px;
-      vertical-align: middle;
-    }
-
-    .fa-circle-thin {
-      display: inline-block;
-    }
-
-    .fa-check-circle {
-      display: none;
-    }
-  }
-}
-
-// Single Toggle Button
-.btn-toggle {
-  $btn-toggle-styles: (
-    primary: (bg: $btn-primary-bg, bc: $btn-primary-border),
-    secondary: (bg: $btn-secondary-bg, bc: $btn-secondary-border),
-    gray: (bg: $btn-gray-bg, bc: $btn-gray-border),
-    option: (bg: $btn-option-bg, bc: $btn-option-border),
-    default: (bg: $btn-default-bg, bc: $btn-default-border)
-  );
-
-  @each $style, $map in $btn-toggle-styles {
-    &.btn-#{$style} {
-      &,
-      &:active,
-      &:active:focus,
-      &:focus,
-      &:hover {
-        background: map-get($map, bg);
-        border-color: map-get($map, bc);
-        box-shadow: none;
-      }
-    }
-  }
-
-  &.btn-link,
-  &.btn-link:active,
-  &.btn-link:active:focus,
-  &.btn-link:focus,
-  &.btn-link:hover {
-    text-decoration: none;
-  }
-
-  &.text-white {
-    color: $cr-white;
   }
 }
