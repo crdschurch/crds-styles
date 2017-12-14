@@ -2,6 +2,8 @@
 ** 1. Styles
 ** 2. Layouts
 ** 3. Utilities
+** 4. Dropdowns
+** 5. Button groups
 **************/
 
 
@@ -593,6 +595,8 @@ a {
 
 
 
+
+/* 4. Dropdowns */
 .dropdown {
   .dropdown-toggle {
     &.btn {
@@ -614,6 +618,10 @@ a {
   }
 }
 
+
+
+
+/* 5. Button groups */
 .input-group-white {
   .form-control {
     background-color: darken($cr-gray-lighter, 2);
