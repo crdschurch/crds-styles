@@ -322,9 +322,9 @@ $alert-danger-text: $state-danger-text !default;
 $alert-danger-border: $state-danger-border !default;
 
 // Progress bars
-// $progress-bg: !default;
+$progress-bg: $cr-gray-lighter !default;
 // $progress-bar-color: !default;
-// $progress-border-radius: !default;
+$progress-border-radius: 0 !default;
 // $progress-bar-bg: !default;
 // $progress-bar-success-bg: !default;
 // $progress-bar-warning-bg: !default;
