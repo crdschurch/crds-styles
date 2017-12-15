@@ -2,6 +2,8 @@
 ** 1. Styles
 ** 2. Layouts
 ** 3. Utilities
+** 4. Dropdowns
+** 5. Button groups
 **************/
 
 
@@ -274,7 +276,6 @@
 .btn-block {
   text-align: left;
 }
-
 
 
 
@@ -588,6 +589,99 @@ a {
   &.btn {
     &.disabled {
       pointer-events: auto;
+    }
+  }
+}
+
+
+
+
+/* 4. Dropdowns */
+.dropdown {
+  .dropdown-toggle {
+    &.btn {
+      &.btn-lg {
+        font-size: $base-font-size;
+        padding: 14px 20px 16px;
+      }
+
+      &, &.btn-md {
+        font-size: $font-size-small;
+        padding: 12px 16px;
+      }
+
+      &.btn-sm {
+        font-size: 13px;
+        padding: 9px 16px;
+      }
+    }
+  }
+}
+
+
+
+
+/* 5. Button groups */
+.input-group-white {
+  .form-control {
+    background-color: darken($cr-gray-lighter, 2);
+    border-color: darken($cr-gray-lighter, 2);
+  }
+  .form-control[disabled] {
+    background-color: lighten($input-color-placeholder, 25);
+    border-color: lighten($input-color-placeholder, 25);
+  }
+}
+
+.input-group-lg,
+.input-group-sm {
+  .form-control {
+    line-height: 1.2;
+  }
+
+  .input-group-btn {
+    > .btn {
+      border-top-right-radius: $border-radius-base;
+      border-bottom-right-radius: $border-radius-base;
+      line-height: 1;
+    }
+  }
+}
+
+.input-group-lg {
+  .form-control,
+  .input-group-btn > .btn {
+    height: 48px;
+  }
+
+  .form-control {
+    padding: 11px 10px 8px;
+  }
+
+  .input-group-btn {
+    > .btn {
+      font-size: 18px;
+      margin: 0;
+      padding: 9px 22px 11px 20px;
+    }
+  }
+}
+
+.input-group-sm {
+  .form-control,
+  .input-group-btn > .btn {
+    height: 36px;
+  }
+
+  .form-control {
+    padding: 8px 10px 7px;
+  }
+
+  .input-group-btn {
+    > .btn {
+      font-size: 14px;
+      margin: 0;
+      padding: 7px 16px 8px;
     }
   }
 }
