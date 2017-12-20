@@ -73,27 +73,34 @@ $table-border-color: lighten($cr-gray-light, 20) !default;
 
 // Buttons
 $btn-font-weight: 300 !default;
-$btn-default-color: $cr-white !default;
-$btn-default-bg: $cr-gray-light !default;
+$btn-default-color: $cr-gray-light !default;
+$btn-default-bg: rgba($cr-white, .25) !default;
 $btn-default-border: $cr-gray-light !default;
 $btn-primary-color: $cr-white !default;
 $btn-primary-bg: $cr-blue !default;
 $btn-primary-border: $cr-blue !default;
 $btn-toggle-primary-color: $cr-gray-light;
-$btn-secondary-bg: $cr-cyan;
-$btn-secondary-border: $cr-cyan;
-$btn-secondary-color: $cr-white;
-$btn-info-bg: $btn-secondary-bg !default;
-$btn-info-border: $btn-secondary-border !default;
-$btn-info-color: $btn-secondary-color !default;
-$btn-gray-bg: $cr-gray;
-$btn-gray-border: $cr-gray;
+$btn-info-bg: $cr-cyan !default;
+$btn-info-border: $cr-cyan !default;
+$btn-info-color: $cr-white !default;
+
+$btn-blue-bg: $btn-primary-bg;
+$btn-blue-border: $btn-primary-border;
+$btn-blue-color: $btn-primary-color;
+$btn-cyan-bg: $btn-info-bg;
+$btn-cyan-border: $btn-info-border;
+$btn-cyan-color: $btn-info-color;
+$btn-gray-bg: $cr-gray-dark;
+$btn-gray-border: $cr-gray-dark;
 $btn-gray-color: $cr-white;
-$btn-option-color: $cr-white;
-$btn-option-bg: $cr-gray-light;
-$btn-option-border: rgba($cr-gray-light, .75);
-$btn-outline-bg: $cr-white;
-$btn-outline-hover-bg: $cr-gray-lighter;
+$btn-gray-lt-bg: $cr-gray-light;
+$btn-gray-lt-border: $cr-gray-light;
+$btn-gray-lt-color: $cr-white;
+$btn-white-bg: $cr-white;
+$btn-white-border: $cr-white;
+$btn-white-color: $cr-gray-dark;
+
+
 // $btn-warning-color: !default;
 // $btn-warning-bg: !default;
 // $btn-warning-border: !default;
@@ -315,9 +322,9 @@ $alert-danger-text: $state-danger-text !default;
 $alert-danger-border: $state-danger-border !default;
 
 // Progress bars
-// $progress-bg: !default;
+$progress-bg: $cr-gray-lighter !default;
 // $progress-bar-color: !default;
-// $progress-border-radius: !default;
+$progress-border-radius: 0 !default;
 // $progress-bar-bg: !default;
 // $progress-bar-success-bg: !default;
 // $progress-bar-warning-bg: !default;
