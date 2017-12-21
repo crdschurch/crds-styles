@@ -5,7 +5,7 @@
   }
 }
 
-* > svg {
+* > svg:not(.ngx-charts) {
   pointer-events: none;
 }
 
