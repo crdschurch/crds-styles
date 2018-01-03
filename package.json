@@ -42,6 +42,7 @@
     "aws-sdk": "^2.91.0",
     "cheerio": "^0.22.0",
     "commander": "^2.9.0",
+    "crds-publisher": "github:crdschurch/crds-publisher",
     "lodash": "^4.17.4",
     "node-sass": "^4.7.2",
     "node-sass-tilde-importer": "^1.0.0",
