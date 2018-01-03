@@ -17,7 +17,7 @@ var CRDS = {};
 
 CRDS.Styles = function() {
   this.setup();
-  this.init();
+  this.build();
 };
 
 CRDS.Styles.prototype.setup = function() {
@@ -25,14 +25,6 @@ CRDS.Styles.prototype.setup = function() {
   this.outputFile = slug + '.css';
   this.minOutputFile = slug + '.min.css';
   this.debug = argv.debug || false;
-}
-
-CRDS.Styles.prototype.init = function() {
-  if(argv.build) {
-    this.build();
-  } else if(argv.deploy) {
-    this.deploy();
-  }
 }
 
 CRDS.Styles.prototype.bind = function(fn, me) {
@@ -67,7 +59,7 @@ CRDS.Styles.prototype.compile = function(style) {
 };
 
 CRDS.Styles.prototype.copySVGs = function() {
-  fs.mkdir('./dist/svgs');
+  fs.ensureDir('./dist/svgs');
   glob('./assets/**/*.svg', {}, (err, files) => {
     files.forEach((file) => {
       var filename = this.filenameFromPath(file);
@@ -123,105 +115,6 @@ CRDS.Styles.prototype.writeFile = function(payload, outputFile) {
       console.log(outputFile);
     }
   }.bind(this));
-}
-
-// ------------------------------------------------- |
-
-CRDS.Styles.prototype.setupS3 = function() {
-  AWS.config.update({
-    accessKeyId: process.env.CRDS_STYLES_AWS_ACCESS_KEY,
-    secretAccessKey: process.env.CRDS_STYLES_AWS_SECRET_KEY
-  });
-  this.s3 = new AWS.S3();
-  this.s3Bucket = process.env.CRDS_STYLES_S3_BUCKET;
-  this.existingStyleFiles = this.listObjects('styles/');
-  this.existingImageFiles = this.listObjects('images/');
-}
-
-CRDS.Styles.prototype.listObjects = function(prefix) {
-  this.log('listObjects()');
-  this.s3.listObjects({ Bucket: this.s3Bucket, Prefix: prefix }, function(err, data) {
-    if (err) {
-      console.error(err, err.stack);
-    } else {
-      this.existingStyleFiles = _.chain(data['Contents'])
-        .map('Key')
-        .map(function(v) {
-          var pattern = prefix;
-          return v.replace(new RegExp(pattern), '');
-        }.bind(this))
-        .compact()
-        .value();
-    }
-  }.bind(this));
-};
-
-CRDS.Styles.prototype.fileExists = function(filename) {
-  return _.includes(this.existingStyleFiles, filename);
-};
-
-CRDS.Styles.prototype.deploy = function() {
-  this.log('deploy()');
-  this.setupS3();
-
-  var stylesTimer = setInterval(function() {
-    if(this.existingStyleFiles) {
-      clearInterval(stylesTimer);
-      return this.upload('styles/', './dist/*.css*');
-    }
-  }.bind(this), 300);
-
-  var imagesTimer = setInterval(function() {
-    if(this.existingStyleFiles) {
-      clearInterval(imagesTimer);
-      return this.upload('images/', './dist/**/*.svg');
-    }
-  }.bind(this), 300);
-};
-
-CRDS.Styles.prototype.upload = function(s3Prefix, files) {
-  this.log('upload()');
-  glob(files, {}, (err, files) => {
-    if (err) {
-      this.log(err);
-    } else {
-      files.forEach((file) => {
-        this.uploadFile(s3Prefix, file);
-      });
-    }
-  });
-}
-
-CRDS.Styles.prototype.uploadFile = function(prefix, filename) {
-  this.log('uploadFile()', filename);
-
-  if (this.fileExists(filename) && !argv.force) {
-    this.error('[SKIPPING] File already exists: ' + filename);
-  } else {
-    var stream = fs.createReadStream(filename);
-    var ext = path.extname(filename);
-    switch (path.extname(filename)) {
-      case '.css':
-        var mime_type = 'text/css';
-        break;
-      case '.map':
-        var mime_type = 'application/octet-stream';
-        break;
-      case '.svg':
-        var mime_type = 'image/svg+xml';
-        break;
-    }
-    var params = {
-      Bucket: this.s3Bucket,
-      Key: prefix + this.filenameFromPath(filename),
-      ContentType: mime_type,
-      Body: stream,
-      ACL: 'public-read'
-    };
-    this.s3.upload(params, (err, data) => {
-      console.log(err, data);
-    });
-  }
 }
 
 // ------------------------------------------------- |
