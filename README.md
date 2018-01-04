@@ -1,88 +1,135 @@
-# crds-styles
+crds-styles
+==========
 
-`crds-styles` provides the primary CSS framework and global style patterns that power [crossroads.net](http://crossroads.net) and it's related properties. Any elements and/or implementation details included within the [Digital Design Kit (DDK)](http://github.com/crdschurch/crds-styleguide) are provided by this NPM package. Any deviations from the patterns defined there should be implemented in the client application.
+`crds-styles` provides the primary CSS framework and global style patterns that
+power [crossroads.net](http://crossroads.net) and it's related properties.
 
-## Implementation
+Any elements and/or implementation details included within the [Digital Design
+Kit (DDK)](http://github.com/crdschurch/crds-styleguide) are provided by this
+NPM package. Any deviations from the patterns defined there should be
+implemented in the client application.
 
-Until this project is published to NPM, you have two options to get it included as a dependency of your Node compatible application.
+Usage
+----------
 
----
+There are two options for including crds-styles in your project.
 
-### Option #1 - Symlink Local Directory
+### Option #1 (Recommended) - External Build
 
-Assuming the `crds-styles` repo resides in the same local directory as your project, you can do the following to setup the symlink...
+The easiest way to include crds-styles is by loading the external CSS file. The
+build is deployed to S3 and is available through our Cloudfront distribution.
 
-    $ cd path/to/your/project-directory
-    $ npm link ../crds-styles
+This approached is most useful when you don't need to override any styles, or
+when the styles you're overriding don't require needing crds-styles' (or
+Bootstrap's) sass variables.
 
-Then update your project's `package.json` file with a reference to `crds-styles`, for example...
-
-    {
-      "name": "foo",
-      "version": "0.0.0",
-      "dependencies": {
-        "crds-styles": "*"
-      }
-    }
-
----
-
-### Option #2 - Reference Github URL in package.json
-
-If you don't have the DDK cloned locally, you can just reference the repo directly in your `package.json` file, like so...
-
-    {
-      "name": "foo",
-      "version": "0.0.0",
-      "dependencies": {
-        "crds-styles": "crdschurch/crds-styles"
-      }
-    }
-
----
-
-Once you've added `crds-styles` to `package.json` you need to import the stylesheet in your application's main '.scss' file using the following convention. You can optionally override any of the customizable Bootstrap variables prior to import...
-
-    @import '~crds-styles/assets/stylesheets/bootstrap';
-
-## SVGs
-
-Any project consuming `crds-styles` will need to update their build process in order to access SVG files. For information on adding new icons to `crds-styles` please refer to [the documentation](https://github.com/crdschurch/crds-styles/blob/development/src/assets/svgs/README.md).
-
-### Webpack build
-If using webpack, the `copy-webpack-plugin` can be used to move the svg files to the distribution folder
-```javascript
-plugins: [
-    new CopyWebpackPlugin([
-      {
-        context: './node_modules/crds-styles/assets/svgs/',
-        from: '*.svg',
-        to: 'assets'
-      }
-    ])
-  ]
+```html
+<link rel="stylesheet" href="//d1tmclqz61gqwd.cloudfront.net/styles/crds-styles-2.0.0.min.css">
 ```
-See `crds-styleguide` [`webpack.common.js`](https://github.com/crdschurch/crds-styleguide/blob/development/config/webpack.common.js) for a full example
 
-### Webpack Dev Server
-If using `webpack-dev-server` as a development tool, the implementation will need to be modifed to support `content-base` which will serve static assets from the given directory as well as trigger a build in order to have `CopyWebpackPlugin` triggered to move SVGs
+_(Note: Replace `2.0.0` with the desired version.)_
+
+### Option #2 - NPM via package.json
+
+If your project needs to use crds-styles' sass variables or requires that you
+build crds-styles locally, you can bring it in via NPM in your `package.json`
+file.
+
 ```json
-"scripts": {
-    "serve": "npm run start",
-    "start": "npm run build-dev && webpack-dev-server --inline --open --progress --port 4200 --content-base dist/",
-    "build-dev": "rimraf dist && webpack --config config/webpack.dev.js --progress --profile --bail",
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "dependencies": {
+    "crds-styles": "2.0.0"
+  }
 }
 ```
-See `crds-styleguide` [`package.json`](https://github.com/crdschurch/crds-styleguide/blob/development/package.json) for a full example.
 
-## Versions &amp; Roadmap
+You can also use a reference to the GitHub URL in cases where you would like to
+use upstream changes that haven't yet been released.
 
-We'll be developing the pattern library over the next few months and as we release new updates, we will increase the version number according to the following rules.
+```json
+{
+  "name": "my-project",
+  "version": "1.0.0",
+  "dependencies": {
+    "crds-styles": "crdschurch/crds-styles#development"
+  }
+}
+```
 
-* Bug fixes and other minor changes: Patch release, increment the last number, e.g. 1.0.1
-* New features which don't break existing features: Minor release, increment the middle number, e.g. 1.1.0
-* Changes which break backwards compatibility: Major release, increment the first number, e.g. 2.0.0
+In both of these cases, you'll need to import the stylesheet in your
+application's main '.scss' file using the following convention. You can
+optionally override any of the customizable Bootstrap variables prior to
+import.
 
-## License
+```scss
+@import '~crds-styles/assets/stylesheets/bootstrap';
+```
 
-This project is licensed under the [3-Clause BSD License](https://opensource.org/licenses/BSD-3-Clause).
+_Note: The tilde character (`~`) assumes use of the
+[node-sass](https://github.com/sass/node-sass) library.
+
+---
+
+#### A note on local development
+
+When making changes to crds-styles locally and in wanting them to be reflected
+in your project, you should follow the NPM/package.json approach for importing
+styles.
+
+In this case you'll want to link to a local copy of crds-styles. Assuming the
+`crds-styles` repo resides in the same local directory as your project, you can
+do the following to setup the symlink.
+
+```text
+$ cd path/to/your/project-directory
+$ rm -rf node_modules/crds-styles
+$ npm link ../crds-styles
+```
+
+SVGs
+--------
+
+Any project consuming `crds-styles` will need to update their build process in
+order to access SVG files. For information on adding new icons to `crds-styles`
+please refer to [the
+documentation](https://github.com/crdschurch/crds-styles/blob/development/src/assets/svgs/README.md).
+
+### Angular CLI Build
+
+Angular CLI ships with the ability to copy assets into a project. To include the
+icons (or any other assets), drop the necessary files in `src/assets`. Then make
+sure your `.angular-cli.json` file copies the assets directory:
+
+```js
+{
+  "apps": [{
+    "assets": [
+      "assets"
+    ]
+  }
+]
+```
+
+This will make anything you drop into `src/assets` available at `/assets` when
+the app is running.
+
+Versioning
+--------
+
+Versions are released sprintly following [semantic
+versioning](https://semver.org/). In other words:
+
+- Bug fixes and other minor changes: Patch release, increment the last number,
+  e.g. 1.0.1
+- New features which don't break existing features: Minor release, increment the
+  middle number, e.g. 1.1.0
+- Changes which break backwards compatibility: Major release, increment the
+  first number, e.g. 2.0.0
+
+License
+--------
+
+This project is licensed under the [3-Clause BSD
+License](https://opensource.org/licenses/BSD-3-Clause).
