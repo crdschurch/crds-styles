@@ -77,6 +77,6 @@
 
   accordion-group .panel,
   accordion-group:first-child .panel {
-    border-color: rgba($cr-gray-light, .25);
+    border-color: $cr-dark-theme-border;
   }
 }
