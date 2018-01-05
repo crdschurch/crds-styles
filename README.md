@@ -67,8 +67,10 @@ import.
 @import '~crds-styles/assets/stylesheets/bootstrap';
 ```
 
-_Note: The tilde character (`~`) assumes use of the
-[node-sass](https://github.com/sass/node-sass) library.
+_Note: The tilde character (`~`) is a shorthand reference to `node_modules`,
+provided by either [Webpack's SASS Loader](https://github.com/webpack-contrib/sass-loader#imports)
+or [node-sass-tilde-importer](https://github.com/matthewdavidson/node-sass-tilde-importer),
+depending on your preferred build configuration._
 
 ---
 
@@ -99,21 +101,26 @@ documentation](https://github.com/crdschurch/crds-styles/blob/development/src/as
 ### Angular CLI Build
 
 Angular CLI ships with the ability to copy assets into a project. To include the
-icons (or any other assets), drop the necessary files in `src/assets`. Then make
-sure your `.angular-cli.json` file copies the assets directory:
+icons (or any other assets), first install crds-styles into your `node_modules`
+directory via NPM. Then add the following to your `assets` config in
+`.angular-cli.json` file:
 
 ```js
 {
   "apps": [{
     "assets": [
-      "assets"
+      {
+        "glob": "icons.svg",
+        "input": "../node_modules/crds-styles/assets/svgs",
+        "output": "assets"
+      }
     ]
   }
 ]
 ```
 
-This will make anything you drop into `src/assets` available at `/assets` when
-the app is running.
+Note that you could change `icons.svg` to `*` to copy all of crds-styles' svg
+assets into your project.
 
 Versioning
 --------
