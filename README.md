@@ -2,7 +2,7 @@ crds-styles
 ==========
 
 `crds-styles` provides the primary CSS framework and global style patterns that
-power [crossroads.net](http://crossroads.net) and it's related properties.
+power [crossroads.net](http://crossroads.net) and its related properties.
 
 Any elements and/or implementation details included within the [Digital Design
 Kit (DDK)](http://github.com/crdschurch/crds-styleguide) are provided by this
@@ -19,7 +19,7 @@ There are two options for including crds-styles in your project.
 The easiest way to include crds-styles is by loading the external CSS file. The
 build is deployed to S3 and is available through our Cloudfront distribution.
 
-This approached is most useful when you don't need to override any styles, or
+This approach is most useful when you don't need to override any styles, or
 when the styles you're overriding don't require needing crds-styles' (or
 Bootstrap's) sass variables.
 
