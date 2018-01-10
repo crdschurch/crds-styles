@@ -59,3 +59,4 @@ $alert-danger: $cr-rust;
 
 // Other
 $cr-path-to-icons-sprite: 'assets/svgs/' !default; // include trailing slash
+$cr-dark-theme-border: darken($cr-gray, 5);
