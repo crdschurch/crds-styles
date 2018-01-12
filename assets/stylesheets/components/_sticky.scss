@@ -1,0 +1,11 @@
+.sticky-example-wrapper {
+  max-height: 330px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.sticky-top {
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+}
