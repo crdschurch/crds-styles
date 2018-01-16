@@ -10,7 +10,8 @@
 ** 9. Maintain aspect Ratio
 ** 10. Margin rules
 ** 11. Padding rules
-** 12. Misc.
+** 12. Sticky
+** 13. Misc.
 */
 
 
@@ -705,9 +706,15 @@ a.underline,
 }
 
 
+/* 12. Sticky */
+.sticky-top {
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+}
 
 
-/* 12. Misc. */
+/* 13. Misc. */
 
 .pointer {
   cursor: pointer;
