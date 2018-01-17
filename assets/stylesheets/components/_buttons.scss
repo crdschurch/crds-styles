@@ -323,6 +323,8 @@
       }
 
       &.btn-default {
+        -webkit-tap-highlight-color: $cr-teal;
+
         &:focus {
           border: 1px solid $input-border-focus;
           box-shadow: 0 0 0 1px $input-border-focus inset;
