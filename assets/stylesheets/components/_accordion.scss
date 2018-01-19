@@ -64,3 +64,19 @@
     }
   }
 }
+
+.dark-theme .accordion {
+  .panel,
+  .panel-heading {
+    background-color: $cr-black;
+  }
+
+  .accordion-toggle[aria-expanded=true] {
+    color: $cr-gray-light;
+  }
+
+  accordion-group .panel,
+  accordion-group:first-child .panel {
+    border-color: $cr-dark-theme-border;
+  }
+}
