@@ -6066,7 +6066,8 @@ timepicker .form-control.ng-touched.ng-invalid {
     #toast-container > div.toast .toast-close-button,
     #toast-container > div.toast.toast-custom .toast-close-button {
       float: right;
-      font-size: 2rem; }
+      font-size: 2rem;
+      text-decoration: none; }
       #toast-container > div.toast .toast-close-button:hover,
       #toast-container > div.toast.toast-custom .toast-close-button:hover {
         cursor: pointer; }
@@ -7822,6 +7823,11 @@ select.form-control:focus, .dark-theme select.form-control:focus {
     background-color: rgba(230, 230, 230, 0.25);
     border-color: #7e7e7e;
     color: #979797; }
+    @media (pointer: coarse) {
+      .btn-default:hover {
+        background-color: rgba(255, 255, 255, 0.25);
+        border-color: #979797;
+        color: #979797; } }
   .btn-default :focus {
     border-color: #8bceed;
     -webkit-box-shadow: 0 0 0 1px #8bceed inset;
@@ -8098,10 +8104,12 @@ select.form-control:focus, .dark-theme select.form-control:focus {
       border: 1px solid #8bceed;
       -webkit-box-shadow: 0 0 0 1px #8bceed inset;
               box-shadow: 0 0 0 1px #8bceed inset; }
-  .btn-group .btn:not(.active).btn-default:focus, .btn-group .btn:not(:active).btn-default:focus {
-    border: 1px solid #8bceed;
-    -webkit-box-shadow: 0 0 0 1px #8bceed inset;
-            box-shadow: 0 0 0 1px #8bceed inset; }
+  .btn-group .btn:not(.active).btn-default, .btn-group .btn:not(:active).btn-default {
+    -webkit-tap-highlight-color: #57afa9; }
+    .btn-group .btn:not(.active).btn-default:focus, .btn-group .btn:not(:active).btn-default:focus {
+      border: 1px solid #8bceed;
+      -webkit-box-shadow: 0 0 0 1px #8bceed inset;
+              box-shadow: 0 0 0 1px #8bceed inset; }
   .btn-group .btn.active.btn-blue, .btn-group .btn.active.btn-primary, .btn-group .btn:active.btn-blue, .btn-group .btn:active.btn-primary {
     color: white;
     background-color: #3b6e8f;
@@ -9637,8 +9645,13 @@ a.btn.disabled {
 .dark-theme .table-tagline {
   border-top: 1px solid #666666; }
 
-.dark-theme .table td {
+.dark-theme .table,
+.dark-theme .table td,
+.dark-theme .table th {
   border-color: #666666; }
+
+.dark-theme .table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #151515; }
 
 .logo {
   padding: .5rem 1rem; }
@@ -10422,6 +10435,17 @@ svg use {
   color: #737373;
   font-weight: 400; }
 
+.dark-theme .accordion .panel,
+.dark-theme .accordion .panel-heading {
+  background-color: black; }
+
+.dark-theme .accordion .accordion-toggle[aria-expanded=true] {
+  color: #979797; }
+
+.dark-theme .accordion accordion-group .panel,
+.dark-theme .accordion accordion-group:first-child .panel {
+  border-color: #666666; }
+
 .progress {
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -10478,6 +10502,10 @@ svg use {
   opacity: 1;
   padding: 10px;
   letter-spacing: 0.6px; }
+
+.dark-theme .panel {
+  background-color: black;
+  border-color: #666666; }
 
 /* stylelint-disable */
 .header {
@@ -10862,7 +10890,8 @@ svg use {
 ** 9. Maintain aspect Ratio
 ** 10. Margin rules
 ** 11. Padding rules
-** 12. Misc.
+** 12. Sticky
+** 13. Misc.
 */
 /* 1. Image styles */
 .img-background {
@@ -11394,7 +11423,13 @@ a.underline,
     padding-top: 12px;
     padding-bottom: 12px; } }
 
-/* 12. Misc. */
+/* 12. Sticky */
+.sticky-top {
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px; }
+
+/* 13. Misc. */
 .pointer {
   cursor: pointer; }
 
