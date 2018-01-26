@@ -38,23 +38,15 @@
     padding: 15px 15px 50px;
 
     .close {
-      background: $cr-gray-light;
+      background-color: rgba(187, 187, 187, .6);
       border-radius: 50%;
       color: $cr-white;
       font-size: unset;
       font-weight: unset;
       margin-top: 0;
+      opacity: 1;
       padding: 3px 7px 6px;
       text-shadow: initial;
-    }
-
-    &.modal-header-promo {
-      background-image: url('https://placeimg.com/530/250/nature');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 250px;
-      margin-bottom: 25px;
     }
   }
 
@@ -91,35 +83,48 @@
   }
 }
 
-/* 3. Video Modal */
-.video-modal {
-  .modal-body {
-    padding: 0;
+.modal-promo {
+  .modal-header {
+    background-image: url('https://placeimg.com/530/250/nature');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 250px;
+    margin-bottom: 25px;
+  }
+}
+
+.modal-video {
+  .modal-content {
+    background: transparent;
   }
 
-  .modal-content {
-    box-shadow: none;
-    background: transparent;
-    border: none;
-    border-radius: 0;
+  .modal-header {
+    padding: 15px;
+
+    @media screen and (min-width: $screen-xs-max) {
+      padding-right: 0;
+    }
+
+    .close {
+      background-color: rgba(187, 187, 187, .6);
+      opacity: 1;
+    }
+  }
+
+  .modal-body {
+    padding: 0;
+
   }
 
   iframe {
-    width: 100%;
     min-height: 300px;
+    width: 100%;
 
     @each $height in (600 800 1000) {
       @media screen and ( min-height: #{$height}px ){
         min-height: #{$height - 100}px;
       }
     }
-  }
-
-  .close {
-    margin-bottom: .5rem;
-    color: $cr-white;
-    font-size: 3.5rem;
-    opacity: 1;
-    font-weight: 100;
   }
 }
