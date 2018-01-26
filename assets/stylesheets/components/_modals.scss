@@ -81,6 +81,10 @@
     background-color: $cr-white;
     opacity: 1;
   }
+
+  &.in {
+    opacity: .85;
+  }
 }
 
 .modal-promo {
@@ -121,9 +125,20 @@
     min-height: 300px;
     width: 100%;
 
-    @each $height in (600 800 1000) {
-      @media screen and ( min-height: #{$height}px ){
-        min-height: #{$height - 100}px;
+    @media screen and (min-width: $screen-xs-max) {
+      min-height: 350px;
+    }
+  }
+
+  .modal-lg {
+    iframe {
+      min-height: 300px;
+      width: 100%;
+
+      @each $height in (600 800 1000) {
+        @media screen and ( min-height: #{$height}px ){
+          min-height: #{$height - 100}px;
+        }
       }
     }
   }
