@@ -5,8 +5,15 @@
 ** 3. Video Modal
 **/
 
+
+
+
 /* 1. Default Modal */
 .modal {
+  @media screen and (max-width: $screen-xs-max) {
+    background: $cr-white;
+  }
+
   .modal-footer {
     padding: 0 15px 45px;
     text-align: left;
@@ -77,16 +84,12 @@
 }
 
 .modal-backdrop {
-  @media screen and (max-width: $screen-xs-max - 1) {
-    background-color: $cr-white;
-    opacity: 1;
-  }
-
   &.in {
     opacity: .85;
   }
 }
 
+// Promo modal, needs special layout to accommodate header image
 .modal-promo {
   .modal-header {
     background-image: url('https://placeimg.com/530/250/nature');
@@ -99,6 +102,10 @@
 }
 
 .modal-video {
+  @media screen and (max-width: $screen-xs-max) {
+    background: transparent;
+  }
+
   .modal-content {
     background: transparent;
   }
