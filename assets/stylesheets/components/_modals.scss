@@ -101,6 +101,41 @@
   }
 }
 
+
+
+
+/* 2. Full page modals (definitely not fauxdals 😉) */
+.modal-splash {
+  background: $cr-blue-dark;
+
+  .modal-content {
+    background: $cr-blue-dark;
+  }
+
+  .modal-content {
+    .modal-body,
+    .modal-title {
+      color: $cr-white;
+    }
+  }
+
+  .modal-header {
+    padding-top: 15px;
+
+    @media screen and (min-width: $screen-xs-max) {
+      padding-top: 0;
+    }
+  }
+
+  .modal-full {
+    width: 100%;
+  }
+}
+
+
+
+
+/* 3. Video Modal */
 .modal-video {
   @media screen and (max-width: $screen-xs-max) {
     background: transparent;
