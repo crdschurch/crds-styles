@@ -288,7 +288,7 @@
 
 /* 2. Layout */
 .btn-group {
-  .btn {
+  > .btn {
     margin-right: .5rem;
 
     // Styles below may seem redundant but are required to override bootstrap
@@ -572,6 +572,10 @@
   .clear {
     clear: both;
   }
+
+  .row {
+    display: initial;
+  }
 }
 
 
@@ -587,9 +591,11 @@
 
 // Block-level buttons on mobile screens
 .btn-block-mobile {
-  @media only screen and (max-width: $screen-xs-max) {
-    display: block;
-    width: 100%;
+  > .btn {
+    @media only screen and (max-width: $screen-xs-max) {
+      display: block;
+      width: 100%;
+    }
   }
 }
 
