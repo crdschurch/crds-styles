@@ -1,0 +1,28 @@
+/* CR.net footer */
+.crds-footer {
+  background: $cr-gray-lighter;
+
+  .crds-footer-header,
+  .crds-footer-subheader {
+    font-family: $base-font-face;
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+
+  .crds-footer-header,
+  .crds-footer-subheader {
+    &, .secondary {
+      color: $cr-gray;
+    }
+  }
+
+  .crds-footer-subheader {
+    margin-top: 1.5rem;
+    margin-bottom: .25rem;
+  }
+
+  .crds-footer-social {
+    margin-top: .75rem;
+    text-align: right;
+  }
+}
