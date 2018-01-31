@@ -1,16 +1,14 @@
 /* CR.net footer */
 .crds-footer {
   background: $cr-gray-lighter;
+  font-size: 1rem;
 
   .crds-footer-header,
   .crds-footer-subheader {
     font-family: $base-font-face;
-    font-size: 1.125rem;
     font-weight: 600;
-  }
+    font-size: 1rem;
 
-  .crds-footer-header,
-  .crds-footer-subheader {
     &, .secondary {
       color: $cr-gray;
     }
