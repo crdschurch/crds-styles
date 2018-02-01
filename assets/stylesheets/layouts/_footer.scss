@@ -20,7 +20,25 @@
   }
 
   .crds-footer-social {
-    margin-top: .75rem;
-    text-align: right;
+    text-align: left;
+
+    @media screen and (min-width: $screen-md) {
+      text-align: right;
+    }
+
+    a {
+      background: $cr-gray-light;
+      border-radius: 50%;
+      line-height: 1;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: .75rem;
+      padding: 10px;
+    }
+
+    li {
+      color: $cr-gray-lighter;
+    }
   }
 }
