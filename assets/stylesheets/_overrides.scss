@@ -290,19 +290,19 @@ $label-font-family: $accent-font-face;
 // $label-link-hover-color: !default;
 
 // Modals
-// $modal-inner-padding: !default;
-// $modal-title-padding: !default;
-// $modal-title-line-height: !default;
-// $modal-content-bg: !default;
-// $modal-content-border-color: !default;
-// $modal-content-fallback-border-color: !default;
-// $modal-backdrop-bg: !default;
-// $modal-backdrop-opacity: !default;
-// $modal-header-border-color: !default;
-// $modal-footer-border-color: !default;
-// $modal-lg: !default;
-// $modal-md: !default;
-// $modal-sm: !default;
+$modal-inner-padding: 45px 40px !default;
+$modal-title-padding: 90px 40px 0 !default;
+$modal-title-line-height: 43px !default;
+// $modal-content-bg: #fff !default;
+$modal-content-border-color: none !default;
+$modal-content-fallback-border-color: none !default;
+$modal-backdrop-bg: rgba(23,23,23,.85) !default;
+// $modal-backdrop-opacity: .85 !default;
+$modal-header-border-color: none !default;
+$modal-footer-border-color: $modal-header-border-color !default;
+// $modal-lg: 900px !default;
+// $modal-md: 600px !default;
+// $modal-sm: 300px !default;
 
 // Alerts
 $alert-padding: 1rem !default;

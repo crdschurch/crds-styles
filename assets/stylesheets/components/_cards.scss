@@ -1,5 +1,6 @@
 .card {
   margin-bottom: 1rem;
+  // DEPRECATION NOTICE: .card-caption is now .card-img-caption and .img-caption
   &.current-series .card-caption {
     @media screen and (min-width: $screen-sm) {
       @include make-sm-column(8);
@@ -86,6 +87,7 @@
   margin-right: .5rem;
 }
 
+// DEPRECATION NOTICE: .card-caption is now .card-img-caption and .img-caption
 .card-caption:before {
   background-color: $cr-blue-lighter;
   color: $cr-gray-dark;
@@ -97,6 +99,35 @@
   position: relative;
   top: -30px;
 }
+
+.card-img-caption {
+  position: relative;
+
+  .img-caption {
+    background-color: $cr-blue-lighter;
+    bottom: -1rem;
+    color: $cr-gray-dark;
+    font-family: $accent-font-face;
+    font-size: .8125rem;
+    font-style: italic;
+    left: 50%;
+    padding: .5rem .75rem;
+    position: absolute;
+    transform: translate(-50%, 0);
+
+    &.img-caption--left {
+      left: 1rem;
+      transform: none;
+    }
+
+    &.img-caption--right {
+      left: auto;
+      right: 1rem;
+      transform: none;
+    }
+  }
+}
+
 
 .card-subtitle {
   color: $cr-gray-light;
