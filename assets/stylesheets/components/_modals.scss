@@ -83,12 +83,6 @@
   }
 }
 
-.modal-backdrop {
-  &.in {
-    opacity: .85;
-  }
-}
-
 // Promo modal, needs special layout to accommodate header image
 .modal-promo {
   .modal-header {
