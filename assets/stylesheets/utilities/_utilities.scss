@@ -438,6 +438,9 @@ a.underline,
   .mobile-push {
     margin: $line-height-computed;
   }
+  .mobile-push-center {
+    margin: 0 auto;
+  }
   .mobile-push-half {
     margin: $line-height-computed / 2;
   }
@@ -495,6 +498,14 @@ a.underline,
   .mobile-push-half-ends {
     margin-top: $line-height-computed / 2;
     margin-bottom: $line-height-computed / 2;
+  }
+  .mobile-push-quarter-sides {
+    margin-right: $line-height-computed / 4;
+    margin-left: $line-height-computed / 4;
+  }
+  .mobile-push-quarter-ends {
+    margin-top: $line-height-computed / 4;
+    margin-bottom: $line-height-computed / 4;
   }
   .mobile-flush {
     margin: 0;
