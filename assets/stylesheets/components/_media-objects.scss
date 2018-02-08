@@ -77,9 +77,6 @@
   }
 }
 
-
-
-
 /* 3. Images*/
 .media-img-wrapper {
   margin-top: .25rem;
@@ -96,6 +93,12 @@
     border-style: solid;
     border-width: 2px;
   }
+}
+
+.img-border {
+  border-color: rgba($cr-gray-lighter, .4);
+  border-style: solid;
+  border-width: 2px;
 }
 
 .media-object-default {
