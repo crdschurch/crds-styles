@@ -81,6 +81,16 @@
       }
     }
   }
+
+  &.alpha {
+    opacity: 0;
+    transition: opacity .5s;
+
+    &.in {
+      opacity: .85;
+      transition: opacity .5s;
+    }
+  }
 }
 
 // Promo modal, needs special layout to accommodate header image
