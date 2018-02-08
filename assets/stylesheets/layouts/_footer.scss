@@ -29,16 +29,13 @@
     a {
       background: $cr-gray-light;
       border-radius: 50%;
+      color: $cr-gray-lighter;
       line-height: 1;
       display: inline-flex;
       justify-content: center;
       align-items: center;
       margin-top: .75rem;
       padding: 10px;
-    }
-
-    li {
-      color: $cr-gray-lighter;
     }
   }
 }
