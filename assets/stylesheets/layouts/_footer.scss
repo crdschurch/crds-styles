@@ -1,0 +1,37 @@
+/* CR.net footer */
+.crds-footer {
+  background: $cr-gray-lighter;
+  font-size: 1rem;
+
+  .crds-footer-header,
+  .crds-footer-subheader {
+    font-family: $base-font-face;
+    font-weight: 600;
+    font-size: 1rem;
+
+    &, .secondary {
+      color: $cr-gray;
+    }
+  }
+
+  .crds-footer-subheader {
+    margin-top: 1.5rem;
+    margin-bottom: .25rem;
+  }
+
+  .crds-footer-social {
+    text-align: left;
+
+    @media screen and (min-width: $screen-md) {
+      text-align: right;
+    }
+
+    a {
+      border-radius: 50%;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: .75rem;
+    }
+  }
+}
