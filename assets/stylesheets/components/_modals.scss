@@ -81,11 +81,15 @@
       }
     }
   }
-}
 
-.modal-backdrop {
-  &.in {
-    opacity: .85;
+  &.alpha {
+    opacity: 0;
+    transition: opacity .5s;
+
+    &.in {
+      opacity: .85;
+      transition: opacity .5s;
+    }
   }
 }
 
