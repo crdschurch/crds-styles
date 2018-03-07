@@ -1,25 +1,14 @@
-.countdown {
-  background-color: $cr-cyan;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  padding: 1rem 0;
+/**************
+** 1. Timer
+** 2. Bar
+** 3. Color Variations
+**************/
 
-  @media (min-width: $screen-sm) {
-    flex-direction: row;
-    padding: .5rem;
-  }
-}
 
-.countdown-header {
-  color: $cr-cyan-lighter;
-  font-family: $accent-font-face;
-  font-style: italic;
-}
 
+
+/* 1. Timer */
 .countdown-timer {
-  color: $cr-white;
   margin: 0;
   padding: .5rem 0 0;
 
@@ -37,14 +26,13 @@
     width: 3rem;
 
     &::after {
-      color: $cr-cyan-lighter;
       display: block;
       font-size: .5rem;
       font-weight: normal;
     }
 
     &:not(:first-child) {
-      border-left: 1px solid rgba($cr-white, .3);
+      border-left: 1px solid rgba($cr-gray-dark, .3);
     }
   }
 }
@@ -65,11 +53,58 @@
   content: 'SEC';
 }
 
-.countdown-btn {
-  background-color: rgba(lighten($cr-cyan, 15), 10);
-  color: $cr-white;
 
-  &:hover {
-    background-color: lighten($cr-cyan, 5);
+
+
+/* 2. Bar */
+.countdown {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 0;
+
+  @media (min-width: $screen-sm) {
+    flex-direction: row;
+    padding: .5rem;
+  }
+}
+
+.countdown-header {
+  font-family: $accent-font-face;
+  font-style: italic;
+}
+
+
+
+
+/* 3. Color Variations */
+.countdown-cyan {
+  background-color: $cr-cyan;
+
+  .countdown-btn {
+    background-color: rgba(lighten($cr-cyan, 15), 10);
+    color: $cr-white;
+
+    &:hover {
+      background-color: lighten($cr-cyan, 5);
+    }
+  }
+
+  .countdown-header {
+    color: $cr-cyan-lighter;
+  }
+
+  .countdown-timer {
+    color: $cr-white;
+
+    li {
+      &::after {
+        color: $cr-cyan-lighter;
+      }
+      &:not(:first-child) {
+        border-left-color: rgba($cr-white, .3);
+      }
+    }
   }
 }
