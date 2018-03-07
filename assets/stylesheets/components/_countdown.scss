@@ -2,6 +2,7 @@
 ** 1. Timer
 ** 2. Bar
 ** 3. Color Variations
+** 4. Floating Timer
 **************/
 
 
@@ -10,11 +11,6 @@
 /* 1. Timer */
 .countdown-timer {
   margin: 0;
-  padding: .5rem 0 0;
-
-  @media (min-width: $screen-sm) {
-    padding: 0 0 0 1rem;
-  }
 
   li {
     display: inline-block;
@@ -68,6 +64,13 @@
     flex-direction: row;
     padding: .5rem;
   }
+
+  .countdown-timer {
+    padding: .5rem 0 0;
+    @media (min-width: $screen-sm) {
+      padding: 0 0 0 1rem;
+    }
+  }
 }
 
 .countdown-header {
@@ -79,7 +82,7 @@
 
 
 /* 3. Color Variations */
-.countdown-cyan {
+.countdown-bg-cyan {
   background-color: $cr-cyan;
 
   .countdown-btn {
@@ -107,4 +110,34 @@
       }
     }
   }
+}
+
+.countdown-white {
+
+  .countdown-timer {
+    color: $cr-white;
+    border-color: $cr-white;
+
+    li:not(:first-child) {
+      border-left-color: rgba($cr-white, .3);
+    }
+  }
+}
+
+
+
+
+/* 4. Floating Timer */
+.countdown-border {
+  text-align: center;
+
+  &:not(.countdown-white) .countdown-timer {
+    border-color: rgba($cr-gray-dark, .3);
+  }
+
+  .countdown-timer {
+    border: 1px solid;
+    padding: 1rem;
+  }
+
 }
