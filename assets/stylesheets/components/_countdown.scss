@@ -116,7 +116,7 @@
 
   .countdown-timer {
     color: $cr-white;
-    border-color: $cr-white;
+    border-color: rgba($cr-white, .3);
 
     li:not(:first-child) {
       border-left-color: rgba($cr-white, .3);
