@@ -10407,8 +10407,44 @@ svg use {
     .modal-video .modal-lg iframe {
       min-height: 900px; } }
 
+/**************
+** 1. Timer
+** 2. Bar
+** 3. Color Variations
+** 4. Floating Timer
+**************/
+/* 1. Timer */
+.countdown-timer {
+  margin: 0; }
+  .countdown-timer li {
+    display: inline-block;
+    font-family: "acumin-pro", helvetica, arial, sans-serif;
+    font-size: 1.35rem;
+    font-weight: 500;
+    padding: 0 .5rem;
+    text-align: center;
+    width: 3rem; }
+    .countdown-timer li::after {
+      display: block;
+      font-size: .5rem;
+      font-weight: normal; }
+    .countdown-timer li:not(:first-child) {
+      border-left: 1px solid rgba(77, 77, 77, 0.3); }
+
+.countdown-days::after {
+  content: 'DAYS'; }
+
+.countdown-hours::after {
+  content: 'HOURS'; }
+
+.countdown-minutes::after {
+  content: 'MIN'; }
+
+.countdown-seconds::after {
+  content: 'SEC'; }
+
+/* 2. Bar */
 .countdown {
-  background-color: #0095d9;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10430,52 +10466,47 @@ svg use {
           -ms-flex-direction: row;
               flex-direction: row;
       padding: .5rem; } }
+  .countdown .countdown-timer {
+    padding: .5rem 0 0; }
+    @media (min-width: 768px) {
+      .countdown .countdown-timer {
+        padding: 0 0 0 1rem; } }
 
 .countdown-header {
-  color: #d0ebf8;
   font-family: "lexia", serif;
   font-style: italic; }
 
-.countdown-timer {
+/* 3. Color Variations */
+.countdown-bg-cyan {
+  background-color: #0095d9; }
+  .countdown-bg-cyan .countdown-btn {
+    background-color: #27bbff;
+    color: white; }
+    .countdown-bg-cyan .countdown-btn:hover {
+      background-color: #00a7f3; }
+  .countdown-bg-cyan .countdown-header {
+    color: #d0ebf8; }
+  .countdown-bg-cyan .countdown-timer {
+    color: white; }
+    .countdown-bg-cyan .countdown-timer li::after {
+      color: #d0ebf8; }
+    .countdown-bg-cyan .countdown-timer li:not(:first-child) {
+      border-left-color: rgba(255, 255, 255, 0.3); }
+
+.countdown-white .countdown-timer {
   color: white;
-  margin: 0;
-  padding: .5rem 0 0; }
-  @media (min-width: 768px) {
-    .countdown-timer {
-      padding: 0 0 0 1rem; } }
-  .countdown-timer li {
-    display: inline-block;
-    font-family: "acumin-pro", helvetica, arial, sans-serif;
-    font-size: 1.35rem;
-    font-weight: 500;
-    padding: 0 .5rem;
-    text-align: center;
-    width: 3rem; }
-    .countdown-timer li::after {
-      color: #d0ebf8;
-      display: block;
-      font-size: .5rem;
-      font-weight: normal; }
-    .countdown-timer li:not(:first-child) {
-      border-left: 1px solid rgba(255, 255, 255, 0.3); }
+  border-color: rgba(255, 255, 255, 0.3); }
+  .countdown-white .countdown-timer li:not(:first-child) {
+    border-left-color: rgba(255, 255, 255, 0.3); }
 
-.countdown-days::after {
-  content: 'DAYS'; }
-
-.countdown-hours::after {
-  content: 'HOURS'; }
-
-.countdown-minutes::after {
-  content: 'MIN'; }
-
-.countdown-seconds::after {
-  content: 'SEC'; }
-
-.countdown-btn {
-  background-color: #27bbff;
-  color: white; }
-  .countdown-btn:hover {
-    background-color: #00a7f3; }
+/* 4. Floating Timer */
+.countdown-border {
+  text-align: center; }
+  .countdown-border:not(.countdown-white) .countdown-timer {
+    border-color: rgba(77, 77, 77, 0.3); }
+  .countdown-border .countdown-timer {
+    border: 1px solid;
+    padding: 1rem; }
 
 .accordion .accordion-toggle {
   color: #979797; }
