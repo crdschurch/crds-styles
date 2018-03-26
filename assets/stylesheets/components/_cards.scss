@@ -128,6 +128,12 @@
   }
 }
 
+.card img:not(.card-img-unrestrained) {
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
 
 .card-subtitle {
   color: $cr-gray-light;
