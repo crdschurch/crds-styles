@@ -10049,6 +10049,14 @@ svg use {
       -webkit-transform: none;
               transform: none; }
 
+.card img:not(.card-img-unrestrained) {
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%; }
+
 .card-subtitle {
   color: #979797;
   font-size: 12px;
