@@ -14,4 +14,7 @@ Gem::Specification.new do |s|
   s.files         = `git ls-files`.split($/)
 
   s.add_runtime_dependency 'sass', '>= 3.2'
+
+  s.add_dependency 'bootstrap-sass', '~> 3.3.7'
+
 end
