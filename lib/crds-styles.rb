@@ -1,3 +1,5 @@
+require 'bootstrap-sass'
+
 module CRDS
   module Styles
     class << self
@@ -76,3 +78,4 @@ module CRDS
 end
 
 CRDS::Styles.load!
+Bootstrap.load!
