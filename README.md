@@ -64,7 +64,7 @@ optionally override any of the customizable Bootstrap variables prior to
 import.
 
 ```scss
-@import '~crds-styles/assets/stylesheets/bootstrap';
+@import '~crds-styles/assets/stylesheets/crds-styles';
 ```
 
 _Note: The tilde character (`~`) is a shorthand reference to `node_modules`,
