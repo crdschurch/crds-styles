@@ -1,5 +1,8 @@
+require 'json'
+
 module CRDS
   module Styles
-    VERSION = '2.4.1'
+    package_file = File.expand_path('../../package.json', __dir__)
+    VERSION = JSON.parse(File.read(package_file))['version']
   end
 end
