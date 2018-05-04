@@ -10906,6 +10906,40 @@ svg use {
       text-transform: uppercase; }
 
 /* stylelint-enable */
+.site-footer {
+  background: #e7e7e7;
+  margin-bottom: -.5rem;
+  padding: 3.125rem 0; }
+  .site-footer, .site-footer a, .site-footer h5 {
+    color: #737373; }
+  .site-footer a:hover {
+    color: #666666; }
+  .site-footer h5 {
+    font-size: 16px;
+    font-weight: bold; }
+  @media screen and (min-width: 768px) {
+    .site-footer .social-icons {
+      text-align: right; } }
+  .site-footer .social-icons a {
+    background: #737373;
+    border-radius: 50%;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 36px;
+    width: 36px;
+    margin-right: .5rem;
+    padding: 10px; }
+    .site-footer .social-icons a:hover {
+      background: #666666; }
+    @media screen and (min-width: 768px) {
+      .site-footer .social-icons a {
+        margin-right: 0;
+        margin-left: .5rem; } }
+
 .dark-theme {
   background: black;
   color: #737373; }
