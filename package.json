@@ -23,8 +23,7 @@
     "watch": "npm-watch build"
   },
   "files": [
-    "assets",
-    "bin"
+    "assets"
   ],
   "keywords": [
     "crossroads"
