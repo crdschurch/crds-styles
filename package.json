@@ -21,7 +21,7 @@
     "build": "rimraf dist && node src/index.js --build",
     "deploy": "node src/index.js --deploy",
     "watch": "npm-watch build",
-    "postinstall": "node ./bin/postinstall.js"
+    "postinstall": "if [ -f ./node_modules/crds-styles/bin/postinstall.js ]; then node ./node_modules/crds-styles/bin/postinstall.js; fi"
   },
   "files": [
     "assets"
