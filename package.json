@@ -12,6 +12,9 @@
       "extensions": "js,scss"
     }
   },
+  "bin": {
+    "crds-styles-postinstall": "./bin/postinstall.js"
+  },
   "scripts": {
     "lint": "stylelint 'assets/stylesheets/**/*.scss' --syntax scss",
     "build-css-icons": "./node_modules/svg-sprite/bin/svg-sprite.js --config=config/svg-sprite.config.json src/assets/svgs/*.svg",
@@ -21,7 +24,7 @@
     "build": "rimraf dist && node src/index.js --build",
     "deploy": "node src/index.js --deploy",
     "watch": "npm-watch build",
-    "postinstall": "if [ -f ./node_modules/crds-styles/bin/postinstall.js ]; then node ./node_modules/crds-styles/bin/postinstall.js; fi"
+    "postinstall": "if [ -f ./node_modules/.bin/crds-styles-postinstall.js ]; then node ./node_modules/.bin/crds-styles-postinstall.js; fi"
   },
   "files": [
     "assets"
