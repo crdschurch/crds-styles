@@ -1,6 +1,6 @@
 {
   "name": "crds-styles",
-  "version": "2.5.0",
+  "version": "3.0.0",
   "description": "",
   "style": "assets/stylesheets/_crds.scss",
   "watch": {
@@ -20,8 +20,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rimraf dist && node src/index.js --build",
     "deploy": "node src/index.js --deploy",
-    "watch": "npm-watch build",
-    "postinstall": "if [ -f ./node_modules/crds-styles/bin/postinstall.js ]; then node ./node_modules/crds-styles/bin/postinstall.js; fi"
+    "watch": "npm-watch build"
   },
   "files": [
     "assets",
