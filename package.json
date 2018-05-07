@@ -27,7 +27,8 @@
     "postinstall": "if [ -f ./node_modules/.bin/crds-styles-postinstall.js ]; then node ./node_modules/.bin/crds-styles-postinstall.js; fi"
   },
   "files": [
-    "assets"
+    "assets",
+    "bin"
   ],
   "keywords": [
     "crossroads"
