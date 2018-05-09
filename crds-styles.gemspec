@@ -13,15 +13,6 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
   s.files         = `git ls-files`.split($/)
 
-  s.post_install_message = %{
- - - - - - - - - - - - - - - - - - - - - - - - - -
-| To add crds-styles to your project, add the     |
-| following to your SCSS manifest file:           |
-|                                                 |
-|     @import 'crds-styles-sprockets';            |
- - - - - - - - - - - - - - - - - - - - - - - - - -
-  }
-
   s.add_runtime_dependency 'sass', '~> 3.2'
 
   s.add_dependency 'bootstrap-sass', '~> 3.3'
