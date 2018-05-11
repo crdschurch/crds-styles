@@ -9909,6 +9909,13 @@ svg use {
       margin-left: 16.66667%; } }
   .card > a {
     display: block; }
+  .card .card-img-constrained {
+    height: 200px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+    width: 100%; }
 
 @media screen and (max-width: 767px) {
   .cards-4x .card {
@@ -10048,14 +10055,6 @@ svg use {
       right: 1rem;
       -webkit-transform: none;
               transform: none; }
-
-.card img:not(.card-img-unrestrained) {
-  height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  width: 100%; }
 
 .card-subtitle {
   color: #979797;
