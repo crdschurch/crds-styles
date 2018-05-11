@@ -9,7 +9,7 @@ Kit (DDK)](http://github.com/crdschurch/crds-styleguide) are provided by this
 NPM package. Any deviations from the patterns defined there should be
 implemented in the client application.
 
-Usage
+Installation
 ----------
 
 There are two options for including crds-styles in your project.
@@ -58,13 +58,15 @@ use upstream changes that haven't yet been released.
 }
 ```
 
-In both of these cases, you'll need to import the stylesheet in your
-application's main '.scss' file using the following convention. You can
-optionally override any of the customizable Bootstrap variables prior to
-import.
+Usage
+----------
+
+Import the stylesheet in your application's main '.scss'
+file using the following convention. You can optionally override
+any of the customizable Bootstrap variables prior to import.
 
 ```scss
-@import '~crds-styles/assets/stylesheets/bootstrap';
+@import '~crds-styles/assets/stylesheets/crds-styles';
 ```
 
 _Note: The tilde character (`~`) is a shorthand reference to `node_modules`,

@@ -54,7 +54,7 @@ CRDS.Styles.prototype.compile = function(style) {
   this.log('compile()');
   var filename = style == 'compressed' ? this.minOutputFile : this.outputFile;
   sass.render({
-    file: './assets/stylesheets/bootstrap.scss',
+    file: './assets/stylesheets/_crds-styles.scss',
     outFile: filename,
     sourceMap: true,
     sourceComment: 'true',
