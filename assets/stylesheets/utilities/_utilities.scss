@@ -223,7 +223,7 @@ a.underline,
 /* 5. Border stuff */
 
 .no-borders {
-  border: 0;
+  border: 0 !important;
 }
 
 .border-bottom {
@@ -253,7 +253,11 @@ a.underline,
 }
 
 .border-width-3 {
-  border-width: 3px;
+  border-width: 3px !important;
+}
+
+.no-border-radius {
+  border-radius: 0 !important;
 }
 
 
