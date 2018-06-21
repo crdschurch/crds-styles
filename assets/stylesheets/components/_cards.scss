@@ -34,6 +34,27 @@
   }
   @media screen and (min-width: $screen-md) {
     @include make-sm-column(3);
+    &:nth-child(4n+1) {
+      clear: left;
+    }
+  }
+}
+
+.cards-3x .card {
+  @media screen and (max-width: $screen-sm - 1) {
+    @include make-sm-column(12);
+  }
+  @media screen and (min-width: $screen-sm) and (max-width: $screen-md - 1) {
+    @include make-sm-column(6);
+    &:nth-child(odd) {
+      clear: left;
+    }
+  }
+  @media screen and (min-width: $screen-md) {
+    @include make-sm-column(4);
+    &:nth-child(3n+1) {
+      clear: left;
+    }
   }
 }
 
@@ -49,8 +70,16 @@
   }
 }
 
+.cards-2x-xs .card {
+  @media (max-width: $screen-sm) {
+    @include make-xs-column(6);
+    &:nth-child(odd) {
+      clear: left;
+    }
+  }
+}
 
-.cards-4x, .cards-2x {
+.cards-4x, .cards-3x,.cards-2x {
   .feature-cards:not([data-carousel]) {
     @include make-row();
   }
