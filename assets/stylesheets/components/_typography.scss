@@ -226,11 +226,8 @@ main, .main {
 }
 
 .lead {
-  font-size: 1.125rem; // 18px
-
-  @media screen and (min-width: $screen-xs) {
-    font-size: 1.375rem; // 22px
-  }
+  font-size: 1.5rem; // 24px
+  line-height: 1.5;
 }
 
 .quiet {
@@ -313,19 +310,43 @@ address {
 
 /* 7. Blockquote */
 blockquote {
-  border: 1px solid $blockquote-border-color;
-  color: $text-muted;
-  font-family: $accent-font-face;
+  border-left: 0;
+  color: $cr-gray;
   font-style: italic;
-  line-height: $line-height-base;
-  padding: 2em;
+  line-height: 1.5;
+  padding: 12px 15px;
+  padding-top: 4rem;
+  position: relative;
 
-  span {
-    display: block;
+  &:before {
+    content: '\201C'; // left double quotation mark
+    color: $cr-gray-lighter;
+    font-family: $accent-font-face;
+    font-size: 100px;
+    font-style: italic;
+    left: 0;
+    line-height: 1;
+    position: absolute;
+    top: 0;
+  }
+
+  @media screen and (min-width: $screen-xs) {
+    padding-left: 6.5rem;
+    padding-top: 12px;
+
+    &:before {
+      font-size: 144px;
+    }
+  }
+
+  footer {
+    font-size: 1rem;
     font-style: normal;
-    font-size: 1.375rem; // 22px
-    font-family: $condensed-extra-font-face;
-    margin-top: .5em;
+    line-height: 1.75;
+
+    &:before {
+      content: '\2013 \00A0'; // ndash and space
+    }
   }
 }
 
