@@ -1414,7 +1414,7 @@ blockquote {
   padding: 12px 24px;
   margin: 0 0 24px;
   font-size: 1.1875rem;
-  border-left: 5px solid #b3b3b3; }
+  border-left: 5px solid #e7e7e7; }
   blockquote p:last-child,
   blockquote ul:last-child,
   blockquote ol:last-child {
@@ -1435,7 +1435,7 @@ blockquote {
 blockquote.pull-right {
   padding-right: 15px;
   padding-left: 0;
-  border-right: 5px solid #b3b3b3;
+  border-right: 5px solid #e7e7e7;
   border-left: 0;
   text-align: right; }
   .blockquote-reverse footer:before,
@@ -6376,31 +6376,31 @@ a > p {
 img {
   max-width: 100%; }
 
-svg.icon, .icon.calendar:not(svg), .icon.camera:not(svg), .icon.caret-down:not(svg), .icon.check-circle:not(svg), .icon.chevron-down:not(svg), .icon.chevron-left:not(svg), .icon.chevron-right:not(svg), .icon.chevron-up:not(svg), .icon.circle-thin:not(svg), .icon.clock-o:not(svg), .icon.close:not(svg), .icon.close-thin:not(svg), .icon.contrast:not(svg), .icon.copy:not(svg), .icon.download:not(svg), .icon.equalizer:not(svg), .icon.exclamation-circle:not(svg), .icon.eye:not(svg), .icon.eye-slash:not(svg), .icon.facebook:not(svg), .icon.github:not(svg), .icon.instagram:not(svg), .icon.link:not(svg), .icon.map-marker:not(svg), .icon.menu:not(svg), .icon.play-thin:not(svg), .icon.question-circle:not(svg), .icon.screwhead-crds:not(svg), .icon.search:not(svg), .icon.share:not(svg), .icon.twitter:not(svg), .icon.usd:not(svg), .icon.youtube:not(svg) {
+svg.icon, .icon.calendar:not(svg), .icon.camera:not(svg), .icon.caret-down:not(svg), .icon.check-circle:not(svg), .icon.chevron-down:not(svg), .icon.chevron-left:not(svg), .icon.chevron-right:not(svg), .icon.chevron-up:not(svg), .icon.circle-thin:not(svg), .icon.clock-o:not(svg), .icon.close:not(svg), .icon.close-thin:not(svg), .icon.contrast:not(svg), .icon.copy:not(svg), .icon.download:not(svg), .icon.equalizer:not(svg), .icon.exclamation-circle:not(svg), .icon.eye:not(svg), .icon.eye-slash:not(svg), .icon.facebook:not(svg), .icon.github:not(svg), .icon.instagram:not(svg), .icon.link:not(svg), .icon.location-arrow:not(svg), .icon.map-marker:not(svg), .icon.media-article:not(svg), .icon.media-podcast:not(svg), .icon.media-video:not(svg), .icon.menu:not(svg), .icon.minus:not(svg), .icon.play-thin:not(svg), .icon.plus:not(svg), .icon.question-circle:not(svg), .icon.screwhead-crds:not(svg), .icon.search:not(svg), .icon.share:not(svg), .icon.twitter:not(svg), .icon.usd:not(svg), .icon.youtube:not(svg) {
   width: auto;
   height: 32px;
   background-size: 32px; }
-  svg.icon-1.icon, .icon-1.icon.calendar:not(svg), .icon-1.icon.camera:not(svg), .icon-1.icon.caret-down:not(svg), .icon-1.icon.check-circle:not(svg), .icon-1.icon.chevron-down:not(svg), .icon-1.icon.chevron-left:not(svg), .icon-1.icon.chevron-right:not(svg), .icon-1.icon.chevron-up:not(svg), .icon-1.icon.circle-thin:not(svg), .icon-1.icon.clock-o:not(svg), .icon-1.icon.close:not(svg), .icon-1.icon.close-thin:not(svg), .icon-1.icon.contrast:not(svg), .icon-1.icon.copy:not(svg), .icon-1.icon.download:not(svg), .icon-1.icon.equalizer:not(svg), .icon-1.icon.exclamation-circle:not(svg), .icon-1.icon.eye:not(svg), .icon-1.icon.eye-slash:not(svg), .icon-1.icon.facebook:not(svg), .icon-1.icon.github:not(svg), .icon-1.icon.instagram:not(svg), .icon-1.icon.link:not(svg), .icon-1.icon.map-marker:not(svg), .icon-1.icon.menu:not(svg), .icon-1.icon.play-thin:not(svg), .icon-1.icon.question-circle:not(svg), .icon-1.icon.screwhead-crds:not(svg), .icon-1.icon.search:not(svg), .icon-1.icon.share:not(svg), .icon-1.icon.twitter:not(svg), .icon-1.icon.usd:not(svg), .icon-1.icon.youtube:not(svg) {
+  svg.icon-1.icon, .icon-1.icon.calendar:not(svg), .icon-1.icon.camera:not(svg), .icon-1.icon.caret-down:not(svg), .icon-1.icon.check-circle:not(svg), .icon-1.icon.chevron-down:not(svg), .icon-1.icon.chevron-left:not(svg), .icon-1.icon.chevron-right:not(svg), .icon-1.icon.chevron-up:not(svg), .icon-1.icon.circle-thin:not(svg), .icon-1.icon.clock-o:not(svg), .icon-1.icon.close:not(svg), .icon-1.icon.close-thin:not(svg), .icon-1.icon.contrast:not(svg), .icon-1.icon.copy:not(svg), .icon-1.icon.download:not(svg), .icon-1.icon.equalizer:not(svg), .icon-1.icon.exclamation-circle:not(svg), .icon-1.icon.eye:not(svg), .icon-1.icon.eye-slash:not(svg), .icon-1.icon.facebook:not(svg), .icon-1.icon.github:not(svg), .icon-1.icon.instagram:not(svg), .icon-1.icon.link:not(svg), .icon-1.icon.location-arrow:not(svg), .icon-1.icon.map-marker:not(svg), .icon-1.icon.media-article:not(svg), .icon-1.icon.media-podcast:not(svg), .icon-1.icon.media-video:not(svg), .icon-1.icon.menu:not(svg), .icon-1.icon.minus:not(svg), .icon-1.icon.play-thin:not(svg), .icon-1.icon.plus:not(svg), .icon-1.icon.question-circle:not(svg), .icon-1.icon.screwhead-crds:not(svg), .icon-1.icon.search:not(svg), .icon-1.icon.share:not(svg), .icon-1.icon.twitter:not(svg), .icon-1.icon.usd:not(svg), .icon-1.icon.youtube:not(svg) {
     width: auto;
     height: 16px;
     background-size: 16px; }
-  svg.icon-2.icon, .icon-2.icon.calendar:not(svg), .icon-2.icon.camera:not(svg), .icon-2.icon.caret-down:not(svg), .icon-2.icon.check-circle:not(svg), .icon-2.icon.chevron-down:not(svg), .icon-2.icon.chevron-left:not(svg), .icon-2.icon.chevron-right:not(svg), .icon-2.icon.chevron-up:not(svg), .icon-2.icon.circle-thin:not(svg), .icon-2.icon.clock-o:not(svg), .icon-2.icon.close:not(svg), .icon-2.icon.close-thin:not(svg), .icon-2.icon.contrast:not(svg), .icon-2.icon.copy:not(svg), .icon-2.icon.download:not(svg), .icon-2.icon.equalizer:not(svg), .icon-2.icon.exclamation-circle:not(svg), .icon-2.icon.eye:not(svg), .icon-2.icon.eye-slash:not(svg), .icon-2.icon.facebook:not(svg), .icon-2.icon.github:not(svg), .icon-2.icon.instagram:not(svg), .icon-2.icon.link:not(svg), .icon-2.icon.map-marker:not(svg), .icon-2.icon.menu:not(svg), .icon-2.icon.play-thin:not(svg), .icon-2.icon.question-circle:not(svg), .icon-2.icon.screwhead-crds:not(svg), .icon-2.icon.search:not(svg), .icon-2.icon.share:not(svg), .icon-2.icon.twitter:not(svg), .icon-2.icon.usd:not(svg), .icon-2.icon.youtube:not(svg) {
+  svg.icon-2.icon, .icon-2.icon.calendar:not(svg), .icon-2.icon.camera:not(svg), .icon-2.icon.caret-down:not(svg), .icon-2.icon.check-circle:not(svg), .icon-2.icon.chevron-down:not(svg), .icon-2.icon.chevron-left:not(svg), .icon-2.icon.chevron-right:not(svg), .icon-2.icon.chevron-up:not(svg), .icon-2.icon.circle-thin:not(svg), .icon-2.icon.clock-o:not(svg), .icon-2.icon.close:not(svg), .icon-2.icon.close-thin:not(svg), .icon-2.icon.contrast:not(svg), .icon-2.icon.copy:not(svg), .icon-2.icon.download:not(svg), .icon-2.icon.equalizer:not(svg), .icon-2.icon.exclamation-circle:not(svg), .icon-2.icon.eye:not(svg), .icon-2.icon.eye-slash:not(svg), .icon-2.icon.facebook:not(svg), .icon-2.icon.github:not(svg), .icon-2.icon.instagram:not(svg), .icon-2.icon.link:not(svg), .icon-2.icon.location-arrow:not(svg), .icon-2.icon.map-marker:not(svg), .icon-2.icon.media-article:not(svg), .icon-2.icon.media-podcast:not(svg), .icon-2.icon.media-video:not(svg), .icon-2.icon.menu:not(svg), .icon-2.icon.minus:not(svg), .icon-2.icon.play-thin:not(svg), .icon-2.icon.plus:not(svg), .icon-2.icon.question-circle:not(svg), .icon-2.icon.screwhead-crds:not(svg), .icon-2.icon.search:not(svg), .icon-2.icon.share:not(svg), .icon-2.icon.twitter:not(svg), .icon-2.icon.usd:not(svg), .icon-2.icon.youtube:not(svg) {
     width: auto;
     height: 32px;
     background-size: 32px; }
-  svg.icon-3.icon, .icon-3.icon.calendar:not(svg), .icon-3.icon.camera:not(svg), .icon-3.icon.caret-down:not(svg), .icon-3.icon.check-circle:not(svg), .icon-3.icon.chevron-down:not(svg), .icon-3.icon.chevron-left:not(svg), .icon-3.icon.chevron-right:not(svg), .icon-3.icon.chevron-up:not(svg), .icon-3.icon.circle-thin:not(svg), .icon-3.icon.clock-o:not(svg), .icon-3.icon.close:not(svg), .icon-3.icon.close-thin:not(svg), .icon-3.icon.contrast:not(svg), .icon-3.icon.copy:not(svg), .icon-3.icon.download:not(svg), .icon-3.icon.equalizer:not(svg), .icon-3.icon.exclamation-circle:not(svg), .icon-3.icon.eye:not(svg), .icon-3.icon.eye-slash:not(svg), .icon-3.icon.facebook:not(svg), .icon-3.icon.github:not(svg), .icon-3.icon.instagram:not(svg), .icon-3.icon.link:not(svg), .icon-3.icon.map-marker:not(svg), .icon-3.icon.menu:not(svg), .icon-3.icon.play-thin:not(svg), .icon-3.icon.question-circle:not(svg), .icon-3.icon.screwhead-crds:not(svg), .icon-3.icon.search:not(svg), .icon-3.icon.share:not(svg), .icon-3.icon.twitter:not(svg), .icon-3.icon.usd:not(svg), .icon-3.icon.youtube:not(svg) {
+  svg.icon-3.icon, .icon-3.icon.calendar:not(svg), .icon-3.icon.camera:not(svg), .icon-3.icon.caret-down:not(svg), .icon-3.icon.check-circle:not(svg), .icon-3.icon.chevron-down:not(svg), .icon-3.icon.chevron-left:not(svg), .icon-3.icon.chevron-right:not(svg), .icon-3.icon.chevron-up:not(svg), .icon-3.icon.circle-thin:not(svg), .icon-3.icon.clock-o:not(svg), .icon-3.icon.close:not(svg), .icon-3.icon.close-thin:not(svg), .icon-3.icon.contrast:not(svg), .icon-3.icon.copy:not(svg), .icon-3.icon.download:not(svg), .icon-3.icon.equalizer:not(svg), .icon-3.icon.exclamation-circle:not(svg), .icon-3.icon.eye:not(svg), .icon-3.icon.eye-slash:not(svg), .icon-3.icon.facebook:not(svg), .icon-3.icon.github:not(svg), .icon-3.icon.instagram:not(svg), .icon-3.icon.link:not(svg), .icon-3.icon.location-arrow:not(svg), .icon-3.icon.map-marker:not(svg), .icon-3.icon.media-article:not(svg), .icon-3.icon.media-podcast:not(svg), .icon-3.icon.media-video:not(svg), .icon-3.icon.menu:not(svg), .icon-3.icon.minus:not(svg), .icon-3.icon.play-thin:not(svg), .icon-3.icon.plus:not(svg), .icon-3.icon.question-circle:not(svg), .icon-3.icon.screwhead-crds:not(svg), .icon-3.icon.search:not(svg), .icon-3.icon.share:not(svg), .icon-3.icon.twitter:not(svg), .icon-3.icon.usd:not(svg), .icon-3.icon.youtube:not(svg) {
     width: auto;
     height: 48px;
     background-size: 48px; }
-  svg.icon-4.icon, .icon-4.icon.calendar:not(svg), .icon-4.icon.camera:not(svg), .icon-4.icon.caret-down:not(svg), .icon-4.icon.check-circle:not(svg), .icon-4.icon.chevron-down:not(svg), .icon-4.icon.chevron-left:not(svg), .icon-4.icon.chevron-right:not(svg), .icon-4.icon.chevron-up:not(svg), .icon-4.icon.circle-thin:not(svg), .icon-4.icon.clock-o:not(svg), .icon-4.icon.close:not(svg), .icon-4.icon.close-thin:not(svg), .icon-4.icon.contrast:not(svg), .icon-4.icon.copy:not(svg), .icon-4.icon.download:not(svg), .icon-4.icon.equalizer:not(svg), .icon-4.icon.exclamation-circle:not(svg), .icon-4.icon.eye:not(svg), .icon-4.icon.eye-slash:not(svg), .icon-4.icon.facebook:not(svg), .icon-4.icon.github:not(svg), .icon-4.icon.instagram:not(svg), .icon-4.icon.link:not(svg), .icon-4.icon.map-marker:not(svg), .icon-4.icon.menu:not(svg), .icon-4.icon.play-thin:not(svg), .icon-4.icon.question-circle:not(svg), .icon-4.icon.screwhead-crds:not(svg), .icon-4.icon.search:not(svg), .icon-4.icon.share:not(svg), .icon-4.icon.twitter:not(svg), .icon-4.icon.usd:not(svg), .icon-4.icon.youtube:not(svg) {
+  svg.icon-4.icon, .icon-4.icon.calendar:not(svg), .icon-4.icon.camera:not(svg), .icon-4.icon.caret-down:not(svg), .icon-4.icon.check-circle:not(svg), .icon-4.icon.chevron-down:not(svg), .icon-4.icon.chevron-left:not(svg), .icon-4.icon.chevron-right:not(svg), .icon-4.icon.chevron-up:not(svg), .icon-4.icon.circle-thin:not(svg), .icon-4.icon.clock-o:not(svg), .icon-4.icon.close:not(svg), .icon-4.icon.close-thin:not(svg), .icon-4.icon.contrast:not(svg), .icon-4.icon.copy:not(svg), .icon-4.icon.download:not(svg), .icon-4.icon.equalizer:not(svg), .icon-4.icon.exclamation-circle:not(svg), .icon-4.icon.eye:not(svg), .icon-4.icon.eye-slash:not(svg), .icon-4.icon.facebook:not(svg), .icon-4.icon.github:not(svg), .icon-4.icon.instagram:not(svg), .icon-4.icon.link:not(svg), .icon-4.icon.location-arrow:not(svg), .icon-4.icon.map-marker:not(svg), .icon-4.icon.media-article:not(svg), .icon-4.icon.media-podcast:not(svg), .icon-4.icon.media-video:not(svg), .icon-4.icon.menu:not(svg), .icon-4.icon.minus:not(svg), .icon-4.icon.play-thin:not(svg), .icon-4.icon.plus:not(svg), .icon-4.icon.question-circle:not(svg), .icon-4.icon.screwhead-crds:not(svg), .icon-4.icon.search:not(svg), .icon-4.icon.share:not(svg), .icon-4.icon.twitter:not(svg), .icon-4.icon.usd:not(svg), .icon-4.icon.youtube:not(svg) {
     width: auto;
     height: 64px;
     background-size: 64px; }
-  svg.icon-5.icon, .icon-5.icon.calendar:not(svg), .icon-5.icon.camera:not(svg), .icon-5.icon.caret-down:not(svg), .icon-5.icon.check-circle:not(svg), .icon-5.icon.chevron-down:not(svg), .icon-5.icon.chevron-left:not(svg), .icon-5.icon.chevron-right:not(svg), .icon-5.icon.chevron-up:not(svg), .icon-5.icon.circle-thin:not(svg), .icon-5.icon.clock-o:not(svg), .icon-5.icon.close:not(svg), .icon-5.icon.close-thin:not(svg), .icon-5.icon.contrast:not(svg), .icon-5.icon.copy:not(svg), .icon-5.icon.download:not(svg), .icon-5.icon.equalizer:not(svg), .icon-5.icon.exclamation-circle:not(svg), .icon-5.icon.eye:not(svg), .icon-5.icon.eye-slash:not(svg), .icon-5.icon.facebook:not(svg), .icon-5.icon.github:not(svg), .icon-5.icon.instagram:not(svg), .icon-5.icon.link:not(svg), .icon-5.icon.map-marker:not(svg), .icon-5.icon.menu:not(svg), .icon-5.icon.play-thin:not(svg), .icon-5.icon.question-circle:not(svg), .icon-5.icon.screwhead-crds:not(svg), .icon-5.icon.search:not(svg), .icon-5.icon.share:not(svg), .icon-5.icon.twitter:not(svg), .icon-5.icon.usd:not(svg), .icon-5.icon.youtube:not(svg) {
+  svg.icon-5.icon, .icon-5.icon.calendar:not(svg), .icon-5.icon.camera:not(svg), .icon-5.icon.caret-down:not(svg), .icon-5.icon.check-circle:not(svg), .icon-5.icon.chevron-down:not(svg), .icon-5.icon.chevron-left:not(svg), .icon-5.icon.chevron-right:not(svg), .icon-5.icon.chevron-up:not(svg), .icon-5.icon.circle-thin:not(svg), .icon-5.icon.clock-o:not(svg), .icon-5.icon.close:not(svg), .icon-5.icon.close-thin:not(svg), .icon-5.icon.contrast:not(svg), .icon-5.icon.copy:not(svg), .icon-5.icon.download:not(svg), .icon-5.icon.equalizer:not(svg), .icon-5.icon.exclamation-circle:not(svg), .icon-5.icon.eye:not(svg), .icon-5.icon.eye-slash:not(svg), .icon-5.icon.facebook:not(svg), .icon-5.icon.github:not(svg), .icon-5.icon.instagram:not(svg), .icon-5.icon.link:not(svg), .icon-5.icon.location-arrow:not(svg), .icon-5.icon.map-marker:not(svg), .icon-5.icon.media-article:not(svg), .icon-5.icon.media-podcast:not(svg), .icon-5.icon.media-video:not(svg), .icon-5.icon.menu:not(svg), .icon-5.icon.minus:not(svg), .icon-5.icon.play-thin:not(svg), .icon-5.icon.plus:not(svg), .icon-5.icon.question-circle:not(svg), .icon-5.icon.screwhead-crds:not(svg), .icon-5.icon.search:not(svg), .icon-5.icon.share:not(svg), .icon-5.icon.twitter:not(svg), .icon-5.icon.usd:not(svg), .icon-5.icon.youtube:not(svg) {
     width: auto;
     height: 80px;
     background-size: 80px; }
-  svg.icon-6.icon, .icon-6.icon.calendar:not(svg), .icon-6.icon.camera:not(svg), .icon-6.icon.caret-down:not(svg), .icon-6.icon.check-circle:not(svg), .icon-6.icon.chevron-down:not(svg), .icon-6.icon.chevron-left:not(svg), .icon-6.icon.chevron-right:not(svg), .icon-6.icon.chevron-up:not(svg), .icon-6.icon.circle-thin:not(svg), .icon-6.icon.clock-o:not(svg), .icon-6.icon.close:not(svg), .icon-6.icon.close-thin:not(svg), .icon-6.icon.contrast:not(svg), .icon-6.icon.copy:not(svg), .icon-6.icon.download:not(svg), .icon-6.icon.equalizer:not(svg), .icon-6.icon.exclamation-circle:not(svg), .icon-6.icon.eye:not(svg), .icon-6.icon.eye-slash:not(svg), .icon-6.icon.facebook:not(svg), .icon-6.icon.github:not(svg), .icon-6.icon.instagram:not(svg), .icon-6.icon.link:not(svg), .icon-6.icon.map-marker:not(svg), .icon-6.icon.menu:not(svg), .icon-6.icon.play-thin:not(svg), .icon-6.icon.question-circle:not(svg), .icon-6.icon.screwhead-crds:not(svg), .icon-6.icon.search:not(svg), .icon-6.icon.share:not(svg), .icon-6.icon.twitter:not(svg), .icon-6.icon.usd:not(svg), .icon-6.icon.youtube:not(svg) {
+  svg.icon-6.icon, .icon-6.icon.calendar:not(svg), .icon-6.icon.camera:not(svg), .icon-6.icon.caret-down:not(svg), .icon-6.icon.check-circle:not(svg), .icon-6.icon.chevron-down:not(svg), .icon-6.icon.chevron-left:not(svg), .icon-6.icon.chevron-right:not(svg), .icon-6.icon.chevron-up:not(svg), .icon-6.icon.circle-thin:not(svg), .icon-6.icon.clock-o:not(svg), .icon-6.icon.close:not(svg), .icon-6.icon.close-thin:not(svg), .icon-6.icon.contrast:not(svg), .icon-6.icon.copy:not(svg), .icon-6.icon.download:not(svg), .icon-6.icon.equalizer:not(svg), .icon-6.icon.exclamation-circle:not(svg), .icon-6.icon.eye:not(svg), .icon-6.icon.eye-slash:not(svg), .icon-6.icon.facebook:not(svg), .icon-6.icon.github:not(svg), .icon-6.icon.instagram:not(svg), .icon-6.icon.link:not(svg), .icon-6.icon.location-arrow:not(svg), .icon-6.icon.map-marker:not(svg), .icon-6.icon.media-article:not(svg), .icon-6.icon.media-podcast:not(svg), .icon-6.icon.media-video:not(svg), .icon-6.icon.menu:not(svg), .icon-6.icon.minus:not(svg), .icon-6.icon.play-thin:not(svg), .icon-6.icon.plus:not(svg), .icon-6.icon.question-circle:not(svg), .icon-6.icon.screwhead-crds:not(svg), .icon-6.icon.search:not(svg), .icon-6.icon.share:not(svg), .icon-6.icon.twitter:not(svg), .icon-6.icon.usd:not(svg), .icon-6.icon.youtube:not(svg) {
     width: auto;
     height: 96px;
     background-size: 96px; }
@@ -6415,10 +6415,10 @@ svg.icon, .icon.calendar:not(svg), .icon.camera:not(svg), .icon.caret-down:not(s
 svg.icon use {
   fill: currentColor; }
 
-.icon.calendar:not(svg), .icon.camera:not(svg), .icon.caret-down:not(svg), .icon.check-circle:not(svg), .icon.chevron-down:not(svg), .icon.chevron-left:not(svg), .icon.chevron-right:not(svg), .icon.chevron-up:not(svg), .icon.circle-thin:not(svg), .icon.clock-o:not(svg), .icon.close:not(svg), .icon.close-thin:not(svg), .icon.contrast:not(svg), .icon.copy:not(svg), .icon.download:not(svg), .icon.equalizer:not(svg), .icon.exclamation-circle:not(svg), .icon.eye:not(svg), .icon.eye-slash:not(svg), .icon.facebook:not(svg), .icon.github:not(svg), .icon.instagram:not(svg), .icon.link:not(svg), .icon.map-marker:not(svg), .icon.menu:not(svg), .icon.play-thin:not(svg), .icon.question-circle:not(svg), .icon.screwhead-crds:not(svg), .icon.search:not(svg), .icon.share:not(svg), .icon.twitter:not(svg), .icon.usd:not(svg), .icon.youtube:not(svg) {
+.icon.calendar:not(svg), .icon.camera:not(svg), .icon.caret-down:not(svg), .icon.check-circle:not(svg), .icon.chevron-down:not(svg), .icon.chevron-left:not(svg), .icon.chevron-right:not(svg), .icon.chevron-up:not(svg), .icon.circle-thin:not(svg), .icon.clock-o:not(svg), .icon.close:not(svg), .icon.close-thin:not(svg), .icon.contrast:not(svg), .icon.copy:not(svg), .icon.download:not(svg), .icon.equalizer:not(svg), .icon.exclamation-circle:not(svg), .icon.eye:not(svg), .icon.eye-slash:not(svg), .icon.facebook:not(svg), .icon.github:not(svg), .icon.instagram:not(svg), .icon.link:not(svg), .icon.location-arrow:not(svg), .icon.map-marker:not(svg), .icon.media-article:not(svg), .icon.media-podcast:not(svg), .icon.media-video:not(svg), .icon.menu:not(svg), .icon.minus:not(svg), .icon.play-thin:not(svg), .icon.plus:not(svg), .icon.question-circle:not(svg), .icon.screwhead-crds:not(svg), .icon.search:not(svg), .icon.share:not(svg), .icon.twitter:not(svg), .icon.usd:not(svg), .icon.youtube:not(svg) {
   background-image: url("assets/svgs/icons.css.svg");
   background-repeat: no-repeat; }
-  .dark-theme .icon.calendar:not(svg), .dark-theme .icon.camera:not(svg), .dark-theme .icon.caret-down:not(svg), .dark-theme .icon.check-circle:not(svg), .dark-theme .icon.chevron-down:not(svg), .dark-theme .icon.chevron-left:not(svg), .dark-theme .icon.chevron-right:not(svg), .dark-theme .icon.chevron-up:not(svg), .dark-theme .icon.circle-thin:not(svg), .dark-theme .icon.clock-o:not(svg), .dark-theme .icon.close:not(svg), .dark-theme .icon.close-thin:not(svg), .dark-theme .icon.contrast:not(svg), .dark-theme .icon.copy:not(svg), .dark-theme .icon.download:not(svg), .dark-theme .icon.equalizer:not(svg), .dark-theme .icon.exclamation-circle:not(svg), .dark-theme .icon.eye:not(svg), .dark-theme .icon.eye-slash:not(svg), .dark-theme .icon.facebook:not(svg), .dark-theme .icon.github:not(svg), .dark-theme .icon.instagram:not(svg), .dark-theme .icon.link:not(svg), .dark-theme .icon.map-marker:not(svg), .dark-theme .icon.menu:not(svg), .dark-theme .icon.play-thin:not(svg), .dark-theme .icon.question-circle:not(svg), .dark-theme .icon.screwhead-crds:not(svg), .dark-theme .icon.search:not(svg), .dark-theme .icon.share:not(svg), .dark-theme .icon.twitter:not(svg), .dark-theme .icon.usd:not(svg), .dark-theme .icon.youtube:not(svg) {
+  .dark-theme .icon.calendar:not(svg), .dark-theme .icon.camera:not(svg), .dark-theme .icon.caret-down:not(svg), .dark-theme .icon.check-circle:not(svg), .dark-theme .icon.chevron-down:not(svg), .dark-theme .icon.chevron-left:not(svg), .dark-theme .icon.chevron-right:not(svg), .dark-theme .icon.chevron-up:not(svg), .dark-theme .icon.circle-thin:not(svg), .dark-theme .icon.clock-o:not(svg), .dark-theme .icon.close:not(svg), .dark-theme .icon.close-thin:not(svg), .dark-theme .icon.contrast:not(svg), .dark-theme .icon.copy:not(svg), .dark-theme .icon.download:not(svg), .dark-theme .icon.equalizer:not(svg), .dark-theme .icon.exclamation-circle:not(svg), .dark-theme .icon.eye:not(svg), .dark-theme .icon.eye-slash:not(svg), .dark-theme .icon.facebook:not(svg), .dark-theme .icon.github:not(svg), .dark-theme .icon.instagram:not(svg), .dark-theme .icon.link:not(svg), .dark-theme .icon.location-arrow:not(svg), .dark-theme .icon.map-marker:not(svg), .dark-theme .icon.media-article:not(svg), .dark-theme .icon.media-podcast:not(svg), .dark-theme .icon.media-video:not(svg), .dark-theme .icon.menu:not(svg), .dark-theme .icon.minus:not(svg), .dark-theme .icon.play-thin:not(svg), .dark-theme .icon.plus:not(svg), .dark-theme .icon.question-circle:not(svg), .dark-theme .icon.screwhead-crds:not(svg), .dark-theme .icon.search:not(svg), .dark-theme .icon.share:not(svg), .dark-theme .icon.twitter:not(svg), .dark-theme .icon.usd:not(svg), .dark-theme .icon.youtube:not(svg) {
     filter: invert(75%);
     -webkit-filter: invert(75%); }
 
@@ -6426,97 +6426,115 @@ svg.icon use {
   background-position: 0 0; }
 
 .icon.camera:not(svg) {
-  background-position: 0 3.1242372467659263%; }
+  background-position: 0 2.63103802672148%; }
 
 .icon.caret-down:not(svg) {
-  background-position: 0 6.248474493531853%; }
+  background-position: 0 5.26207605344296%; }
 
 .icon.check-circle:not(svg) {
-  background-position: 0 9.37271174029778%; }
+  background-position: 0 7.89311408016444%; }
 
 .icon.chevron-down:not(svg) {
-  background-position: 0 12.496948987063705%; }
+  background-position: 0 10.52415210688592%; }
 
 .icon.chevron-left:not(svg) {
-  background-position: 0 15.621186233829631%; }
+  background-position: 0 13.1551901336074%; }
 
 .icon.chevron-right:not(svg) {
-  background-position: 0 18.74542348059556%; }
+  background-position: 0 15.78622816032888%; }
 
 .icon.chevron-up:not(svg) {
-  background-position: 0 21.869660727361484%; }
+  background-position: 0 18.41726618705036%; }
 
 .icon.circle-thin:not(svg) {
-  background-position: 0 24.99389797412741%; }
+  background-position: 0 21.04830421377184%; }
 
 .icon.clock-o:not(svg) {
-  background-position: 0 28.118135220893336%; }
+  background-position: 0 23.67934224049332%; }
 
 .icon.close:not(svg) {
-  background-position: 0 31.242372467659262%; }
+  background-position: 0 26.3103802672148%; }
 
 .icon.close-thin:not(svg) {
-  background-position: 0 34.36660971442519%; }
+  background-position: 0 28.94141829393628%; }
 
 .icon.contrast:not(svg) {
-  background-position: 0 37.49084696119112%; }
+  background-position: 0 31.57245632065776%; }
 
 .icon.copy:not(svg) {
-  background-position: 0 40.61508420795704%; }
+  background-position: 0 34.20349434737924%; }
 
 .icon.download:not(svg) {
-  background-position: 0 43.73932145472297%; }
+  background-position: 0 36.83453237410072%; }
 
 .icon.equalizer:not(svg) {
-  background-position: 0 46.86355870148889%; }
+  background-position: 0 39.4655704008222%; }
 
 .icon.exclamation-circle:not(svg) {
-  background-position: 0 49.98779594825482%; }
+  background-position: 0 42.09660842754368%; }
 
 .icon.eye:not(svg) {
-  background-position: 0 53.118515806176006%; }
+  background-position: 0 44.73224380717443%; }
 
 .icon.eye-slash:not(svg) {
-  background-position: 0 56.25533992432565%; }
+  background-position: 0 47.37383081508891%; }
 
 .icon.facebook:not(svg) {
-  background-position: 0 59.38491579204296%; }
+  background-position: 0 50.010277492291884%; }
 
 .icon.github:not(svg) {
-  background-position: 0 62.50915303880888%; }
+  background-position: 0 52.64131551901336%; }
 
 .icon.instagram:not(svg) {
-  background-position: 0 65.6333902855748%; }
+  background-position: 0 55.27235354573484%; }
 
 .icon.link:not(svg) {
-  background-position: 0 68.75762753234073%; }
+  background-position: 0 57.90339157245632%; }
+
+.icon.location-arrow:not(svg) {
+  background-position: 0 60.5344295991778%; }
 
 .icon.map-marker:not(svg) {
-  background-position: 0 71.88186477910666%; }
+  background-position: 0 63.16546762589928%; }
+
+.icon.media-article:not(svg) {
+  background-position: 0 65.79650565262077%; }
+
+.icon.media-podcast:not(svg) {
+  background-position: 0 68.42754367934224%; }
+
+.icon.media-video:not(svg) {
+  background-position: 0 71.05858170606372%; }
 
 .icon.menu:not(svg) {
-  background-position: 0 75.0061020258726%; }
+  background-position: 0 73.6896197327852%; }
+
+.icon.minus:not(svg) {
+  background-position: 0 76.32065775950667%; }
 
 .icon.play-thin:not(svg) {
-  background-position: 0 78.13033927263852%; }
+  background-position: 0 78.95169578622816%; }
+
+.icon.plus:not(svg) {
+  background-position: 0 81.58273381294964%; }
 
 .icon.question-circle:not(svg) {
-  background-position: 0 81.25457651940444%; }
+  background-position: 0 84.21377183967113%; }
 
 .icon.screwhead-crds:not(svg) {
-  background-position: 0 84.37881376617037%; }
+  background-position: 0 86.8448098663926%; }
 
 .icon.search:not(svg) {
-  background-position: 0 87.5030510129363%; }
+  background-position: 0 89.47584789311408%; }
 
 .icon.share:not(svg) {
-  background-position: 0 90.62728825970223%; }
+  background-position: 0 92.10688591983556%; }
 
 .icon.twitter:not(svg) {
-  background-position: 0 93.75152550646814%; }
+  background-position: 0 94.73792394655705%; }
 
 .icon.usd:not(svg) {
-  background-position: 0 96.87576275323407%; }
+  background-position: 0 97.36896197327852%; }
 
 .icon.youtube:not(svg) {
   background-position: 0 100%; }
@@ -6534,87 +6552,87 @@ svg.icon use {
 */
 /* 1. Font-face utility classes */
 .font-family-base {
-  font-family: "acumin-pro", helvetica, arial, sans-serif;
-  font-weight: 300; }
+  font-family: "acumin-pro", helvetica, arial, sans-serif !important;
+  font-weight: 300 !important; }
 
 .font-family-base-light {
-  font-family: "acumin-pro", helvetica, arial, sans-serif;
-  font-weight: 100; }
+  font-family: "acumin-pro", helvetica, arial, sans-serif !important;
+  font-weight: 100 !important; }
 
 .font-family-base-bold {
-  font-family: "acumin-pro", helvetica, arial, sans-serif;
-  font-weight: 600; }
+  font-family: "acumin-pro", helvetica, arial, sans-serif !important;
+  font-weight: 600 !important; }
 
 .font-family-condensed {
-  font-family: "acumin-pro-semi-condensed", sans-serif;
-  font-weight: 600; }
+  font-family: "acumin-pro-semi-condensed", sans-serif !important;
+  font-weight: 600 !important; }
 
 .font-family-condensed-extra {
-  font-family: "acumin-pro-extra-condensed", sans-serif;
-  font-weight: 500; }
+  font-family: "acumin-pro-extra-condensed", sans-serif !important;
+  font-weight: 500 !important; }
 
 .font-family-accent {
-  font-family: "lexia", serif;
-  font-style: italic;
-  font-weight: 300; }
+  font-family: "lexia", serif !important;
+  font-style: italic !important;
+  font-weight: 300 !important; }
 
 /* 2. Font-size utility classes */
 .font-size-h1 {
-  font-size: 2.75rem; }
+  font-size: 2.75rem !important; }
   @media screen and (min-width: 480px) {
     .font-size-h1 {
-      font-size: 3.9875rem; } }
+      font-size: 3.9875rem !important; } }
 
 .font-size-h2 {
-  font-size: 2.5rem; }
+  font-size: 2.5rem !important; }
   @media screen and (min-width: 480px) {
     .font-size-h2 {
-      font-size: 3.375rem; } }
+      font-size: 3.375rem !important; } }
 
 .font-size-h3 {
-  font-size: 2rem; }
+  font-size: 2rem !important; }
   @media screen and (min-width: 480px) {
     .font-size-h3 {
-      font-size: 2.5rem; } }
+      font-size: 2.5rem !important; } }
 
 .font-size-h4 {
-  font-size: 1.75rem; }
+  font-size: 1.75rem !important; }
   @media screen and (min-width: 480px) {
     .font-size-h4 {
-      font-size: 2.0125rem; } }
+      font-size: 2.0125rem !important; } }
 
 .font-size-h5 {
-  font-size: 1.375rem; }
+  font-size: 1.375rem !important; }
   @media screen and (min-width: 480px) {
     .font-size-h5 {
-      font-size: 1.71875rem; } }
+      font-size: 1.71875rem !important; } }
 
 .font-size-h6 {
-  font-size: 1.1875rem; }
+  font-size: 1.1875rem !important; }
   @media screen and (min-width: 480px) {
     .font-size-h6 {
-      font-size: 1.36562rem; } }
+      font-size: 1.36562rem !important; } }
 
 .font-size-large {
-  font-size: 19px; }
+  font-size: 19px !important; }
   @media screen and (min-width: 480px) {
     .font-size-large {
-      font-size: 22px; } }
+      font-size: 22px !important; } }
 
 .font-size-base {
-  font-size: 16px; }
+  font-size: 16px !important; }
   @media screen and (min-width: 480px) {
     .font-size-base {
-      font-size: 19px; } }
+      font-size: 19px !important; } }
 
 .font-size-small {
-  font-size: 14px; }
+  font-size: 14px !important; }
   @media screen and (min-width: 480px) {
     .font-size-small {
-      font-size: 16px; } }
+      font-size: 16px !important; } }
 
 .font-size-smaller {
-  font-size: 14px; }
+  font-size: 14px !important; }
 
 /* 3. Typesetting */
 .page-header {
@@ -6693,10 +6711,8 @@ main, .main {
       font-size: 19px; } }
 
 .lead {
-  font-size: 1.125rem; }
-  @media screen and (min-width: 480px) {
-    .lead {
-      font-size: 1.375rem; } }
+  font-size: 1.5rem;
+  line-height: 1.5; }
 
 .quiet {
   font-size: .875rem; }
@@ -6749,18 +6765,35 @@ address {
 
 /* 7. Blockquote */
 blockquote {
-  border: 1px solid #b3b3b3;
-  color: #979797;
-  font-family: "lexia", serif;
+  border-left: 0;
+  color: #737373;
   font-style: italic;
   line-height: 1.5;
-  padding: 2em; }
-  blockquote span {
-    display: block;
+  padding: 12px 15px;
+  padding-top: 4rem;
+  position: relative; }
+  blockquote:before {
+    content: '\201C';
+    color: #e7e7e7;
+    font-family: "lexia", serif;
+    font-size: 100px;
+    font-style: italic;
+    left: 0;
+    line-height: 1;
+    position: absolute;
+    top: 0; }
+  @media screen and (min-width: 480px) {
+    blockquote {
+      padding-left: 6.5rem;
+      padding-top: 12px; }
+      blockquote:before {
+        font-size: 144px; } }
+  blockquote footer {
+    font-size: 1rem;
     font-style: normal;
-    font-size: 1.375rem;
-    font-family: "acumin-pro-extra-condensed", sans-serif;
-    margin-top: .5em; }
+    line-height: 1.75; }
+    blockquote footer:before {
+      content: '\2013 \00A0'; }
 
 /* 8. Lists */
 ol.crds-list, ul.crds-list {
@@ -6787,6 +6820,33 @@ dl.crds-list {
   color: #979797; }
   .dark-theme .text-muted {
     color: #4d4d4d; }
+
+.text-lowercase {
+  text-transform: lowercase !important; }
+
+.text-uppercase, .initialism {
+  text-transform: uppercase !important; }
+
+.text-capitalize {
+  text-transform: capitalize !important; }
+
+.text-left {
+  text-align: left !important; }
+
+.text-center {
+  text-align: center !important; }
+
+.text-right {
+  text-align: right !important; }
+
+.text-justify {
+  text-align: justify !important; }
+
+.text-nowrap {
+  white-space: nowrap !important; }
+
+.text-italic {
+  font-style: italic !important; }
 
 h1 {
   font-size: 2.75rem; }
@@ -9954,6 +10014,51 @@ svg use {
       float: left;
       width: 25%; } }
 
+@media screen and (min-width: 992px) {
+    .cards-4x .card:nth-child(4n+1) {
+      clear: left; } }
+
+@media screen and (max-width: 767px) {
+  .cards-3x .card {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; } }
+  @media screen and (max-width: 767px) and (min-width: 768px) {
+    .cards-3x .card {
+      float: left;
+      width: 100%; } }
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .cards-3x .card {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; } }
+  @media screen and (min-width: 768px) and (max-width: 991px) and (min-width: 768px) {
+    .cards-3x .card {
+      float: left;
+      width: 50%; } }
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .cards-3x .card:nth-child(odd) {
+      clear: left; } }
+
+@media screen and (min-width: 992px) {
+  .cards-3x .card {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; } }
+  @media screen and (min-width: 992px) and (min-width: 768px) {
+    .cards-3x .card {
+      float: left;
+      width: 33.33333%; } }
+
+@media screen and (min-width: 992px) {
+    .cards-3x .card:nth-child(3n+1) {
+      clear: left; } }
+
 @media screen and (max-width: 767px) {
   .cards-2x .card {
     position: relative;
@@ -9980,13 +10085,24 @@ svg use {
     .cards-2x .card:nth-child(odd) {
       clear: left; } }
 
-.cards-4x .feature-cards:not([data-carousel]), .cards-2x .feature-cards:not([data-carousel]) {
+@media (max-width: 768px) {
+  .cards-2x-xs .card {
+    position: relative;
+    float: left;
+    width: 50%;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px; }
+    .cards-2x-xs .card:nth-child(odd) {
+      clear: left; } }
+
+.cards-4x .feature-cards:not([data-carousel]), .cards-3x .feature-cards:not([data-carousel]), .cards-2x .feature-cards:not([data-carousel]) {
   margin-left: -15px;
   margin-right: -15px; }
-  .cards-4x .feature-cards:not([data-carousel]):before, .cards-4x .feature-cards:not([data-carousel]):after, .cards-2x .feature-cards:not([data-carousel]):before, .cards-2x .feature-cards:not([data-carousel]):after {
+  .cards-4x .feature-cards:not([data-carousel]):before, .cards-4x .feature-cards:not([data-carousel]):after, .cards-3x .feature-cards:not([data-carousel]):before, .cards-3x .feature-cards:not([data-carousel]):after, .cards-2x .feature-cards:not([data-carousel]):before, .cards-2x .feature-cards:not([data-carousel]):after {
     content: " ";
     display: table; }
-  .cards-4x .feature-cards:not([data-carousel]):after, .cards-2x .feature-cards:not([data-carousel]):after {
+  .cards-4x .feature-cards:not([data-carousel]):after, .cards-3x .feature-cards:not([data-carousel]):after, .cards-2x .feature-cards:not([data-carousel]):after {
     clear: both; }
 
 .card-block {
@@ -11218,7 +11334,7 @@ a.underline,
 
 /* 5. Border stuff */
 .no-borders {
-  border: 0; }
+  border: 0 !important; }
 
 .border-bottom {
   border-bottom: 1px solid #e7e7e7; }
@@ -11241,7 +11357,10 @@ a.underline,
   border-bottom: 1px solid #e7e7e7; }
 
 .border-width-3 {
-  border-width: 3px; }
+  border-width: 3px !important; }
+
+.no-border-radius {
+  border-radius: 0 !important; }
 
 /* 6. Corners */
 .square-corners {
@@ -11359,27 +11478,27 @@ a.underline,
   margin-bottom: 6px; }
 
 .flush {
-  margin: 0; }
+  margin: 0 !important; }
 
 .flush-top {
-  margin-top: 0; }
+  margin-top: 0 !important; }
 
 .flush-right {
-  margin-right: 0; }
+  margin-right: 0 !important; }
 
 .flush-bottom {
-  margin-bottom: 0; }
+  margin-bottom: 0 !important; }
 
 .flush-left {
-  margin-left: 0; }
+  margin-left: 0 !important; }
 
 .flush-sides {
-  margin-right: 0;
-  margin-left: 0; }
+  margin-right: 0 !important;
+  margin-left: 0 !important; }
 
 .flush-ends {
-  margin-top: 0;
-  margin-bottom: 0; }
+  margin-top: 0 !important;
+  margin-bottom: 0 !important; }
 
 @media only screen and (max-width: 768px) {
   .mobile-push {
