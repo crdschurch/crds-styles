@@ -6376,31 +6376,31 @@ a > p {
 img {
   max-width: 100%; }
 
-svg.icon, .icon.calendar:not(svg), .icon.camera:not(svg), .icon.caret-down:not(svg), .icon.check-circle:not(svg), .icon.chevron-down:not(svg), .icon.chevron-left:not(svg), .icon.chevron-right:not(svg), .icon.chevron-up:not(svg), .icon.circle-thin:not(svg), .icon.clock-o:not(svg), .icon.close:not(svg), .icon.close-thin:not(svg), .icon.contrast:not(svg), .icon.copy:not(svg), .icon.download:not(svg), .icon.equalizer:not(svg), .icon.exclamation-circle:not(svg), .icon.eye:not(svg), .icon.eye-slash:not(svg), .icon.facebook:not(svg), .icon.github:not(svg), .icon.instagram:not(svg), .icon.link:not(svg), .icon.location-arrow:not(svg), .icon.map-marker:not(svg), .icon.media-article:not(svg), .icon.media-music:not(svg), .icon.media-podcast:not(svg), .icon.media-video:not(svg), .icon.menu:not(svg), .icon.minus:not(svg), .icon.play-thin:not(svg), .icon.plus:not(svg), .icon.question-circle:not(svg), .icon.screwhead-crds:not(svg), .icon.search:not(svg), .icon.share:not(svg), .icon.twitter:not(svg), .icon.usd:not(svg), .icon.youtube:not(svg) {
+svg.icon, .icon.calendar:not(svg), .icon.camera:not(svg), .icon.caret-down:not(svg), .icon.check-circle:not(svg), .icon.chevron-down:not(svg), .icon.chevron-left:not(svg), .icon.chevron-right:not(svg), .icon.chevron-up:not(svg), .icon.circle-thin:not(svg), .icon.clock-o:not(svg), .icon.close:not(svg), .icon.close-thin:not(svg), .icon.contrast:not(svg), .icon.copy:not(svg), .icon.credit-card:not(svg), .icon.download:not(svg), .icon.equalizer:not(svg), .icon.exclamation-circle:not(svg), .icon.eye:not(svg), .icon.eye-slash:not(svg), .icon.facebook:not(svg), .icon.github:not(svg), .icon.instagram:not(svg), .icon.link:not(svg), .icon.location-arrow:not(svg), .icon.map-marker:not(svg), .icon.media-article:not(svg), .icon.media-music:not(svg), .icon.media-podcast:not(svg), .icon.media-video:not(svg), .icon.menu:not(svg), .icon.minus:not(svg), .icon.play-thin:not(svg), .icon.plus:not(svg), .icon.question-circle:not(svg), .icon.screwhead-crds:not(svg), .icon.search:not(svg), .icon.share:not(svg), .icon.twitter:not(svg), .icon.university:not(svg), .icon.usd:not(svg), .icon.youtube:not(svg) {
   width: auto;
   height: 32px;
   background-size: 32px; }
-  svg.icon-1.icon, .icon-1.icon.calendar:not(svg), .icon-1.icon.camera:not(svg), .icon-1.icon.caret-down:not(svg), .icon-1.icon.check-circle:not(svg), .icon-1.icon.chevron-down:not(svg), .icon-1.icon.chevron-left:not(svg), .icon-1.icon.chevron-right:not(svg), .icon-1.icon.chevron-up:not(svg), .icon-1.icon.circle-thin:not(svg), .icon-1.icon.clock-o:not(svg), .icon-1.icon.close:not(svg), .icon-1.icon.close-thin:not(svg), .icon-1.icon.contrast:not(svg), .icon-1.icon.copy:not(svg), .icon-1.icon.download:not(svg), .icon-1.icon.equalizer:not(svg), .icon-1.icon.exclamation-circle:not(svg), .icon-1.icon.eye:not(svg), .icon-1.icon.eye-slash:not(svg), .icon-1.icon.facebook:not(svg), .icon-1.icon.github:not(svg), .icon-1.icon.instagram:not(svg), .icon-1.icon.link:not(svg), .icon-1.icon.location-arrow:not(svg), .icon-1.icon.map-marker:not(svg), .icon-1.icon.media-article:not(svg), .icon-1.icon.media-music:not(svg), .icon-1.icon.media-podcast:not(svg), .icon-1.icon.media-video:not(svg), .icon-1.icon.menu:not(svg), .icon-1.icon.minus:not(svg), .icon-1.icon.play-thin:not(svg), .icon-1.icon.plus:not(svg), .icon-1.icon.question-circle:not(svg), .icon-1.icon.screwhead-crds:not(svg), .icon-1.icon.search:not(svg), .icon-1.icon.share:not(svg), .icon-1.icon.twitter:not(svg), .icon-1.icon.usd:not(svg), .icon-1.icon.youtube:not(svg) {
+  svg.icon-1.icon, .icon-1.icon.calendar:not(svg), .icon-1.icon.camera:not(svg), .icon-1.icon.caret-down:not(svg), .icon-1.icon.check-circle:not(svg), .icon-1.icon.chevron-down:not(svg), .icon-1.icon.chevron-left:not(svg), .icon-1.icon.chevron-right:not(svg), .icon-1.icon.chevron-up:not(svg), .icon-1.icon.circle-thin:not(svg), .icon-1.icon.clock-o:not(svg), .icon-1.icon.close:not(svg), .icon-1.icon.close-thin:not(svg), .icon-1.icon.contrast:not(svg), .icon-1.icon.copy:not(svg), .icon-1.icon.credit-card:not(svg), .icon-1.icon.download:not(svg), .icon-1.icon.equalizer:not(svg), .icon-1.icon.exclamation-circle:not(svg), .icon-1.icon.eye:not(svg), .icon-1.icon.eye-slash:not(svg), .icon-1.icon.facebook:not(svg), .icon-1.icon.github:not(svg), .icon-1.icon.instagram:not(svg), .icon-1.icon.link:not(svg), .icon-1.icon.location-arrow:not(svg), .icon-1.icon.map-marker:not(svg), .icon-1.icon.media-article:not(svg), .icon-1.icon.media-music:not(svg), .icon-1.icon.media-podcast:not(svg), .icon-1.icon.media-video:not(svg), .icon-1.icon.menu:not(svg), .icon-1.icon.minus:not(svg), .icon-1.icon.play-thin:not(svg), .icon-1.icon.plus:not(svg), .icon-1.icon.question-circle:not(svg), .icon-1.icon.screwhead-crds:not(svg), .icon-1.icon.search:not(svg), .icon-1.icon.share:not(svg), .icon-1.icon.twitter:not(svg), .icon-1.icon.university:not(svg), .icon-1.icon.usd:not(svg), .icon-1.icon.youtube:not(svg) {
     width: auto;
     height: 16px;
     background-size: 16px; }
-  svg.icon-2.icon, .icon-2.icon.calendar:not(svg), .icon-2.icon.camera:not(svg), .icon-2.icon.caret-down:not(svg), .icon-2.icon.check-circle:not(svg), .icon-2.icon.chevron-down:not(svg), .icon-2.icon.chevron-left:not(svg), .icon-2.icon.chevron-right:not(svg), .icon-2.icon.chevron-up:not(svg), .icon-2.icon.circle-thin:not(svg), .icon-2.icon.clock-o:not(svg), .icon-2.icon.close:not(svg), .icon-2.icon.close-thin:not(svg), .icon-2.icon.contrast:not(svg), .icon-2.icon.copy:not(svg), .icon-2.icon.download:not(svg), .icon-2.icon.equalizer:not(svg), .icon-2.icon.exclamation-circle:not(svg), .icon-2.icon.eye:not(svg), .icon-2.icon.eye-slash:not(svg), .icon-2.icon.facebook:not(svg), .icon-2.icon.github:not(svg), .icon-2.icon.instagram:not(svg), .icon-2.icon.link:not(svg), .icon-2.icon.location-arrow:not(svg), .icon-2.icon.map-marker:not(svg), .icon-2.icon.media-article:not(svg), .icon-2.icon.media-music:not(svg), .icon-2.icon.media-podcast:not(svg), .icon-2.icon.media-video:not(svg), .icon-2.icon.menu:not(svg), .icon-2.icon.minus:not(svg), .icon-2.icon.play-thin:not(svg), .icon-2.icon.plus:not(svg), .icon-2.icon.question-circle:not(svg), .icon-2.icon.screwhead-crds:not(svg), .icon-2.icon.search:not(svg), .icon-2.icon.share:not(svg), .icon-2.icon.twitter:not(svg), .icon-2.icon.usd:not(svg), .icon-2.icon.youtube:not(svg) {
+  svg.icon-2.icon, .icon-2.icon.calendar:not(svg), .icon-2.icon.camera:not(svg), .icon-2.icon.caret-down:not(svg), .icon-2.icon.check-circle:not(svg), .icon-2.icon.chevron-down:not(svg), .icon-2.icon.chevron-left:not(svg), .icon-2.icon.chevron-right:not(svg), .icon-2.icon.chevron-up:not(svg), .icon-2.icon.circle-thin:not(svg), .icon-2.icon.clock-o:not(svg), .icon-2.icon.close:not(svg), .icon-2.icon.close-thin:not(svg), .icon-2.icon.contrast:not(svg), .icon-2.icon.copy:not(svg), .icon-2.icon.credit-card:not(svg), .icon-2.icon.download:not(svg), .icon-2.icon.equalizer:not(svg), .icon-2.icon.exclamation-circle:not(svg), .icon-2.icon.eye:not(svg), .icon-2.icon.eye-slash:not(svg), .icon-2.icon.facebook:not(svg), .icon-2.icon.github:not(svg), .icon-2.icon.instagram:not(svg), .icon-2.icon.link:not(svg), .icon-2.icon.location-arrow:not(svg), .icon-2.icon.map-marker:not(svg), .icon-2.icon.media-article:not(svg), .icon-2.icon.media-music:not(svg), .icon-2.icon.media-podcast:not(svg), .icon-2.icon.media-video:not(svg), .icon-2.icon.menu:not(svg), .icon-2.icon.minus:not(svg), .icon-2.icon.play-thin:not(svg), .icon-2.icon.plus:not(svg), .icon-2.icon.question-circle:not(svg), .icon-2.icon.screwhead-crds:not(svg), .icon-2.icon.search:not(svg), .icon-2.icon.share:not(svg), .icon-2.icon.twitter:not(svg), .icon-2.icon.university:not(svg), .icon-2.icon.usd:not(svg), .icon-2.icon.youtube:not(svg) {
     width: auto;
     height: 32px;
     background-size: 32px; }
-  svg.icon-3.icon, .icon-3.icon.calendar:not(svg), .icon-3.icon.camera:not(svg), .icon-3.icon.caret-down:not(svg), .icon-3.icon.check-circle:not(svg), .icon-3.icon.chevron-down:not(svg), .icon-3.icon.chevron-left:not(svg), .icon-3.icon.chevron-right:not(svg), .icon-3.icon.chevron-up:not(svg), .icon-3.icon.circle-thin:not(svg), .icon-3.icon.clock-o:not(svg), .icon-3.icon.close:not(svg), .icon-3.icon.close-thin:not(svg), .icon-3.icon.contrast:not(svg), .icon-3.icon.copy:not(svg), .icon-3.icon.download:not(svg), .icon-3.icon.equalizer:not(svg), .icon-3.icon.exclamation-circle:not(svg), .icon-3.icon.eye:not(svg), .icon-3.icon.eye-slash:not(svg), .icon-3.icon.facebook:not(svg), .icon-3.icon.github:not(svg), .icon-3.icon.instagram:not(svg), .icon-3.icon.link:not(svg), .icon-3.icon.location-arrow:not(svg), .icon-3.icon.map-marker:not(svg), .icon-3.icon.media-article:not(svg), .icon-3.icon.media-music:not(svg), .icon-3.icon.media-podcast:not(svg), .icon-3.icon.media-video:not(svg), .icon-3.icon.menu:not(svg), .icon-3.icon.minus:not(svg), .icon-3.icon.play-thin:not(svg), .icon-3.icon.plus:not(svg), .icon-3.icon.question-circle:not(svg), .icon-3.icon.screwhead-crds:not(svg), .icon-3.icon.search:not(svg), .icon-3.icon.share:not(svg), .icon-3.icon.twitter:not(svg), .icon-3.icon.usd:not(svg), .icon-3.icon.youtube:not(svg) {
+  svg.icon-3.icon, .icon-3.icon.calendar:not(svg), .icon-3.icon.camera:not(svg), .icon-3.icon.caret-down:not(svg), .icon-3.icon.check-circle:not(svg), .icon-3.icon.chevron-down:not(svg), .icon-3.icon.chevron-left:not(svg), .icon-3.icon.chevron-right:not(svg), .icon-3.icon.chevron-up:not(svg), .icon-3.icon.circle-thin:not(svg), .icon-3.icon.clock-o:not(svg), .icon-3.icon.close:not(svg), .icon-3.icon.close-thin:not(svg), .icon-3.icon.contrast:not(svg), .icon-3.icon.copy:not(svg), .icon-3.icon.credit-card:not(svg), .icon-3.icon.download:not(svg), .icon-3.icon.equalizer:not(svg), .icon-3.icon.exclamation-circle:not(svg), .icon-3.icon.eye:not(svg), .icon-3.icon.eye-slash:not(svg), .icon-3.icon.facebook:not(svg), .icon-3.icon.github:not(svg), .icon-3.icon.instagram:not(svg), .icon-3.icon.link:not(svg), .icon-3.icon.location-arrow:not(svg), .icon-3.icon.map-marker:not(svg), .icon-3.icon.media-article:not(svg), .icon-3.icon.media-music:not(svg), .icon-3.icon.media-podcast:not(svg), .icon-3.icon.media-video:not(svg), .icon-3.icon.menu:not(svg), .icon-3.icon.minus:not(svg), .icon-3.icon.play-thin:not(svg), .icon-3.icon.plus:not(svg), .icon-3.icon.question-circle:not(svg), .icon-3.icon.screwhead-crds:not(svg), .icon-3.icon.search:not(svg), .icon-3.icon.share:not(svg), .icon-3.icon.twitter:not(svg), .icon-3.icon.university:not(svg), .icon-3.icon.usd:not(svg), .icon-3.icon.youtube:not(svg) {
     width: auto;
     height: 48px;
     background-size: 48px; }
-  svg.icon-4.icon, .icon-4.icon.calendar:not(svg), .icon-4.icon.camera:not(svg), .icon-4.icon.caret-down:not(svg), .icon-4.icon.check-circle:not(svg), .icon-4.icon.chevron-down:not(svg), .icon-4.icon.chevron-left:not(svg), .icon-4.icon.chevron-right:not(svg), .icon-4.icon.chevron-up:not(svg), .icon-4.icon.circle-thin:not(svg), .icon-4.icon.clock-o:not(svg), .icon-4.icon.close:not(svg), .icon-4.icon.close-thin:not(svg), .icon-4.icon.contrast:not(svg), .icon-4.icon.copy:not(svg), .icon-4.icon.download:not(svg), .icon-4.icon.equalizer:not(svg), .icon-4.icon.exclamation-circle:not(svg), .icon-4.icon.eye:not(svg), .icon-4.icon.eye-slash:not(svg), .icon-4.icon.facebook:not(svg), .icon-4.icon.github:not(svg), .icon-4.icon.instagram:not(svg), .icon-4.icon.link:not(svg), .icon-4.icon.location-arrow:not(svg), .icon-4.icon.map-marker:not(svg), .icon-4.icon.media-article:not(svg), .icon-4.icon.media-music:not(svg), .icon-4.icon.media-podcast:not(svg), .icon-4.icon.media-video:not(svg), .icon-4.icon.menu:not(svg), .icon-4.icon.minus:not(svg), .icon-4.icon.play-thin:not(svg), .icon-4.icon.plus:not(svg), .icon-4.icon.question-circle:not(svg), .icon-4.icon.screwhead-crds:not(svg), .icon-4.icon.search:not(svg), .icon-4.icon.share:not(svg), .icon-4.icon.twitter:not(svg), .icon-4.icon.usd:not(svg), .icon-4.icon.youtube:not(svg) {
+  svg.icon-4.icon, .icon-4.icon.calendar:not(svg), .icon-4.icon.camera:not(svg), .icon-4.icon.caret-down:not(svg), .icon-4.icon.check-circle:not(svg), .icon-4.icon.chevron-down:not(svg), .icon-4.icon.chevron-left:not(svg), .icon-4.icon.chevron-right:not(svg), .icon-4.icon.chevron-up:not(svg), .icon-4.icon.circle-thin:not(svg), .icon-4.icon.clock-o:not(svg), .icon-4.icon.close:not(svg), .icon-4.icon.close-thin:not(svg), .icon-4.icon.contrast:not(svg), .icon-4.icon.copy:not(svg), .icon-4.icon.credit-card:not(svg), .icon-4.icon.download:not(svg), .icon-4.icon.equalizer:not(svg), .icon-4.icon.exclamation-circle:not(svg), .icon-4.icon.eye:not(svg), .icon-4.icon.eye-slash:not(svg), .icon-4.icon.facebook:not(svg), .icon-4.icon.github:not(svg), .icon-4.icon.instagram:not(svg), .icon-4.icon.link:not(svg), .icon-4.icon.location-arrow:not(svg), .icon-4.icon.map-marker:not(svg), .icon-4.icon.media-article:not(svg), .icon-4.icon.media-music:not(svg), .icon-4.icon.media-podcast:not(svg), .icon-4.icon.media-video:not(svg), .icon-4.icon.menu:not(svg), .icon-4.icon.minus:not(svg), .icon-4.icon.play-thin:not(svg), .icon-4.icon.plus:not(svg), .icon-4.icon.question-circle:not(svg), .icon-4.icon.screwhead-crds:not(svg), .icon-4.icon.search:not(svg), .icon-4.icon.share:not(svg), .icon-4.icon.twitter:not(svg), .icon-4.icon.university:not(svg), .icon-4.icon.usd:not(svg), .icon-4.icon.youtube:not(svg) {
     width: auto;
     height: 64px;
     background-size: 64px; }
-  svg.icon-5.icon, .icon-5.icon.calendar:not(svg), .icon-5.icon.camera:not(svg), .icon-5.icon.caret-down:not(svg), .icon-5.icon.check-circle:not(svg), .icon-5.icon.chevron-down:not(svg), .icon-5.icon.chevron-left:not(svg), .icon-5.icon.chevron-right:not(svg), .icon-5.icon.chevron-up:not(svg), .icon-5.icon.circle-thin:not(svg), .icon-5.icon.clock-o:not(svg), .icon-5.icon.close:not(svg), .icon-5.icon.close-thin:not(svg), .icon-5.icon.contrast:not(svg), .icon-5.icon.copy:not(svg), .icon-5.icon.download:not(svg), .icon-5.icon.equalizer:not(svg), .icon-5.icon.exclamation-circle:not(svg), .icon-5.icon.eye:not(svg), .icon-5.icon.eye-slash:not(svg), .icon-5.icon.facebook:not(svg), .icon-5.icon.github:not(svg), .icon-5.icon.instagram:not(svg), .icon-5.icon.link:not(svg), .icon-5.icon.location-arrow:not(svg), .icon-5.icon.map-marker:not(svg), .icon-5.icon.media-article:not(svg), .icon-5.icon.media-music:not(svg), .icon-5.icon.media-podcast:not(svg), .icon-5.icon.media-video:not(svg), .icon-5.icon.menu:not(svg), .icon-5.icon.minus:not(svg), .icon-5.icon.play-thin:not(svg), .icon-5.icon.plus:not(svg), .icon-5.icon.question-circle:not(svg), .icon-5.icon.screwhead-crds:not(svg), .icon-5.icon.search:not(svg), .icon-5.icon.share:not(svg), .icon-5.icon.twitter:not(svg), .icon-5.icon.usd:not(svg), .icon-5.icon.youtube:not(svg) {
+  svg.icon-5.icon, .icon-5.icon.calendar:not(svg), .icon-5.icon.camera:not(svg), .icon-5.icon.caret-down:not(svg), .icon-5.icon.check-circle:not(svg), .icon-5.icon.chevron-down:not(svg), .icon-5.icon.chevron-left:not(svg), .icon-5.icon.chevron-right:not(svg), .icon-5.icon.chevron-up:not(svg), .icon-5.icon.circle-thin:not(svg), .icon-5.icon.clock-o:not(svg), .icon-5.icon.close:not(svg), .icon-5.icon.close-thin:not(svg), .icon-5.icon.contrast:not(svg), .icon-5.icon.copy:not(svg), .icon-5.icon.credit-card:not(svg), .icon-5.icon.download:not(svg), .icon-5.icon.equalizer:not(svg), .icon-5.icon.exclamation-circle:not(svg), .icon-5.icon.eye:not(svg), .icon-5.icon.eye-slash:not(svg), .icon-5.icon.facebook:not(svg), .icon-5.icon.github:not(svg), .icon-5.icon.instagram:not(svg), .icon-5.icon.link:not(svg), .icon-5.icon.location-arrow:not(svg), .icon-5.icon.map-marker:not(svg), .icon-5.icon.media-article:not(svg), .icon-5.icon.media-music:not(svg), .icon-5.icon.media-podcast:not(svg), .icon-5.icon.media-video:not(svg), .icon-5.icon.menu:not(svg), .icon-5.icon.minus:not(svg), .icon-5.icon.play-thin:not(svg), .icon-5.icon.plus:not(svg), .icon-5.icon.question-circle:not(svg), .icon-5.icon.screwhead-crds:not(svg), .icon-5.icon.search:not(svg), .icon-5.icon.share:not(svg), .icon-5.icon.twitter:not(svg), .icon-5.icon.university:not(svg), .icon-5.icon.usd:not(svg), .icon-5.icon.youtube:not(svg) {
     width: auto;
     height: 80px;
     background-size: 80px; }
-  svg.icon-6.icon, .icon-6.icon.calendar:not(svg), .icon-6.icon.camera:not(svg), .icon-6.icon.caret-down:not(svg), .icon-6.icon.check-circle:not(svg), .icon-6.icon.chevron-down:not(svg), .icon-6.icon.chevron-left:not(svg), .icon-6.icon.chevron-right:not(svg), .icon-6.icon.chevron-up:not(svg), .icon-6.icon.circle-thin:not(svg), .icon-6.icon.clock-o:not(svg), .icon-6.icon.close:not(svg), .icon-6.icon.close-thin:not(svg), .icon-6.icon.contrast:not(svg), .icon-6.icon.copy:not(svg), .icon-6.icon.download:not(svg), .icon-6.icon.equalizer:not(svg), .icon-6.icon.exclamation-circle:not(svg), .icon-6.icon.eye:not(svg), .icon-6.icon.eye-slash:not(svg), .icon-6.icon.facebook:not(svg), .icon-6.icon.github:not(svg), .icon-6.icon.instagram:not(svg), .icon-6.icon.link:not(svg), .icon-6.icon.location-arrow:not(svg), .icon-6.icon.map-marker:not(svg), .icon-6.icon.media-article:not(svg), .icon-6.icon.media-music:not(svg), .icon-6.icon.media-podcast:not(svg), .icon-6.icon.media-video:not(svg), .icon-6.icon.menu:not(svg), .icon-6.icon.minus:not(svg), .icon-6.icon.play-thin:not(svg), .icon-6.icon.plus:not(svg), .icon-6.icon.question-circle:not(svg), .icon-6.icon.screwhead-crds:not(svg), .icon-6.icon.search:not(svg), .icon-6.icon.share:not(svg), .icon-6.icon.twitter:not(svg), .icon-6.icon.usd:not(svg), .icon-6.icon.youtube:not(svg) {
+  svg.icon-6.icon, .icon-6.icon.calendar:not(svg), .icon-6.icon.camera:not(svg), .icon-6.icon.caret-down:not(svg), .icon-6.icon.check-circle:not(svg), .icon-6.icon.chevron-down:not(svg), .icon-6.icon.chevron-left:not(svg), .icon-6.icon.chevron-right:not(svg), .icon-6.icon.chevron-up:not(svg), .icon-6.icon.circle-thin:not(svg), .icon-6.icon.clock-o:not(svg), .icon-6.icon.close:not(svg), .icon-6.icon.close-thin:not(svg), .icon-6.icon.contrast:not(svg), .icon-6.icon.copy:not(svg), .icon-6.icon.credit-card:not(svg), .icon-6.icon.download:not(svg), .icon-6.icon.equalizer:not(svg), .icon-6.icon.exclamation-circle:not(svg), .icon-6.icon.eye:not(svg), .icon-6.icon.eye-slash:not(svg), .icon-6.icon.facebook:not(svg), .icon-6.icon.github:not(svg), .icon-6.icon.instagram:not(svg), .icon-6.icon.link:not(svg), .icon-6.icon.location-arrow:not(svg), .icon-6.icon.map-marker:not(svg), .icon-6.icon.media-article:not(svg), .icon-6.icon.media-music:not(svg), .icon-6.icon.media-podcast:not(svg), .icon-6.icon.media-video:not(svg), .icon-6.icon.menu:not(svg), .icon-6.icon.minus:not(svg), .icon-6.icon.play-thin:not(svg), .icon-6.icon.plus:not(svg), .icon-6.icon.question-circle:not(svg), .icon-6.icon.screwhead-crds:not(svg), .icon-6.icon.search:not(svg), .icon-6.icon.share:not(svg), .icon-6.icon.twitter:not(svg), .icon-6.icon.university:not(svg), .icon-6.icon.usd:not(svg), .icon-6.icon.youtube:not(svg) {
     width: auto;
     height: 96px;
     background-size: 96px; }
@@ -6415,10 +6415,10 @@ svg.icon, .icon.calendar:not(svg), .icon.camera:not(svg), .icon.caret-down:not(s
 svg.icon use {
   fill: currentColor; }
 
-.icon.calendar:not(svg), .icon.camera:not(svg), .icon.caret-down:not(svg), .icon.check-circle:not(svg), .icon.chevron-down:not(svg), .icon.chevron-left:not(svg), .icon.chevron-right:not(svg), .icon.chevron-up:not(svg), .icon.circle-thin:not(svg), .icon.clock-o:not(svg), .icon.close:not(svg), .icon.close-thin:not(svg), .icon.contrast:not(svg), .icon.copy:not(svg), .icon.download:not(svg), .icon.equalizer:not(svg), .icon.exclamation-circle:not(svg), .icon.eye:not(svg), .icon.eye-slash:not(svg), .icon.facebook:not(svg), .icon.github:not(svg), .icon.instagram:not(svg), .icon.link:not(svg), .icon.location-arrow:not(svg), .icon.map-marker:not(svg), .icon.media-article:not(svg), .icon.media-music:not(svg), .icon.media-podcast:not(svg), .icon.media-video:not(svg), .icon.menu:not(svg), .icon.minus:not(svg), .icon.play-thin:not(svg), .icon.plus:not(svg), .icon.question-circle:not(svg), .icon.screwhead-crds:not(svg), .icon.search:not(svg), .icon.share:not(svg), .icon.twitter:not(svg), .icon.usd:not(svg), .icon.youtube:not(svg) {
+.icon.calendar:not(svg), .icon.camera:not(svg), .icon.caret-down:not(svg), .icon.check-circle:not(svg), .icon.chevron-down:not(svg), .icon.chevron-left:not(svg), .icon.chevron-right:not(svg), .icon.chevron-up:not(svg), .icon.circle-thin:not(svg), .icon.clock-o:not(svg), .icon.close:not(svg), .icon.close-thin:not(svg), .icon.contrast:not(svg), .icon.copy:not(svg), .icon.credit-card:not(svg), .icon.download:not(svg), .icon.equalizer:not(svg), .icon.exclamation-circle:not(svg), .icon.eye:not(svg), .icon.eye-slash:not(svg), .icon.facebook:not(svg), .icon.github:not(svg), .icon.instagram:not(svg), .icon.link:not(svg), .icon.location-arrow:not(svg), .icon.map-marker:not(svg), .icon.media-article:not(svg), .icon.media-music:not(svg), .icon.media-podcast:not(svg), .icon.media-video:not(svg), .icon.menu:not(svg), .icon.minus:not(svg), .icon.play-thin:not(svg), .icon.plus:not(svg), .icon.question-circle:not(svg), .icon.screwhead-crds:not(svg), .icon.search:not(svg), .icon.share:not(svg), .icon.twitter:not(svg), .icon.university:not(svg), .icon.usd:not(svg), .icon.youtube:not(svg) {
   background-image: url("assets/svgs/icons.css.svg");
   background-repeat: no-repeat; }
-  .dark-theme .icon.calendar:not(svg), .dark-theme .icon.camera:not(svg), .dark-theme .icon.caret-down:not(svg), .dark-theme .icon.check-circle:not(svg), .dark-theme .icon.chevron-down:not(svg), .dark-theme .icon.chevron-left:not(svg), .dark-theme .icon.chevron-right:not(svg), .dark-theme .icon.chevron-up:not(svg), .dark-theme .icon.circle-thin:not(svg), .dark-theme .icon.clock-o:not(svg), .dark-theme .icon.close:not(svg), .dark-theme .icon.close-thin:not(svg), .dark-theme .icon.contrast:not(svg), .dark-theme .icon.copy:not(svg), .dark-theme .icon.download:not(svg), .dark-theme .icon.equalizer:not(svg), .dark-theme .icon.exclamation-circle:not(svg), .dark-theme .icon.eye:not(svg), .dark-theme .icon.eye-slash:not(svg), .dark-theme .icon.facebook:not(svg), .dark-theme .icon.github:not(svg), .dark-theme .icon.instagram:not(svg), .dark-theme .icon.link:not(svg), .dark-theme .icon.location-arrow:not(svg), .dark-theme .icon.map-marker:not(svg), .dark-theme .icon.media-article:not(svg), .dark-theme .icon.media-music:not(svg), .dark-theme .icon.media-podcast:not(svg), .dark-theme .icon.media-video:not(svg), .dark-theme .icon.menu:not(svg), .dark-theme .icon.minus:not(svg), .dark-theme .icon.play-thin:not(svg), .dark-theme .icon.plus:not(svg), .dark-theme .icon.question-circle:not(svg), .dark-theme .icon.screwhead-crds:not(svg), .dark-theme .icon.search:not(svg), .dark-theme .icon.share:not(svg), .dark-theme .icon.twitter:not(svg), .dark-theme .icon.usd:not(svg), .dark-theme .icon.youtube:not(svg) {
+  .dark-theme .icon.calendar:not(svg), .dark-theme .icon.camera:not(svg), .dark-theme .icon.caret-down:not(svg), .dark-theme .icon.check-circle:not(svg), .dark-theme .icon.chevron-down:not(svg), .dark-theme .icon.chevron-left:not(svg), .dark-theme .icon.chevron-right:not(svg), .dark-theme .icon.chevron-up:not(svg), .dark-theme .icon.circle-thin:not(svg), .dark-theme .icon.clock-o:not(svg), .dark-theme .icon.close:not(svg), .dark-theme .icon.close-thin:not(svg), .dark-theme .icon.contrast:not(svg), .dark-theme .icon.copy:not(svg), .dark-theme .icon.credit-card:not(svg), .dark-theme .icon.download:not(svg), .dark-theme .icon.equalizer:not(svg), .dark-theme .icon.exclamation-circle:not(svg), .dark-theme .icon.eye:not(svg), .dark-theme .icon.eye-slash:not(svg), .dark-theme .icon.facebook:not(svg), .dark-theme .icon.github:not(svg), .dark-theme .icon.instagram:not(svg), .dark-theme .icon.link:not(svg), .dark-theme .icon.location-arrow:not(svg), .dark-theme .icon.map-marker:not(svg), .dark-theme .icon.media-article:not(svg), .dark-theme .icon.media-music:not(svg), .dark-theme .icon.media-podcast:not(svg), .dark-theme .icon.media-video:not(svg), .dark-theme .icon.menu:not(svg), .dark-theme .icon.minus:not(svg), .dark-theme .icon.play-thin:not(svg), .dark-theme .icon.plus:not(svg), .dark-theme .icon.question-circle:not(svg), .dark-theme .icon.screwhead-crds:not(svg), .dark-theme .icon.search:not(svg), .dark-theme .icon.share:not(svg), .dark-theme .icon.twitter:not(svg), .dark-theme .icon.university:not(svg), .dark-theme .icon.usd:not(svg), .dark-theme .icon.youtube:not(svg) {
     filter: invert(75%);
     -webkit-filter: invert(75%); }
 
@@ -6426,118 +6426,124 @@ svg.icon use {
   background-position: 0 0; }
 
 .icon.camera:not(svg) {
-  background-position: 0 2.563589024634488%; }
+  background-position: 0 2.438559725662031%; }
 
 .icon.caret-down:not(svg) {
-  background-position: 0 5.127178049268976%; }
+  background-position: 0 4.877119451324062%; }
 
 .icon.check-circle:not(svg) {
-  background-position: 0 7.690767073903465%; }
+  background-position: 0 7.315679176986093%; }
 
 .icon.chevron-down:not(svg) {
-  background-position: 0 10.254356098537952%; }
+  background-position: 0 9.754238902648124%; }
 
 .icon.chevron-left:not(svg) {
-  background-position: 0 12.817945123172441%; }
+  background-position: 0 12.192798628310154%; }
 
 .icon.chevron-right:not(svg) {
-  background-position: 0 15.38153414780693%; }
+  background-position: 0 14.631358353972185%; }
 
 .icon.chevron-up:not(svg) {
-  background-position: 0 17.945123172441416%; }
+  background-position: 0 17.069918079634217%; }
 
 .icon.circle-thin:not(svg) {
-  background-position: 0 20.508712197075905%; }
+  background-position: 0 19.50847780529625%; }
 
 .icon.clock-o:not(svg) {
-  background-position: 0 23.072301221710394%; }
+  background-position: 0 21.947037530958276%; }
 
 .icon.close:not(svg) {
-  background-position: 0 25.635890246344882%; }
+  background-position: 0 24.385597256620308%; }
 
 .icon.close-thin:not(svg) {
-  background-position: 0 28.19947927097937%; }
+  background-position: 0 26.82415698228234%; }
 
 .icon.contrast:not(svg) {
-  background-position: 0 30.76306829561386%; }
+  background-position: 0 29.26271670794437%; }
 
 .icon.copy:not(svg) {
-  background-position: 0 33.326657320248344%; }
+  background-position: 0 31.701276433606402%; }
+
+.icon.credit-card:not(svg) {
+  background-position: 0 34.139836159268434%; }
 
 .icon.download:not(svg) {
-  background-position: 0 35.89024634488283%; }
+  background-position: 0 36.578395884930465%; }
 
 .icon.equalizer:not(svg) {
-  background-position: 0 38.45383536951732%; }
+  background-position: 0 39.0169556105925%; }
 
 .icon.exclamation-circle:not(svg) {
-  background-position: 0 41.01742439415181%; }
+  background-position: 0 41.45551533625452%; }
 
 .icon.eye:not(svg) {
-  background-position: 0 43.58537806710065%; }
+  background-position: 0 43.89825664475565%; }
 
 .icon.eye-slash:not(svg) {
-  background-position: 0 46.15923885828743%; }
+  background-position: 0 46.34657521196532%; }
 
 .icon.facebook:not(svg) {
-  background-position: 0 48.728219507310236%; }
+  background-position: 0 48.79024576109735%; }
 
 .icon.github:not(svg) {
-  background-position: 0 51.291808531944724%; }
+  background-position: 0 51.228805486759384%; }
 
 .icon.instagram:not(svg) {
-  background-position: 0 53.85539755657921%; }
+  background-position: 0 53.667365212421416%; }
 
 .icon.link:not(svg) {
-  background-position: 0 56.4189865812137%; }
+  background-position: 0 56.10592493808345%; }
 
 .icon.location-arrow:not(svg) {
-  background-position: 0 58.98257560584819%; }
+  background-position: 0 58.54448466374548%; }
 
 .icon.map-marker:not(svg) {
-  background-position: 0 61.54616463048268%; }
+  background-position: 0 60.9830443894075%; }
 
 .icon.media-article:not(svg) {
-  background-position: 0 64.10975365511716%; }
+  background-position: 0 63.421604115069535%; }
 
 .icon.media-music:not(svg) {
-  background-position: 0 66.67334267975166%; }
+  background-position: 0 65.86016384073157%; }
 
 .icon.media-podcast:not(svg) {
-  background-position: 0 69.23693170438614%; }
+  background-position: 0 68.2987235663936%; }
 
 .icon.media-video:not(svg) {
-  background-position: 0 71.80052072902063%; }
+  background-position: 0 70.73728329205564%; }
 
 .icon.menu:not(svg) {
-  background-position: 0 74.36410975365511%; }
+  background-position: 0 73.17584301771765%; }
 
 .icon.minus:not(svg) {
-  background-position: 0 76.92769877828961%; }
+  background-position: 0 75.61440274337969%; }
 
 .icon.play-thin:not(svg) {
-  background-position: 0 79.49128780292409%; }
+  background-position: 0 78.05296246904172%; }
 
 .icon.plus:not(svg) {
-  background-position: 0 82.05487682755859%; }
+  background-position: 0 80.49152219470375%; }
 
 .icon.question-circle:not(svg) {
-  background-position: 0 84.61846585219307%; }
+  background-position: 0 82.93008192036578%; }
 
 .icon.screwhead-crds:not(svg) {
-  background-position: 0 87.18205487682756%; }
+  background-position: 0 85.36864164602781%; }
 
 .icon.search:not(svg) {
-  background-position: 0 89.74564390146205%; }
+  background-position: 0 87.80720137168984%; }
 
 .icon.share:not(svg) {
-  background-position: 0 92.30923292609654%; }
+  background-position: 0 90.24576109735187%; }
 
 .icon.twitter:not(svg) {
-  background-position: 0 94.87282195073102%; }
+  background-position: 0 92.6843208230139%; }
+
+.icon.university:not(svg) {
+  background-position: 0 95.12288054867594%; }
 
 .icon.usd:not(svg) {
-  background-position: 0 97.43641097536552%; }
+  background-position: 0 97.56144027433797%; }
 
 .icon.youtube:not(svg) {
   background-position: 0 100%; }
