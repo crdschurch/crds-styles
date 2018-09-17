@@ -101,7 +101,7 @@
       &:active,
       &:focus,
       &:hover {
-        &, &:focus, &:hover {
+        &, &.focus, &:focus, &:hover {
           opacity: .65;
           background: $btn-white-bg;
           border-color: $btn-white-border;
@@ -164,7 +164,7 @@
   color: $btn-default-color;
 
   &.active, &:active {
-    &, &:focus, &:hover {
+    &, &.focus, &:focus, &:hover {
       box-shadow: none;
 
       background-color: $cr-teal;
@@ -193,7 +193,7 @@
 
   &.disabled {
     &.active, &:active {
-      &, &:focus, &:hover {
+      &, &.focus, &:focus, &:hover {
         background-color: $btn-default-bg;
         border-color: $btn-default-border;
         color: $btn-default-color;
