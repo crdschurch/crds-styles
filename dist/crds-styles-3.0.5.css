@@ -7845,7 +7845,7 @@ select.form-control:focus, .dark-theme select.form-control:focus {
     .btn.btn-white.disabled {
       opacity: .65;
       pointer-events: auto; }
-      .btn.btn-white.disabled.active, .btn.btn-white.disabled.active:focus, .btn.btn-white.disabled.active:hover, .btn.btn-white.disabled:active, .btn.btn-white.disabled:active:focus, .btn.btn-white.disabled:active:hover, .btn.btn-white.disabled:focus, .btn.btn-white.disabled:focus:focus, .btn.btn-white.disabled:focus:hover, .btn.btn-white.disabled:hover, .btn.btn-white.disabled:hover:focus, .btn.btn-white.disabled:hover:hover {
+      .btn.btn-white.disabled.active, .btn.btn-white.disabled.active.focus, .btn.btn-white.disabled.active:focus, .btn.btn-white.disabled.active:hover, .btn.btn-white.disabled:active, .btn.btn-white.disabled:active.focus, .btn.btn-white.disabled:active:focus, .btn.btn-white.disabled:active:hover, .btn.btn-white.disabled:focus, .btn.btn-white.disabled:focus.focus, .btn.btn-white.disabled:focus:focus, .btn.btn-white.disabled:focus:hover, .btn.btn-white.disabled:hover, .btn.btn-white.disabled:hover.focus, .btn.btn-white.disabled:hover:focus, .btn.btn-white.disabled:hover:hover {
         opacity: .65;
         background: white;
         border-color: white;
@@ -7882,7 +7882,7 @@ select.form-control:focus, .dark-theme select.form-control:focus {
   background-color: rgba(255, 255, 255, 0.25);
   border-color: #979797;
   color: #979797; }
-  .btn-default.active, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active, .btn-default:active:focus, .btn-default:active:hover {
+  .btn-default.active, .btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover {
     -webkit-box-shadow: none;
             box-shadow: none;
     background-color: #57afa9;
@@ -7901,7 +7901,7 @@ select.form-control:focus, .dark-theme select.form-control:focus {
     border-color: #8bceed;
     -webkit-box-shadow: 0 0 0 1px #8bceed inset;
             box-shadow: 0 0 0 1px #8bceed inset; }
-  .btn-default.disabled.active, .btn-default.disabled.active:focus, .btn-default.disabled.active:hover, .btn-default.disabled:active, .btn-default.disabled:active:focus, .btn-default.disabled:active:hover {
+  .btn-default.disabled.active, .btn-default.disabled.active.focus, .btn-default.disabled.active:focus, .btn-default.disabled.active:hover, .btn-default.disabled:active, .btn-default.disabled:active.focus, .btn-default.disabled:active:focus, .btn-default.disabled:active:hover {
     background-color: rgba(255, 255, 255, 0.25);
     border-color: #979797;
     color: #979797; }
