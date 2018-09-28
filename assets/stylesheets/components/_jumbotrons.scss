@@ -5,6 +5,7 @@
   padding-bottom: 48px;
 
   &[style*='background-image'],
+  &[data-optimize-bg-img],
   &.bg-video {
     background-size: cover;
     background-position: center;
