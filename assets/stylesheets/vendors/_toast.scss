@@ -21,7 +21,7 @@
   > div.toast.toast-custom {
     @extend .alert;
     @extend .alert-info;
-    height: 4rem;
+    min-height: 4rem;
     margin: 0;
     padding: 1.5rem 1rem;
     transform: translate3d(0,0,0);
@@ -29,7 +29,7 @@
     color: $cr-white;
     background-image: none !important;
     @media only screen and (max-width: $screen-md) {
-      height: 3.375rem;
+      min-height: 3.375rem;
       padding: 1.125rem 1rem;
     }
     &:hover {
@@ -49,6 +49,7 @@
     .toast-close-button {
       float: right;
       font-size: 2rem;
+      padding: 0 0 5px 5px;
       text-decoration: none;
       &:hover {
         cursor: pointer;
