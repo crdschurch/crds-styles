@@ -10790,6 +10790,28 @@ svg use {
   background-color: black;
   border-color: #666666; }
 
+.nav-tabs li {
+  margin-right: .5rem; }
+  @media screen and (min-width: 480px) {
+    .nav-tabs li {
+      margin-right: 1.5rem; } }
+  .nav-tabs li.active {
+    border-bottom: 3px solid #0095d9; }
+    .nav-tabs li.active > a,
+    .nav-tabs li.active > a:hover,
+    .nav-tabs li.active > a:focus {
+      border: 0; }
+  .nav-tabs li > a,
+  .nav-tabs li > a:hover,
+  .nav-tabs li > a:focus {
+    border: 0;
+    background-color: transparent !important;
+    color: #737373;
+    padding-left: 0;
+    padding-right: 0; }
+  .nav-tabs li > a:hover {
+    color: #4d4d4d; }
+
 /* stylelint-disable */
 .header {
   height: 3.375rem; }
