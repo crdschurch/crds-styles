@@ -2,7 +2,7 @@ crds-styles
 ==========
 
 `crds-styles` provides the primary CSS framework and global style patterns that
-power [crossroads.net](http://crossroads.net) and its related properties.
+power [crossroads.net](http://crossroads.net) and its related properties. 
 
 Any elements and/or implementation details included within the [Digital Design
 Kit (DDK)](http://github.com/crdschurch/crds-styleguide) are provided by this
