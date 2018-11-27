@@ -6047,7 +6047,6 @@ timepicker .form-control.ng-touched.ng-invalid {
       display: inline-block; }
   #toast-container > div.toast,
   #toast-container > div.toast.toast-custom {
-    height: 4rem;
     margin: 0;
     padding: 1.5rem 1rem;
     -webkit-transform: translate3d(0, 0, 0);
@@ -6058,7 +6057,6 @@ timepicker .form-control.ng-touched.ng-invalid {
     @media only screen and (max-width: 992px) {
       #toast-container > div.toast,
       #toast-container > div.toast.toast-custom {
-        height: 3.375rem;
         padding: 1.125rem 1rem; } }
     #toast-container > div.toast:hover,
     #toast-container > div.toast.toast-custom:hover {
@@ -6067,6 +6065,7 @@ timepicker .form-control.ng-touched.ng-invalid {
     #toast-container > div.toast.toast-custom .toast-close-button {
       float: right;
       font-size: 2rem;
+      padding: 0 0 5px 5px;
       text-decoration: none; }
       #toast-container > div.toast .toast-close-button:hover,
       #toast-container > div.toast.toast-custom .toast-close-button:hover {
