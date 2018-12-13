@@ -2,7 +2,7 @@ crds-styles
 ==========
 
 `crds-styles` provides the primary CSS framework and global style patterns that
-power [crossroads.net](http://crossroads.net) and its related properties. 
+power [crossroads.net](http://crossroads.net) and its related properties.
 
 Any elements and/or implementation details included within the [Digital Design
 Kit (DDK)](http://github.com/crdschurch/crds-styleguide) are provided by this
@@ -123,6 +123,27 @@ directory via NPM. Then add the following to your `assets` config in
 
 Note that you could change `icons.svg` to `*` to copy all of crds-styles' svg
 assets into your project.
+
+
+#### Contributing to the DDK
+
+The DDK is now a Jekyll project. The Styleguide is on continuous deployment and updates branches are merged into `master`.
+
+Styles are still in `crds-styles` but they are now linked through `git submodules` instead of `npm`.
+
+### Updating Styles in Styleguide
+
+When working in the new `crds-styleguide` and `crds-styles` for the first time you will need to add the `crds-styles` submodule:
+
+```$ git submodule add https://github.com/crdschurch/crds-styles.git vendor/gems/crds-styles ```
+
+run command ```GIT ADD [SUBMODULE REPO] [OPTIONAL DIRECTORY]```
+
+if submodule has already been added:
+run `GIT SUBMODULE UPDATE` to update all submodules defined in .gitmodules file
+
+if project is a ruby project, run BUNDLE UPDATE and all assets should be successfully updated/added
+
 
 Versioning
 --------

@@ -98,6 +98,16 @@
       }
     }
 
+    &.l-mini {
+      .l-text-wrapper {
+        display: block;
+      }
+      .s-text-wrapper {
+        text-align: left;
+        font-size: 14px;
+      }
+    }
+
     @media screen and (min-width: $screen-sm) {
       .l-foreground-image {
         margin: 20px;
@@ -113,6 +123,12 @@
 
       .s-text-wrapper {
         font-size: 16px;
+      }
+
+      &.l-mini {
+        .l-foreground-image img {
+          height: auto;
+        }
       }
     }
 
