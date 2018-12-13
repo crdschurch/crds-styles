@@ -76,7 +76,7 @@ depending on your preferred build configuration._
 
 ---
 
-#### A note on local development
+#### Local Development - NPM packages
 
 When making changes to crds-styles locally and in wanting them to be reflected
 in your project, you should follow the NPM/package.json approach for importing
@@ -133,9 +133,11 @@ Styles are still in `crds-styles` but they are now linked through `git submodule
 
 ### Updating Styles in Styleguide
 
-When working in the new `crds-styleguide` and `crds-styles` for the first time you will need to add the `crds-styles` submodule:
+When working in the new `crds-styleguide` and `crds-styles` for the first time you will need to add the `crds-styles` submodule (We prefer using SSH so you don't need to remember your password.):
 
-```$ git submodule add https://github.com/crdschurch/crds-styles.git vendor/gems/crds-styles ```
+```$ git submodule add git@github.com:crdschurch/crds-styles.git vendor/gems/crds-styles ```
+
+Each time you start a new branch you will need to run two commands: `git submodule init` to initialize your local configuration file, and `git submodule update` to fetch all the data from that project and check out the appropriate commit listed in your superproject. From [Git docs](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
 
 run command ```GIT ADD [SUBMODULE REPO] [OPTIONAL DIRECTORY]```
 
