@@ -192,13 +192,23 @@
     @media screen and (min-width: $screen-sm) {
       flex-direction: row;
 
+
       .s-text-wrapper {
         text-align: left;
       }
 
       .l-foreground-image {
-        flex: 0 0 auto;
+        flex: 0 1 auto;
       }
+
+      &.l-mini {
+        flex-direction: column;
+
+        .s-text-wrapper {
+          text-align: center;
+        }
+      }
+
     }
 
     @media screen and (min-width: $screen-md) {
@@ -208,6 +218,12 @@
 
       .l-text-wrapper {
         margin-right: 75px;
+      }
+
+      &.l-mini {
+        .l-text-wrapper {
+          margin: 0;
+        }
       }
     }
   }
