@@ -1,0 +1,702 @@
+/**************
+** 1. Styles
+** 2. Layouts
+** 3. Utilities
+** 4. Dropdowns
+** 5. Button groups
+**************/
+
+
+
+
+/* 1. Styles */
+.btn {
+  border-radius: $border-radius-base;
+  line-height: 1;
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+  &.active,
+  &:active {
+    &, &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    outline-offset: 0;
+  }
+
+  &.btn-lg {
+    font-size: $base-font-size;
+    padding: 14px 20px 16px;
+  }
+
+  &, &.btn-md {
+    font-size: $font-size-small;
+    padding: 13px 16px;
+  }
+
+  &.btn-sm {
+    font-size: 13px;
+    padding: 10px 16px 11px;
+  }
+
+  &.btn-blue,
+  &.btn-primary {
+    @include crds-button-variant($btn-blue-color, $btn-blue-bg, $btn-blue-border);
+
+    .dark-theme & {
+      @extend .btn-cyan;
+    }
+  }
+
+  &.btn-cyan,
+  &.btn-secondary {
+    @include crds-button-variant($btn-cyan-color, $btn-cyan-bg, $btn-cyan-border);
+  }
+
+  &.btn-gray {
+    @include crds-button-variant($btn-gray-color, $btn-gray-bg, $btn-gray-border);
+  }
+
+  &.btn-gray-light {
+    @include crds-button-variant($btn-gray-lt-color, $btn-gray-lt-bg, $btn-gray-lt-border);
+  }
+
+  &.btn-white {
+    background: $btn-white-bg;
+    border-color: $btn-white-border;
+    color: $btn-white-color;
+
+    // solid buttons
+    &.active,
+    &:active {
+      &, &:hover, &:focus {
+        background: darken($btn-white-bg, 5);
+
+        &:focus {
+          border: 1px solid darken($btn-white-bg, 5);
+          box-shadow: none;
+        }
+      }
+    }
+
+    &:focus {
+      border-color: $input-border-focus;
+      box-shadow: 0 0 0 1px $input-border-focus inset;
+    }
+
+    &:hover {
+      background: darken($btn-white-bg, 5);
+    }
+
+    &.disabled {
+      opacity: .65;
+      pointer-events: auto;
+
+      &.active,
+      &:active,
+      &:focus,
+      &:hover {
+        &, &.focus, &:focus, &:hover {
+          opacity: .65;
+          background: $btn-white-bg;
+          border-color: $btn-white-border;
+          color: $btn-white-color;
+          box-shadow: none;
+        }
+      }
+    }
+
+    // outline buttons
+    &.btn-outline {
+      background: transparent;
+      border-style: solid;
+      border-width: 1px;
+      color: $btn-white-border;
+
+      &.active,
+      &:active {
+        &, &:hover, &:focus {
+          background: rgba($btn-white-border, .25);
+          border-color: $btn-white-border;
+          color: $btn-white-border;
+        }
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
+
+      &:hover {
+        background: rgba($btn-white-border, .25);
+      }
+
+      &.disabled {
+        opacity: .65;
+        pointer-events: auto;
+
+        &.active,
+        &:active,
+        &:focus,
+        &:hover {
+          &, &:hover {
+            background: transparent;
+            border-color: $btn-white-border;
+            color: $btn-white-border;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.btn-default {
+  border-style: solid;
+  border-width: 1px;
+
+  background-color: $btn-default-bg;
+  border-color: $btn-default-border;
+  color: $btn-default-color;
+
+  &.active, &:active {
+    &, &.focus, &:focus, &:hover {
+      box-shadow: none;
+
+      background-color: $cr-teal;
+      border-color: $cr-teal;
+      color: $cr-white;
+    }
+  }
+
+  &:hover {
+    background-color: darken($btn-default-bg, 10);
+    border-color: darken($btn-default-border, 10);
+    color: $btn-default-color;
+
+    @media (pointer:coarse) {
+      background-color: $btn-default-bg;
+      border-color: $btn-default-border;
+      color: $btn-default-color;
+    }
+  }
+
+
+  :focus {
+    border-color: $input-border-focus;
+    box-shadow: 0 0 0 1px $input-border-focus inset;
+  }
+
+  &.disabled {
+    &.active, &:active {
+      &, &.focus, &:focus, &:hover {
+        background-color: $btn-default-bg;
+        border-color: $btn-default-border;
+        color: $btn-default-color;
+      }
+    }
+
+    &:hover {
+      background-color: $btn-default-bg;
+      border-color: $btn-default-border;
+      color: $btn-default-color;
+    }
+
+    .dark-theme & {
+      opacity: 1;
+    }
+  }
+}
+
+.btn-link {
+  color: $cr-cyan;
+
+  &:hover {
+    color: darken($cr-cyan, 5);
+  }
+
+  &:focus {
+    border: 1px solid $input-border-focus;
+    box-shadow: 0 0 0 1px $input-border-focus inset;
+  }
+
+  &.active,
+  &:active {
+    text-decoration: underline;
+  }
+
+  &.disabled {
+    &:focus {
+      color: $cr-cyan;
+      border-color: transparent;
+      box-shadow: none;
+    }
+
+    &, &.active {
+      text-decoration: none;
+
+      &:focus,
+      &:hover {
+        border-color: transparent;
+        box-shadow: none;
+        color: $cr-cyan;
+      }
+    }
+  }
+
+  &.secondary {
+    color: $cr-gray;
+
+    &:hover {
+      color: darken($cr-gray, 5);
+    }
+
+    &.active,
+    &:active {
+      text-decoration: underline;
+    }
+
+    &.disabled {
+      &:focus {
+        border-color: transparent;
+        box-shadow: none;
+      }
+
+      &, &.active {
+        text-decoration: none;
+
+        &:focus,
+        &:hover {
+          border-color: transparent;
+          box-shadow: none;
+          color: $cr-gray;
+        }
+      }
+    }
+  }
+}
+
+.btn-block {
+  text-align: left;
+}
+
+
+
+/* 2. Layout */
+.btn-group {
+  > .btn {
+    margin-right: .5rem;
+
+    // Styles below may seem redundant but are required to override bootstrap
+    &:first-child:not(:last-child):not(.dropdown-toggle) {
+      border-radius: $btn-border-radius-base;
+    }
+
+    &:last-child:not(:first-child):not(.dropdown-toggle) {
+      border-radius: $btn-border-radius-base;
+      margin-right: 0;
+    }
+
+    &:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+      border-radius: $btn-border-radius-base;
+    }
+
+    &:not(.active),
+    &:not(:active) {
+      &.btn-blue,
+      &.btn-primary,
+      &.btn-cyan,
+      &.btn-secondary,
+      &.btn-gray,
+      &.btn-gray-light,
+      &.btn-white {
+        @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+
+        &:focus {
+          border: 1px solid $input-border-focus;
+          box-shadow: 0 0 0 1px $input-border-focus inset;
+        }
+      }
+
+      &.btn-default {
+        -webkit-tap-highlight-color: $cr-teal;
+
+        &:focus {
+          border: 1px solid $input-border-focus;
+          box-shadow: 0 0 0 1px $input-border-focus inset;
+        }
+      }
+    }
+
+    &.active,
+    &:active {
+      &.btn-blue,
+      &.btn-primary {
+        @include crds-button-variant($btn-blue-color, $btn-blue-bg, $btn-blue-border);
+      }
+
+      &.btn-cyan,
+      &.btn-secondary {
+        @include crds-button-variant($btn-cyan-color, $btn-cyan-bg, $btn-cyan-border);
+      }
+
+      &.btn-gray {
+        @include crds-button-variant($btn-gray-color, $btn-gray-bg, $btn-gray-border);
+      }
+
+      &.btn-gray-light {
+        @include crds-button-variant($btn-gray-lt-color, $btn-gray-lt-bg, $btn-gray-lt-border);
+      }
+
+      &.btn-white {
+        @include crds-button-variant($btn-white-color, $btn-white-bg, $btn-white-border);
+      }
+
+      &.btn-default {
+        &:focus {
+          border-color: $cr-teal;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+
+.btn-group-link {
+  > .btn {
+    border: 0;
+    padding: 14px 17px;
+
+    &:not(.active),
+    &:not(:active) {
+      &.btn-blue,
+      &.btn-primary,
+      &.btn-cyan,
+      &.btn-secondary,
+      &.btn-gray,
+      &.btn-gray-light,
+      &.btn-white,
+      &.btn-default {
+        &:hover {
+          background-color: transparent;
+          color: darken($btn-default-color, 15);
+        }
+
+        &:focus {
+          padding: 13px 16px;
+        }
+      }
+    }
+
+    &.active:hover,
+    &:active:hover {
+      &.btn-blue,
+      &.btn-primary {
+        @include crds-button-variant($btn-blue-color, $btn-blue-bg, $btn-blue-border);
+      }
+
+      &.btn-cyan,
+      &.btn-secondary {
+        @include crds-button-variant($btn-cyan-color, $btn-cyan-bg, $btn-cyan-border);
+      }
+
+      &.btn-gray {
+        @include crds-button-variant($btn-gray-color, $btn-gray-bg, $btn-gray-border);
+      }
+
+      &.btn-gray-light {
+        @include crds-button-variant($btn-gray-lt-color, $btn-gray-lt-bg, $btn-gray-lt-border);
+      }
+
+      &.btn-white {
+        @include crds-button-variant($btn-white-color, $btn-white-bg, $btn-white-border);
+      }
+
+      &.btn-default {
+        background: $cr-teal;
+        border-color: $cr-teal;
+        color: $cr-white;
+      }
+    }
+  }
+}
+
+.btn-group-bar {
+  > .btn {
+    margin-right: 0;
+
+    &:first-child:not(:last-child):not(.dropdown-toggle) {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    &:last-child:not(:first-child):not(.dropdown-toggle) {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+
+    &:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+      border-radius: 0;
+    }
+
+    &.active {
+      border-style: solid;
+      border-width: 1px;
+    }
+
+    &:not(:first-child):not(:last-child) {
+      border-right-color: rgba($cr-gray-light, .25);
+      border-left-color: rgba($cr-gray-light, .25);
+
+      &:hover {
+        border-right-color: rgba($cr-gray-light, .25);
+        border-left-color: rgba($cr-gray-light, .25);
+      }
+    }
+
+    @mixin active_pillbar($active-color) {
+      &:first-child,
+      &:last-child {
+        border-color: $active-color;
+
+        &:hover {
+          border-color: $active-color;
+        }
+      }
+
+      &:first-child {
+        border-right-color: rgba($cr-gray-light, .25);
+
+        &:hover {
+          border-right-color: rgba($cr-gray-light, .25);
+        }
+      }
+
+      &:last-child {
+        border-left-color: rgba($cr-gray-light, .25);
+
+        &:hover {
+          border-left-color: rgba($cr-gray-light, .25);
+        }
+      }
+
+      &:not(:first-child):not(:last-child) {
+        border-top-color: $active-color;
+        border-bottom-color: $active-color;
+      }
+
+      &.active,
+      &:active {
+        &:first-child {
+          border-right-color: darken($active-color, 10);
+
+          &:focus {
+            border-right-color: darken($active-color, 10);
+            box-shadow: none;
+          }
+        }
+
+        &:last-child {
+          border-left-color: darken($active-color, 10);
+
+          &:focus {
+            border-left-color: darken($active-color, 10);
+            box-shadow: none;
+          }
+        }
+
+        &:not(:first-child):not(:last-child) {
+          border-right-color: darken($active-color, 10);
+          border-left-color: darken($active-color, 10);
+
+          &:focus {
+            border-top-color: $active-color;
+            border-bottom-color: $active-color;
+            border-right-color: darken($active-color, 10);
+            border-left-color: darken($active-color, 10);
+            box-shadow: none;
+          }
+        }
+      }
+    }
+
+    &.btn-default {
+      @include active_pillbar($cr-teal);
+    }
+
+    &.btn-blue,
+    &.btn-primary {
+      @include active_pillbar($btn-blue-bg);
+    }
+
+    &.btn-cyan,
+    &.btn-secondary {
+      @include active_pillbar($btn-cyan-bg);
+    }
+
+    &.btn-gray {
+      @include active_pillbar($btn-gray-bg);
+    }
+
+    &.btn-gray-light {
+      @include active_pillbar($btn-gray-lt-bg);
+    }
+
+    &.btn-white {
+      @include active_pillbar($btn-white-bg);
+    }
+  }
+}
+
+.btn-group-bar-flexbox {
+  display: flex;
+
+  > .btn {
+    flex: 1 1 auto;
+  }
+}
+
+.btn-group-block {
+  width: 100%;
+
+  > .btn {
+    display: block;
+    text-align: left;
+    width: 100%;
+  }
+
+  .clear {
+    clear: both;
+  }
+
+  .row {
+    display: initial;
+  }
+}
+
+
+
+
+/* 3. Utilities */
+.btn-group-lg,
+.btn-group-sm {
+  > .btn {
+    line-height: 1;
+  }
+}
+
+// Block-level buttons on mobile screens
+.btn-block-mobile {
+  > .btn {
+    @media only screen and (max-width: $screen-xs-max) {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+// Disabled buttons styles when <a> is used
+a {
+  &.btn {
+    &.disabled {
+      pointer-events: auto;
+    }
+  }
+}
+
+
+
+
+/* 4. Dropdowns */
+.dropdown {
+  .dropdown-toggle {
+    &.btn {
+      &.btn-lg {
+        font-size: $base-font-size;
+        padding: 14px 20px 16px;
+      }
+
+      &, &.btn-md {
+        font-size: $font-size-small;
+        padding: 12px 16px;
+      }
+
+      &.btn-sm {
+        font-size: 13px;
+        padding: 9px 16px;
+      }
+    }
+  }
+}
+
+
+
+
+/* 5. Button groups */
+.input-group-white {
+  .form-control {
+    background-color: darken($cr-gray-lighter, 2);
+    border-color: darken($cr-gray-lighter, 2);
+  }
+  .form-control[disabled] {
+    background-color: lighten($input-color-placeholder, 25);
+    border-color: lighten($input-color-placeholder, 25);
+  }
+}
+
+.input-group-lg,
+.input-group-sm {
+  .form-control {
+    line-height: 1.2;
+  }
+
+  .input-group-btn {
+    > .btn {
+      border-top-right-radius: $border-radius-base;
+      border-bottom-right-radius: $border-radius-base;
+      line-height: 1;
+    }
+  }
+}
+
+.input-group-lg {
+  .form-control,
+  .input-group-btn > .btn {
+    height: 48px;
+  }
+
+  .form-control {
+    padding: 11px 10px 8px;
+  }
+
+  .input-group-btn {
+    > .btn {
+      font-size: 18px;
+      margin: 0;
+      padding: 9px 22px 11px 20px;
+    }
+  }
+}
+
+.input-group-sm {
+  .form-control,
+  .input-group-btn > .btn {
+    height: 36px;
+  }
+
+  .form-control {
+    padding: 8px 10px 7px;
+  }
+
+  .input-group-btn {
+    > .btn {
+      font-size: 14px;
+      margin: 0;
+      padding: 7px 16px 8px;
+    }
+  }
+}

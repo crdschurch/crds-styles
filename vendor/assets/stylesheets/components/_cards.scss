@@ -1,0 +1,240 @@
+.card {
+  margin-bottom: 1rem;
+  // DEPRECATION NOTICE: .card-caption is now .card-img-caption and .img-caption
+  &.current-series .card-caption {
+    @media screen and (min-width: $screen-sm) {
+      @include make-sm-column(8);
+      @include make-sm-column-offset(2);
+    }
+  }
+  > a {
+    display: block;
+  }
+
+  // Sets fixed height on images when applied
+  .card-img-constrained {
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+  }
+}
+
+
+
+.cards-4x .card {
+  @media screen and (max-width: $screen-sm - 1) {
+    @include make-sm-column(12);
+  }
+  @media screen and (min-width: $screen-sm) and (max-width: $screen-md - 1) {
+    @include make-sm-column(6);
+    &:nth-child(odd) {
+      clear: left;
+    }
+  }
+  @media screen and (min-width: $screen-md) {
+    @include make-sm-column(3);
+    &:nth-child(4n+1) {
+      clear: left;
+    }
+  }
+}
+
+.cards-3x .card {
+  @media screen and (max-width: $screen-sm - 1) {
+    @include make-sm-column(12);
+  }
+  @media screen and (min-width: $screen-sm) and (max-width: $screen-md - 1) {
+    @include make-sm-column(6);
+    &:nth-child(odd) {
+      clear: left;
+    }
+  }
+  @media screen and (min-width: $screen-md) {
+    @include make-sm-column(4);
+    &:nth-child(3n+1) {
+      clear: left;
+    }
+  }
+}
+
+.cards-2x .card {
+  @media screen and (max-width: $screen-sm - 1) {
+    @include make-sm-column(12);
+  }
+  @media screen and (min-width: $screen-sm) {
+    @include make-sm-column(6);
+    &:nth-child(odd) {
+      clear: left;
+    }
+  }
+}
+
+.cards-2x-xs .card {
+  @media (max-width: $screen-sm) {
+    @include make-xs-column(6);
+    &:nth-child(odd) {
+      clear: left;
+    }
+  }
+}
+
+.cards-4x, .cards-3x,.cards-2x {
+  .feature-cards:not([data-carousel]) {
+    @include make-row();
+  }
+}
+
+.card-block {
+  font-family: $base-font-face;
+  padding: 1rem;
+}
+
+.card-title {
+  color: $cr-gray-dark;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.card-title--overlap {
+  background-color: $cr-white;
+  display: inline-block;
+  font-family: $condensed-extra-font-face;
+  font-size: 2.125rem;
+  margin: -2rem -.5rem;
+  padding: .25rem .5rem;
+  position: relative;
+
+  .dark-theme & {
+    background-color: $cr-black;
+  }
+}
+
+.card-title--overlap:after {
+  color: $cr-gray-light;
+  content: '\2014';
+  display: block;
+  font-family: $base-font-face;
+  font-size: 1.25rem;
+  font-weight: 100;
+  line-height: 1.5;
+  padding-bottom: .25rem;
+}
+
+.card-link:not(:last-of-type) {
+  margin-right: .5rem;
+}
+
+// DEPRECATION NOTICE: .card-caption is now .card-img-caption and .img-caption
+.card-caption:before {
+  background-color: $cr-blue-lighter;
+  color: $cr-gray-dark;
+  content: 'Current Series';
+  font-family: $accent-font-face;
+  font-size: .8125rem;
+  font-style: italic;
+  padding: .5rem .75rem;
+  position: relative;
+  top: -30px;
+}
+
+.card-img-caption {
+  position: relative;
+
+  .img-caption {
+    background-color: $cr-blue-lighter;
+    bottom: -1rem;
+    color: $cr-gray-dark;
+    font-family: $accent-font-face;
+    font-size: .8125rem;
+    font-style: italic;
+    left: 50%;
+    padding: .5rem .75rem;
+    position: absolute;
+    transform: translate(-50%, 0);
+
+    &.img-caption--left {
+      left: 1rem;
+      transform: none;
+    }
+
+    &.img-caption--right {
+      left: auto;
+      right: 1rem;
+      transform: none;
+    }
+  }
+}
+
+.card-subtitle {
+  color: $cr-gray-light;
+  font-size: $font-size-smaller;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.card-deck {
+  .card {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .card-text {
+    font-size: .9375rem;;
+    position: relative;
+    
+    address {
+      font-size: $font-size-small;
+      background: transparent;
+      padding: 0;
+    }
+  }
+}
+
+.card-deck--expanded-layout {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+
+  @media (min-width: $screen-sm) {
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+  }
+
+  .card {
+    cursor: auto;
+    -webkit-flex: 1 0 270px;
+    -ms-flex: 1 0 270px;
+    flex: 1 0 270px;
+    margin-bottom: 1rem;
+    padding: 0 .5rem;
+    position: relative;
+
+    @media (min-width: $screen-sm) {
+      max-width: 25%;
+    }
+  }
+}
+
+.carousel-cell {
+  width: 270px;
+  margin-right: 1rem;
+
+  @media (min-width: $screen-md) {
+    width: calc(25% - .75rem);
+  }
+
+  img {
+    pointer-events: none;
+  }
+}

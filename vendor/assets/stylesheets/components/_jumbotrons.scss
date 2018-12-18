@@ -1,0 +1,169 @@
+.jumbotron {
+  position: relative;
+  text-align: center;
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  &[style*='background-image'],
+  &[data-optimize-bg-img],
+  &.bg-video {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: $cr-white;
+
+    a {
+      display: inline-block;
+      color: $cr-white;
+    }
+  }
+
+  &.img-background-top {
+    background-position: top center;
+  }
+
+  &.text-black {
+    color: $cr-black;
+  }
+
+  &.bg-video {
+    position: relative;
+    background-color: transparent;
+    overflow: hidden;
+  }
+
+  &.jumbotron-sm {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  &.jumbotron-md {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  &.jumbotron-lg {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  &.jumbotron-xl {
+    padding-top: 112px;
+    padding-bottom: 112px;
+  }
+
+  .container &,
+  .container-fluid & {
+    border-radius: 0;
+  }
+
+  .jumbotron-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .bg-video-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+
+    &:after {
+      content: ' ';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+    }
+  }
+
+  .inline-video-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: -4;
+    background-color: $cr-black;
+    @media screen and (max-width: $screen-sm) {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    &.active {
+      opacity: 1;
+      z-index: 2;
+    }
+
+    iframe {
+      position: relative;
+      min-width: 100%;
+      min-height: 100%;
+      @media screen and (max-width: $screen-sm) {
+        width: 100%;
+        min-height: auto;
+      }
+    }
+
+    .close-video {
+      color: $cr-white;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      z-index: 3;
+    }
+  }
+
+  .inline-preloader-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: $cr-black;
+    transition: opacity .35s ease;
+    opacity: 1;
+    &.loaded {
+      opacity: 0;
+    }
+  }
+
+  .title {
+    margin: 1rem 0;
+    font-family: $base-font-face;
+    font-weight: 100;
+    font-size: 4.25rem;
+    line-height: 1;
+  }
+
+  > p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+
+  .small-heading {
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: .85rem;
+    line-height: 1;
+    opacity: .8;
+  }
+
+  a.btn,
+  .btn {
+    margin: 1rem .25rem 0;
+  }
+
+  a.btn-large,
+  .btn-large {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+  }
+}
