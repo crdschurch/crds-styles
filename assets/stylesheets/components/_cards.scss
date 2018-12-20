@@ -32,7 +32,7 @@
   }
   @media screen and (min-width: $screen-md) {
     @include make-sm-column(3);
-    &:nth-child(4n + 1) {
+    &:nth-child(4n+1) {
       clear: left;
     }
   }
@@ -50,7 +50,7 @@
   }
   @media screen and (min-width: $screen-md) {
     @include make-sm-column(4);
-    &:nth-child(3n + 1) {
+    &:nth-child(3n+1) {
       clear: left;
     }
   }
@@ -101,8 +101,8 @@
   display: inline-block;
   font-family: $condensed-extra-font-face;
   font-size: 2.125rem;
-  margin: -2rem -0.5rem;
-  padding: 0.25rem 0.5rem;
+  margin: -2rem -.5rem;
+  padding: .25rem .5rem;
   position: relative;
 
   .dark-theme & {
@@ -112,28 +112,28 @@
 
 .card-title--overlap:after {
   color: $cr-gray-light;
-  content: "\2014";
+  content: '\2014';
   display: block;
   font-family: $base-font-face;
   font-size: 1.25rem;
   font-weight: 100;
   line-height: 1.5;
-  padding-bottom: 0.25rem;
+  padding-bottom: .25rem;
 }
 
 .card-link:not(:last-of-type) {
-  margin-right: 0.5rem;
+  margin-right: .5rem;
 }
 
 // DEPRECATION NOTICE: .card-caption is now .card-img-caption and .img-caption
 .card-caption:before {
   background-color: $cr-blue-lighter;
   color: $cr-gray-dark;
-  content: "Current Series";
+  content: 'Current Series';
   font-family: $accent-font-face;
-  font-size: 0.8125rem;
+  font-size: .8125rem;
   font-style: italic;
-  padding: 0.5rem 0.75rem;
+  padding: .5rem .75rem;
   position: relative;
   top: -30px;
 }
@@ -146,10 +146,10 @@
     bottom: -1rem;
     color: $cr-gray-dark;
     font-family: $accent-font-face;
-    font-size: 0.8125rem;
+    font-size: .8125rem;
     font-style: italic;
     left: 50%;
-    padding: 0.5rem 0.75rem;
+    padding: .5rem .75rem;
     position: absolute;
     transform: translate(-50%, 0);
 
@@ -188,7 +188,7 @@
   }
 
   .card-text {
-    font-size: 0.9375rem;
+    font-size: .9375rem;
     position: relative;
 
     address {
@@ -217,7 +217,7 @@
     -ms-flex: 1 0 270px;
     flex: 1 0 270px;
     margin-bottom: 1rem;
-    padding: 0 0.5rem;
+    padding: 0 .5rem;
     position: relative;
 
     @media (min-width: $screen-sm) {
@@ -231,7 +231,7 @@
   margin-right: 1rem;
 
   @media (min-width: $screen-md) {
-    width: calc(25% - 0.75rem);
+    width: calc(25% - .75rem);
   }
 
   img {
@@ -285,7 +285,7 @@
   }
 
   .overlay-card-category {
-    color: rgba($cr-white, 0.8);
+    color: rgba($cr-white, .8);
     font-size: $font-size-smaller;
     line-height: 1.6;
     margin-bottom: 4px;
@@ -296,7 +296,7 @@
     color: $cr-white;
     font-family: $condensed-extra-font-face;
     font-size: 8vw;
-    line-height: 0.9;
+    line-height: .9;
     margin-top: 0;
     text-transform: uppercase;
   }
@@ -336,7 +336,7 @@
   @media screen and (min-width: $screen-lg) {
     .overlay-card-title {
       font-size: 4.5rem;
-      line-height: 0.8;
+      line-height: .8;
     }
 
     .overlay-card-image {
@@ -363,7 +363,7 @@
     }
     .overlay-card-title {
       font-size: 4rem;
-      margin-left: -0.2rem;
+      margin-left: -.2rem;
 
       @media (min-width: $screen-sm) {
         font-size: 6.875rem;
@@ -400,10 +400,10 @@
     position: relative;
 
     .overlay-feature-card-category {
-      color: rgba($cr-white, 0.8);
+      color: rgba($cr-white, .8);
       font-size: $font-size-small;
       line-height: 1.2;
-      margin-bottom: 0.5rem;
+      margin-bottom: .5rem;
       text-transform: uppercase;
     }
 
@@ -411,7 +411,7 @@
       color: $cr-white;
       font-family: $condensed-extra-font-face;
       font-size: 4rem;
-      line-height: 0.9;
+      line-height: .9;
       margin-top: 0;
       text-transform: uppercase;
 
