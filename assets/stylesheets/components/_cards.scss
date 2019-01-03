@@ -32,7 +32,7 @@
   }
   @media screen and (min-width: $screen-md) {
     @include make-sm-column(3);
-    &:nth-child(4n + 1) {
+    &:nth-child(4n+1) {
       clear: left;
     }
   }
@@ -50,7 +50,7 @@
   }
   @media screen and (min-width: $screen-md) {
     @include make-sm-column(4);
-    &:nth-child(3n + 1) {
+    &:nth-child(3n+1) {
       clear: left;
     }
   }
@@ -235,6 +235,18 @@
 
   img {
     pointer-events: none;
+  }
+}
+
+.card-stamp {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 6px 8px;
+
+  .icon {
+    width: 12px;
+    height: 16px;
   }
 }
 
