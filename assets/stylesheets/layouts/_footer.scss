@@ -1,9 +1,12 @@
 .site-footer {
   background: $cr-gray-lighter;
-  margin-bottom: -.5rem; // Removes space at the bottom of the footer (from .crds-shared-header)
+  // Remove space at the bottom of the footer (from .crds-shared-header)
+  margin-bottom: -0.5rem;
   padding: 3.125rem 0;
 
-  &, a, h5 {
+  &,
+  a,
+  h5 {
     color: $cr-gray;
   }
 
@@ -30,7 +33,7 @@
       justify-content: center;
       height: 36px;
       width: 36px;
-      margin-right: .5rem;
+      margin-right: 0.5rem;
       padding: 10px;
 
       &:hover {
@@ -39,7 +42,7 @@
 
       @media screen and (min-width: $screen-sm) {
         margin-right: 0;
-        margin-left: .5rem;
+        margin-left: 0.5rem;
       }
     }
   }
