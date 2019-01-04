@@ -20,8 +20,6 @@
   }
 }
 
-
-
 .cards-4x .card {
   @media screen and (max-width: $screen-sm - 1) {
     @include make-sm-column(12);
@@ -34,7 +32,7 @@
   }
   @media screen and (min-width: $screen-md) {
     @include make-sm-column(3);
-    &:nth-child(4n+1) {
+    &:nth-child(4n + 1) {
       clear: left;
     }
   }
@@ -52,7 +50,7 @@
   }
   @media screen and (min-width: $screen-md) {
     @include make-sm-column(4);
-    &:nth-child(3n+1) {
+    &:nth-child(3n + 1) {
       clear: left;
     }
   }
@@ -79,7 +77,9 @@
   }
 }
 
-.cards-4x, .cards-3x,.cards-2x {
+.cards-4x,
+.cards-3x,
+.cards-2x {
   .feature-cards:not([data-carousel]) {
     @include make-row();
   }
@@ -188,9 +188,9 @@
   }
 
   .card-text {
-    font-size: .9375rem;;
+    font-size: .9375rem;
     position: relative;
-    
+
     address {
       font-size: $font-size-small;
       background: transparent;
@@ -236,5 +236,17 @@
 
   img {
     pointer-events: none;
+  }
+}
+
+.card-stamp {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 6px 8px;
+
+  .icon {
+    width: 12px;
+    height: 16px;
   }
 }

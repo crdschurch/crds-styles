@@ -10,9 +10,6 @@
 ** 9. Misc.
 */
 
-
-
-
 /* 1. Font-face utility classes */
 .font-family-base {
   font-family: $base-font-face !important;
@@ -44,9 +41,6 @@
   font-style: italic !important;
   font-weight: 300 !important;
 }
-
-
-
 
 /* 2. Font-size utility classes */
 .font-size-h1 {
@@ -125,8 +119,9 @@
   font-size: $font-size-small !important; // 14px
 }
 
-
-
+.font-size-smallest {
+  font-size: 10px;
+}
 
 /* 3. Typesetting */
 .page-header {
@@ -179,12 +174,12 @@
 }
 
 .collection-header {
-  border-top: 1px solid rgba($cr-gray-light, .35);
+  border-top: 1px solid rgba($cr-gray-light, 0.35);
   color: $cr-gray;
   font-family: $base-font-face;
   font-size: 1.3125rem; // 21px
   font-weight: 300;
-  padding-top: .65em;
+  padding-top: 0.65em;
 
   .dark-theme & {
     border-color: $cr-gray-dark;
@@ -213,11 +208,9 @@
   text-transform: uppercase;
 }
 
-
-
-
 /* 4. Body content */
-main, .main {
+main,
+.main {
   font-size: $font-size-base; // 16px
 
   @media screen and (min-width: $screen-xs) {
@@ -231,7 +224,7 @@ main, .main {
 }
 
 .quiet {
-  font-size: .875rem; // 14px
+  font-size: 0.875rem; // 14px
 
   @media screen and (min-width: $screen-xs) {
     font-size: 1rem; // 16px
@@ -245,7 +238,7 @@ main, .main {
   color: $text-muted;
 
   @media screen and (min-width: $screen-xs) {
-    font-size: .9375rem; // 15px
+    font-size: 0.9375rem; // 15px
   }
 }
 
@@ -270,9 +263,6 @@ main, .main {
   }
 }
 
-
-
-
 /* 5. Links */
 a {
   &.secondary {
@@ -291,9 +281,6 @@ a {
   }
 }
 
-
-
-
 /* 6. Address */
 address {
   background: $cr-gray-lighter;
@@ -304,9 +291,6 @@ address {
     font-size: $font-size-large; // 19px
   }
 }
-
-
-
 
 /* 7. Blockquote */
 blockquote {
@@ -319,7 +303,7 @@ blockquote {
   position: relative;
 
   &:before {
-    content: '\201C'; // left double quotation mark
+    content: "\201C"; // left double quotation mark
     color: $cr-gray-lighter;
     font-family: $accent-font-face;
     font-size: 100px;
@@ -345,16 +329,14 @@ blockquote {
     line-height: 1.75;
 
     &:before {
-      content: '\2013 \00A0'; // ndash and space
+      content: "\2013 \00A0"; // ndash and space
     }
   }
 }
 
-
-
-
 /* 8. Lists */
-ol, ul {
+ol,
+ul {
   &.crds-list {
     font-size: $font-size-large; // 19px
 
@@ -386,9 +368,6 @@ dl.crds-list {
     }
   }
 }
-
-
-
 
 /* 9. Misc */
 .text-muted {
