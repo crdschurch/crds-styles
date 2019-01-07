@@ -9,17 +9,11 @@
 * 8. Application-specific styles
 **/
 
-
-
-
 // 1. Global form styles
 .form-control {
   box-shadow: none;
   -webkit-appearance: none;
 }
-
-
-
 
 // 2. Text fields
 textarea {
@@ -55,9 +49,6 @@ textarea {
   }
 }
 
-
-
-
 // 3. Input groups & Addon styles
 .input-group {
   .form-control {
@@ -80,12 +71,12 @@ textarea {
 
   &.input-group-left {
     input.form-control {
-      padding-right: $padding-base-horizontal;;
+      padding-right: $padding-base-horizontal;
       padding-left: 36px;
     }
 
     .input-group-addon {
-      left: .25rem;
+      left: 0.25rem;
       top: 0;
     }
   }
@@ -93,7 +84,7 @@ textarea {
   &.input-group-right {
     input.form-control {
       padding-right: 48px;
-      padding-left: $padding-base-horizontal;;
+      padding-left: $padding-base-horizontal;
     }
 
     .input-group-addon {
@@ -121,7 +112,8 @@ textarea {
     align-items: center;
     z-index: 4;
 
-    i, .icon {
+    i,
+    .icon {
       background-size: 16px;
       filter: invert(55%);
       height: 16px;
@@ -147,11 +139,11 @@ textarea {
   line-height: 1.5;
   margin-top: 5px;
   margin-bottom: 5px;
-  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 
   &:focus {
     border-color: $input-border-focus;
-    box-shadow: inset 0 0 0 1px rgba($input-border-focus, .5);
+    box-shadow: inset 0 0 0 1px rgba($input-border-focus, 0.5);
   }
 }
 
@@ -189,9 +181,6 @@ textarea {
     z-index: 1;
   }
 }
-
-
-
 
 // 4. Search bar
 // 🚨 will need to change to variables once maestro loads assets via S3
@@ -250,7 +239,7 @@ textarea {
       display: inline-block;
       width: 16px;
       height: 16px;
-      margin: 13px .75rem 0 0;
+      margin: 13px 0.75rem 0 0;
       padding: 0;
       border: 0;
       background: transparent;
@@ -270,9 +259,9 @@ textarea {
   }
 
   .icon-btn-wrapper {
-    background: lighten(rgba(231,231,231,1), 5);
-    border: 1px solid lighten(rgba(231,231,231,1), 5);
-    box-shadow: inset 0 0 0 1px lighten(rgba(231,231,231,1), 5);
+    background: lighten(rgba(231, 231, 231, 1), 5);
+    border: 1px solid lighten(rgba(231, 231, 231, 1), 5);
+    box-shadow: inset 0 0 0 1px lighten(rgba(231, 231, 231, 1), 5);
     position: absolute;
     top: 0;
     left: 0;
@@ -302,8 +291,8 @@ textarea {
       }
 
       &:focus + .icon-btn-wrapper {
-        border: 1px solid rgba(139,206,237,1);
-        box-shadow: inset 0 0 0 1px rgba(rgba(139,206,237,1), .5);
+        border: 1px solid rgba(139, 206, 237, 1);
+        box-shadow: inset 0 0 0 1px rgba(rgba(139, 206, 237, 1), 0.5);
       }
     }
   }
@@ -314,9 +303,6 @@ textarea {
     }
   }
 }
-
-
-
 
 // 5. Checkboxes & Radios
 label {
@@ -385,8 +371,6 @@ label {
   }
 }
 
-
-
 // 6. Select & Dropdowns
 select {
   &.form-control {
@@ -423,9 +407,6 @@ select {
   }
 }
 
-
-
-
 // 7. Layout
 .form-row {
   @include make-row();
@@ -443,12 +424,9 @@ select {
   }
 }
 
-
-
-
 // 8. 🚨 Search bar - connect-specific layout
 .connect-search {
   background-color: darken(desaturate($cr-blue-dark, 5), 5);
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }

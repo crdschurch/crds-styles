@@ -5,9 +5,6 @@
 ** 3. Video Modal
 **/
 
-
-
-
 /* 1. Default Modal */
 .modal {
   @media screen and (max-width: $screen-xs-max) {
@@ -45,7 +42,7 @@
     padding: 15px 15px 50px;
 
     .close {
-      background-color: rgba(187, 187, 187, .6);
+      background-color: rgba(187, 187, 187, 0.6);
       border-radius: 50%;
       color: $cr-white;
       font-size: unset;
@@ -84,11 +81,11 @@
 
   &.alpha {
     opacity: 0;
-    transition: opacity .5s;
+    transition: opacity 0.5s;
 
     &.in {
-      opacity: .85;
-      transition: opacity .5s;
+      opacity: 0.85;
+      transition: opacity 0.5s;
     }
   }
 }
@@ -104,9 +101,6 @@
     margin-bottom: 25px;
   }
 }
-
-
-
 
 /* 2. Full page modals (definitely not fauxdals 😉) */
 .modal-splash {
@@ -136,9 +130,6 @@
   }
 }
 
-
-
-
 /* 3. Video Modal */
 .modal-video {
   @media screen and (max-width: $screen-xs-max) {
@@ -157,14 +148,13 @@
     }
 
     .close {
-      background-color: rgba(187, 187, 187, .6);
+      background-color: rgba(187, 187, 187, 0.6);
       opacity: 1;
     }
   }
 
   .modal-body {
     padding: 0;
-
   }
 
   iframe {
@@ -176,15 +166,13 @@
     }
   }
 
-  .modal-lg {
-    iframe {
-      min-height: 300px;
-      width: 100%;
+  .modal-lg iframe {
+    min-height: 300px;
+    width: 100%;
 
-      @each $height in (600 800 1000) {
-        @media screen and ( min-height: #{$height}px ){
-          min-height: #{$height - 100}px;
-        }
+    @each $height in (600 800 1000) {
+      @media screen and ( min-height: #{$height}px ) {
+        min-height: #{$height - 100}px;
       }
     }
   }

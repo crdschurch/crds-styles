@@ -2,13 +2,16 @@
 
 // There are 3 base templates: .cta-1. .cta-2, .cta-3
 
-// Each template has a series of modifier classes. Classes beginning with .l- effect layout, while classes starting with .s- are purely aesthetic.
+// Each template has a series of modifier classes. Classes beginning with
+// .l-effect layout, while classes starting with .s- are purely aesthetic.
 
 .cta {
   min-height: 250px;
   position: relative;
 
-  &.l-sidebar { min-height: 100px; }
+  &.l-sidebar {
+    min-height: 100px;
+  }
 
   &.l-mobile,
   &.l-mini,
@@ -147,7 +150,12 @@
       color: $cr-white;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       &.s-headline {
         color: $cr-white;
       }
@@ -194,7 +202,12 @@
     padding: 20px;
     text-align: center;
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       &.s-headline {
         color: $cr-white;
       }
