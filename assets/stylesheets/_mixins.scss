@@ -16,7 +16,9 @@
   // solid buttons
   &.active,
   &:active {
-    &, &:hover, &:focus {
+    &,
+    &:hover,
+    &:focus {
       background: darken($background, 5);
       border-color: darken($background, 5);
       box-shadow: none;
@@ -33,13 +35,15 @@
   }
 
   &.disabled {
-    opacity: .65;
+    opacity: 0.65;
 
     &.active,
     &:active,
     &:focus,
     &:hover {
-      &, &:focus, &:hover {
+      &,
+      &:focus,
+      &:hover {
         background: $background;
         border-color: $border;
         box-shadow: none;
@@ -56,15 +60,17 @@
 
     &.active,
     &:active {
-      &, &:hover, &:focus {
-        background: rgba(tint(desaturate($border, 75), 95%), .75);
+      &,
+      &:hover,
+      &:focus {
+        background: rgba(tint(desaturate($border, 75), 95%), 0.75);
         border-color: $border;
         color: $border;
         box-shadow: none;
 
         .dark-theme & {
-          background: rgba(shade(desaturate($border, 75), 95%), .75);
-          border-color: rgba($border, .75);
+          background: rgba(shade(desaturate($border, 75), 95%), 0.75);
+          border-color: rgba($border, 0.75);
         }
       }
 
@@ -79,21 +85,23 @@
     }
 
     &:hover {
-      background: rgba(tint(desaturate($border, 75), 90%), .75);
+      background: rgba(tint(desaturate($border, 75), 90%), 0.75);
 
       .dark-theme & {
-        background: rgba(shade(desaturate($border, 75), 90%), .75);
+        background: rgba(shade(desaturate($border, 75), 90%), 0.75);
       }
     }
 
     &.disabled {
-      opacity: .65;
+      opacity: 0.65;
 
       &.active,
       &:active,
       &:focus,
       &:hover {
-        &, &:hover, .dark-theme & {
+        &,
+        &:hover,
+        .dark-theme & {
           background: transparent;
           border-color: $border;
           color: $border;
@@ -110,14 +118,13 @@
 /* stylelint-enable */
 
 @mixin position($position, $box-edge-values) {
-
   $box-edge-values: _unpack-shorthand($box-edge-values);
 
   $offsets: (
-    top:    nth($box-edge-values, 1),
-    right:  nth($box-edge-values, 2),
+    top: nth($box-edge-values, 1),
+    right: nth($box-edge-values, 2),
     bottom: nth($box-edge-values, 3),
-    left:   nth($box-edge-values, 4),
+    left: nth($box-edge-values, 4)
   );
 
   position: $position;

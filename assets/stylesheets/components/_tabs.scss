@@ -1,13 +1,10 @@
 // 1. Default tabs
 // 2. Vertical tabs
 
-
-
-
 // 1. Default tabs (horizontal tabs)
 .nav-tabs {
   li {
-    margin-right: .5rem;
+    margin-right: 0.5rem;
 
     @media screen and (min-width: $screen-xs) {
       margin-right: 1.5rem;
@@ -27,7 +24,9 @@
     > a:hover,
     > a:focus {
       border: 0;
+      /* stylelint-disable */
       background-color: transparent !important;
+      /* stylelint-enable */
       color: $cr-gray;
       padding-left: 0;
       padding-right: 0;
@@ -38,9 +37,6 @@
     }
   }
 }
-
-
-
 
 // 2. Vertical tabs (sidebar navigation)
 .sidebar-navigation {
@@ -73,23 +69,23 @@
         box-shadow: none;
         display: block;
         position: relative;
+      }
+    }
 
-        > li > a {
-          color: $dd-color;
-          margin-bottom: .5rem;
-          padding-top: 0;
-          padding-bottom: 0;
+    .dropdown .dropdown-menu > li > a {
+      color: $dd-color;
+      margin-bottom: 0.5rem;
+      padding-top: 0;
+      padding-bottom: 0;
 
-          &.active,
-          &:active,
-          &:hover,
-          &:focus {
-            background: transparent;
-            border-left: 3px solid $dd-border-color;
-            color: $dd-color-hover;
-            padding-left: 17px;
-          }
-        }
+      &.active,
+      &:active,
+      &:hover,
+      &:focus {
+        background: transparent;
+        border-left: 3px solid $dd-border-color;
+        color: $dd-color-hover;
+        padding-left: 17px;
       }
     }
   }

@@ -6,7 +6,12 @@
 
   color: $text-color;
 
-  h1, h2, h3, h4, h5, h6,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
   .page-header,
   .section-header,
   .title,
@@ -26,7 +31,7 @@
     text-decoration: underline;
 
     &:hover {
-      color: rgba($link-color, .3);
+      color: rgba($link-color, 0.3);
     }
   }
 

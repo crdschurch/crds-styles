@@ -5,14 +5,11 @@
 ** 3. Images
 **/
 
-
-
-
 /* 1. Base layout */
 .media {
   display: flex;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 
   > div:last-child {
     margin-left: 1rem;
@@ -32,9 +29,6 @@
     font-weight: 400;
   }
 }
-
-
-
 
 /* 2. Text */
 .media-heading {
@@ -61,7 +55,7 @@
   text-transform: uppercase;
 
   > *:first-child {
-    margin-right: .5rem;
+    margin-right: 0.5rem;
   }
 }
 
@@ -79,7 +73,7 @@
 
 /* 3. Images*/
 .media-img-wrapper {
-  margin-top: .25rem;
+  margin-top: 0.25rem;
   position: relative;
 
   .media & {
@@ -89,7 +83,7 @@
   }
 
   .img-circle {
-    border-color: rgba($cr-gray-lighter, .4);
+    border-color: rgba($cr-gray-lighter, 0.4);
     border-style: solid;
     border-width: 2px;
   }
