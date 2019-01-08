@@ -5,6 +5,8 @@
 // Each template has a series of modifier classes. Classes beginning with
 // .l-effect layout, while classes starting with .s- are purely aesthetic.
 
+/* stylelint-disable max-nesting-depth */
+
 .cta {
   min-height: 250px;
   position: relative;
@@ -100,7 +102,6 @@
         margin: 3px 0 0;
       }
     }
-
 
     @media screen and (min-width: $screen-sm) {
       .l-foreground-image {
@@ -200,7 +201,6 @@
     @media screen and (min-width: $screen-sm) {
       flex-direction: row;
 
-
       .s-text-wrapper {
         text-align: left;
       }
@@ -216,7 +216,6 @@
           text-align: center;
         }
       }
-
     }
 
     @media screen and (min-width: $screen-md) {
@@ -287,7 +286,7 @@
       margin-top: 20px;
     }
 
-     @media screen and (min-width: $screen-md) {
+    @media screen and (min-width: $screen-md) {
       .l-details {
         max-width: 80%;
         margin: 0 auto;
@@ -305,3 +304,5 @@
     min-height: 310px;
   }
 }
+
+/* stylelint-enable max-nesting-depth */
