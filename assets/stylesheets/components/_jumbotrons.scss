@@ -128,7 +128,7 @@
     height: 100%;
     z-index: 0;
     background-color: $cr-black;
-    transition: opacity .35s ease;
+    transition: opacity 0.35s ease;
     opacity: 1;
     &.loaded {
       opacity: 0;
@@ -151,19 +151,19 @@
   .small-heading {
     font-weight: 400;
     letter-spacing: 1px;
-    font-size: .85rem;
+    font-size: 0.85rem;
     line-height: 1;
-    opacity: .8;
+    opacity: 0.8;
   }
 
   a.btn,
   .btn {
-    margin: 1rem .25rem 0;
+    margin: 1rem 0.25rem 0;
   }
 
   a.btn-large,
   .btn-large {
-    padding-top: .75rem;
-    padding-bottom: .75rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
   }
 }

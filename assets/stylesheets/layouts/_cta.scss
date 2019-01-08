@@ -2,13 +2,18 @@
 
 // There are 3 base templates: .cta-1. .cta-2, .cta-3
 
-// Each template has a series of modifier classes. Classes beginning with .l- effect layout, while classes starting with .s- are purely aesthetic.
+// Each template has a series of modifier classes. Classes beginning with
+// .l-effect layout, while classes starting with .s- are purely aesthetic.
+
+/* stylelint-disable max-nesting-depth */
 
 .cta {
   min-height: 250px;
   position: relative;
 
-  &.l-sidebar { min-height: 100px; }
+  &.l-sidebar {
+    min-height: 100px;
+  }
 
   &.l-mobile,
   &.l-mini,
@@ -114,11 +119,36 @@
       .s-text-wrapper {
         font-size: 16px;
       }
+
+      &.l-mini {
+        .l-text-wrapper {
+          display: block;
+        }
+        .s-text-wrapper {
+          text-align: left;
+          font-size: 14px;
+        }
+        .l-foreground-image {
+          height: auto;
+          img {
+            height: auto;
+          }
+        }
+      }
     }
 
     @media screen and (min-width: $screen-md) {
       .s-text-wrapper {
         font-size: 19px;
+      }
+
+      &.l-mini {
+        .l-foreground-image {
+          height: auto;
+          img {
+            height: auto;
+          }
+        }
       }
     }
   }
@@ -147,7 +177,12 @@
       color: $cr-white;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       &.s-headline {
         color: $cr-white;
       }
@@ -171,7 +206,15 @@
       }
 
       .l-foreground-image {
-        flex: 0 0 auto;
+        flex: 0 1 auto;
+      }
+
+      &.l-mini {
+        flex-direction: column;
+
+        .s-text-wrapper {
+          text-align: center;
+        }
       }
     }
 
@@ -182,6 +225,12 @@
 
       .l-text-wrapper {
         margin-right: 75px;
+      }
+
+      &.l-mini {
+        .l-text-wrapper {
+          margin: 0;
+        }
       }
     }
   }
@@ -194,7 +243,12 @@
     padding: 20px;
     text-align: center;
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       &.s-headline {
         color: $cr-white;
       }
@@ -237,6 +291,12 @@
         max-width: 80%;
         margin: 0 auto;
       }
+
+      &.l-mini {
+        .l-details {
+          max-width: 100%;
+        }
+      }
     }
   }
 
@@ -244,3 +304,5 @@
     min-height: 310px;
   }
 }
+
+/* stylelint-enable max-nesting-depth */
