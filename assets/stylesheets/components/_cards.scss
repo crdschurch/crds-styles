@@ -112,7 +112,7 @@
 
 .card-title--overlap:after {
   color: $cr-gray-light;
-  content: "\2014";
+  content: '\2014';
   display: block;
   font-family: $base-font-face;
   font-size: 1.25rem;
@@ -129,7 +129,7 @@
 .card-caption:before {
   background-color: $cr-blue-lighter;
   color: $cr-gray-dark;
-  content: "Current Series";
+  content: 'Current Series';
   font-family: $accent-font-face;
   font-size: 0.8125rem;
   font-style: italic;
