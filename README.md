@@ -2,7 +2,7 @@ crds-styles
 ==========
 
 `crds-styles` provides the primary CSS framework and global style patterns that
-power [crossroads.net](http://crossroads.net) and its related properties. 
+power [crossroads.net](http://crossroads.net) and its related properties.
 
 Any elements and/or implementation details included within the [Digital Design
 Kit (DDK)](http://github.com/crdschurch/crds-styleguide) are provided by this
@@ -76,7 +76,7 @@ depending on your preferred build configuration._
 
 ---
 
-#### A note on local development
+#### Local Development - NPM packages
 
 When making changes to crds-styles locally and in wanting them to be reflected
 in your project, you should follow the NPM/package.json approach for importing
@@ -123,6 +123,50 @@ directory via NPM. Then add the following to your `assets` config in
 
 Note that you could change `icons.svg` to `*` to copy all of crds-styles' svg
 assets into your project.
+
+
+#### Contributing to the DDK
+
+The DDK is now a Jekyll project. The Styleguide is on continuous deployment and updates branches are merged into `master`.
+
+Styles are still in `crds-styles` but they are now linked through `git submodules` instead of `npm`.
+
+### Updating Styles in Styleguide
+
+When working in the new `crds-styleguide` and `crds-styles` for the first time you will need to add the `crds-styles` submodule (We prefer using SSH so you don't need to remember your password.):
+
+`$ git submodule add git@github.com:crdschurch/crds-styles.git vendor/gems/crds-styles `
+
+When working in a new branch/project you must run two commands: `git submodule init` to initialize your local configuration file, and `git submodule update` to fetch all the data from that project and check out the appropriate commit listed in your superproject. (From [Git Docs](https://git-scm.com/book/en/v2/Git-Tools-Submodules))
+
+You will be able to see all your submodules defined in the `.gitmodules` file.
+
+If you don’t want to have to constantly run `git submodule update`, you can set a global config to do this for you automatically using: `git config --global submodule.recurse true`
+
+#### Commits and PRS
+
+##### Get Latest Version
+
+Before  making changes in `crds-styles`, it's advisable to make sure you have the latest version.
+
+While in your `crds-styleguide` branch cd into your submodule folder and then `git checkout development`. and then `git pull origin development`.
+
+Next create/checkout the same branch your working on in `crds-styleguide`.
+
+##### Make and Push Commits
+
+When you're ready to make commits to your `crds-styles` changes, make sure you're in your submodule folder on the same branch as your `crds-styleguide` commits. Make and push your `crds-styles` commits from here.
+
+After you make commits in `crds-styles`, cd back to your `crds-styleguide` branch and run `git status`. You will see:
+`modified:   [your folder path]/crds-styles (modified content)`
+
+When you see this, you should add a commit in `crds-styleguide` to update `crds-styles` in your project.
+
+##### PRs
+
+When work is ready to be merged into `crds-styles` and `crds-styleguide`, work should be merged into `crds-styles` first.
+
+Outstanding `crds-styleguide` PRs may need to be updated with the newest `crds-styles` commit hash before they are merged.
 
 Versioning
 --------

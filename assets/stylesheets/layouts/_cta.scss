@@ -101,6 +101,7 @@
       }
     }
 
+
     @media screen and (min-width: $screen-sm) {
       .l-foreground-image {
         margin: 20px;
@@ -117,11 +118,36 @@
       .s-text-wrapper {
         font-size: 16px;
       }
+
+      &.l-mini {
+        .l-text-wrapper {
+          display: block;
+        }
+        .s-text-wrapper {
+          text-align: left;
+          font-size: 14px;
+        }
+        .l-foreground-image {
+          height: auto;
+          img {
+            height: auto;
+          }
+        }
+      }
     }
 
     @media screen and (min-width: $screen-md) {
       .s-text-wrapper {
         font-size: 19px;
+      }
+
+      &.l-mini {
+        .l-foreground-image {
+          height: auto;
+          img {
+            height: auto;
+          }
+        }
       }
     }
   }
@@ -174,13 +200,23 @@
     @media screen and (min-width: $screen-sm) {
       flex-direction: row;
 
+
       .s-text-wrapper {
         text-align: left;
       }
 
       .l-foreground-image {
-        flex: 0 0 auto;
+        flex: 0 1 auto;
       }
+
+      &.l-mini {
+        flex-direction: column;
+
+        .s-text-wrapper {
+          text-align: center;
+        }
+      }
+
     }
 
     @media screen and (min-width: $screen-md) {
@@ -190,6 +226,12 @@
 
       .l-text-wrapper {
         margin-right: 75px;
+      }
+
+      &.l-mini {
+        .l-text-wrapper {
+          margin: 0;
+        }
       }
     }
   }
@@ -245,10 +287,16 @@
       margin-top: 20px;
     }
 
-    @media screen and (min-width: $screen-md) {
+     @media screen and (min-width: $screen-md) {
       .l-details {
         max-width: 80%;
         margin: 0 auto;
+      }
+
+      &.l-mini {
+        .l-details {
+          max-width: 100%;
+        }
       }
     }
   }
