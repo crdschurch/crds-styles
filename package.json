@@ -32,6 +32,7 @@
   "license": "BSD-3-Clause",
   "dependencies": {
     "aws-sdk": "^2.381.0",
+    "bootstrap-sass": "^3.4.0",
     "cheerio": "^1.0.0-rc.2",
     "commander": "^2.19.0",
     "lodash": "^4.17.11",
@@ -46,7 +47,6 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.4.3",
-    "bootstrap-sass": "^3.4.0",
     "fs-extra": "^7.0.1",
     "glob": "^7.1.3",
     "postcss": "^7.0.7",
