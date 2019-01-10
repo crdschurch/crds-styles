@@ -29,7 +29,7 @@
   left: 0;
   z-index: 7;
   .close {
-    opacity: 1.0;
+    opacity: 1;
     position: absolute;
     top: 1rem;
     right: 2rem;
@@ -39,7 +39,7 @@
       padding: 1rem;
       margin: -1rem;
       &:hover {
-        color: rgba($cr-white, .5);
+        color: rgba($cr-white, 0.5);
       }
     }
   }

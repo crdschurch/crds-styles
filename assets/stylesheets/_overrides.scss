@@ -74,7 +74,7 @@ $table-border-color: lighten($cr-gray-light, 20) !default;
 // Buttons
 $btn-font-weight: 300 !default;
 $btn-default-color: $cr-gray-light !default;
-$btn-default-bg: rgba($cr-white, .25) !default;
+$btn-default-bg: rgba($cr-white, 0.25) !default;
 $btn-default-border: $cr-gray-light !default;
 $btn-primary-color: $cr-white !default;
 $btn-primary-bg: $cr-blue !default;
@@ -99,7 +99,6 @@ $btn-gray-lt-color: $cr-white;
 $btn-white-bg: $cr-white;
 $btn-white-border: $cr-white;
 $btn-white-color: $cr-gray-dark;
-
 
 // $btn-warning-color: !default;
 // $btn-warning-bg: !default;
@@ -297,7 +296,7 @@ $modal-title-line-height: 43px !default;
 $modal-content-border-color: none !default;
 $modal-content-fallback-border-color: none !default;
 $modal-backdrop-bg: $cr-gray-darker !default;
-$modal-backdrop-opacity: .85 !default;
+$modal-backdrop-opacity: 0.85 !default;
 $modal-header-border-color: none !default;
 $modal-footer-border-color: $modal-header-border-color !default;
 // $modal-lg: 900px !default;

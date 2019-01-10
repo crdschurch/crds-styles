@@ -6,8 +6,7 @@
 ** 5. Button groups
 **************/
 
-
-
+/* stylelint-disable max-nesting-depth */
 
 /* 1. Styles */
 .btn {
@@ -18,7 +17,8 @@
 
   &.active,
   &:active {
-    &, &:focus {
+    &,
+    &:focus {
       box-shadow: none;
       outline: none;
     }
@@ -34,7 +34,8 @@
     padding: 14px 20px 16px;
   }
 
-  &, &.btn-md {
+  &,
+  &.btn-md {
     font-size: $font-size-small;
     padding: 13px 16px;
   }
@@ -46,24 +47,42 @@
 
   &.btn-blue,
   &.btn-primary {
-    @include crds-button-variant($btn-blue-color, $btn-blue-bg, $btn-blue-border);
+    @include crds-button-variant(
+      $btn-blue-color,
+      $btn-blue-bg,
+      $btn-blue-border
+    );
 
     .dark-theme & {
+      /* stylelint-disable at-rule-blacklist */
       @extend .btn-cyan;
+      /* stylelint-enable at-rule-blacklist */
     }
   }
 
   &.btn-cyan,
   &.btn-secondary {
-    @include crds-button-variant($btn-cyan-color, $btn-cyan-bg, $btn-cyan-border);
+    @include crds-button-variant(
+      $btn-cyan-color,
+      $btn-cyan-bg,
+      $btn-cyan-border
+    );
   }
 
   &.btn-gray {
-    @include crds-button-variant($btn-gray-color, $btn-gray-bg, $btn-gray-border);
+    @include crds-button-variant(
+      $btn-gray-color,
+      $btn-gray-bg,
+      $btn-gray-border
+    );
   }
 
   &.btn-gray-light {
-    @include crds-button-variant($btn-gray-lt-color, $btn-gray-lt-bg, $btn-gray-lt-border);
+    @include crds-button-variant(
+      $btn-gray-lt-color,
+      $btn-gray-lt-bg,
+      $btn-gray-lt-border
+    );
   }
 
   &.btn-white {
@@ -74,7 +93,9 @@
     // solid buttons
     &.active,
     &:active {
-      &, &:hover, &:focus {
+      &,
+      &:hover,
+      &:focus {
         background: darken($btn-white-bg, 5);
 
         &:focus {
@@ -94,15 +115,18 @@
     }
 
     &.disabled {
-      opacity: .65;
+      opacity: 0.65;
       pointer-events: auto;
 
       &.active,
       &:active,
       &:focus,
       &:hover {
-        &, &.focus, &:focus, &:hover {
-          opacity: .65;
+        &,
+        &.focus,
+        &:focus,
+        &:hover {
+          opacity: 0.65;
           background: $btn-white-bg;
           border-color: $btn-white-border;
           color: $btn-white-color;
@@ -120,8 +144,10 @@
 
       &.active,
       &:active {
-        &, &:hover, &:focus {
-          background: rgba($btn-white-border, .25);
+        &,
+        &:hover,
+        &:focus {
+          background: rgba($btn-white-border, 0.25);
           border-color: $btn-white-border;
           color: $btn-white-border;
         }
@@ -132,18 +158,19 @@
       }
 
       &:hover {
-        background: rgba($btn-white-border, .25);
+        background: rgba($btn-white-border, 0.25);
       }
 
       &.disabled {
-        opacity: .65;
+        opacity: 0.65;
         pointer-events: auto;
 
         &.active,
         &:active,
         &:focus,
         &:hover {
-          &, &:hover {
+          &,
+          &:hover {
             background: transparent;
             border-color: $btn-white-border;
             color: $btn-white-border;
@@ -163,8 +190,12 @@
   border-color: $btn-default-border;
   color: $btn-default-color;
 
-  &.active, &:active {
-    &, &.focus, &:focus, &:hover {
+  &.active,
+  &:active {
+    &,
+    &.focus,
+    &:focus,
+    &:hover {
       box-shadow: none;
 
       background-color: $cr-teal;
@@ -178,13 +209,12 @@
     border-color: darken($btn-default-border, 10);
     color: $btn-default-color;
 
-    @media (pointer:coarse) {
+    @media (pointer: coarse) {
       background-color: $btn-default-bg;
       border-color: $btn-default-border;
       color: $btn-default-color;
     }
   }
-
 
   :focus {
     border-color: $input-border-focus;
@@ -192,8 +222,12 @@
   }
 
   &.disabled {
-    &.active, &:active {
-      &, &.focus, &:focus, &:hover {
+    &.active,
+    &:active {
+      &,
+      &.focus,
+      &:focus,
+      &:hover {
         background-color: $btn-default-bg;
         border-color: $btn-default-border;
         color: $btn-default-color;
@@ -236,7 +270,8 @@
       box-shadow: none;
     }
 
-    &, &.active {
+    &,
+    &.active {
       text-decoration: none;
 
       &:focus,
@@ -266,7 +301,8 @@
         box-shadow: none;
       }
 
-      &, &.active {
+      &,
+      &.active {
         text-decoration: none;
 
         &:focus,
@@ -284,12 +320,10 @@
   text-align: left;
 }
 
-
-
 /* 2. Layout */
 .btn-group {
   > .btn {
-    margin-right: .5rem;
+    margin-right: 0.5rem;
 
     // Styles below may seem redundant but are required to override bootstrap
     &:first-child:not(:last-child):not(.dropdown-toggle) {
@@ -314,7 +348,11 @@
       &.btn-gray,
       &.btn-gray-light,
       &.btn-white {
-        @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+        @include button-variant(
+          $btn-default-color,
+          $btn-default-bg,
+          $btn-default-border
+        );
 
         &:focus {
           border: 1px solid $input-border-focus;
@@ -336,24 +374,44 @@
     &:active {
       &.btn-blue,
       &.btn-primary {
-        @include crds-button-variant($btn-blue-color, $btn-blue-bg, $btn-blue-border);
+        @include crds-button-variant(
+          $btn-blue-color,
+          $btn-blue-bg,
+          $btn-blue-border
+        );
       }
 
       &.btn-cyan,
       &.btn-secondary {
-        @include crds-button-variant($btn-cyan-color, $btn-cyan-bg, $btn-cyan-border);
+        @include crds-button-variant(
+          $btn-cyan-color,
+          $btn-cyan-bg,
+          $btn-cyan-border
+        );
       }
 
       &.btn-gray {
-        @include crds-button-variant($btn-gray-color, $btn-gray-bg, $btn-gray-border);
+        @include crds-button-variant(
+          $btn-gray-color,
+          $btn-gray-bg,
+          $btn-gray-border
+        );
       }
 
       &.btn-gray-light {
-        @include crds-button-variant($btn-gray-lt-color, $btn-gray-lt-bg, $btn-gray-lt-border);
+        @include crds-button-variant(
+          $btn-gray-lt-color,
+          $btn-gray-lt-bg,
+          $btn-gray-lt-border
+        );
       }
 
       &.btn-white {
-        @include crds-button-variant($btn-white-color, $btn-white-bg, $btn-white-border);
+        @include crds-button-variant(
+          $btn-white-color,
+          $btn-white-bg,
+          $btn-white-border
+        );
       }
 
       &.btn-default {
@@ -396,24 +454,44 @@
     &:active:hover {
       &.btn-blue,
       &.btn-primary {
-        @include crds-button-variant($btn-blue-color, $btn-blue-bg, $btn-blue-border);
+        @include crds-button-variant(
+          $btn-blue-color,
+          $btn-blue-bg,
+          $btn-blue-border
+        );
       }
 
       &.btn-cyan,
       &.btn-secondary {
-        @include crds-button-variant($btn-cyan-color, $btn-cyan-bg, $btn-cyan-border);
+        @include crds-button-variant(
+          $btn-cyan-color,
+          $btn-cyan-bg,
+          $btn-cyan-border
+        );
       }
 
       &.btn-gray {
-        @include crds-button-variant($btn-gray-color, $btn-gray-bg, $btn-gray-border);
+        @include crds-button-variant(
+          $btn-gray-color,
+          $btn-gray-bg,
+          $btn-gray-border
+        );
       }
 
       &.btn-gray-light {
-        @include crds-button-variant($btn-gray-lt-color, $btn-gray-lt-bg, $btn-gray-lt-border);
+        @include crds-button-variant(
+          $btn-gray-lt-color,
+          $btn-gray-lt-bg,
+          $btn-gray-lt-border
+        );
       }
 
       &.btn-white {
-        @include crds-button-variant($btn-white-color, $btn-white-bg, $btn-white-border);
+        @include crds-button-variant(
+          $btn-white-color,
+          $btn-white-bg,
+          $btn-white-border
+        );
       }
 
       &.btn-default {
@@ -449,12 +527,12 @@
     }
 
     &:not(:first-child):not(:last-child) {
-      border-right-color: rgba($cr-gray-light, .25);
-      border-left-color: rgba($cr-gray-light, .25);
+      border-right-color: rgba($cr-gray-light, 0.25);
+      border-left-color: rgba($cr-gray-light, 0.25);
 
       &:hover {
-        border-right-color: rgba($cr-gray-light, .25);
-        border-left-color: rgba($cr-gray-light, .25);
+        border-right-color: rgba($cr-gray-light, 0.25);
+        border-left-color: rgba($cr-gray-light, 0.25);
       }
     }
 
@@ -469,18 +547,18 @@
       }
 
       &:first-child {
-        border-right-color: rgba($cr-gray-light, .25);
+        border-right-color: rgba($cr-gray-light, 0.25);
 
         &:hover {
-          border-right-color: rgba($cr-gray-light, .25);
+          border-right-color: rgba($cr-gray-light, 0.25);
         }
       }
 
       &:last-child {
-        border-left-color: rgba($cr-gray-light, .25);
+        border-left-color: rgba($cr-gray-light, 0.25);
 
         &:hover {
-          border-left-color: rgba($cr-gray-light, .25);
+          border-left-color: rgba($cr-gray-light, 0.25);
         }
       }
 
@@ -578,9 +656,6 @@
   }
 }
 
-
-
-
 /* 3. Utilities */
 .btn-group-lg,
 .btn-group-sm {
@@ -608,9 +683,6 @@ a {
   }
 }
 
-
-
-
 /* 4. Dropdowns */
 .dropdown {
   .dropdown-toggle {
@@ -620,7 +692,8 @@ a {
         padding: 14px 20px 16px;
       }
 
-      &, &.btn-md {
+      &,
+      &.btn-md {
         font-size: $font-size-small;
         padding: 12px 16px;
       }
@@ -632,9 +705,6 @@ a {
     }
   }
 }
-
-
-
 
 /* 5. Button groups */
 .input-group-white {
@@ -700,3 +770,5 @@ a {
     }
   }
 }
+
+/* stylelint-enable max-nesting-depth */

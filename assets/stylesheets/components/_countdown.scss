@@ -5,9 +5,6 @@
 ** 4. Floating Timer
 **************/
 
-
-
-
 /* 1. Timer */
 .countdown-timer {
   margin: 0;
@@ -17,18 +14,18 @@
     font-family: $base-font-face;
     font-size: 1.35rem;
     font-weight: 500;
-    padding: 0 .5rem;
+    padding: 0 0.5rem;
     text-align: center;
     width: 3rem;
 
     &::after {
       display: block;
-      font-size: .5rem;
+      font-size: 0.5rem;
       font-weight: normal;
     }
 
     &:not(:first-child) {
-      border-left: 1px solid rgba($cr-gray-dark, .3);
+      border-left: 1px solid rgba($cr-gray-dark, 0.3);
     }
   }
 }
@@ -49,9 +46,6 @@
   content: 'SEC';
 }
 
-
-
-
 /* 2. Bar */
 .countdown {
   display: flex;
@@ -62,11 +56,11 @@
 
   @media (min-width: $screen-sm) {
     flex-direction: row;
-    padding: .5rem;
+    padding: 0.5rem;
   }
 
   .countdown-timer {
-    padding: .5rem 0 0;
+    padding: 0.5rem 0 0;
     @media (min-width: $screen-sm) {
       padding: 0 0 0 1rem;
     }
@@ -77,9 +71,6 @@
   font-family: $accent-font-face;
   font-style: italic;
 }
-
-
-
 
 /* 3. Color Variations */
 .countdown-bg-cyan {
@@ -106,38 +97,33 @@
         color: $cr-cyan-lighter;
       }
       &:not(:first-child) {
-        border-left-color: rgba($cr-white, .3);
+        border-left-color: rgba($cr-white, 0.3);
       }
     }
   }
 }
 
 .countdown-white {
-
   .countdown-timer {
     color: $cr-white;
-    border-color: rgba($cr-white, .3);
+    border-color: rgba($cr-white, 0.3);
 
     li:not(:first-child) {
-      border-left-color: rgba($cr-white, .3);
+      border-left-color: rgba($cr-white, 0.3);
     }
   }
 }
-
-
-
 
 /* 4. Floating Timer */
 .countdown-border {
   text-align: center;
 
   &:not(.countdown-white) .countdown-timer {
-    border-color: rgba($cr-gray-dark, .3);
+    border-color: rgba($cr-gray-dark, 0.3);
   }
 
   .countdown-timer {
     border: 1px solid;
     padding: 1rem;
   }
-
 }
