@@ -1,9 +1,9 @@
 .dropdown {
   display: inline-block;
 
-  // fixes alignment in FF
+  // fixes wrapping issue on homepage location dropdown
   .btn {
-    white-space: normal;
+    white-space: nowrap;
   }
 
   .dropdown-toggle.btn {
