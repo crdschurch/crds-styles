@@ -1,11 +1,6 @@
 .dropdown {
   display: inline-block;
 
-  // fixes wrapping issue on homepage location dropdown
-  .btn {
-    white-space: nowrap;
-  }
-
   .dropdown-toggle.btn {
     padding: 14px 16px 12px;
     text-align: left;
