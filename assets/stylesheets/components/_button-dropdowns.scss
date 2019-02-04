@@ -1,11 +1,6 @@
 .dropdown {
   display: inline-block;
 
-  // fixes alignment in FF
-  .btn {
-    white-space: normal;
-  }
-
   .dropdown-toggle.btn {
     padding: 14px 16px 12px;
     text-align: left;
