@@ -51,8 +51,10 @@
   @media screen and (min-width: $screen-md) {
     background-color: transparent;
     display: block;
+    /* stylelint-disable declaration-no-important */
     // Forces override of collapse, which we don't want on larger screens.
     height: auto !important;
+    /* stylelint-enable declaration-no-important */
   }
 }
 
