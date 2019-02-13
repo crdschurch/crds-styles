@@ -41,9 +41,19 @@
 // 2. Vertical tabs (sidebar navigation)
 .sidebar-nav,
 .sidebar-subnav {
+  background-color: #F4F4F4;
   list-style-type: none;
   margin: 0 0 0.5rem;
   padding: 0;
+}
+
+.sidebar-nav {
+  @media screen and (min-width: $screen-md) {
+    background-color: transparent;
+    display: block;
+    // Forces override of collapse, which we don't want on larger screens.
+    height: auto !important;
+  }
 }
 
 .sidebar-nav-item,
@@ -56,6 +66,7 @@
 }
 
 .sidebar-nav-link,
+.sidebar-nav-trigger,
 .sidebar-subnav-link {
   border-left: 0.1875rem solid transparent;
   color: $cr-gray-light;
@@ -95,6 +106,7 @@
 }
 
 .sidebar-subnav {
+  background-color: transparent;
   margin: 0.5rem 0 0;
 }
 
@@ -102,4 +114,28 @@
   padding-left: 1.5rem;
 }
 
-@media screen and (min-width: $screen-md) {}
+.sidebar-nav-trigger {
+  background-color: $cr-gray-lighter;
+  border: 1px solid #CACACA;
+  display: block;
+  padding-bottom: 0.75rem;
+  padding-top: 0.75rem;
+  text-align: left;
+  width: 100%;
+
+  @media screen and (min-width: $screen-md) {
+    display: none;
+  }
+
+  &.active,
+  &:active,
+  &:focus,
+  &:hover {
+    border: 1px solid #CACACA;
+  }
+
+  svg.icon {
+    float: right;
+    margin-top: 0.125rem;
+  }
+}
