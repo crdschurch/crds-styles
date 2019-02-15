@@ -39,54 +39,106 @@
 }
 
 // 2. Vertical tabs (sidebar navigation)
-.sidebar-navigation {
-  $dd-border-color: $cr-cyan;
-  $dd-color: $cr-gray-light;
-  $dd-color-hover: $cr-gray;
+.sidebar-nav,
+.sidebar-subnav {
+  background-color: #F4F4F4;
+  list-style-type: none;
+  margin: 0 0 0.5rem;
+  padding: 0;
+}
 
-  .dropdown {
+.sidebar-nav {
+  @media screen and (min-width: $screen-md) {
+    background-color: transparent;
     display: block;
-    z-index: 1;
+    /* stylelint-disable declaration-no-important */
+    // Forces override of collapse, which we don't want on larger screens.
+    height: auto !important;
+    /* stylelint-enable declaration-no-important */
+  }
+}
+
+.sidebar-nav-item,
+.sidebar-subnav-item {
+  margin-bottom: 0.25rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.sidebar-nav-link,
+.sidebar-nav-trigger,
+.sidebar-subnav-link {
+  border-left: 0.1875rem solid transparent;
+  color: $cr-gray-light;
+  display: inline-block;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  padding: 0.25rem 0.75rem;
+
+  &:active,
+  &:hover {
+    border-left-color: $cr-gray-lighter;
+    color: $cr-gray;
+    text-decoration: none;
   }
 
-  .dropdown-menu {
-    right: 0;
-
-    > li > a {
-      white-space: normal;
-    }
+  &:focus {
+    color: $cr-gray-light;
+    text-decoration: none;
   }
+
+  &.active {
+    border-left-color: $cr-cyan;
+    color: $cr-gray;
+  }
+
+  svg.icon {
+    display: inline-block;
+    height: 0.75rem;
+    margin-left: 0.5rem;
+    width: 0.75rem;
+    transition: transform 0.35s ease;
+  }
+
+  &[aria-expanded=true] svg.icon {
+    transform: rotate(180deg);
+  }
+}
+
+.sidebar-subnav {
+  background-color: transparent;
+  margin: 0.5rem 0 0;
+}
+
+.sidebar-subnav-link {
+  padding-left: 1.5rem;
+}
+
+.sidebar-nav-trigger {
+  background-color: $cr-gray-lighter;
+  border: 1px solid #CACACA;
+  display: block;
+  line-height: 1;
+  padding-bottom: 0.75rem;
+  padding-top: 0.75rem;
+  text-align: left;
+  width: 100%;
 
   @media screen and (min-width: $screen-md) {
-    .dropdown {
-      .btn {
-        display: none;
-      }
+    display: none;
+  }
 
-      .dropdown-menu {
-        border: 0;
-        border-radius: 0;
-        box-shadow: none;
-        display: block;
-        position: relative;
-      }
-    }
+  &.active,
+  &:active,
+  &:focus,
+  &:hover {
+    border: 1px solid #CACACA;
+  }
 
-    .dropdown .dropdown-menu > li > a {
-      color: $dd-color;
-      margin-bottom: 0.5rem;
-      padding-top: 0;
-      padding-bottom: 0;
-
-      &.active,
-      &:active,
-      &:hover,
-      &:focus {
-        background: transparent;
-        border-left: 3px solid $dd-border-color;
-        color: $dd-color-hover;
-        padding-left: 17px;
-      }
-    }
+  svg.icon {
+    float: right;
+    margin-top: 0.125rem;
   }
 }
