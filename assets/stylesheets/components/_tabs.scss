@@ -51,8 +51,10 @@
   @media screen and (min-width: $screen-md) {
     background-color: transparent;
     display: block;
+    /* stylelint-disable declaration-no-important */
     // Forces override of collapse, which we don't want on larger screens.
     height: auto !important;
+    /* stylelint-enable declaration-no-important */
   }
 }
 
@@ -72,8 +74,8 @@
   color: $cr-gray-light;
   display: inline-block;
   font-size: 0.875rem;
-  line-height: 0.875rem;
-  padding: 0.5rem 0.75rem;
+  line-height: 1.5rem;
+  padding: 0.25rem 0.75rem;
 
   &:active,
   &:hover {
@@ -118,6 +120,7 @@
   background-color: $cr-gray-lighter;
   border: 1px solid #CACACA;
   display: block;
+  line-height: 1;
   padding-bottom: 0.75rem;
   padding-top: 0.75rem;
   text-align: left;
