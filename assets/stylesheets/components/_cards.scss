@@ -263,6 +263,7 @@
     rgba(23, 23, 23, 0),
     $cr-gray-darker
   );
+  z-index: 1;
 }
 
 .card-stamp {
@@ -306,6 +307,7 @@
     padding: 15px 15px 20px;
     position: absolute;
     right: 0;
+    z-index: 2;
   }
 
   .overlay-card-category {
