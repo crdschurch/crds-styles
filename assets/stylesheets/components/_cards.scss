@@ -443,3 +443,19 @@
     }
   }
 }
+
+
+.card-video-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+// allows for smooth fade in
+.overlay-card-image,
+.overlay-card-content,
+.card-video-player {
+  transition: opacity 0.45s ease;
+}
+
