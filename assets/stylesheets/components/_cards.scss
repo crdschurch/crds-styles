@@ -449,14 +449,14 @@
   top: 0;
   left: 0;
   width: 100%;
-    // hide UI on cards
-    .bmpui-container-wrapper {
-      visibility: hidden;
-        // except for subtitles
-        .bmpui-ui-subtitle-overlay .bmpui-container-wrapper {
-          visibility: visible;
-        }
+  // hide UI on cards
+  .bmpui-container-wrapper {
+    visibility: hidden;
+    // except for subtitles
+    .bmpui-ui-subtitle-overlay .bmpui-container-wrapper {
+      visibility: visible;
     }
+  }
 }
 
 // allows for smooth fade in
