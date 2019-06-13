@@ -443,3 +443,25 @@
     }
   }
 }
+
+.card-video-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  // hide UI on cards
+  .bmpui-container-wrapper {
+    visibility: hidden;
+    // except for subtitles
+    .bmpui-ui-subtitle-overlay .bmpui-container-wrapper {
+      visibility: visible;
+    }
+  }
+}
+
+// allows for smooth fade in
+.overlay-card-image,
+.overlay-card-content,
+.card-video-player {
+  transition: opacity 0.45s ease;
+}
