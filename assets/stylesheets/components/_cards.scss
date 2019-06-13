@@ -456,6 +456,11 @@
     .bmpui-ui-subtitle-overlay .bmpui-container-wrapper {
       visibility: visible;
     }
+    @media (max-width: 600px) {
+      .bmpui-ui-subtitle-overlay  {
+        font-size: 0.9em
+      }
+    } 
   }
 }
 
