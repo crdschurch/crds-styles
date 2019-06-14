@@ -1,6 +1,8 @@
 $skeleton-blue-bar-height: 49px;
 $skeleton-snail-trail-height: 43px;
 
+// --------------------------------------------------------
+
 .shared-header-skeleton,
 .shared-header {
   min-height: $skeleton-blue-bar-height + $skeleton-snail-trail-height;
@@ -26,3 +28,11 @@ $skeleton-snail-trail-height: 43px;
   top: $skeleton-blue-bar-height;
   z-index: 1;
 }
+
+// --------------------------------------------------------
+
+.shared-footer-skeleton {
+  background-color: $cr-gray-lighter;
+  min-height: 626px;
+}
+
