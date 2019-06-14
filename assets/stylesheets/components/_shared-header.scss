@@ -1,0 +1,28 @@
+$skeleton-blue-bar-height: 49px;
+$skeleton-snail-trail-height: 43px;
+
+.shared-header-skeleton,
+.shared-header {
+  min-height: $skeleton-blue-bar-height + $skeleton-snail-trail-height;
+}
+
+.shared-header-skeleton div:first-of-type {
+  background-color: $cr-cyan;
+  min-height: $skeleton-blue-bar-height;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 2;
+}
+
+.shared-header-skeleton div:last-of-type {
+  background-color: $cr-white;
+  min-height: $skeleton-snail-trail-height;
+}
+
+.shared-header div:last-of-type,
+.shared-header-skeleton div:last-of-type {
+  position: relative;
+  top: $skeleton-blue-bar-height;
+  z-index: 1;
+}
