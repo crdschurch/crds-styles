@@ -3,35 +3,25 @@ $skeleton-snail-trail-height: 43px;
 
 // --------------------------------------------------------
 
-.shared-header-skeleton,
-.shared-header {
-  min-height: $skeleton-blue-bar-height + $skeleton-snail-trail-height;
+.shared-header,
+.shared-header-skeleton {
+  min-height: var(--skeleton-blue-bar-height);
+}
 
-  div {
-    &:last-of-type {
-      position: relative;
-      top: $skeleton-blue-bar-height;
-      z-index: 1;
-    }
-  }
+.shared-header {
+  background-color: transparent;
 }
 
 .shared-header-skeleton {
-  div {
-    &:first-of-type {
-      background-color: $cr-cyan;
-      min-height: $skeleton-blue-bar-height;
-      position: fixed;
-      top: 0;
-      width: 100vw;
-      z-index: 2;
-    }
+  background-color: $cr-cyan;
+}
 
-    &:last-of-type {
-      background-color: $cr-white;
-      min-height: $skeleton-snail-trail-height;
-    }
-  }
+// --------------------------------------------------------
+
+.shared-snail-trail-skeleton {
+  background-color: $cr-white;
+  min-height: var(--skeleton-snail-trail-height);
+  position: relative;
 }
 
 // --------------------------------------------------------
