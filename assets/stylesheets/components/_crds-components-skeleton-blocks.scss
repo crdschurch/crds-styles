@@ -1,11 +1,6 @@
-$skeleton-blue-bar-height: 49px;
-$skeleton-snail-trail-height: 43px;
-
-// --------------------------------------------------------
-
 .shared-header,
 .shared-header-skeleton {
-  min-height: var(--skeleton-blue-bar-height);
+  min-height: 49px;
 }
 
 .shared-header {
@@ -20,7 +15,7 @@ $skeleton-snail-trail-height: 43px;
 
 .shared-snail-trail-skeleton {
   background-color: $cr-white;
-  min-height: var(--skeleton-snail-trail-height);
+  min-height: 43px;
   position: relative;
 }
 
