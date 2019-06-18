@@ -465,3 +465,8 @@
 .card-video-player {
   transition: opacity 0.45s ease;
 }
+
+// fixes an issue where subtitles were under overlay
+.overlay-card .bmpui-ui-subtitle-overlay {
+  z-index: 1;
+}
