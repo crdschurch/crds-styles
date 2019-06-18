@@ -467,6 +467,6 @@
 }
 
 // fixes an issue where subtitles were under overlay
-.overlay-card .bmpui-ui-subtitle-overlay {
+.overlay-card .card-video-player {
   z-index: 1;
 }
