@@ -1,6 +1,8 @@
 .shared-header,
 .shared-header-skeleton {
   min-height: 49px;
+  position: relative;
+  z-index: 10;
 }
 
 .shared-header {
