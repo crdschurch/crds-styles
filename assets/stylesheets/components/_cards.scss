@@ -465,8 +465,3 @@
 .card-video-player {
   transition: opacity 0.45s ease;
 }
-
-// fixes an issue where subtitles were under overlay
-.overlay-card .card-video-player {
-  z-index: 1;
-}
