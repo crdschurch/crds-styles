@@ -1,0 +1,30 @@
+.shared-header,
+.shared-header-skeleton {
+  min-height: 49px;
+  position: relative;
+  z-index: 10;
+}
+
+.shared-header {
+  background-color: transparent;
+}
+
+.shared-header-skeleton {
+  background-color: $cr-cyan;
+}
+
+// --------------------------------------------------------
+
+.snail-trail-skeleton {
+  background-color: $cr-white;
+  min-height: 43px;
+  position: relative;
+}
+
+// --------------------------------------------------------
+
+.shared-footer-skeleton {
+  background-color: $cr-gray-lighter;
+  min-height: 626px;
+}
+
