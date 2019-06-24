@@ -2,7 +2,12 @@
 .shared-header-skeleton {
   min-height: 49px;
   position: relative;
-  z-index: 10;
+  z-index: 10; 
+
+  @supports(position: sticky){
+    position: sticky;
+    top: 0;
+  }
 }
 
 .shared-header {
