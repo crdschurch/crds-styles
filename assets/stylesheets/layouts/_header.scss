@@ -126,6 +126,7 @@
     position: absolute;
     padding-left: 0;
     transform: translateX(-50%);
+    max-width: 125px;
 
     @media only screen and (min-width: $screen-md) {
       left: auto;
