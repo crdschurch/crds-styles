@@ -8,6 +8,11 @@
     position: sticky;
     top: 0;
   }
+
+  @supports(position: -webkit-sticky) {
+    position: -webkit-sticky;
+    top: 0;
+  }
 }
 
 .shared-header {
