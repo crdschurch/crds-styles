@@ -746,6 +746,13 @@ a.underline,
 .sticky-top {
   position: -webkit-sticky;
   position: sticky;
+  top: -1px;
+  z-index: 3;
+}
+
+.stick-below-header {
+  position: -webkit-sticky;
+  position: sticky;
   top: 48px;
   z-index: 3;
 }
