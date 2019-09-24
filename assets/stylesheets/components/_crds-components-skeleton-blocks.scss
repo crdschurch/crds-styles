@@ -1,15 +1,15 @@
 .shared-header,
 .shared-header-skeleton {
-  min-height: 48px;
+  min-height: 49px;
   position: relative;
   z-index: 10;
 
-  @supports(position: sticky){
+  @supports (position: sticky) {
     position: sticky;
     top: 0;
   }
 
-  @supports(position: -webkit-sticky) {
+  @supports (position: -webkit-sticky) {
     position: -webkit-sticky;
     top: 0;
   }
@@ -21,6 +21,13 @@
 
 .shared-header-skeleton {
   background-color: $cr-cyan;
+
+  svg {
+    left: 45%;
+    margin: 7px 0 0 20px;
+    position: absolute;
+    right: 50%;
+  }
 }
 
 // --------------------------------------------------------
@@ -37,4 +44,3 @@
   background-color: $cr-gray-lighter;
   min-height: 626px;
 }
-
