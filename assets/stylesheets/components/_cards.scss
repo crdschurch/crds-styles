@@ -453,8 +453,14 @@
   .bmpui-container-wrapper {
     visibility: hidden;
     // except for subtitles
-    .bmpui-ui-subtitle-overlay .bmpui-container-wrapper {
-      visibility: visible;
+    .bmpui-ui-subtitle-overlay {
+      &.bmpui-controlbar-visible {
+        bottom: 2em;
+        z-index: 1;
+      }
+      .bmpui-container-wrapper {
+        visibility: visible;
+      }
     }
   }
 }
@@ -464,10 +470,4 @@
 .overlay-card-content,
 .card-video-player {
   transition: opacity 0.45s ease;
-}
-
-// prevent subtitles on autoplay cards from jumping
-.bmpui-ui-subtitle-overlay.bmpui-controlbar-visible {
-  bottom: 2em;
-  z-index: 1;
 }
