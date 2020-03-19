@@ -31,7 +31,6 @@
     path {
       fill: $cr-white;
     }
-
   }
 }
 
@@ -48,4 +47,30 @@
 .shared-footer-skeleton {
   background-color: $cr-gray-lighter;
   min-height: 626px;
+}
+
+// --------------------------------------------------------
+
+.crds-image-skeleton {
+  animation: crdsImageSkeleton 2s infinite;
+  padding-bottom: 66.6666666667%;
+
+  &.loaded {
+    animation: none;
+    padding-bottom: 0;
+  }
+}
+
+@keyframes crdsImageSkeleton {
+  0% {
+    background: rgba($cr-gray-lighter, 0.75);
+  }
+
+  25% {
+    background: rgba($cr-gray-lighter, 0.5);
+  }
+
+  100% {
+    background: rgba($cr-gray-lighter, 0.75);
+  }
 }
