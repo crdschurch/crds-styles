@@ -1,7 +1,6 @@
 crds-styles
 ==========
 
-
 `crds-styles` provides the primary CSS framework and global style patterns that
 power [crossroads.net](http://crossroads.net) and its related properties.
 
