@@ -11,7 +11,7 @@
     }
 
     &.active {
-      border-bottom: 3px solid $cr-cyan;
+      border-bottom: 3px solid $cr-orange;
 
       > a,
       > a:hover,
@@ -90,7 +90,7 @@
   }
 
   &.active {
-    border-left-color: $cr-cyan;
+    border-left-color: $cr-orange;
     color: $cr-gray;
   }
 
