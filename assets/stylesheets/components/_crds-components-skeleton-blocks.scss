@@ -24,9 +24,23 @@
 
   .shared-header-skeleton-logo {
     left: 50%;
-    margin: 0px 0 0 -52px;
+    margin: 11px 0 0 -75px;
     position: absolute;
     right: 0;
+  
+    @media (min-width: $screen-sm) {
+      margin: 8px 0 0 -93px;
+    }
+
+    svg {
+      height: 24px;
+      width: 149px;
+  
+      @media (min-width: $screen-sm) {
+        height: 30px;
+        width: 187px;
+      }
+    }
   }
 }
 
