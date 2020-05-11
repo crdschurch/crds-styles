@@ -20,17 +20,13 @@
 }
 
 .shared-header-skeleton {
-  background-color: $cr-cyan;
+  background-color: $cr-blue;
 
   .shared-header-skeleton-logo {
     left: 50%;
-    margin: 9px 0 0 -52px;
+    margin: 0px 0 0 -52px;
     position: absolute;
     right: 0;
-
-    path {
-      fill: $cr-white;
-    }
   }
 }
 
