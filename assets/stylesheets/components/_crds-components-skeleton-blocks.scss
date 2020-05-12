@@ -29,7 +29,7 @@
     right: 0;
   
     @media (min-width: $screen-sm) {
-      margin: 8px 0 0 -93px;
+      margin: 7px 0 0 -93px;
     }
 
     svg {
@@ -39,6 +39,14 @@
       @media (min-width: $screen-sm) {
         height: 30px;
         width: 187px;
+      }
+
+      .logo-text {
+        fill: #e0d8c6;
+      }
+      
+      .logo-mark {
+        fill: #f47920;
       }
     }
   }
