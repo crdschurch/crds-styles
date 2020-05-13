@@ -1,29 +1,29 @@
 .crds-logo-color {
   .crds-logo-text {
-    fill: #e0d8c6;
+    fill: $cr-tan;
   }
   
   .crds-logo-mark {
-    fill: #f47920;
+    fill: $cr-white;
   }
 }
 
 .crds-logo-black {
   .crds-logo-text {
-    fill: #000000;
+    fill: $cr-black;
   }
   
   .crds-logo-mark {
-    fill: #000000;
+    fill: $cr-black;
   }
 }
 
 .crds-logo-white {
   .crds-logo-text {
-    fill: #ffffff;
+    fill: $cr-white;
   }
   
   .crds-logo-mark {
-    fill: #ffffff;
+    fill: $cr-white;
   }
 }
