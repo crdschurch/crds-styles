@@ -58,6 +58,14 @@
     );
   }
 
+  &.btn-orange {
+    @include crds-button-variant(
+      $btn-orange-color,
+      $btn-orange-bg,
+      $btn-orange-border
+    );
+  }
+  
   &.btn-gray {
     @include crds-button-variant(
       $btn-gray-color,
