@@ -65,6 +65,14 @@
       $btn-orange-border
     );
   }
+
+  &.btn-orange-blue { 
+    @include crds-button-variant(
+      $btn-orange-blue-color,
+      $btn-orange-blue-bg,
+      $btn-orange-blue border
+    );
+  }
   
   &.btn-gray {
     @include crds-button-variant(
