@@ -6,6 +6,10 @@
   @include crds-bg-variant($brand-info);
 }
 
+.bg-social {
+  @include crds-bg-variant($cr-orange);
+}
+
 .bg-warning {
   @include crds-bg-variant($brand-warning);
 }
