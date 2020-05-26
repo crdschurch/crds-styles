@@ -26,6 +26,14 @@
   @include crds-bg-variant($cr-blue-dark);
 }
 
+.bg-orange {
+  @include crds-bg-variant($cr-orange);
+}
+
+.bg-orange-dark {
+  @include crds-bg-variant($cr-orange-dark);
+}
+
 .bg-cyan {
   @include crds-bg-variant($cr-cyan);
 }
