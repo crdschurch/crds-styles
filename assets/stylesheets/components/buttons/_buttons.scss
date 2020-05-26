@@ -244,10 +244,10 @@
 }
 
 .btn-link {
-  color: $cr-cyan;
+  color: $cr-orange-dark;
 
   &:hover {
-    color: darken($cr-cyan, 5);
+    color: darken($cr-orange-dark, 5);
   }
 
   &:focus {
