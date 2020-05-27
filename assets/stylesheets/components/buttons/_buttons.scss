@@ -82,6 +82,14 @@
     );
   }
 
+  &.btn-white-blue { 
+    @include crds-button-variant(
+      $btn-white-blue-bg,
+      $btn-white-blue-border,
+      $btn-white-blue-color,
+    );
+  }
+
   &.btn-white {
     background: $btn-white-bg;
     border-color: $btn-white-border;
