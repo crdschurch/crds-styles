@@ -158,6 +158,7 @@
 
 .component-header-box {
   border: 3px solid;
+  border-color: currentColor;
   display: inline-block;
   font-family: $condensed-extra-font-face;
   font-size: $font-size-h1;
@@ -166,22 +167,6 @@
   padding: 25px;
   text-align: center;
   text-transform: uppercase;
-
-  &.text-orange {
-    border-color: currentColor;
-  }
-
-  &.text-blue {
-    border-color: currentColor;
-  }
-
-  &.text-white {
-    border-color: currentColor;
-  }
-  
-  &.text-gray {
-    border-color: currentColor;
-  }
 }
 
 
