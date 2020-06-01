@@ -20,18 +20,35 @@
 }
 
 .shared-header-skeleton {
-  background-color: $cr-cyan;
+  background-color: $cr-blue;
 
   .shared-header-skeleton-logo {
     left: 50%;
-    margin: 9px 0 0 -52px;
+    margin: 11px 0 0 -75px;
     position: absolute;
     right: 0;
-
-    path {
-      fill: $cr-white;
+  
+    @media (min-width: $screen-sm) {
+      margin: 7px 0 0 -93px;
     }
 
+    svg {
+      height: 24px;
+      width: 149px;
+  
+      @media (min-width: $screen-sm) {
+        height: 30px;
+        width: 187px;
+      }
+
+      .logo-text {
+        fill: $cr-tan;
+      }
+      
+      .logo-mark {
+        fill: $cr-orange;
+      }
+    }
   }
 }
 
@@ -48,4 +65,30 @@
 .shared-footer-skeleton {
   background-color: $cr-gray-lighter;
   min-height: 626px;
+}
+
+// --------------------------------------------------------
+
+.crds-image-skeleton {
+  animation: crdsImageSkeleton 2s infinite;
+  padding-bottom: 66.6666666667%;
+
+  &.loaded {
+    animation: none;
+    padding-bottom: 0;
+  }
+}
+
+@keyframes crdsImageSkeleton {
+  0% {
+    background: rgba($cr-gray-lighter, 0.75);
+  }
+
+  25% {
+    background: rgba($cr-gray-lighter, 0.5);
+  }
+
+  100% {
+    background: rgba($cr-gray-lighter, 0.75);
+  }
 }

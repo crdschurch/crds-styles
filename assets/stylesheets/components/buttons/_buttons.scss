@@ -58,6 +58,14 @@
     );
   }
 
+  &.btn-orange {
+    @include crds-button-variant(
+      $btn-orange-color,
+      $btn-orange-bg,
+      $btn-orange-border
+    );
+  }
+  
   &.btn-gray {
     @include crds-button-variant(
       $btn-gray-color,
@@ -71,6 +79,14 @@
       $btn-gray-lt-color,
       $btn-gray-lt-bg,
       $btn-gray-lt-border
+    );
+  }
+
+  &.btn-white-blue { 
+    @include crds-button-variant(
+      $btn-white-blue-bg,
+      $btn-white-blue-border,
+      $btn-white-blue-color,
     );
   }
 
@@ -236,10 +252,10 @@
 }
 
 .btn-link {
-  color: $cr-cyan;
+  color: $cr-orange-dark;
 
   &:hover {
-    color: darken($cr-cyan, 5);
+    color: darken($cr-orange-dark, 5);
   }
 
   &:focus {
