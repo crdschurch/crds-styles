@@ -6,6 +6,10 @@
   @include crds-bg-variant($brand-info);
 }
 
+.bg-social {
+  @include crds-bg-variant($cr-orange);
+}
+
 .bg-warning {
   @include crds-bg-variant($brand-warning);
 }
@@ -20,6 +24,14 @@
 
 .bg-blue-dark {
   @include crds-bg-variant($cr-blue-dark);
+}
+
+.bg-orange {
+  @include crds-bg-variant($cr-orange);
+}
+
+.bg-orange-dark {
+  @include crds-bg-variant($cr-orange-dark);
 }
 
 .bg-cyan {
