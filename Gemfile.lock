@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    crds-styles (4.0.0.pre.alpha)
+    crds-styles (4.0.0)
       bootstrap-sass (~> 3.3)
       sass (~> 3.2)
 
@@ -14,8 +14,8 @@ GEM
       autoprefixer-rails (>= 5.2.1)
       sassc (>= 2.0.0)
     execjs (2.7.0)
-    ffi (1.12.2)
-    rb-fsevent (0.10.3)
+    ffi (1.13.0)
+    rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     sass (3.7.4)
@@ -33,4 +33,4 @@ DEPENDENCIES
   crds-styles!
 
 BUNDLED WITH
-   2.0.2
+   2.1.4
