@@ -2,26 +2,24 @@ $fontUrl: '//d1tmclqz61gqwd.cloudfront.net/fonts/';
 
 @font-face {
   font-family: 'sentinel';
-  src: url('#{$fontUrl}SentinelSSm-LightWeb.eot'); /* IE9 Compat Modes */
-  src: url('#{$fontUrl}SentinelSSm-LightWeb.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('#{$fontUrl}SentinelSSm-LightWeb.otf') format('opentype'), /* Open Type Font */
-    url('#{$fontUrl}SentinelSSm-LightWeb.svg') format('svg'), /* Legacy iOS */
-    url('#{$fontUrl}SentinelSSm-LightWeb.ttf') format('truetype'), /* Safari, Android, iOS */
-    url('#{$fontUrl}SentinelSSm-LightWeb.woff') format('woff'), /* Modern Browsers */
-    url('#{$fontUrl}SentinelSSm-LightWeb.woff2') format('woff2'); /* Modern Browsers */
+  src: url('#{$fontUrl}sentinel-light.eot'); /* IE9 Compat Modes */
+  src: url('#{$fontUrl}sentinel-light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('#{$fontUrl}sentinel-light.svg') format('svg'), /* Legacy iOS */
+    url('#{$fontUrl}sentinel-light.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('#{$fontUrl}sentinel-light.woff') format('woff'), /* Modern Browsers */
+    url('#{$fontUrl}sentinel-light.woff2') format('woff2'); /* Modern Browsers */
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'sentinel-italic';
-  src: url('#{$fontUrl}SentinelSSm-LightItalicWeb.eot'); /* IE9 Compat Modes */
-  src: url('#{$fontUrl}SentinelSSm-LightItalicWeb.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('#{$fontUrl}SentinelSSm-LightItalicWeb.otf') format('opentype'), /* Open Type Font */
-    url('#{$fontUrl}SentinelSSm-LightItalicWeb.svg') format('svg'), /* Legacy iOS */
-    url('#{$fontUrl}SentinelSSm-LightItalicWeb.ttf') format('truetype'), /* Safari, Android, iOS */
-    url('#{$fontUrl}SentinelSSm-LightItalicWeb.woff') format('woff'), /* Modern Browsers */
-    url('#{$fontUrl}SentinelSSm-LightItalicWeb.woff2') format('woff2'); /* Modern Browsers */
+  src: url('#{$fontUrl}sentinel-light-italic.eot'); /* IE9 Compat Modes */
+  src: url('#{$fontUrl}sentinel-light-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('#{$fontUrl}sentinel-light-italic.svg') format('svg'), /* Legacy iOS */
+    url('#{$fontUrl}sentinel-light-italic.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('#{$fontUrl}sentinel-light-italic.woff') format('woff'), /* Modern Browsers */
+    url('#{$fontUrl}sentinel-light-italic.woff2') format('woff2'); /* Modern Browsers */
   font-weight: normal;
   font-style: normal;
 }
