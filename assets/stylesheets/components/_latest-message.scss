@@ -1,10 +1,9 @@
 .background-tan {
-    background-color: #E7E2D0;
-    max-width: 765px; 
+    background-color: $cr-tan-lighter;
 }
 
 .body-gray {
-    color: #5f5f5f;
+    color: $cr-gray-lighter;
     font-size: 19px; 
     letter-spacing: 0;
     max-width: 750px; 
@@ -32,7 +31,7 @@
 }
 
 .headline-gray {
-    color: #575757;
+    color: $cr-gray-lighter;
     font-size: 52px;
     margin-top: 18px; 
 }
@@ -42,13 +41,13 @@
 }
 
 .subtitle-gray {
-    color: #999;
+    color: $cr-gray-lighter;
     font-size: 12px;
     margin-top: 0px; 
     margin-bottom: 20px; 
 }
 
 .title { 
-    color: #808080; 
+    color: $cr-gray-light; 
     font-size: 15px; 
 }
