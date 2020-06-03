@@ -1,27 +1,26 @@
 .content-menu { 
-    background-color: $cr-tan-lighter; 
-    border: 1px solid $cr-gray-lighter!important; 
-    height: 331px; 
-    margin-left: 10px;
-    padding-top: 10px; 
-    width: 364px; 
+  background-color: $cr-tan-lighter; 
+  border: 1px solid $cr-gray-lighter!important; 
+  height: auto; 
+  margin-left: 10px;
+  padding-top: 10px; 
 }
 
 .dashed {
-    border-bottom: 1px dashed $cr-gray-lighter;
-    height: 1px;
-    opacity: 0.75; 
-    width: 85%;
-    margin-left: 24.5px; 
-    margin-bottom: 45px; 
-  }
+  border-bottom: 1px dashed $cr-gray-lighter;
+  height: 1px;
+  opacity: 0.75; 
+  width: 85%;
+  margin-left: 24.5px; 
+  margin-bottom: 45px; 
+}
 
-  .menu-link { 
-    position: relative; 
-    top: 4px; 
-  }
+.menu-link { 
+  position: relative; 
+  top: 4px; 
+}
   
 .menu-title { 
-    position: relative;
-    top: 4px;
+  position: relative;
+  top: 4px;
 }
