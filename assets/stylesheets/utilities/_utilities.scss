@@ -269,6 +269,15 @@ a.underline,
   border-width: 3px !important;
 }
 
+.dashed {
+  border-bottom: 1px dashed $cr-gray-lighter;
+  height: 1px;
+  opacity: 0.75; 
+  width: 85%;
+  margin-left: 24.5px; 
+  margin-bottom: 45px; 
+}
+
 .no-border-radius {
   border-radius: 0 !important;
 }
