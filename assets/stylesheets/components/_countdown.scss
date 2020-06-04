@@ -73,6 +73,19 @@
 }
 
 /* 3. Color Variations */
+.countdown-bg-orange { 
+  background-color: $cr-orange; 
+  
+  .countdown-btn { 
+    background-color: $cr-blue; 
+    color: $cr-white;
+
+    &:hover { 
+      background-color: lighten($cr-blue, 5); 
+    }
+  }
+}
+
 .countdown-bg-cyan {
   background-color: $cr-cyan;
 

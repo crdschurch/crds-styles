@@ -20,16 +20,34 @@
 }
 
 .shared-header-skeleton {
-  background-color: $cr-cyan;
+  background-color: $cr-blue;
 
   .shared-header-skeleton-logo {
     left: 50%;
-    margin: 9px 0 0 -52px;
+    margin: 11px 0 0 -75px;
     position: absolute;
     right: 0;
+  
+    @media (min-width: $screen-sm) {
+      margin: 7px 0 0 -93px;
+    }
 
-    path {
-      fill: $cr-white;
+    svg {
+      height: 24px;
+      width: 149px;
+  
+      @media (min-width: $screen-sm) {
+        height: 30px;
+        width: 187px;
+      }
+
+      .logo-text {
+        fill: $cr-tan;
+      }
+      
+      .logo-mark {
+        fill: $cr-orange;
+      }
     }
   }
 }
