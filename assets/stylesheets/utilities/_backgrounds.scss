@@ -50,6 +50,10 @@
   @include crds-bg-variant(lighten($cr-gray-darker, 0.75), $cr-gray);
 }
 
+.bg-tan {
+  @include crds-bg-variant($cr-tan);
+}
+
 .bg-cover-image {
   background-size: cover;
   background-repeat: no-repeat;
