@@ -178,6 +178,10 @@
   padding: 25px;
   text-align: center;
   text-transform: uppercase;
+
+  &.component-header-box-border-lg {
+    border-width: 6px;
+  }
 }
 
 
