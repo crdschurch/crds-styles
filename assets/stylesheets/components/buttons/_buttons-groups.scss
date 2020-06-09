@@ -93,7 +93,7 @@
 
       &.btn-default {
         &:focus {
-          border-color: $cr-teal;
+          border-color: $cr-orange;
           box-shadow: none;
         }
       }
@@ -172,8 +172,8 @@
       }
 
       &.btn-default {
-        background: $cr-teal;
-        border-color: $cr-teal;
+        background: $cr-orange;
+        border-color: $cr-orange;
         color: $cr-white;
       }
     }
@@ -203,17 +203,17 @@
       border-width: 1px;
     }
 
-    &:not(:first-child):not(:last-child) {
-      border-right-color: rgba($cr-gray-light, 0.25);
-      border-left-color: rgba($cr-gray-light, 0.25);
-
-      &:hover {
-        border-right-color: rgba($cr-gray-light, 0.25);
-        border-left-color: rgba($cr-gray-light, 0.25);
-      }
-    }
-
     @mixin active_pillbar($active-color) {
+      &:not(:first-child):not(:last-child) {
+        border-right-color: rgba($active-color, 0.25);
+        border-left-color: rgba($active-color, 0.25);
+  
+        &:hover {
+          border-right-color: rgba($active-color, 0.25);
+          border-left-color: rgba($active-color, 0.25);
+        }
+      }
+
       &:first-child,
       &:last-child {
         border-color: $active-color;
@@ -224,18 +224,18 @@
       }
 
       &:first-child {
-        border-right-color: rgba($cr-gray-light, 0.25);
+        border-right-color: rgba($active-color, 0.25);
 
         &:hover {
-          border-right-color: rgba($cr-gray-light, 0.25);
+          border-right-color: rgba($active-color, 0.25);
         }
       }
 
       &:last-child {
-        border-left-color: rgba($cr-gray-light, 0.25);
+        border-left-color: rgba($active-color, 0.25);
 
         &:hover {
-          border-left-color: rgba($cr-gray-light, 0.25);
+          border-left-color: rgba($active-color, 0.25);
         }
       }
 
@@ -280,7 +280,7 @@
     }
 
     &.btn-default {
-      @include active_pillbar($cr-teal);
+      @include active_pillbar($cr-orange);
     }
 
     &.btn-blue,
