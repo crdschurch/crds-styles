@@ -1,11 +1,9 @@
 .content-menu {
+  background-color: $cr-tan-light;
   border: 1px solid $cr-gray-lighter;
   height: auto;
-  background-color: $cr-tan-light;
   margin-left: 10px;
   padding: 10px 0px 20px;
-  position: relative;
-  top: 0px;
 }
 
 .content-menu-link {
@@ -17,8 +15,8 @@
   padding: 20px 0px;
 
   &:first-child {
-    position: absolute;
-    top: 5px;
+    padding-top: 0px;
+    margin-top: -20px;
   }
 }
 
