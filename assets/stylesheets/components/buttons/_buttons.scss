@@ -35,6 +35,7 @@
   }
 
   &.btn-blue,
+  &.btn-cyan,
   &.btn-primary {
     @include crds-button-variant(
       $btn-blue-color,
@@ -49,12 +50,11 @@
     }
   }
 
-  &.btn-cyan,
   &.btn-secondary {
     @include crds-button-variant(
-      $btn-cyan-color,
-      $btn-cyan-bg,
-      $btn-cyan-border
+      $btn-orange-color,
+      $btn-orange-bg,
+      $btn-orange-border
     );
   }
 
