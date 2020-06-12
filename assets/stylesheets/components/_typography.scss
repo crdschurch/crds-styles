@@ -404,6 +404,17 @@ dl.crds-list {
 }
 
 /* 9. Misc */
+
+.number-box {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: $font-size-large;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+
 .text-muted {
   color: $text-muted;
 
