@@ -324,7 +324,7 @@ label {
     }
 
     input:checked ~ .control-indicator {
-      background-color: $cr-teal;
+      background-color: $cr-orange;
       border: 0;
     }
 
@@ -359,6 +359,7 @@ label {
   &.control {
     input:checked ~ .control-indicator {
       background-size: 8px;
+      color: $cr-blue;
     }
 
     .controls-inline & {
