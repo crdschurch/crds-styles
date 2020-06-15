@@ -54,6 +54,10 @@
   @include crds-bg-variant($cr-tan);
 }
 
+.bg-white {
+  @include crds-bg-variant($cr-white);
+}
+
 .bg-cover-image {
   background-size: cover;
   background-repeat: no-repeat;
