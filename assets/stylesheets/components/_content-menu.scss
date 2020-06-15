@@ -1,17 +1,27 @@
-.content-menu { 
-  border: 1px solid $cr-gray-lighter; 
-  height: auto; 
+.content-menu {
   background-color: $cr-tan-light;
+  border: 1px solid $cr-gray-lighter;
+  height: auto;
   margin-left: 10px;
-  padding-top: 10px; 
+  padding: 10px 0px 20px;
+}
 
-  .menu-link { 
-    position: relative; 
-    top: 4px; 
+.content-menu-link {
+  position: relative;
+  top: 28px;
+}
+
+.content-menu-list {
+  padding: 20px 0px;
+
+  &:first-child {
+    padding-top: 0px;
+    margin-top: -20px;
   }
-  
-  .menu-title { 
-    position: relative;
-    top: 4px;
-  }
+}
+
+.content-menu-title {
+  position: relative;
+  top: 4px;
+  padding-bottom: 10px;
 }
