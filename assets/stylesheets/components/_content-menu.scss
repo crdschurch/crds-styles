@@ -6,18 +6,17 @@
   padding: 10px 0px 20px;
 
   a {
-    display: inline-block;    
+    box-sizing: content-box; 
+    display: block;    
     height: 100%;  
-    position: relative;    
-    z-index: 1;     
-    padding: 0 2em 0 0;     
-    top: 28px;
+    padding: 20px 0px;   
     width: 100%;
+    z-index: 1; 
   }
 }
 
 .content-menu-list {
-  padding: 20px 0px;
+  padding-bottom: 10px; 
 
   &:first-child {
     padding-top: 0px;
