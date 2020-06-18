@@ -46,8 +46,24 @@
   @include crds-bg-variant($cr-gray-lighter, $cr-gray);
 }
 
+.bg-gray-lightest {
+  @include crds-bg-variant(lighten($cr-gray-lighter, 12%));
+}
+
 .bg-charcoal {
   @include crds-bg-variant(lighten($cr-gray-darker, 0.75), $cr-gray);
+}
+
+.bg-tan {
+  @include crds-bg-variant($cr-tan);
+}
+
+.bg-white {
+  @include crds-bg-variant($cr-white);
+}
+
+.bg-tan-light {
+  @include crds-bg-variant($cr-tan-light);
 }
 
 .bg-cover-image {
@@ -60,4 +76,12 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+.bg-topo {
+  background-image: url('//crds-media.imgix.net/1KLwsN6ilL7RO0xk6JzOsX/840e8b99340ff36bff67036909c4f856/texture-topo-dark-100_2x.png');
+  background-size: cover;
+  display: block;
+  height: 100%;
+  width: 100%;
 }

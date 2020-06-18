@@ -12,7 +12,7 @@ $base-font-size: 16px;
 
 // Blue
 $cr-blue: rgba(37, 55, 70, 1); // #253746
-$cr-blue-dark: $cr-blue;
+$cr-blue-dark: rgba(16, 34, 48, 1);// #102230 
 $cr-blue-light: $cr-blue;
 $cr-blue-lighter: rgba(219, 228, 234, 1);
 
@@ -24,13 +24,16 @@ $cr-orange-lighter: $cr-orange;
 
 // Tan
 $cr-tan: rgba(216, 207, 185, 1); // #D8CFB9
+$cr-tan-light: rgba(231, 226, 208, 1); // #E7E2D0
 
 // Grayscale
-$cr-gray-darker: rgba(33, 33, 32, 1); // #212120
-$cr-gray-dark: rgba(74, 73, 72, 1); // #4A4948
+$cr-gray-darkest: rgba(33, 33, 32, 1); // #212120
+$cr-gray-darker: rgba(74, 73, 72, 1); // #4A4948
+$cr-gray-dark: rgba(87, 86, 84, 1);// #575654 
 $cr-gray: rgba(110, 109, 107, 1); // #6E6D6B
-$cr-gray-light: rgba(150, 149, 146, 1); // #969592
-$cr-gray-lighter: rgba(235, 233, 228, 1); // #EBE9E4
+$cr-gray-light: rgba(130, 129, 127, 1);// #82817F 
+$cr-gray-lighter: rgba(150, 149, 146, 1); // #969592
+$cr-gray-lightest: rgba(235, 233, 228, 1); // #EBE9E4
 $cr-white: rgba(255, 255, 255, 1); // #FFFFFF
 $cr-black: rgba(0, 0, 0, 1); // #000000
 $cr-gray-alpha: rgba($cr-gray, 0.25);
@@ -40,8 +43,8 @@ $cr-rust: rgba(172, 45, 23, 1); // #AC2D17
 $cr-green: rgba(20, 156, 100, 1); // #149C64
 $alert-success: $cr-green;
 $alert-info: rgba(36, 145, 167, 1); // #2491A7
-$alert-warning: rgba(176, 120, 44, 1); // #B0782C
-$alert-danger: $cr-rust;
+$alert-warning: rgba(186, 98, 40, 1); // #BA6228
+$alert-danger: rgba(176, 120, 44, 1); // #B0782C;
 
 // Misc
 $cr-black-alpha: rgba($cr-black, 0.5);

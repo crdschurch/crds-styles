@@ -26,6 +26,11 @@
   font-weight: 600 !important;
 }
 
+.font-family-base-black {
+  font-family: $base-font-face !important;
+  font-weight: 800 !important;
+}
+
 .font-family-condensed {
   font-family: $condensed-font-face !important;
   font-weight: 600 !important;
@@ -175,7 +180,7 @@
   font-size: $font-size-h1;
   font-weight: bold;
   letter-spacing: 4px;
-  padding: 25px;
+  padding: 30px 50px;
   text-align: center;
   text-transform: uppercase;
 
@@ -399,6 +404,17 @@ dl.crds-list {
 }
 
 /* 9. Misc */
+
+.number-box {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: $font-size-large;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+
 .text-muted {
   color: $text-muted;
 
