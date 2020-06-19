@@ -180,15 +180,18 @@
   font-size: $font-size-h1;
   font-weight: bold;
   letter-spacing: 4px;
-  padding: 25px 50px 30px;
+  padding: 25px 15px 30px;
   text-align: center;
   text-transform: uppercase;
+
+  @media screen and (min-width: $screen-xs) {
+    padding: 25px 50px 30px;
+  }
 
   &.component-header-box-border-lg {
     border-width: 6px;
   }
 }
-
 
 .title {
   font-family: $base-font-face;
