@@ -8,9 +8,9 @@
 @mixin crds-bg-variant($background, $color: $cr-white) {
   background-color: $background;
   color: $color;
-  position: relative;
 
   &.topo-overlay {
+    position: relative;
     &:before {
       background-image: url('//crds-media.imgix.net/1KLwsN6ilL7RO0xk6JzOsX/840e8b99340ff36bff67036909c4f856/texture-topo-dark-100_2x.png');
       background-size: cover;
@@ -24,6 +24,7 @@
   }
 
   &.grid-overlay {
+    position: relative;
     &:before {
       background-image: url('//crds-media.imgix.net/57F0cU8HetdfUx9qDWpwtN/dda670721faf791c676f1174a8c4ff25/texture-grid-dark-100_3x.png');
       content: '';
