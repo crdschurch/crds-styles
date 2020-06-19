@@ -118,7 +118,7 @@ $btn-border-radius-large: $border-radius-base !default;
 $btn-border-radius-small: $border-radius-base !default;
 
 // Forms
-$input-bg: lighten($cr-gray-lighter, 5) !default;
+$input-bg: lighten($cr-gray-lightest, 5) !default;
 // $input-bg-disabled: !default;
 $input-bg-focus: $cr-white;
 $input-color: $cr-gray-dark !default;
