@@ -107,7 +107,7 @@
 
     li {
       &::after {
-        color: $cr-cyan-lighter;
+        color: $cr-white;
       }
       &:not(:first-child) {
         border-left-color: rgba($cr-white, 0.3);
