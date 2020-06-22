@@ -17,9 +17,10 @@
     }
   }
 
-  &.topo-overlay {
+  &.topo-overlay,
+  &.topo-overlay-50 {
     &:before {
-      background-image: url('//crds-media.imgix.net/1KLwsN6ilL7RO0xk6JzOsX/840e8b99340ff36bff67036909c4f856/texture-topo-dark-100_2x.png');
+      background-image: url('//crds-media.imgix.net/5keOksLK6PtMmlTnUQQeRT/86d3609bea8e6725c7a0b38a9a5530f3/texture-topo-dark-50_2x.png?format=auto');
       background-size: cover;
       content: '';
       display: block;
@@ -29,7 +30,15 @@
       width: 100%;
     }
   }
-  
+
+  &.topo-overlay {
+    background-image: url('//crds-media.imgix.net/1KLwsN6ilL7RO0xk6JzOsX/840e8b99340ff36bff67036909c4f856/texture-topo-dark-100_2x.png');
+  }
+
+  &.topo-overlay-50 {
+    background-image: url('//crds-media.imgix.net/5keOksLK6PtMmlTnUQQeRT/86d3609bea8e6725c7a0b38a9a5530f3/texture-topo-dark-50_2x.png?format=auto');
+  }
+
   &.grid-overlay {
     &:before {
       background-image: url('//crds-media.imgix.net/57F0cU8HetdfUx9qDWpwtN/dda670721faf791c676f1174a8c4ff25/texture-grid-dark-100_3x.png');

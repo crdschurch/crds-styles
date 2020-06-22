@@ -78,12 +78,20 @@
   background-position: center center;
 }
 
-.bg-topo {
-  background-image: url('//crds-media.imgix.net/1KLwsN6ilL7RO0xk6JzOsX/840e8b99340ff36bff67036909c4f856/texture-topo-dark-100_2x.png');
+.bg-topo,
+.bg-topo-50 {
   background-size: cover;
   display: block;
   height: 100%;
   width: 100%;
+}
+
+.bg-topo {
+  background-image: url('//crds-media.imgix.net/1KLwsN6ilL7RO0xk6JzOsX/840e8b99340ff36bff67036909c4f856/texture-topo-dark-100_2x.png');
+}
+
+.bg-topo-50 {
+  background-image: url('//crds-media.imgix.net/5keOksLK6PtMmlTnUQQeRT/86d3609bea8e6725c7a0b38a9a5530f3/texture-topo-dark-50_2x.png?format=auto');
 }
 
 .beige-overlay {
