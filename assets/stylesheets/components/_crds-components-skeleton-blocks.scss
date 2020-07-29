@@ -92,3 +92,93 @@
     background: rgba($cr-gray-lighter, 0.75);
   }
 }
+
+
+// --------------------------------------------------------
+
+.portrait-card-skeleton {
+  background-color: $cr-gray-lightest;
+  height: 475px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  &::after {
+    animation: skeleton-shimmer 1.5s ease-in-out infinite;
+    background-image: linear-gradient(
+      100deg,
+      rgb($cr-gray-lightest) 20%,
+      rgba($cr-white, 0.3) 30%,
+      rgba($cr-white, 0.7) 40%,
+      rgb($cr-gray-lightest) 50%
+    );
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.portrait-card-skeleton-expanded,
+.portrait-card-skeleton-condensed {
+  background-color: $cr-gray-lightest;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  &::after {
+    animation: skeleton-shimmer 1.5s ease-in-out infinite;
+    background-image: linear-gradient(
+      100deg,
+      rgb($cr-gray-lightest) 20%,
+      rgba($cr-white, 0.3) 30%,
+      rgba($cr-white, 0.7) 40%,
+      rgb($cr-gray-lightest) 50%
+    );
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .portrait-card-skeleton-text {
+    background-color: #EBE9E4;
+    height: 20px;
+    position: relative;
+    width: 350px;
+    overflow-x: hidden;
+    margin-top: 10px;
+
+    &::before {
+      animation: skeleton-shimmer 1.5s ease-in-out infinite;
+      background-image: linear-gradient(
+        100deg,
+        rgb(235, 233, 228) 20%,
+        rgba(255, 255, 255, .3) 30%,
+        rgba(255, 255, 255, .7) 40%,
+        rgb(235, 233, 228) 50%
+      );
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(100%, 0, 0);
+  }
+}
