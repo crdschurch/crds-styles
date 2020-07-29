@@ -92,3 +92,29 @@
     background: rgba($cr-gray-lighter, 0.75);
   }
 }
+
+// --------------------------------------------------------
+
+.jumbotron-skeleton-sm {
+  background-color: $cr-gray-darkest;
+  height: 250px;
+  width: 100%;
+}
+
+.jumbotron-skeleton-md {
+  background-color: $cr-gray-darkest;
+  height: 300px;
+  width: 100%;
+}
+
+.jumbotron-skeleton-lg {
+  background-color: $cr-gray-darkest;
+  height: 350px;
+  width: 100%;
+}
+
+.jumbotron-skeleton-xl {
+  background-color: $cr-gray-darkest;
+  height: 450px;
+  width: 100%;
+}
