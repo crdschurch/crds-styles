@@ -144,6 +144,32 @@
     top: 0;
     width: 100%;
   }
+
+  .portrait-card-skeleton-text {
+    background-color: #EBE9E4;
+    height: 20px;
+    position: relative;
+    width: 350px;
+    overflow-x: hidden;
+    margin-top: 10px;
+  
+    &::before {
+      animation: skeleton-shimmer 1.5s ease-in-out infinite;
+      background-image: linear-gradient(
+        100deg,
+        rgb(235, 233, 228) 20%,
+        rgba(255, 255, 255, .3) 30%,
+        rgba(255, 255, 255, .7) 40%,
+        rgb(235, 233, 228) 50%
+      );
+      content: '';
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
 }
 
 @keyframes skeleton-shimmer {
