@@ -98,6 +98,10 @@
   background-size: cover;
   height: 475px;
   width: 100%;
+
+  * {
+    display: none;
+  }
 }
 
 .portrait-card-skeleton-expanded {
@@ -105,6 +109,10 @@
   background-size: cover;
   height: 525px;
   width: 100%;
+
+  * {
+    display: none;
+  }
 }
 
 .portrait-card-skeleton-condensed {
@@ -112,6 +120,10 @@
   background-size: cover;
   height: 345px;
   width: 100%;
+
+  * {
+    display: none;
+  }
 }
 
 .jumbotron-skeleton-sm {
@@ -119,6 +131,10 @@
   background-size: cover;
   height: 300px;
   width: 100%;
+
+  * {
+    display: none;
+  }
 }
 
 .jumbotron-skeleton-md {
@@ -126,6 +142,10 @@
   background-size: cover;
   height: 400px;
   width: 100%;
+
+  * {
+    display: none;
+  }
 }
 
 .jumbotron-skeleton-lg {
@@ -133,6 +153,10 @@
   background-size: cover;
   height: 500px;
   width: 100%;
+
+  * {
+    display: none;
+  }
 }
 
 .jumbotron-skeleton-xl {
@@ -140,6 +164,10 @@
   background-size: cover;
   height: 600px;
   width: 100%;
+
+  * {
+    display: none;
+  }
 }
 
 .media-object-skeleton {
@@ -147,6 +175,10 @@
   background-size: cover;
   height: 100px;
   width: 100%;
+
+  * {
+    display: none;
+  }
 }
 
 .media-card-skeleton {
@@ -154,5 +186,9 @@
   background-size: cover;
   height: 350px;
   width: 100%;
+
+  * {
+    display: none;
+  }
 }
 
