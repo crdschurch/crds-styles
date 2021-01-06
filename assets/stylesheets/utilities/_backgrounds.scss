@@ -46,8 +46,12 @@
   @include crds-bg-variant($cr-gray-lighter, $cr-gray);
 }
 
+.bg-gray-lighter {
+  @include crds-bg-variant($cr-gray-lighter);
+}
+
 .bg-gray-lightest {
-  @include crds-bg-variant(lighten($cr-gray-lighter, 12%));
+  @include crds-bg-variant($cr-gray-lightest);
 }
 
 .bg-charcoal {
