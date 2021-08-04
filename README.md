@@ -181,6 +181,16 @@ versioning](https://semver.org/). In other words:
 - Changes which break backwards compatibility: Major release, increment the
   first number, e.g. 2.0.0
 
+Bumping versions
+--------
+1. Starting in the  `development`  branch, update the version number in the `package.json`. (look [here](https://github.com/crdschurch/crds-styles#versioning) for versioning)
+2.  `npm install`
+3. Then run  `bundle install`  to update the  `Gemfile.lock`
+4. Push up changes and merge into  `development` and a [TeamCity](https://ci.crossroads.net/) build will fire.
+5. Once the build passes, merge the changes into `master`.
+6. After merging into `master`  goto [TeamCity](https://ci.crossroads.net/) and find “Styles Deploy” under “Release” (You should see that there are pending changes). 
+7. Then you want to click the “Run” button. This build will update the release number in GitHub and NPM and it will update files in an S3 bucket
+
 License
 --------
 

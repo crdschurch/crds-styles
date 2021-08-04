@@ -1,6 +1,6 @@
 {
   "name": "crds-styles",
-  "version": "4.0.10",
+  "version": "4.0.11",
   "description": "",
   "style": "assets/stylesheets/_crds.scss",
   "watch": {
