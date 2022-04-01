@@ -36,6 +36,8 @@ jobs:
         uses: "phips28/gh-action-bump-version@master"
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        with:
+          tag-prefix: "v"
 
       - run: npm publish
         env:
