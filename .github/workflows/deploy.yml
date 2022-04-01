@@ -44,7 +44,14 @@ jobs:
         with:
           tag-prefix: "v"
 
-      - run: npm publish
+      - name: get-npm-version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@master
+
+      - name: npm auth
+        run: echo '//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}' > .npmrc
+
+      - run: npm pack && publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
