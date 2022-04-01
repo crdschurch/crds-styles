@@ -46,12 +46,16 @@ jobs:
         id: package-version
         uses: martinbeentjes/npm-get-version-action@master
 
+      - name: create env file
+        run: |
+          touch .env
+          echo ENGINE_API_KEY=${{ secrets.ENGINE_API_KEY }} >> .env
+          echo CRDS_STYLES_AWS_ACCESS_KEY=${{ secrets.CRDS_STYLES_AWS_ACCESS_KEY }} >> .env
+          echo CRDS_STYLES_AWS_SECRET_KEY=${{ secrets.CRDS_STYLES_AWS_SECRET_KEY }} >> .env
+          echo CRDS_STYLES_S3_BUCKET=${{ secrets.CRDS_STYLES_S3_BUCKET }} >> .env
+
       - run: npm pack
       - run: npm run deploy
-        env:
-          CRDS_STYLES_AWS_ACCESS_KEY: ${{ secrets.CRDS_STYLES_AWS_ACCESS_KEY }}
-          CRDS_STYLES_AWS_SECRET_KEY: ${{ secrets.CRDS_STYLES_AWS_SECRET_KEY }}
-          CRDS_STYLES_S3_BUCKET: ${{ secrets.CRDS_STYLES_S3_BUCKET }}
 
       - uses: actions/setup-node@v2
         with:
