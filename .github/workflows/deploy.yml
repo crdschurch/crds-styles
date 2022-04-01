@@ -36,7 +36,6 @@ jobs:
         with:
           node-version: "16.x"
           registry-url: "https://registry.npmjs.org"
-      - run: npm ci
 
       - name: "Automated Version Bump"
         uses: "phips28/gh-action-bump-version@master"
