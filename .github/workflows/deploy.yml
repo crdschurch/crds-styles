@@ -1,0 +1,45 @@
+name: PROD Deploy Workflow
+
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - "**.md"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      ASPNETCORE_ENVIRONMENT: prod
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version-file: '.nvmrc'
+          
+      - name: Restore dependencies
+        run: npm i
+
+      - run: git config user.email "crdsTeamCity@crossroads.net"
+      - run: git config user.name "crdsTeamCity"
+      - run: git remote rm origin
+      - run: git remote add origin https://${{ secrets.GHA_ACCESS_TOKEN }}:x-oauth-basic@github.com/${{ github.REPOSITORY}}.git
+
+      - run: npm run prepare-release
+
+      - name: "Automated Version Bump"
+        uses: "phips28/gh-action-bump-version@v8.0.18"
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        with:
+          tag-prefix: "v"
+
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

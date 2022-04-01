@@ -20,7 +20,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rimraf dist && node src/index.js --build",
     "deploy": "node src/index.js --deploy",
-    "watch": "npm-watch build"
+    "watch": "npm-watch build",
+    "prepare-release": "npm run build"
   },
   "files": [
     "assets"
