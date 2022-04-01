@@ -1,3 +1,4 @@
+require('dotenv').config();
 var sass = require('node-sass');
 var fs = require('fs-extra');
 var path = require('path');
