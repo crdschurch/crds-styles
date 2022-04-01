@@ -48,6 +48,10 @@ jobs:
 
       - run: npm pack
       - run: npm run deploy
+        env:
+          CRDS_STYLES_AWS_ACCESS_KEY: ${{ secrets.CRDS_STYLES_AWS_ACCESS_KEY }}
+          CRDS_STYLES_AWS_SECRET_KEY: ${{ secrets.CRDS_STYLES_AWS_SECRET_KEY }}
+          CRDS_STYLES_S3_BUCKET: ${{ secrets.CRDS_STYLES_S3_BUCKET }}
 
       - uses: actions/setup-node@v2
         with:
