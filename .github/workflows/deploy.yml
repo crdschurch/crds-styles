@@ -34,9 +34,6 @@ jobs:
 
       - name: bump version
         uses: undergroundwires/bump-everywhere@master
-        with:
-         git-token: ${{ secrets.GHA_ACCESS_TOKEN }}
-         release-token: ${{ secrets.GHA_ACCESS_TOKEN }}
 
       - run: npm publish
         env:
