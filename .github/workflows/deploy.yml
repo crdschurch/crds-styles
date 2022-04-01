@@ -32,8 +32,10 @@ jobs:
 
       - run: npm run prepare-release
 
-      - name: bump version
-        uses: undergroundwires/bump-everywhere@master
+      - name: "Automated Version Bump"
+        uses: "phips28/gh-action-bump-version@master"
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
       - run: npm publish
         env:
