@@ -1,5 +1,4 @@
-crds-styles
-==========
+# crds-styles
 
 `crds-styles` provides the primary CSS framework and global style patterns that
 power [crossroads.net](http://crossroads.net) and its related properties.
@@ -9,8 +8,7 @@ Kit (DDK)](http://github.com/crdschurch/crds-styleguide) are provided by this
 NPM package. Any deviations from the patterns defined there should be
 implemented in the client application.
 
-Installation
-----------
+## Installation
 
 There are two options for including crds-styles in your project.
 
@@ -24,7 +22,10 @@ when the styles you're overriding don't require needing crds-styles' (or
 Bootstrap's) sass variables.
 
 ```html
-<link rel="stylesheet" href="//d1tmclqz61gqwd.cloudfront.net/styles/crds-styles-2.0.0.min.css">
+<link
+  rel="stylesheet"
+  href="//d1tmclqz61gqwd.cloudfront.net/styles/crds-styles-2.0.0.min.css"
+/>
 ```
 
 _(Note: Replace `2.0.0` with the desired version.)_
@@ -58,15 +59,14 @@ use upstream changes that haven't yet been released.
 }
 ```
 
-Usage
-----------
+## Usage
 
 Import the stylesheet in your application's main '.scss'
 file using the following convention. You can optionally override
 any of the customizable Bootstrap variables prior to import.
 
 ```scss
-@import '~crds-styles/assets/stylesheets/crds-styles';
+@import "~crds-styles/assets/stylesheets/crds-styles";
 ```
 
 _Note: The tilde character (`~`) is a shorthand reference to `node_modules`,
@@ -92,8 +92,7 @@ $ rm -rf node_modules/crds-styles
 $ npm link ../crds-styles
 ```
 
-SVGs
---------
+## SVGs
 
 Any project consuming `crds-styles` will need to update their build process in
 order to access SVG files. For information on adding new icons to `crds-styles`
@@ -124,7 +123,6 @@ directory via NPM. Then add the following to your `assets` config in
 Note that you could change `icons.svg` to `*` to copy all of crds-styles' svg
 assets into your project.
 
-
 #### Contributing to the DDK
 
 The DDK is now a Jekyll project. The Styleguide is on continuous deployment and updates branches are merged into `master`.
@@ -147,7 +145,7 @@ If you don’t want to have to constantly run `git submodule update`, you can se
 
 ##### Get Latest Version
 
-Before  making changes in `crds-styles`, it's advisable to make sure you have the latest version.
+Before making changes in `crds-styles`, it's advisable to make sure you have the latest version.
 
 While in your `crds-styleguide` branch cd into your submodule folder and then `git checkout development`. and then `git pull origin development`.
 
@@ -158,7 +156,7 @@ Next create/checkout the same branch your working on in `crds-styleguide`.
 When you're ready to make commits to your `crds-styles` changes, make sure you're in your submodule folder on the same branch as your `crds-styleguide` commits. Make and push your `crds-styles` commits from here.
 
 After you make commits in `crds-styles`, cd back to your `crds-styleguide` branch and run `git status`. You will see:
-`modified:   [your folder path]/crds-styles (modified content)`
+`modified: [your folder path]/crds-styles (modified content)`
 
 When you see this, you should add a commit in `crds-styleguide` to update `crds-styles` in your project.
 
@@ -168,31 +166,15 @@ When work is ready to be merged into `crds-styles` and `crds-styleguide`, work s
 
 Outstanding `crds-styleguide` PRs may need to be updated with the newest `crds-styles` commit hash before they are merged.
 
-Versioning
---------
+## Versioning
 
-Versions are released sprintly following [semantic
-versioning](https://semver.org/). In other words:
+During the Deploy workflow we are utlizing `phips28/gh-action-bump-version` to bump the version automatically. To view details on how the version is determined please see: https://github.com/phips28/gh-action-bump-version. Also be aware that PRs to master will also have the merge notes displayed in the github release that is automatically created during the deploy workflow as well.
 
-- Bug fixes and other minor changes: Patch release, increment the last number,
-  e.g. 1.0.1
-- New features which don't break existing features: Minor release, increment the
-  middle number, e.g. 1.1.0
-- Changes which break backwards compatibility: Major release, increment the
-  first number, e.g. 2.0.0
+## CI/CD
 
-Bumping versions
---------
-1. Starting in the  `development`  branch, update the version number in the `package.json`. (look [here](https://github.com/crdschurch/crds-styles#versioning) for versioning)
-2.  `npm install`
-3. Then run  `bundle install`  to update the  `Gemfile.lock`
-4. Push up changes and merge into  `development` and a [TeamCity](https://ci.crossroads.net/) build will fire.
-5. Once the build passes, merge the changes into `master`.
-6. After merging into `master`  goto [TeamCity](https://ci.crossroads.net/) and find “Styles Deploy” under “Release” (You should see that there are pending changes). 
-7. Then you want to click the “Run” button. This build will update the release number in GitHub and NPM and it will update files in an S3 bucket
+The build and deploy process for this library is handled in by Github Actions. It is deployed to NPM and S3 and a Github Tag and Github Release is automatically created with the bumped version.
 
-License
---------
+## License
 
 This project is licensed under the [3-Clause BSD
 License](https://opensource.org/licenses/BSD-3-Clause).
